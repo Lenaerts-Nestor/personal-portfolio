@@ -1,6 +1,7 @@
 import { Navbar } from '../../components/shared/navbar/navbar';
 import { IntroSection } from '../../components/shared/sections/main.intro';
 import { TechnologiesTechnologies } from '../../components/shared/sections/main.technologies';
+import { ProjectsSection } from '../../components/shared/sections/main.projects';
 
 export const Home = () => {
   const menuItems = [
@@ -25,6 +26,7 @@ export const Home = () => {
         ]}
       />
       <IntroSection />
+      <ProjectsSection />
       <TechnologiesTechnologies />
     </>
   );
