@@ -1,6 +1,6 @@
-import { technologyGroups } from '../../../utils/techgroupsIcon';
+import { techStackCategories } from '../../../utils/techgroupsIcon';
 
-export const TechnologiesTechnologies = () => {
+export const TechnologiesSection = () => {
   return (
     <section className='py-12'>
       <div className='max-w-6xl mx-auto px-4'>
@@ -20,7 +20,7 @@ export const TechnologiesTechnologies = () => {
               Frontend
             </h3>
             <div className='grid grid-cols-2 sm:grid-cols-3 gap-6'>
-              {technologyGroups[0].items.map((tech) => (
+              {techStackCategories[0].items.map((tech) => (
                 <div
                   key={tech.name}
                   className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-6 hover:shadow-lg transition'
@@ -39,7 +39,7 @@ export const TechnologiesTechnologies = () => {
               Backend
             </h3>
             <div className='grid grid-cols-2 sm:grid-cols-3 gap-6'>
-              {technologyGroups[1].items.map((tech) => (
+              {techStackCategories[1].items.map((tech) => (
                 <div
                   key={tech.name}
                   className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-6 hover:shadow-lg transition'
@@ -58,7 +58,7 @@ export const TechnologiesTechnologies = () => {
               Cloud & Tools
             </h3>
             <div className='grid grid-cols-2 sm:grid-cols-3 gap-6'>
-              {technologyGroups[3].items.map((tech) => (
+              {techStackCategories[3].items.map((tech) => (
                 <div
                   key={tech.name}
                   className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-6 hover:shadow-lg transition'
@@ -77,7 +77,7 @@ export const TechnologiesTechnologies = () => {
               Database
             </h3>
             <div className='grid grid-cols-2 sm:grid-cols-3 gap-6'>
-              {technologyGroups[2].items.map((tech) => (
+              {techStackCategories[2].items.map((tech) => (
                 <div
                   key={tech.name}
                   className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-6 hover:shadow-lg transition'

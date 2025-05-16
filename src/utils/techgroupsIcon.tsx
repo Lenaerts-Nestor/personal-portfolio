@@ -21,7 +21,7 @@ import {
   SiDocker,
 } from 'react-icons/si';
 
-export const technologyGroups = [
+export const techStackCategories = [
   {
     label: 'Frontend',
     items: [

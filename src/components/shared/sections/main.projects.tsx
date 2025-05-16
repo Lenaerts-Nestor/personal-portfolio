@@ -1,56 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaNodeJs, FaReact, FaDatabase, FaGamepad } from 'react-icons/fa';
-import {
-  SiTypescript,
-  SiMongodb,
-  SiExpress,
-  SiPostgresql,
-  SiSharp,
-} from 'react-icons/si';
-
-const projects = [
-  {
-    id: 'timesheet',
-    title: 'Timesheet',
-    description: 'Web app for internal business tracking and management.',
-    icon: <FaDatabase className='text-indigo-500 w-10 h-10 mx-auto' />,
-    techs: [
-      <FaNodeJs key='node' />,
-      <FaReact key='react' />,
-      <SiTypescript key='ts' />,
-      <SiPostgresql key='pg' />,
-    ],
-  },
-  {
-    id: 'webdev',
-    title: 'Web Development',
-    description: 'Simple website with login, MongoDB, and admin features.',
-    icon: <FaReact className='text-purple-500 w-10 h-10 mx-auto' />,
-    techs: [
-      <FaNodeJs key='node' />,
-      <SiTypescript key='ts' />,
-      <SiMongodb key='mongo' />,
-      <SiExpress key='express' />,
-    ],
-  },
-  {
-    id: 'game',
-    title: 'Game Development',
-    description: '2D platformer using MonoGame and C#.',
-    icon: <FaGamepad className='text-orange-500 w-10 h-10 mx-auto' />,
-    techs: [<SiSharp key='csharp' />],
-  },
-];
+import { projects } from '../../../utils/projectsgroupicon';
 
 export const ProjectsSection = () => {
   const [carouselIdx, setCarouselIdx] = useState(0);
   const navigate = useNavigate();
 
-  // Responsive: show carousel on mobile, grid on desktop
   return (
-    <section className='py-16 sm:py-24'>
-      <div className='container mx-auto px-4'>
+    <section className='py-12'>
+      <div className='max-w-6xl mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-purple-700 mb-2'>
           Projecten
         </h2>
