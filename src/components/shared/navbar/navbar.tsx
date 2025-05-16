@@ -11,8 +11,11 @@ export const Navbar = ({
   defaultLanguage = 'en',
   onLanguageChange,
   socials = [
-    { platform: 'github', url: 'https://github.com' },
-    { platform: 'linkedin', url: 'https://linkedin.com' },
+    { platform: 'github', url: 'https://github.com/Lenaerts-Nestor' },
+    {
+      platform: 'linkedin',
+      url: 'https://www.linkedin.com/in/nestor-lenaerts/',
+    },
   ],
 }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -1,5 +1,6 @@
 import { Navbar } from '../../components/shared/navbar/navbar';
 import { IntroSection } from '../../components/shared/sections/main.intro';
+import { TechnologiesTechnologies } from '../../components/shared/sections/main.technologies';
 
 export const Home = () => {
   const menuItems = [
@@ -24,10 +25,7 @@ export const Home = () => {
         ]}
       />
       <IntroSection />
-      <div className='flex flex-col items-center justify-center min-h-screen'>
-        <h1 className='text-2xl font-bold'>Welcome to the Home Page</h1>
-        <p className='mt-4 text-lg'>This is a simple example of a home page.</p>
-      </div>
+      <TechnologiesTechnologies />
     </>
   );
 };
