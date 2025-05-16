@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import type { SwitchLanguageProps } from './interface';
+
+import type { SwitchLanguageProps } from '../../../interface/navbar';
 
 export const SwitchLanguage = ({
   defaultLanguage = 'en',

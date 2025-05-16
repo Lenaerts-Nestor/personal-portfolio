@@ -1,4 +1,4 @@
-// filepath: c:\Users\dewil\Documents\personal-portfolio\personal-project\src\components\shared\sections\main.intro.tsx
+import { CustomButton } from '../button';
 
 export const IntroSection = () => {
   return (
@@ -13,12 +13,8 @@ export const IntroSection = () => {
           ervaringen, leermomenten en groei tijdens het werkplekleren.
         </p>
         <div className='flex flex-col sm:flex-row justify-center items-center gap-4'>
-          <button className='bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:opacity-90 transition-opacity w-full sm:w-auto'>
-            Lees blogberichten <span aria-hidden='true'>→</span>
-          </button>
-          <button className='border-indigo-600 text-indigo-600 hover:bg-indigo-600/10 dark:border-indigo-500 dark:text-indigo-500 dark:hover:bg-indigo-500/10 w-full sm:w-auto'>
-            Over mij
-          </button>
+          <CustomButton text='Lees blogberichten' variant='primary' />
+          <CustomButton text='Over mij' variant='secondary' />
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-import type { HeaderMenuProps } from './interface';
+
+import type { HeaderMenuProps } from '../../../interface/navbar';
 
 export const ResponsiveNavMenu = ({
   items,

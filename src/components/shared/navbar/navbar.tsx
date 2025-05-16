@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { Menu, X, Github, Linkedin } from 'lucide-react';
+
 import { NavbarTitle } from './title';
 import { ResponsiveNavMenu } from './menu';
 import { SwitchLanguage } from './languageSwitch';
-import { Menu, X, Github, Linkedin } from 'lucide-react';
-import type { NavbarProps } from './interface';
+import type { NavbarProps } from '../../../interface/navbar';
 
 export const Navbar = ({
   menuItems,
