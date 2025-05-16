@@ -1,4 +1,4 @@
-import { CustomButton } from '../button';
+import { CustomButton } from '../../shared/button';
 
 export const IntroSection = () => {
   return (
