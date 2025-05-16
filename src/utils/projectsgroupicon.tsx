@@ -27,6 +27,7 @@ export const projects = [
     title: 'Timesheet',
     description: 'Web app for internal business tracking and management.',
     icon: projectIcons.timesheet,
+    image: 'src/assets/timesheet.jpg',
     techs: [
       <FaNodeJs key='node' className='text-green-600' />,
       <FaReact key='react' className='text-sky-400' />,
@@ -39,6 +40,7 @@ export const projects = [
     title: 'Web Development',
     description: 'Simple website with login, MongoDB, and admin features.',
     icon: projectIcons.webdev,
+    image: 'src/assets/web_development.jpg',
     techs: [
       <FaNodeJs key='node' className='text-green-600' />,
       <SiTypescript key='ts' className='text-blue-600' />,
@@ -51,6 +53,7 @@ export const projects = [
     title: 'Game Development',
     description: '2D platformer using MonoGame and C#.',
     icon: projectIcons.game,
+    image: 'src/assets/game_development.jpg',
     techs: [<SiSharp key='csharp' className='text-purple-700' />],
   },
   {
@@ -59,6 +62,7 @@ export const projects = [
     description:
       'This project demonstrates the development of web services based on open standards such as XML, JSON, and HTTP(S)..',
     icon: projectIcons.webapi,
+    image: 'src/assets/web_api.jpg',
     techs: [
       <SiDotnet key='dotnet' className='text-purple-700' />,
       <SiMysql key='sql' className='text-blue-700' />,
@@ -70,6 +74,7 @@ export const projects = [
     description:
       'Flutter-app waarmee gebruikers parkeerplekken kunnen reserveren,bekijken, verlengen of annuleren.Gebruikers kunnen ook hun voertuig selecteren uit een lijst van...',
     icon: projectIcons.parkflow,
+    image: 'src/assets/park_flow.jpg',
     techs: [
       <SiFlutter key='flutter' className='text-blue-400' />,
       <SiFirebase key='firebase' className='text-yellow-500' />,
@@ -81,6 +86,7 @@ export const projects = [
     description:
       "this is a project where i test my skils of react native and focused on mobile devices where i test my skils to get API's correctly and use the CRUDS functions",
     icon: projectIcons.carinfo,
+    image: 'src/assets/car_info.jpg',
     techs: [
       <FaReact key='react' className='text-cyan-400' />,
       <SiTypescript key='ts' className='text-blue-600' />,

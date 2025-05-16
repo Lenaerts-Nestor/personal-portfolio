@@ -22,18 +22,25 @@ export const ProjectsSection = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className='bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center cursor-pointer hover:shadow-xl transition-shadow border border-gray-100'
+              className='bg-white rounded-2xl shadow-lg p-0 flex flex-col items-center cursor-pointer hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden'
               onClick={() => navigate(`/projects/${project.id}`)}
             >
-              {project.icon}
-              <h3 className='text-xl font-semibold mt-4 mb-2'>
-                {project.title}
-              </h3>
-              <p className='text-gray-500 text-center mb-4'>
-                {project.description}
-              </p>
-              <div className='flex gap-3 text-2xl text-indigo-600'>
-                {project.techs}
+              <img
+                src={project.image}
+                alt={project.title}
+                className='w-full h-44 sm:h-48 md:h-52 object-cover object-center transition-all duration-300'
+                loading='lazy'
+              />
+              <div className='p-6 flex flex-col items-center w-full'>
+                <h3 className='text-xl font-semibold mt-2 mb-2 text-center'>
+                  {project.title}
+                </h3>
+                <p className='text-gray-500 text-center mb-4'>
+                  {project.description}
+                </p>
+                <div className='flex gap-3 text-2xl text-indigo-600'>
+                  {project.techs}
+                </div>
               </div>
             </div>
           ))}
@@ -50,18 +57,25 @@ export const ProjectsSection = () => {
           </button>
           <div className='w-80 mx-2'>
             <div
-              className='bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center cursor-pointer border border-gray-100'
+              className='bg-white rounded-2xl shadow-lg p-0 flex flex-col items-center cursor-pointer border border-gray-100 overflow-hidden'
               onClick={() => navigate(`/projects/${projects[carouselIdx].id}`)}
             >
-              {projects[carouselIdx].icon}
-              <h3 className='text-xl font-semibold mt-4 mb-2'>
-                {projects[carouselIdx].title}
-              </h3>
-              <p className='text-gray-500 text-center mb-4'>
-                {projects[carouselIdx].description}
-              </p>
-              <div className='flex gap-3 text-2xl text-indigo-600'>
-                {projects[carouselIdx].techs}
+              <img
+                src={projects[carouselIdx].image}
+                alt={projects[carouselIdx].title}
+                className='w-full h-44 sm:h-48 object-cover object-center transition-all duration-300'
+                loading='lazy'
+              />
+              <div className='p-6 flex flex-col items-center w-full'>
+                <h3 className='text-xl font-semibold mt-2 mb-2 text-center'>
+                  {projects[carouselIdx].title}
+                </h3>
+                <p className='text-gray-500 text-center mb-4'>
+                  {projects[carouselIdx].description}
+                </p>
+                <div className='flex gap-3 text-2xl text-indigo-600'>
+                  {projects[carouselIdx].techs}
+                </div>
               </div>
             </div>
           </div>
