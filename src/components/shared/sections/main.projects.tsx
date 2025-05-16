@@ -48,7 +48,7 @@ export const ProjectsSection = () => {
         {/* Mobile carousel */}
         <div className='md:hidden flex items-center justify-center'>
           <button
-            className='p-2 text-2xl text-indigo-400 disabled:opacity-30'
+            className='p-2 text-2xl text-indigo-400 text-4xl font-extrabold disabled:opacity-30'
             onClick={() => setCarouselIdx((i) => Math.max(i - 1, 0))}
             disabled={carouselIdx === 0}
             aria-label='Previous project'
@@ -80,7 +80,7 @@ export const ProjectsSection = () => {
             </div>
           </div>
           <button
-            className='p-2 text-2xl text-indigo-400 disabled:opacity-30'
+            className='p-2  text-4xl font-extrabold text-indigo-400 disabled:opacity-30'
             onClick={() =>
               setCarouselIdx((i) => Math.min(i + 1, projects.length - 1))
             }

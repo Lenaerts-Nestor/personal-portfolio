@@ -10,6 +10,8 @@ import {
   SiDotnet,
   SiCss3,
   SiMysql,
+  SiDrizzle,
+  SiFastify,
 } from 'react-icons/si';
 
 export const projectIcons = {
@@ -33,6 +35,8 @@ export const projects = [
       <FaReact key='react' className='text-sky-400' />,
       <SiTypescript key='ts' className='text-blue-600' />,
       <SiPostgresql key='pg' className='text-blue-800' />,
+      <SiDrizzle key='drizzle' className='text-black' />,
+      <SiFastify key='fastify' className='text-black' />,
     ],
   },
   {
