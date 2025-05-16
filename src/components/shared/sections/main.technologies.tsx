@@ -19,14 +19,14 @@ export const TechnologiesSection = () => {
             <h3 className='text-2xl font-bold text-indigo-800 mb-6 text-center tracking-wide uppercase drop-shadow-sm'>
               Frontend
             </h3>
-            <div className='grid grid-cols-2 sm:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 gap-4'>
               {techStackCategories[0].items.map((tech) => (
                 <div
                   key={tech.name}
-                  className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-6 hover:shadow-lg transition'
+                  className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-2 hover:shadow-lg transition'
                 >
-                  {tech.icon}
-                  <span className='mt-3 font-medium text-gray-800 text-center text-base'>
+                  <div className='text-2xl'>{tech.icon}</div>
+                  <span className='mt-2 font-medium text-gray-800 text-center text-sm'>
                     {tech.name}
                   </span>
                 </div>
@@ -38,14 +38,14 @@ export const TechnologiesSection = () => {
             <h3 className='text-2xl font-bold text-indigo-800 mb-6 text-center tracking-wide uppercase drop-shadow-sm'>
               Backend
             </h3>
-            <div className='grid grid-cols-2 sm:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 gap-4'>
               {techStackCategories[1].items.map((tech) => (
                 <div
                   key={tech.name}
-                  className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-6 hover:shadow-lg transition'
+                  className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-2 hover:shadow-lg transition'
                 >
-                  {tech.icon}
-                  <span className='mt-3 font-medium text-gray-800 text-center text-base'>
+                  <div className='text-2xl'>{tech.icon}</div>
+                  <span className='mt-2 font-medium text-gray-800 text-center text-sm'>
                     {tech.name}
                   </span>
                 </div>
@@ -57,14 +57,14 @@ export const TechnologiesSection = () => {
             <h3 className='text-2xl font-bold text-indigo-800 mb-6 text-center tracking-wide uppercase drop-shadow-sm'>
               Cloud & Tools
             </h3>
-            <div className='grid grid-cols-2 sm:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 gap-4'>
               {techStackCategories[3].items.map((tech) => (
                 <div
                   key={tech.name}
-                  className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-6 hover:shadow-lg transition'
+                  className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-2 hover:shadow-lg transition'
                 >
-                  {tech.icon}
-                  <span className='mt-3 font-medium text-gray-800 text-center text-base'>
+                  <div className='text-2xl'>{tech.icon}</div>
+                  <span className='mt-2 font-medium text-gray-800 text-center text-sm'>
                     {tech.name}
                   </span>
                 </div>
@@ -76,14 +76,14 @@ export const TechnologiesSection = () => {
             <h3 className='text-2xl font-bold text-indigo-800 mb-6 text-center tracking-wide uppercase drop-shadow-sm'>
               Database
             </h3>
-            <div className='grid grid-cols-2 sm:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 gap-4'>
               {techStackCategories[2].items.map((tech) => (
                 <div
                   key={tech.name}
-                  className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-6 hover:shadow-lg transition'
+                  className='flex flex-col items-center justify-center bg-white rounded-xl shadow border border-gray-200 p-2 hover:shadow-lg transition'
                 >
-                  {tech.icon}
-                  <span className='mt-3 font-medium text-gray-800 text-center text-base'>
+                  <div className='text-2xl'>{tech.icon}</div>
+                  <span className='mt-2 font-medium text-gray-800 text-center text-sm'>
                     {tech.name}
                   </span>
                 </div>

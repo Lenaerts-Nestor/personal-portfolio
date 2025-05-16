@@ -3,7 +3,7 @@ import { CustomButton } from '../button';
 export const IntroSection = () => {
   return (
     <section className='py-16 sm:py-24'>
-      <div className='container mx-auto px-4 text-center'>
+      <div className='container mx-auto px-4 text-center text-align:normal'>
         <h1 className='text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6'>
           Welkom bij mijn WPL-portfolio
         </h1>
