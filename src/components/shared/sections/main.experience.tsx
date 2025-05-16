@@ -1,42 +1,9 @@
-import { FaBriefcase, FaLaptopCode, FaUserTie } from 'react-icons/fa';
-
-const experienceData = [
-  {
-    company: 'Amotek',
-    role: 'Full-Stack Developer',
-    period: 'Feb 2024 - Jun 2024',
-    type: 'Hybrid · Temporary Contract/internship',
-    description:
-      "I'm worked on a project called AmoTrack, where I'm learning to build a full-stack application using React, PostgreSQL, and Fastify. I'm focusing on both frontend and backend development.",
-    icon: <FaLaptopCode className='text-white w-4 h-4' />,
-    iconBg: 'bg-indigo-500',
-  },
-  {
-    company: 'Beego',
-    role: 'ICT Consultant',
-    period: 'Okt 2023 - Mei 2024',
-    type: 'Op afstand · Tijdelijk contract',
-    description:
-      'Ik hielp klanten met basistechnische problemen thuis of op het werk, zoals het repareren van computers en uitleggen hoe ze veilig online kunnen blijven.',
-    icon: <FaUserTie className='text-white w-4 h-4' />,
-    iconBg: 'bg-purple-500',
-  },
-  {
-    company: 'Digipolis',
-    role: 'ICT Support Specialist',
-    period: 'Aug 2024 - Sep 2024',
-    type: 'Antwerpen, België · Tijdelijk contract',
-    description:
-      'Ik leerde de basis van ICT-ondersteuning door computers in te stellen en te helpen met netwerkinstallaties. Zo kreeg ik een goed beeld van hoe alles werkt buiten het programmeren.',
-    icon: <FaBriefcase className='text-white w-4 h-4' />,
-    iconBg: 'bg-green-500',
-  },
-];
+import { experienceData } from '../../../utils/expiriencegroups';
 
 export const ExperienceSection = () => {
   return (
     <section className='py-12 bg-white'>
-      <div className='max-w-3xl mx-auto px-4'>
+      <div className='max-w-6xl mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-purple-700 mb-2'>
           Ervaring
         </h2>
@@ -51,7 +18,7 @@ export const ExperienceSection = () => {
           <div className='absolute left-3.5 sm:left-4 top-4 bottom-4 w-0.5 bg-indigo-400'></div>
 
           <div className='space-y-12'>
-            {experienceData.map((exp, idx) => (
+            {experienceData.map((exp, _idx) => (
               <div key={exp.company} className='relative group'>
                 {/* Connector line from timeline to card - positioned BEHIND the icon */}
                 <div className='absolute left-3.5 sm:left-4 top-4 w-8 sm:w-12 h-0.5 bg-indigo-300'></div>
