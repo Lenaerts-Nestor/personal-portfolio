@@ -1,21 +1,22 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { projects } from '../../../utils/projectsgroupicon';
+import { useI18n } from '../../shared/i18nContext'; // Import useI18n
 
 export const ProjectsSection = () => {
   const [carouselIdx, setCarouselIdx] = useState(0);
   const navigate = useNavigate();
+  const { t } = useI18n(); // Initialize t function
 
   return (
     <section className='py-12'>
       <div className='max-w-6xl mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-purple-700 mb-2'>
-          Projecten
+          {t('home.projects')}
         </h2>
-        <div className='h-1 w-full bg-gradient-to-r from-indigo-600 to-purple-600 mb-8' />
+        <div className='h-1 w-full bg-gradient-to-r from-indigo-600 to-purple-600 mb-8 ' />
         <p className='text-center text-lg text-gray-600 mb-8'>
-          Hier zijn mijn belangrijkste projecten die mijn technische
-          vaardigheden demonstreren.
+          {t('home.projectsDescription')}
         </p>
         {/* Desktop grid */}
         <div className='hidden md:grid grid-cols-1 md:grid-cols-3 gap-8'>

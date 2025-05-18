@@ -7,9 +7,15 @@ export const Home = () => {
   return (
     <>
       <IntroSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <TechnologiesSection />
+      <section id="technologies">
+        <TechnologiesSection />
+      </section>
+      <section id="projects">
+        <ProjectsSection />
+      </section>
+      <section id="experience">
+        <ExperienceSection />
+      </section>
     </>
   );
 };

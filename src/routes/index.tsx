@@ -10,15 +10,6 @@ export const AppRoutes = () => {
       <Route path='/Home' element={<Home />} />
       <Route path='/About' element={<About />} />
       <Route path='/Blog' element={<Blog />} />
-      {/* Placeholder for project details */}
-      <Route
-        path='/projects/:id'
-        element={
-          <div className='p-8 text-center'>
-            Project detail page coming soon!
-          </div>
-        }
-      />
     </Routes>
   );
 };

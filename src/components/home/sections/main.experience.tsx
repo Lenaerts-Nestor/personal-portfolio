@@ -1,15 +1,18 @@
 import { experienceData } from '../../../utils/expiriencegroups';
+import { useI18n } from '../../shared/i18nContext'; // Import useI18n
 
 export const ExperienceSection = () => {
+  const { t } = useI18n(); // Initialize t function
+
   return (
     <section className='py-12 bg-white'>
       <div className='max-w-6xl mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-purple-700 mb-2'>
-          Ervaring
+          {t('home.experienceTitle')}
         </h2>
         <div className='h-1 w-full bg-gradient-to-r from-indigo-600 to-purple-600 mb-8' />
         <p className='text-center text-lg text-gray-600 mb-8'>
-          Mijn professionele reis in de techindustrie tot nu toe.
+          {t('home.experienceDescription')}
         </p>
 
         {/* Timeline container */}
