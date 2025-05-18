@@ -93,7 +93,10 @@
           "Proactive & Eager to Contribute"
         ]
       }
-    ]
+    ],
+    "blogButton": "Read Internship Blog",
+    "aboutButton": "About Me",
+    "scrollDown": "Scroll down to explore more"
   },
   "about": {
     "title": "About Me: Junior Full-Stack & Backend Developer",
@@ -121,7 +124,10 @@
     "description": "Portfolio showcasing my skills, projects, and experience as a Junior Software Developer seeking opportunities.",
     "quickLinks": "Quick Links",
     "connect": "Connect",
-    "copyright": "© {year} [Your Name]. All rights reserved."
+    "contact": "Contact",
+    "location": "Antwerp, Belgium",
+    "rights": "All rights reserved.",
+    "tagline": "Showcasing my journey, skills, and projects as a developer."
   },
   "blog": {
     "title": "My Software Development Internship Journey",
@@ -202,6 +208,13 @@
         "day": []
       }
     }
+  },
+  "projects": {
+    "viewDetails": "View Details",
+    "viewAll": "View All Projects"
+  },
+  "experience": {
+    "downloadResume": "Download Resume"
   },
   "toggleLanguage": "Toggle language"
 }

@@ -1,18 +1,10 @@
-export interface SwitchLanguageProps {
-  defaultLanguage?: string;
-  leftOption?: string;
-  rightOption?: string;
-  onLanguageChange?: (language: string) => void;
-}
-
-export interface MenuItem {
+export interface NavItem {
   path: string;
   label: string;
 }
 
 export interface NavbarProps {
-  title?: string;
-  menuItems: MenuItem[];
+  menuItems: NavItem[];
   defaultLanguage?: string;
   onLanguageChange?: (language: string) => void;
   socials?: {
@@ -20,8 +12,16 @@ export interface NavbarProps {
     url: string;
   }[];
 }
+
 export interface HeaderMenuProps {
-  items: MenuItem[];
+  items: NavItem[];
   onLinkClick?: () => void;
   isMobile?: boolean;
+}
+
+export interface SwitchLanguageProps {
+  leftOption?: string;
+  rightOption?: string;
+  defaultLanguage?: string;
+  onLanguageChange?: (language: string) => void;
 }

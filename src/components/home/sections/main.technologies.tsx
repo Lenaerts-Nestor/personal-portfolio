@@ -3,6 +3,8 @@
 import { techStackCategories } from '../../../utils/techgroupsIcon';
 import { useI18n } from '../../shared/i18nContext';
 import { motion } from 'framer-motion';
+import { Code } from 'lucide-react';
+import { SectionHeading } from '../../shared/layout/section-heading';
 
 export const TechnologiesSection = () => {
   const { t } = useI18n();
@@ -23,17 +25,16 @@ export const TechnologiesSection = () => {
   };
 
   return (
-    <section className='py-16 bg-gradient-to-b from-white to-gray-50'>
+    <section
+      id='technologies'
+      className='py-16 bg-gradient-to-b from-white to-gray-50'
+    >
       <div className='max-w-6xl mx-auto px-4'>
-        <div className='text-center mb-12'>
-          <h2 className='text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-indigo-600 mb-4 pb-3'>
-            {t('home.technologies')}
-          </h2>
-          <div className='h-1.5 w-24 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full mb-6' />
-          <p className='text-center text-lg text-gray-700 max-w-2xl mx-auto'>
-            {t('home.techDescription')}
-          </p>
-        </div>
+        <SectionHeading
+          title={t('home.technologies')}
+          description={t('home.techDescription')}
+          icon={<Code className='h-8 w-8' />}
+        />
 
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2 md:grid-rows-2 md:gap-8 lg:gap-10'>
           {/* Frontend */}
@@ -42,7 +43,7 @@ export const TechnologiesSection = () => {
             whileInView='show'
             viewport={{ once: true, margin: '-100px' }}
             variants={container}
-            className='flex flex-col h-full rounded-2xl shadow-xl bg-white overflow-hidden border-t-4 border-indigo-500'
+            className='flex flex-col h-full rounded-2xl shadow-xl bg-white overflow-hidden border-t-4 border-indigo-500 hover:shadow-2xl transition-shadow duration-300'
           >
             <div className='bg-gradient-to-r from-indigo-500 to-indigo-600 py-4'>
               <h3 className='text-2xl font-bold text-white text-center tracking-wide uppercase'>
@@ -55,7 +56,7 @@ export const TechnologiesSection = () => {
                   <motion.div
                     key={tech.name}
                     variants={item}
-                    className='flex flex-col items-center justify-center p-3 rounded-lg hover:bg-gray-50 transition-all duration-300'
+                    className='flex flex-col items-center justify-center p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300 cursor-pointer'
                   >
                     <div className='mb-2'>{tech.icon}</div>
                     <span className='font-medium text-gray-800 text-center text-sm'>
@@ -73,7 +74,7 @@ export const TechnologiesSection = () => {
             whileInView='show'
             viewport={{ once: true, margin: '-100px' }}
             variants={container}
-            className='flex flex-col h-full rounded-2xl shadow-xl bg-white overflow-hidden border-t-4 border-purple-500'
+            className='flex flex-col h-full rounded-2xl shadow-xl bg-white overflow-hidden border-t-4 border-purple-500 hover:shadow-2xl transition-shadow duration-300'
           >
             <div className='bg-gradient-to-r from-purple-500 to-purple-600 py-4'>
               <h3 className='text-2xl font-bold text-white text-center tracking-wide uppercase'>
@@ -86,7 +87,7 @@ export const TechnologiesSection = () => {
                   <motion.div
                     key={tech.name}
                     variants={item}
-                    className='flex flex-col items-center justify-center p-3 rounded-lg hover:bg-gray-50 transition-all duration-300'
+                    className='flex flex-col items-center justify-center p-3 rounded-lg hover:bg-purple-50 transition-all duration-300 cursor-pointer'
                   >
                     <div className='mb-2'>{tech.icon}</div>
                     <span className='font-medium text-gray-800 text-center text-sm'>
@@ -104,7 +105,7 @@ export const TechnologiesSection = () => {
             whileInView='show'
             viewport={{ once: true, margin: '-100px' }}
             variants={container}
-            className='flex flex-col h-full rounded-2xl shadow-xl bg-white overflow-hidden border-t-4 border-blue-500'
+            className='flex flex-col h-full rounded-2xl shadow-xl bg-white overflow-hidden border-t-4 border-blue-500 hover:shadow-2xl transition-shadow duration-300'
           >
             <div className='bg-gradient-to-r from-blue-500 to-blue-600 py-4'>
               <h3 className='text-2xl font-bold text-white text-center tracking-wide uppercase'>
@@ -117,7 +118,7 @@ export const TechnologiesSection = () => {
                   <motion.div
                     key={tech.name}
                     variants={item}
-                    className='flex flex-col items-center justify-center p-3 rounded-lg hover:bg-gray-50 transition-all duration-300'
+                    className='flex flex-col items-center justify-center p-3 rounded-lg hover:bg-blue-50 transition-all duration-300 cursor-pointer'
                   >
                     <div className='mb-2'>{tech.icon}</div>
                     <span className='font-medium text-gray-800 text-center text-sm'>
@@ -135,7 +136,7 @@ export const TechnologiesSection = () => {
             whileInView='show'
             viewport={{ once: true, margin: '-100px' }}
             variants={container}
-            className='flex flex-col h-full rounded-2xl shadow-xl bg-white overflow-hidden border-t-4 border-green-500'
+            className='flex flex-col h-full rounded-2xl shadow-xl bg-white overflow-hidden border-t-4 border-green-500 hover:shadow-2xl transition-shadow duration-300'
           >
             <div className='bg-gradient-to-r from-green-500 to-green-600 py-4'>
               <h3 className='text-2xl font-bold text-white text-center tracking-wide uppercase'>
@@ -148,7 +149,7 @@ export const TechnologiesSection = () => {
                   <motion.div
                     key={tech.name}
                     variants={item}
-                    className='flex flex-col items-center justify-center p-3 rounded-lg hover:bg-gray-50 transition-all duration-300'
+                    className='flex flex-col items-center justify-center p-3 rounded-lg hover:bg-green-50 transition-all duration-300 cursor-pointer'
                   >
                     <div className='mb-2'>{tech.icon}</div>
                     <span className='font-medium text-gray-800 text-center text-sm'>

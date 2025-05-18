@@ -93,7 +93,10 @@
           "Proactief & Leergierig"
         ]
       }
-    ]
+    ],
+    "blogButton": "Lees Stage Blog",
+    "aboutButton": "Over mij",
+    "scrollDown": "Scroll naar beneden voor meer"
   },
   "about": {
     "title": "Over Mij: Junior Full-Stack & Backend Ontwikkelaar",
@@ -121,7 +124,10 @@
     "description": "Portfolio dat mijn vaardigheden, projecten en ervaring toont als Junior Software Developer op zoek naar kansen.",
     "quickLinks": "Snelle links",
     "connect": "Verbinden",
-    "copyright": "© {year} [Jouw Naam]. Alle rechten voorbehouden."
+    "contact": "Contact",
+    "location": "Antwerpen, België",
+    "rights": "Alle rechten voorbehouden.",
+    "tagline": "Toont mijn reis, vaardigheden en projecten als ontwikkelaar."
   },
   "blog": {
     "title": "Mijn Software Ontwikkel Stage Reis",
@@ -202,6 +208,13 @@
         "day": []
       }
     }
+  },
+  "projects": {
+    "viewDetails": "Bekijk details",
+    "viewAll": "Bekijk alle projecten"
+  },
+  "experience": {
+    "downloadResume": "Download CV"
   },
   "toggleLanguage": "Taal wisselen"
 }
