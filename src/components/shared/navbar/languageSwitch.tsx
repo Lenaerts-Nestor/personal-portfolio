@@ -1,17 +1,16 @@
-import { useState } from 'react';
+import { useI18n } from '../../shared/i18nContext';
 
 import type { SwitchLanguageProps } from '../../../interface/navbar';
 
 export const SwitchLanguage = ({
-  defaultLanguage = 'en',
   leftOption = 'EN',
   rightOption = 'NL',
   onLanguageChange,
 }: SwitchLanguageProps) => {
-  const [language, setLanguage] = useState(defaultLanguage);
+  const { language, setLanguage } = useI18n();
 
   const handleLanguageChange = (newLanguage: string) => {
-    setLanguage(newLanguage);
+    setLanguage(newLanguage as 'en' | 'nl');
     if (onLanguageChange) {
       onLanguageChange(newLanguage);
     }

@@ -1,0 +1,80 @@
+/* App.css */
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeInModal 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  .animate-fade-out {
+    animation: fadeOutModal 0.22s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+}
+
+@keyframes fadeInModal {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutModal {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+.loading-dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Semi-transparent white background */
+  z-index: 10; /* Ensure it's above the content */
+}
+
+.loading-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #8a2be2; /* Purple color to match theme elements */
+  border-radius: 50%;
+  animation: pulse 1.4s infinite ease-in-out both;
+}
+
+.loading-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes pulse {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "Over mij",
+    "blog": "Blog",
+    "documentation": "Documentatie",
+    "previous": "Vorige",
+    "next": "Volgende"
+  },
+  "home": {
+    "welcome": "Welkom bij mijn WPL-portfolio",
+    "description": "Dit portfolio documenteert mijn stageverloop als onderdeel van het graduaat Programmeren aan de AP Hogeschool. Hier deel ik mijn ervaringen, leermomenten en groei tijdens het werkplekleren.",
+    "readBlog": "Lees blogberichten",
+    "aboutMe": "Over mij",
+    "latestPosts": "Laatste blogberichten",
+    "comingSoon": "Binnenkort beschikbaar...",
+    "quickOverview": "Snel overzicht",
+    "internshipDetails": "Stagedetails",
+    "technologies": "Technologieën",
+    "projects": "Projecten",
+    "position": "Positie",
+    "duration": "Looptijd",
+    "techUsed": "Gebruikte Technologieën",
+    "experienceTitle": "Ervaring",
+    "coreSkillsTitle": "Kernvaardigheden",
+    "educationTitle": "Opleiding",
+    "techDescription": "Dit zijn de technologieën waarmee ik momenteel kan werken. Binnenkort volgt er meer!",
+    "projectsDescription": "Hier zijn mijn belangrijkste projecten die mijn technische vaardigheden demonstreren.",
+    "experienceDescription": "Mijn professionele reis in de techindustrie tot nu toe.",
+    "skillsDescription": "Kerncompetenties die ik meebreng naar development teams.",
+    "educationDescription": "Mijn formele opleiding in informatica.",
+    "positions": {
+      "ictConsultant": "ICT Consultant",
+      "ictSupport": "ICT Support Specialist"
+    },
+    "companies": {
+      "beego": "Beego",
+      "digipolis": "Digipolis"
+    },
+    "experienceDates": {
+      "beego": "Okt 2023 - Mei 2024",
+      "digipolis": "Aug 2024 - Sep 2024"
+    },
+    "locations": {
+      "remote": "Op afstand · Tijdelijk contract",
+      "antwerp": "Antwerpen, België · Tijdelijk contract"
+    },
+    "experienceDescriptions": {
+      "beego": "Ik hielp klanten met basistechnische problemen thuis of op het werk, zoals het repareren van computers en uitleggen hoe ze veilig online kunnen blijven.",
+      "digipolis": "Ik leerde de basis van ICT-ondersteuning door computers in te stellen en te helpen met netwerkinstallaties. Zo kreeg ik een goed beeld van hoe alles werkt buiten het programmeren."
+    },
+    "education": {
+      "degree": "Graduaat, Informatica",
+      "school": "AP Hogeschool Antwerpen",
+      "duration": "Sep 2023 - Jun 2025",
+      "courses": "Relevante vakken:",
+      "courseList": {
+        "web": "Webontwikkeling",
+        "systems": "Systeembeheer"
+      }
+    },
+    "skills": [
+      "Technische ondersteuning",
+      "IT-advies",
+      "Voorraadbeheer",
+      "Communicatie",
+      "Klantenservice",
+      "Probleemoplossing"
+    ]
+  },
+  "about": {
+    "title": "Aankomend Full-Stack Developer",
+    "educationTitle": "Mijn Leertraject",
+    "educationText": "Ik studeer momenteel Programmeren aan AP Hogeschool, waar ik zowel frontend als backend ontwikkeling leer. Hoewel ik backend-werk het leukst vind, werk ik ook hard aan mijn frontend-vaardigheden om complete applicaties te kunnen bouwen.",
+    "languagesTitle": "Talen die ik spreek",
+    "languagesText": "Mijn moedertaal is Spaans; ik spreek vloeiend Nederlands en ben comfortabel met Engels. Zo kan ik goed samenwerken in diverse teams en technische bronnen in meerdere talen begrijpen.",
+    "aiTitle": "Mijn Kijk op AI",
+    "aiPhilosophy": "AI Slim Inzetten",
+    "aiPhilosophyText": "Ik zie AI als een handige hulp bij het programmeren: ideaal voor suggesties en het opsporen van fouten, terwijl ik zelf de controle en het begrip over mijn projecten behoud.",
+    "aiApproach": "Hoe Ik Het Gebruik",
+    "aiApproachText": "Ik gebruik AI vooral voor code-suggesties, het verbeteren van bestaande oplossingen en het schrijven van documentatie. Ik ben altijd voorzichtig met privacy en deel nooit gevoelige code of data.",
+    "aiExample": "Bij het bouwen van dit portfolio kreeg ik AI-suggesties voor de lay-out en bij het oplossen van problemen, maar alle keuzes en de code zijn door mij gemaakt.",
+    "goalsTitle": "Mijn Doelen",
+    "goalsText": "Ik wil een fullstack developer worden die bestaande systemen onderhoudt en optimaliseert. Mijn focus ligt op het verbeteren van efficiëntie en functionaliteit, in plaats van altijd nieuwe technologieën te bouwen.",
+    "goalsPhilosophy": "Het draait niet alleen om nieuwe features maken, maar om bestaande systemen toekomstbestendig en onderhoudsvriendelijk te houden.",
+    "methodsTitle": "Mijn Werkwijze",
+    "methodsApproach": "Kennis Opbouwen",
+    "methodsText1": "Ik doe dit door zowel nieuwe technologieën te leren als mijn bestaande kennis te verdiepen. Het draait om een balans tussen innovatie en de praktische toepassing van bewezen oplossingen.",
+    "methodsLearning": "Leermethode",
+    "methodsText2": "Ik leer met behulp van boeken als 'Clean Code' ,'Head First Design Patterns' en 'Don't Make Me Think', gecombineerd met AI-gestuurde leermethodes. Ik zoek altijd naar manieren om de codekwaliteit en onderhoudbaarheid te verbeteren."
+  },
+  "footer": {
+    "about": "Over",
+    "description": "Documentatie van mijn stageverloop bij [Bedrijfsnaam] als onderdeel van het graduaat Programmeren aan de AP Hogeschool.",
+    "quickLinks": "Snelle links",
+    "connect": "Verbinden",
+    "copyright": "© {year} Portfolio WPL. Alle rechten voorbehouden."
+  },
+  "blog": {
+    "title": "Mijn Stage Reis",
+    "description": "Volg mijn avonturen en lessen tijdens mijn stage bij het bedrijf",
+    "readMore": "Lees meer",
+    "weekOverview": "Week 1",
+    "dailyUpdates": {
+      "title": "Dagelijkse Updates",
+      "close": "Sluiten",
+      "week1": {
+        "title": "Week 1",
+        "overview": "Deze week heb ik me gefocust op het leren van de AmoDrive coding architectuur, het begrijpen van de projectstructuur en het verbeteren van mijn codeerstijl, met de hulp van mijn seniors.",
+        "day": [
+          {
+            "date": "3 - 7 Februari",
+            "content": "Deze week ben ik begonnen met het inwerken in het project. Ik heb instructies gekregen over accountbeheer, projecten toegevoegd, en uitleg gekregen over Storybook. Ik heb veel geleerd over de structuur van componenten, het herschrijven van componenten op advies van de seniors, en de logica van projectstyling. Ook heb ik met mijn senior gesproken over codeerregels, GitHub gebruikt voor updates, feedback gekregen en nieuwe manieren van coderen ontdekt. Ondanks wat problemen met GitHub en het wachten op instructies, heb ik de meeste errors kunnen oplossen en de laatste hand gelegd aan tickets over forms, cards en modals. Het was een intensieve week, maar ik heb veel geleerd en ben blij met mijn vooruitgang."
+          }
+        ]
+      },
+      "week2": {
+        "title": "Week 2",
+        "overview": "Deze week ben ik dus echt begonnen met AmoTrack, mijn nieuwe project. We gebruiken React, PostgreSQL, Drizzle en Fastify. Klinkt best cool, maar het is wel even inkomen hoor!",
+        "day": [
+          {
+            "date": "10 - 14 Februari",
+            "content": "De eerste dag was meteen een uitdaging met het installeren van Drizzle en PostgreSQL. Dankzij documentatie en oude projecten van het team kreeg ik alles aan de praat. De connectie met de database is gelukt en ik heb mijn eerste CRUD-endpoint gemaakt. Ik kreeg feedback van de seniors over mijn werk en tips om logischer te denken en beter samen te werken. Ik heb nieuwe endpoints gemaakt, server files geoptimaliseerd en gewerkt aan tickets voor de user interface en API performance. Het werken met tickets en PR's was even wennen, maar ik heb veel geleerd van de feedback en het proces."
+          }
+        ]
+      },
+      "week3": {
+        "title": "Week 3",
+        "overview": "Deze week ging het eindelijk beter! Ik heb wat vooruitgang geboekt en mijn werkstijl is verbeterd.",
+        "day": [
+          {
+            "date": "17 - 21 Februari",
+            "content": "Ik wachtte op feedback over componenten, maar kon aan andere tickets werken. Er was verwarring over welke codeerstijl ik moest volgen, maar ik heb van beide seniors veel geleerd. Feedback op mijn PR's was positief en ik voelde me nuttiger. Ik heb alle tickets van week 1 afgerond en goedgekeurd gekregen, en feedback gehad van mijn backend senior. De week afgesloten met werken aan mijn persoonlijk project en de backend."
+          }
+        ]
+      },
+      "week4": {
+        "title": "Week 4",
+        "overview": "Deze week heb ik eindelijk een demo kunnen laten zien aan de seniors! Ik heb getoond hoe ik de frontend en backend van het amoTrack project heb gemaakt.",
+        "day": [
+          {
+            "date": "24 - 28 Februari",
+            "content": "Ik heb belangrijke functies toegevoegd aan formuliercomponenten en bugs in de backend opgelost. Het formulier moest generieker, wat meer tijd kostte. Ik heb weer aan de backend gewerkt en kreeg complimenten van senior Manu, maar wil nog meer bereiken. Na mijn demo aan het team heb ik besloten meer tijd aan het project te besteden om mezelf te verbeteren."
+          }
+        ]
+      },
+      "week5": {
+        "title": "Week 5",
+        "overview": "Een rustige week, waarin ik me vooral heb gefocust op pull requests (PR's) en de frontend van AmoTrack. Lekker productief, maar ook ruimte voor ontspanning!",
+        "day": [
+          {
+            "date": "4 - 8 maart",
+            "content": "Ik heb gewerkt aan PR's en de frontend van AmoTrack, formulieren geüpdatet, PR's afgehandeld en de backend afgerond. Ook een klein zelfproject gestart ('Mini Mike') op advies van mijn senior. Het was een productieve en leerzame week."
+          }
+        ]
+      },
+      "week6": {
+        "title": "Week 6",
+        "overview": "Deze week stond in het teken van Azure-uitdagingen, deployment-issues en de nodige portie frontend-werk. Een rollercoaster aan technische avonturen!",
+        "day": [
+          {
+            "date": "10 - 14 maart",
+            "content": "Frontend-updates doorgevoerd, verdiept in 'chunk size reduction' bij GitHub Actions voor Azure, en gewerkt aan tickets IAT-6 t/m IAT-11. Samen met collega Precious deployment-issues opgelost en AmoStyle geüpdatet. Ook feedback gegeven op het project van mijn collega."
+          }
+        ]
+      },
+      "week7": {
+        "title": "Week 7",
+        "overview": "deze week was gewoon full amo-style-library. mijn senior hadden besloten om gewoon de componenten te laten herschrijven maar zonder de mui te gebruiken",
+        "day": [
+          {
+            "date": "17 - 21 maart",
+            "content": "Ik heb componenten in de Amo-style-library herschreven, getest en verder gewerkt aan de library. Het was repetitief, maar belangrijk werk voor het project."
+          }
+        ]
+      },
+      "week8": {
+        "title": "Week 8",
+        "overview": "deze week was rustig, had feedback gekregeven van mijn tussentijds evaluatie. aangezien dat het een herhaling was van vorige week, zal ik het gewoon in 2 dagen uitleggen",
+        "day": [
+          {
+            "date": "24 - 28 maart",
+            "content": "Frontend herbekeken op advies van senior Mike, bugs zelfstandig gefixt, inputfields, radiofield en checkboxfield gemaakt, en veel feedback en documentatie doorgenomen."
+          }
+        ]
+      },
+      "week9": {
+        "title": "Week 9",
+        "overview": "deze week mocht ik eindelijk terug de FE en BE gaan werken. ben blij dermee",
+        "day": [
+          {
+            "date": "31 maart - 4 april",
+            "content": "Verder gewacht op feedback van Amo Style Lib, daarna weer aan FE en BE van AmoTrack gewerkt. Tickets van senior Manu opgepakt, Swagger gemaakt en updates in frontend doorgevoerd."
+          }
+        ]
+      },
+      "week10": {
+        "title": "Week 10",
+        "overview": "Een energieke week waarin ik de switch maakte van de Amo-Style-Library naar volle focus op AmoTrack, zowel frontend als backend. Veel progressie geboekt en nieuwe uitdagingen aangepakt!",
+        "day": [
+          {
+            "date": "7 - 11 April",
+            "content": "Taken voor de Amo-Style-Library afgerond, daarna vol aan de slag met AmoTrack. Frontend componenten geüpdatet, bugs aangepakt, vertalingsfeedback verwerkt en Swagger-documentatie opgezet. Begonnen aan soft deletion logica."
+          }
+        ]
+      },
+      "week11": {
+        "title": "Week 11",
+        "overview": "Focus op het afronden van tickets en de timesheet-logica, met een blik op de komende demo en nieuwe uitdagingen.",
+        "day": [
+          {
+            "date": "14 - 18 April",
+            "content": "Volledig gefocust op tickets voor AmoTrack, bijna allemaal afgerond. Grote mijlpaal: volledige timesheet-logica geïmplementeerd. Doelen voor volgende week: feedback verzamelen, timesheet testen en nieuwe tickets oppakken."
+          }
+        ]
+      },
+      "week12": {
+        "title": "Week 12",
+        "overview": "Een productieve week met focus op het verwerken van design feedback en het voorbereiden van de gateway implementatie.",
+        "day": [
+          {
+            "date": "21 - 25 April",
+            "content": "Volledig gericht op toegewezen tickets. Pagina's herbouwd op basis van nieuwe design feedback voor een gebruiksvriendelijker resultaat. Volgende week: gateway implementeren en laatste tickets afronden."
+          }
+        ]
+      },
+      "week13": {
+        "title": "Week 13",
+        "overview": "Een week vol afronding en verfijning, met belangrijke stappen in de timesheet, login en vertalingen.",
+        "day": [
+          {
+            "date": "28 April - 2 Mei",
+            "content": "Details en afronding van cruciale onderdelen. Timesheet volledig afgemaakt, login-functionaliteit geïmplementeerd en getest, alle pagina's naar het Engels vertaald. Volgende week: registratie- en login-flow afronden, design feedback verwerken en documentatie reviewen."
+          }
+        ]
+      },
+      "week14": {
+        "title": "Week 14",
+        "overview": "Een week van verdieping en optimalisatie, met focus op React Query, role checks en het verfijnen van bestaande features.",
+        "day": [
+          {
+            "date": "5 - 9 Mei",
+            "content": "Zelfstudie over React Query en implementatie in AmoTrack, onderzoek naar testscenario's en optimalisaties, oude code opgeschoond, role checks geïmplementeerd, login-functionaliteit en React Query verder toegepast, timesheets geüpdatet en project-details gestyled."
+          }
+        ]
+      }
+    }
+  },
+  "toggleLanguage": "Taal wisselen"
+}
