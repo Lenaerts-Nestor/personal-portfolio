@@ -1,35 +1,45 @@
-import { type FC } from 'react';
-import {
-  baseClasses,
-  sizeClasses,
-  variantClasses,
-} from '../../style/customButton.style';
-import type { ButtonProps } from '../../interface/customButton';
+'use client';
 
-export const CustomButton: FC<ButtonProps> = ({
+import type React from 'react';
+
+interface CustomButtonProps {
+  text: string;
+  variant?: 'primary' | 'secondary';
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+  className?: string;
+  icon?: React.ReactNode;
+}
+
+export const CustomButton: React.FC<CustomButtonProps> = ({
   text,
-  onClick,
   variant = 'primary',
-  size = 'medium',
+  onClick,
+  type = 'button',
   disabled = false,
   className = '',
-  iconRight,
+  icon,
 }) => {
+  const baseClasses =
+    'px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center';
+
+  const variantClasses = {
+    primary:
+      'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md hover:shadow-lg',
+    secondary:
+      'bg-white border border-indigo-200 text-indigo-600 hover:bg-indigo-50',
+  };
+
   return (
     <button
-      type='button'
-      className={[
-        baseClasses,
-        sizeClasses[size],
-        variantClasses[variant],
-        disabled ? 'opacity-50 cursor-not-allowed' : '',
-        className,
-      ].join(' ')}
+      type={type}
       onClick={onClick}
       disabled={disabled}
+      className={`${baseClasses} ${variantClasses[variant]} ${className}`}
     >
-      <span>{text}</span>
-      {iconRight && <span className='ml-2'>{iconRight}</span>}
+      {text}
+      {icon && <span className='ml-2'>{icon}</span>}
     </button>
   );
 };

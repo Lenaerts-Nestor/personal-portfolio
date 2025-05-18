@@ -1,14 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
-import { Home } from '../pages/home';
-import { About } from '../pages/about';
+import HomePage from '../pages/home'; // Changed to default import
 import { Blog } from '../pages/blog';
 
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/Home' element={<Home />} />
-      <Route path='/About' element={<About />} />
+      <Route path='/' element={<HomePage />} /> // Changed to HomePage
+      <Route path='/Home' element={<HomePage />} /> // Changed to HomePage
       <Route path='/Blog' element={<Blog />} />
     </Routes>
   );

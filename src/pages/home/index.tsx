@@ -1,14 +1,15 @@
-import { IntroSection } from '../../components/home/sections/main.intro';
-import { TechnologiesSection } from '../../components/home/sections/main.technologies';
-import { ProjectsSection } from '../../components/home/sections/main.projects';
-import { ExperienceSection } from '../../components/home/sections/main.experience';
+import { TechnologiesSection as MainTechnologies } from '../../components/home/sections/skills-section';
+import EducationSection from '../../components/home/sections/education-section';
 import { ScrollToTop } from '../../components/shared/scroll-to-top';
 
 import { useI18n } from '../../components/shared/i18nContext';
 import { Footer } from '../../components/shared/layout/footer';
 import { SectionNavigator } from '../../components/shared/section.navigator';
+import MainProjects from '../../components/home/sections/projects-sections';
+import MainExperience from '../../components/home/sections/experience-section';
+import { IntroSection } from '../../components/home/sections/intro-section';
 
-export const Home = () => {
+const HomePage = () => {
   const { t } = useI18n();
 
   const sections = [
@@ -16,15 +17,17 @@ export const Home = () => {
     { id: 'technologies', label: t('navigation.skills') },
     { id: 'projects', label: t('navigation.projects') },
     { id: 'experience', label: t('navigation.experience') },
+    { id: 'education', label: t('navigation.education') },
   ];
 
   return (
     <>
       <main>
         <IntroSection />
-        <TechnologiesSection />
-        <ProjectsSection />
-        <ExperienceSection />
+        <MainTechnologies />
+        <MainProjects />
+        <MainExperience />
+        <EducationSection />
       </main>
       <Footer />
       <ScrollToTop />
@@ -32,3 +35,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default HomePage;

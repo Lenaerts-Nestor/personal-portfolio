@@ -17,7 +17,7 @@
     "comingSoon": "Coming soon...",
     "quickOverview": "Quick Overview",
     "internshipDetails": "Internship Details",
-    "technologies": "Technologies",
+    "technologies": "Skills & Competencies",
     "projects": "Projects",
     "position": "Position",
     "duration": "Duration",
@@ -27,7 +27,7 @@
     "otherExperienceTitle": "Other Professional Experience",
     "coreSkillsTitle": "Core Skills",
     "educationTitle": "Education",
-    "techDescription": "My core technical stack, ready for building and maintaining applications.",
+    "techDescription": "Technical expertise and professional qualities I bring to development projects",
     "projectsDescription": "Explore a selection of my key projects, showcasing practical application of my technical skills and problem-solving abilities, including work from my recent software development internship.",
     "experienceDescription": "My professional journey in the tech industry so far, highlighting relevant development work and other valuable experience.",
     "skillsDescription": "Key technical and soft skills I bring to development projects, honed during my studies and practical internship experience.",
@@ -94,6 +94,8 @@
         ]
       }
     ],
+    "technicalSkills": "Technical Skills",
+    "professionalSkills": "Professional Skills",
     "blogButton": "Read Internship Blog",
     "aboutButton": "About Me",
     "scrollDown": "Scroll down to explore more"
@@ -146,7 +148,27 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Database",
-      "tools": "Tools"
+      "tools": "Tools",
+      "javascript": "JavaScript (ES6+)",
+      "typescript": "TypeScript",
+      "react": "React",
+      "nodejs": "Node.js",
+      "fastify": "Fastify",
+      "postgresql": "PostgreSQL",
+      "drizzleOrm": "Drizzle ORM",
+      "restfulApis": "RESTful APIs",
+      "html5": "HTML5",
+      "css3": "CSS3",
+      "gitGithub": "Git & GitHub",
+      "azure": "Azure (Basic Deployment)",
+      "agileMethodologies": "Agile Methodologies",
+      "problemSolving": "Problem Solving",
+      "effectiveCommunication": "Effective Communication",
+      "teamCollaboration": "Team Collaboration",
+      "continuousLearning": "Continuous Learning & Adaptability",
+      "attentionToDetail": "Attention to Detail",
+      "timeManagement": "Time Management",
+      "proactiveEager": "Proactive & Eager to Contribute"
     },
     "workStyle": {
       "title": "My Work Style",
@@ -253,5 +275,22 @@
   "experience": {
     "downloadResume": "Download Resume"
   },
-  "toggleLanguage": "Toggle language"
+  "toggleLanguage": "Toggle language",
+  "education": {
+    "title": "Education",
+    "subtitle": "My formal education in information technology",
+    "degree": "Graduate, Information Technology (Programming)",
+    "institution": "AP Hogeschool Antwerpen",
+    "duration": "Sep 2023 - Jun 2025 (Expected)",
+    "courseworkTitle": "Relevant Coursework:",
+    "coursework": {
+      "webDevelopment": "Web Development (HTML, CSS, JavaScript, React)",
+      "backendDevelopment": "Backend Development (Node.js, C#, .NET)",
+      "databaseDesign": "Database Design & Management",
+      "systemAdministration": "System Administration",
+      "softwareEngineering": "Software Engineering Principles",
+      "agileDevelopment": "Agile Development Methodologies"
+    },
+    "description": "My education provided a strong foundation in both theoretical concepts and practical application of software development principles, preparing me for real-world challenges."
+  }
 }

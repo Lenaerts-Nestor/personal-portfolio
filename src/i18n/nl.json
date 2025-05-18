@@ -17,7 +17,7 @@
     "comingSoon": "Binnenkort beschikbaar...",
     "quickOverview": "Snel overzicht",
     "internshipDetails": "Stagedetails",
-    "technologies": "Technologieën",
+    "technologies": "Vaardigheden & Competenties",
     "projects": "Projecten",
     "position": "Positie",
     "duration": "Looptijd",
@@ -27,11 +27,13 @@
     "otherExperienceTitle": "Overige Professionele Ervaring",
     "coreSkillsTitle": "Kernvaardigheden",
     "educationTitle": "Opleiding",
-    "techDescription": "Mijn voornaamste technische stack, waarmee ik klaar ben om applicaties te bouwen en te onderhouden.",
+    "techDescription": "Technische expertise en professionele kwaliteiten die ik meebreng naar ontwikkelingsprojecten",
     "projectsDescription": "Ontdek een selectie van mijn belangrijkste projecten, die de praktische toepassing van mijn technische vaardigheden en probleemoplossend vermogen demonstreren, inclusief werk uit mijn recente softwareontwikkelingstage.",
     "experienceDescription": "Mijn professionele reis in de techindustrie tot nu toe, met nadruk op relevante ontwikkelervaring en andere waardevolle werkervaring.",
     "skillsDescription": "Belangrijke technische en zachte vaardigheden die ik bijdraag aan ontwikkelingsprojecten, aangescherpt tijdens mijn studies en praktische stage-ervaring.",
     "educationDescription": "Mijn formele opleiding in informatica.",
+    "technicalSkills": "Technische Vaardigheden",
+    "professionalSkills": "Professionele Vaardigheden",
     "positions": {
       "fullStackDevIntern": "Software Ontwikkel Stagiair",
       "ictSupport": "ICT Support Specialist"
@@ -53,14 +55,21 @@
       "digipolis": "Bood ICT-ondersteuning, waarbij ik basiservaring opdeed met systeeminstellingen, netwerkhulp en probleemoplossing in een professionele IT-omgeving. Ontwikkelde sterke communicatie- en klantgerichte vaardigheden."
     },
     "education": {
+      "title": "Opleiding",
+      "subtitle": "Mijn formele opleiding in informatietechnologie",
       "degree": "Graduaat, Informatica (Programmeren)",
-      "school": "AP Hogeschool Antwerpen",
+      "institution": "AP Hogeschool Antwerpen",
       "duration": "Sep 2023 - Jun 2025 (Verwacht)",
-      "courses": "Relevante vakken:",
-      "courseList": {
-        "web": "Webontwikkeling",
-        "systems": "Systeembeheer"
-      }
+      "courseworkTitle": "Relevante Cursussen:",
+      "coursework": {
+        "webDevelopment": "Webontwikkeling (HTML, CSS, JavaScript, React)",
+        "backendDevelopment": "Backendontwikkeling (Node.js, C#, .NET)",
+        "databaseDesign": "Databaseontwerp & -beheer",
+        "systemAdministration": "Systeembeheer",
+        "softwareEngineering": "Software Engineering Principes",
+        "agileDevelopment": "Agile Ontwikkelingsmethodologieën"
+      },
+      "description": "Mijn opleiding bood een sterke basis in zowel theoretische concepten als praktische toepassing van softwareontwikkelingsprincipes, en bereidde me voor op uitdagingen in de echte wereld."
     },
     "skillsCategories": [
       {
@@ -252,6 +261,28 @@
   },
   "experience": {
     "downloadResume": "Download CV"
+  },
+  "skills": {
+    "javascript": "JavaScript (ES6+)",
+    "typescript": "TypeScript",
+    "react": "React",
+    "nodejs": "Node.js",
+    "fastify": "Fastify",
+    "postgresql": "PostgreSQL",
+    "drizzleOrm": "Drizzle ORM",
+    "restfulApis": "RESTful API's",
+    "html5": "HTML5",
+    "css3": "CSS3",
+    "gitGithub": "Git & GitHub",
+    "azure": "Azure (Basis Deployment)",
+    "agileMethodologies": "Agile Methodologieën",
+    "problemSolving": "Probleemoplossend Vermogen",
+    "effectiveCommunication": "Effectieve Communicatie",
+    "teamCollaboration": "Team Samenwerking",
+    "continuousLearning": "Continu Leren & Aanpassingsvermogen",
+    "attentionToDetail": "Oog voor Detail",
+    "timeManagement": "Tijdbeheer",
+    "proactiveEager": "Proactief & Leergierig om Bij te Dragen"
   },
   "toggleLanguage": "Taal wisselen"
 }

@@ -1,10 +1,11 @@
 'use client';
 
+import { motion } from 'framer-motion';
+
+import { Download, ArrowRight } from 'lucide-react';
+import { gradientTextClasses } from '../../../style/style';
 import { CustomButton } from '../../shared/button';
 import { useI18n } from '../../shared/i18nContext';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { gradientTextClasses } from '../../../style/style';
 
 export const IntroSection = () => {
   const { t } = useI18n();
@@ -17,51 +18,89 @@ export const IntroSection = () => {
       <div className='max-w-6xl mx-auto px-4'>
         <div className='grid md:grid-cols-2 gap-12 items-center'>
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className='text-left'
           >
             <motion.h1
               className={`text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl ${gradientTextClasses} mb-6`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5 }}
             >
-              {t('home.welcome')}
+              Full-Stack Developer with React & Node.js Expertise
             </motion.h1>
 
             <motion.p
-              className='mt-6 text-lg leading-8 text-gray-600 mb-10'
+              className='mt-6 text-lg leading-8 text-gray-600 mb-6'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
-              {t('home.description')}
+              Junior developer with hands-on experience in building modern web
+              applications. I combine technical skills with strong
+              problem-solving abilities to deliver clean, efficient code and
+              exceptional user experiences.
             </motion.p>
+
+            <motion.div
+              className='space-y-4 mb-6'
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className='flex items-center'>
+                <span className='bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full mr-2'>
+                  React
+                </span>
+                <span className='bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mr-2'>
+                  TypeScript
+                </span>
+                <span className='bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full mr-2'>
+                  Node.js
+                </span>
+                <span className='bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full'>
+                  PostgreSQL
+                </span>
+              </div>
+              <p className='text-gray-600'>
+                Based in Belgium • Available for full-time positions • Open to
+                relocation
+              </p>
+            </motion.div>
 
             <motion.div
               className='flex flex-col sm:flex-row gap-4'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Link to='/Blog'>
-                <CustomButton text={t('home.blogButton')} variant='primary' />
-              </Link>
-              <Link to='/About'>
+              <a
+                href='/resume.pdf'
+                download
+                className='inline-flex items-center'
+              >
                 <CustomButton
-                  text={t('home.aboutButton')}
-                  variant='secondary'
+                  text='Download CV'
+                  variant='primary'
+                  icon={<Download className='w-4 h-4 ml-2' />}
                 />
-              </Link>
+              </a>
+              <a href='#projects'>
+                <CustomButton
+                  text='View Projects'
+                  variant='secondary'
+                  icon={<ArrowRight className='w-4 h-4 ml-2' />}
+                />
+              </a>
             </motion.div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className='relative hidden md:block'
           >
             <div className='absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-3xl transform rotate-3'></div>
@@ -91,39 +130,6 @@ export const IntroSection = () => {
             </div>
           </motion.div>
         </div>
-
-        <motion.div
-          className='absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden md:block'
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            delay: 1,
-            repeat: Number.POSITIVE_INFINITY,
-            repeatType: 'reverse',
-            repeatDelay: 0.5,
-          }}
-        >
-          <div className='flex flex-col items-center'>
-            <span className='text-sm text-gray-500 mb-2'>
-              {t('home.scrollDown')}
-            </span>
-            <svg
-              className='w-6 h-6 text-indigo-600'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M19 14l-7 7m0 0l-7-7m7 7V3'
-              />
-            </svg>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
