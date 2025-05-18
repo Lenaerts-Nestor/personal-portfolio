@@ -1,10 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Download, ArrowRight } from 'lucide-react';
-import { gradientTextClasses } from '../../../style/style';
-import { CustomButton } from '../../shared/button';
-import { useI18n } from '../../shared/i18nContext';
+import {
+  Download,
+  ArrowRight,
+  Code,
+  GraduationCap,
+  FolderKanban,
+  Briefcase,
+} from 'lucide-react';
+import { gradientTextClasses } from '../../style/style';
+import { CustomButton } from '../shared/button';
+import { useI18n } from '../shared/i18nContext';
 
 export const IntroSection = () => {
   const { t } = useI18n();
@@ -44,29 +51,43 @@ export const IntroSection = () => {
               opportunities across Europe.
             </motion.p>
 
+            {/* Section Navigation Buttons */}
             <motion.div
-              className='flex flex-col sm:flex-row gap-4'
+              className='grid grid-cols-2 md:grid-cols-4 gap-3 mb-8'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <a
-                href='/resume.pdf'
-                download
-                className='inline-flex items-center'
+                href='#technologies'
+                className='flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium'
               >
-                <CustomButton
-                  text='Download CV'
-                  variant='primary'
-                  icon={<Download className='w-4 h-4 ml-2' />}
-                />
+                <Code className='w-4 h-4' />
+                <span>My Skills</span>
               </a>
-              <a href='#projects'>
-                <CustomButton
-                  text='View Projects'
-                  variant='secondary'
-                  icon={<ArrowRight className='w-4 h-4 ml-2' />}
-                />
+
+              <a
+                href='#projects'
+                className='flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium'
+              >
+                <FolderKanban className='w-4 h-4' />
+                <span>My Projects</span>
+              </a>
+
+              <a
+                href='#experience'
+                className='flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium'
+              >
+                <Briefcase className='w-4 h-4' />
+                <span>My Experience</span>
+              </a>
+
+              <a
+                href='#education'
+                className='flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium'
+              >
+                <GraduationCap className='w-4 h-4' />
+                <span>My Education</span>
               </a>
             </motion.div>
           </motion.div>

@@ -3,8 +3,8 @@
 import type React from 'react';
 import { GraduationCap, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useI18n } from '../../shared/i18nContext';
-import { SectionHeading } from '../../shared/layout/section-heading';
+import { useI18n } from '../shared/i18nContext';
+import { SectionHeading } from '../shared/layout/section-heading';
 
 const EducationSection: React.FC = () => {
   const { t } = useI18n();

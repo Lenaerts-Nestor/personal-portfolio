@@ -4,8 +4,8 @@ import type React from 'react';
 import { GraduationCap } from 'lucide-react';
 
 import { motion } from 'framer-motion';
-import { useI18n } from '../../shared/i18nContext';
-import { SectionHeading } from '../../shared/layout/section-heading';
+import { useI18n } from '../shared/i18nContext';
+import { SectionHeading } from '../shared/layout/section-heading';
 
 interface EducationEntry {
   degreeKey: string;

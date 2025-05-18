@@ -1,14 +1,14 @@
-import { TechnologiesSection as MainTechnologies } from '../../components/home/sections/skills-section';
-import EducationSection from '../../components/home/sections/education-section';
+import { TechnologiesSection as MainTechnologies } from '../../components/home/skills-section';
+import EducationSection from '../../components/home/education-section';
 import { ScrollToTop } from '../../components/shared/scroll-to-top';
 
 import { useI18n } from '../../components/shared/i18nContext';
 import { Footer } from '../../components/shared/layout/footer';
 import { SectionNavigator } from '../../components/shared/section.navigator';
-import MainProjects from '../../components/home/sections/projects-sections';
-import MainExperience from '../../components/home/sections/experience-section';
-import { IntroSection } from '../../components/home/sections/intro-section';
-import EducationSectionWrapper from '../../components/home/sections/education-section-wrapper';
+import MainProjects from '../../components/home/projects-sections';
+import MainExperience from '../../components/home/experience-section';
+import { IntroSection } from '../../components/home/intro-section';
+import EducationSectionWrapper from '../../components/home/education-section-wrapper';
 
 const HomePage = () => {
   const { t } = useI18n();
