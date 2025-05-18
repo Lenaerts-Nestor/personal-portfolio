@@ -117,7 +117,44 @@
     "methodsApproach": "Balans tussen Innovatie en Fundamenten",
     "methodsText1": "Ik bouw mijn kennis op door continu nieuwe technologieën te leren en tegelijkertijd mijn begrip van fundamentele programmeerprincipes en gevestigde best practices te verdiepen. Deze aanpak helpt me een balans te vinden tussen het verkennen van innovatie en het effectief toepassen van bewezen oplossingen.",
     "methodsLearning": "Gestructureerd Leren & Praktische Toepassing",
-    "methodsText2": "Mijn leerproces wordt geleid door fundamentele boeken zoals ‘Clean Code’, 'Head First Design Patterns', en ‘Don’t Make Me Think’, gecombineerd met praktische projectwerk en het benutten van AI-gestuurde leermethoden voor ondersteuning en exploratie. Mijn constante doel is het verbeteren van codekwaliteit, onderhoudbaarheid en algehele ontwikkelingsefficiëntie."
+    "methodsText2": "Mijn leerproces wordt geleid door fundamentele boeken zoals ‘Clean Code’, 'Head First Design Patterns’, en ‘Don’t Make Me Think’, gecombineerd met praktische projectwerk en het benutten van AI-gestuurde leermethoden voor ondersteuning en exploratie. Mijn constante doel is het verbeteren van codekwaliteit, onderhoudbaarheid en algehele ontwikkelingsefficiëntie.",
+    "subtitle": "Mijn reis, vaardigheden en ambities als ontwikkelaar.",
+    "contactTitle": "Contact",
+    "contactEmail": "contact@example.com",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cvDownloadTitle": "CV Downloaden",
+    "cvDownloadButton": "Download CV",
+    "eyeOnAi": {
+      "title": "Mijn Kijk op AI",
+      "subheading1Title": "AI Slim Inzetten",
+      "subheading1Text": "Ik zie AI als een handige hulp bij het programmeren: ideaal voor suggesties en het opsporen van fouten, terwijl ik zelf de controle en het begrip over mijn projecten behoud.",
+      "subheading2Title": "Hoe Ik Het Gebruik",
+      "subheading2Text": "Ik gebruik AI vooral voor code-suggesties, het verbeteren van bestaande oplossingen en het schrijven van documentatie. Ik ben altijd voorzichtig met privacy en deel nooit gevoelige code of data."
+    },
+    "goals": {
+      "title": "Mijn Doelen",
+      "paragraph1": "Ik wil een fullstack developer worden die bestaande systemen onderhoudt en optimaliseert. Mijn focus ligt op het verbeteren van efficiëntie en functionaliteit, in plaats van altijd nieuwe technologieën te bouwen.",
+      "quote": "Het draait niet alleen om nieuwe features maken, maar om bestaande systemen toekomstbestendig en onderhoudsvriendelijk te houden."
+    },
+    "learningTrajectory": {
+      "title": "Mijn Leertraject",
+      "paragraph1": "Ik studeer momenteel Programmeren aan AP Hogeschool, waar ik zowel frontend als backend ontwikkeling leer. Hoewel ik backend-werk het leukst vind, werk ik ook hard aan mijn frontend-vaardigheden om complete applicaties te kunnen bouwen."
+    },
+    "skills": {
+      "title": "Vaardigheden",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools"
+    },
+    "workStyle": {
+      "title": "Mijn Werkwijze",
+      "subheading1Title": "Kennis Opbouwen",
+      "subheading1Text": "Ik doe dit door zowel nieuwe technologieën te leren als mijn bestaande kennis te verdiepen. Het draait om een balans tussen innovatie en de praktische toepassing van bewezen oplossingen.",
+      "subheading2Title": "Leermethode",
+      "subheading2Text": "Ik leer met behulp van boeken als 'Clean Code', 'Head First Design Patterns' en 'Don\\'t Make Me Think', gecombineerd met AI-gestuurde leermethodes. Ik zoek altijd naar manieren om de codekwaliteit en onderhoudbaarheid te verbeteren."
+    }
   },
   "footer": {
     "about": "Over",

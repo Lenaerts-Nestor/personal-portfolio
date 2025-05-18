@@ -117,7 +117,44 @@
     "methodsApproach": "Balancing Innovation and Foundations",
     "methodsText1": "I build my knowledge base by continuously learning new technologies while simultaneously deepening my understanding of fundamental programming principles and established best practices. This approach helps me find a balance between exploring innovation and applying proven solutions effectively.",
     "methodsLearning": "Structured Learning & Practical Application",
-    "methodsText2": "I learn through books like ‘Clean Code’, 'Head First Design Patterns', and ‘Don’t Make Me Think’, combined with hands-on project work and leveraging AI-driven learning methods for support and exploration. My constant aim is to improve code quality, maintainability, and overall development efficiency."
+    "methodsText2": "I learn through books like ‘Clean Code’, 'Head First Design Patterns', and ‘Don’t Make Me Think’, combined with hands-on project work and leveraging AI-driven learning methods for support and exploration. My constant aim is to improve code quality, maintainability, and overall development efficiency.",
+    "subtitle": "My journey, skills, and aspirations as a developer.",
+    "contactTitle": "Contact",
+    "contactEmail": "contact@example.com",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cvDownloadTitle": "CV Download",
+    "cvDownloadButton": "Download CV",
+    "eyeOnAi": {
+      "title": "My View on AI",
+      "subheading1Title": "Using AI Smartly",
+      "subheading1Text": "I see AI as a helpful tool in programming: ideal for suggestions and error detection, while I maintain control and understanding of my projects.",
+      "subheading2Title": "How I Use It",
+      "subheading2Text": "I primarily use AI for code suggestions, improving existing solutions, and writing documentation. I am always cautious about privacy and never share sensitive code or data."
+    },
+    "goals": {
+      "title": "My Goals",
+      "paragraph1": "I aim to become a full-stack developer who maintains and optimizes existing systems. My focus is on improving efficiency and functionality, rather than always building new technologies.",
+      "quote": "It's not just about creating new features, but about keeping existing systems future-proof and maintainable."
+    },
+    "learningTrajectory": {
+      "title": "My Learning Trajectory",
+      "paragraph1": "I am currently studying Programming at AP University College, where I learn both frontend and backend development. Although I enjoy backend work the most, I also work hard on my frontend skills to be able to build complete applications."
+    },
+    "skills": {
+      "title": "Skills",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools"
+    },
+    "workStyle": {
+      "title": "My Work Style",
+      "subheading1Title": "Building Knowledge",
+      "subheading1Text": "I do this by learning new technologies as well as deepening my existing knowledge. It's about a balance between innovation and the practical application of proven solutions.",
+      "subheading2Title": "Learning Method",
+      "subheading2Text": "I learn using books like 'Clean Code', 'Head First Design Patterns', and 'Don\\'t Make Me Think', combined with AI-driven learning methods. I always look for ways to improve code quality and maintainability."
+    }
   },
   "footer": {
     "about": "About",

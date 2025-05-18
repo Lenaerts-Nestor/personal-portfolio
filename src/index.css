@@ -118,3 +118,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+/* Fix for section titles being cut off */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 0.25rem;
+  line-height: 1.2;
+}
