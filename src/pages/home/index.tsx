@@ -8,6 +8,7 @@ import { SectionNavigator } from '../../components/shared/section.navigator';
 import MainProjects from '../../components/home/sections/projects-sections';
 import MainExperience from '../../components/home/sections/experience-section';
 import { IntroSection } from '../../components/home/sections/intro-section';
+import EducationSectionWrapper from '../../components/home/sections/education-section-wrapper';
 
 const HomePage = () => {
   const { t } = useI18n();
@@ -27,7 +28,7 @@ const HomePage = () => {
         <MainTechnologies />
         <MainProjects />
         <MainExperience />
-        <EducationSection />
+        <EducationSectionWrapper />
       </main>
       <Footer />
       <ScrollToTop />

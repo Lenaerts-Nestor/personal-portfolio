@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
 import { Download, ArrowRight } from 'lucide-react';
 import { gradientTextClasses } from '../../../style/style';
 import { CustomButton } from '../../shared/button';
@@ -33,7 +32,7 @@ export const IntroSection = () => {
             </motion.h1>
 
             <motion.p
-              className='mt-6 text-lg leading-8 text-gray-600 mb-6'
+              className='mt-6 text-lg leading-8 text-gray-600 mb-8'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -41,34 +40,9 @@ export const IntroSection = () => {
               Junior developer with hands-on experience in building modern web
               applications. I combine technical skills with strong
               problem-solving abilities to deliver clean, efficient code and
-              exceptional user experiences.
+              exceptional user experiences. Based in Belgium and available for
+              opportunities across Europe.
             </motion.p>
-
-            <motion.div
-              className='space-y-4 mb-6'
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <div className='flex items-center'>
-                <span className='bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full mr-2'>
-                  React
-                </span>
-                <span className='bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mr-2'>
-                  TypeScript
-                </span>
-                <span className='bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full mr-2'>
-                  Node.js
-                </span>
-                <span className='bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full'>
-                  PostgreSQL
-                </span>
-              </div>
-              <p className='text-gray-600'>
-                Based in Belgium • Available for full-time positions • Open to
-                relocation
-              </p>
-            </motion.div>
 
             <motion.div
               className='flex flex-col sm:flex-row gap-4'
@@ -101,32 +75,14 @@ export const IntroSection = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className='relative hidden md:block'
+            className='relative hidden md:flex justify-center items-center'
           >
-            <div className='absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-3xl transform rotate-3'></div>
-            <div className='relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100'>
-              <div className='flex items-center mb-6'>
-                <div className='w-3 h-3 bg-red-500 rounded-full mr-2'></div>
-                <div className='w-3 h-3 bg-yellow-500 rounded-full mr-2'></div>
-                <div className='w-3 h-3 bg-green-500 rounded-full'></div>
-              </div>
-
-              <div className='space-y-4'>
-                <div className='h-6 bg-gray-100 rounded-md w-3/4'></div>
-                <div className='h-6 bg-gray-100 rounded-md'></div>
-                <div className='h-6 bg-gray-100 rounded-md w-5/6'></div>
-                <div className='h-6 bg-indigo-100 rounded-md w-1/2'></div>
-
-                <div className='pt-4'>
-                  <div className='h-24 bg-purple-100 rounded-md'></div>
-                </div>
-
-                <div className='space-y-2'>
-                  <div className='h-4 bg-gray-100 rounded-md w-5/6'></div>
-                  <div className='h-4 bg-gray-100 rounded-md'></div>
-                  <div className='h-4 bg-gray-100 rounded-md w-3/4'></div>
-                </div>
-              </div>
+            <div className='w-80 h-80 rounded-full bg-indigo-100 border-4 border-white shadow-xl overflow-hidden flex items-center justify-center'>
+              <img
+                src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7zwDG7AheP5bFHrvDtRpJZ3q1ZBU74.png'
+                alt='Profile'
+                className='w-full h-full object-cover'
+              />
             </div>
           </motion.div>
         </div>

@@ -44,23 +44,26 @@
       "amotek": "Feb 2024 - Jun 2024",
       "digipolis": "Aug 2024 - Sep 2024"
     },
+    "experienceTypes": {
+      "internship": "Internship",
+      "temporaryContract": "Temporary Contract"
+    },
     "locations": {
-      "hybrid": "Hybrid · Internship",
-      "antwerp": "Antwerpen, Belgium · Temporary Contract"
+      "hybridAntwerpInternship": "Hybrid · Internship",
+      "antwerpContract": "Antwerpen, Belgium · Temporary Contract"
     },
     "experienceDescriptions": {
-      "amotek": "Completed a full-stack software development internship, working on the AmoTrack project. Gained hands-on experience building features using React (frontend) and Fastify with PostgreSQL/Drizzle (backend). Involved in the full development lifecycle, including contributing to architecture discussions and utilizing modern development workflows.",
+      "amotek": "Completed a full-stack software development internship, working on the AmoTrack project. Gained hands-on experience building features using React (frontend) and Fastify with PostgreSQL/Drizzle (backend). Involved in the full development lifecycle, including contributing to architecture discussions and utilizing modern development workflows. This internship also served as my final project for my Graduaat.",
       "digipolis": "Provided ICT support, gaining foundational experience in system setup, network assistance, and problem-solving in a professional IT environment. Developed strong communication and client interaction skills."
     },
     "education": {
-      "degree": "Graduate, Information Technology (Programming)",
-      "school": "AP Hogeschool Antwerpen",
-      "duration": "Sep 2023 - Jun 2025 (Expected)",
-      "courses": "Relevant Courses:",
-      "courseList": {
-        "web": "Web Development",
-        "systems": "System Administration"
-      }
+      "title": "Education Summary",
+      "graduaatDegree": "Graduaat Programmeren",
+      "institution": "AP Hogeschool Antwerpen",
+      "graduaatPeriod": "Sep 2023 - Jun 2025 (Expected)",
+      "bachelorDegree": "Bachelor Toegepaste Informatica",
+      "bachelorPeriod": "Sep 2020 - Jun 2022 (Not completed)",
+      "description": "Details about my educational background, including key coursework and my learning journey, are available on the About page."
     },
     "skillsCategories": [
       {
@@ -78,7 +81,9 @@
           "CSS3",
           "Git & GitHub",
           "Azure (Basic Deployment)",
-          "Agile Methodologies"
+          "Agile Methodologies",
+          "C#",
+          ".NET"
         ]
       },
       {
@@ -101,50 +106,91 @@
     "scrollDown": "Scroll down to explore more"
   },
   "about": {
-    "title": "About Me: Junior Full-Stack & Backend Developer",
-    "educationTitle": "My Learning Journey",
-    "educationText": "I am currently completing my Graduate Programming degree at AP Hogeschool, building a strong foundation in both frontend and backend development. While I have a strong interest and aptitude for backend logic and architecture, I am also dedicated to strengthening my frontend skills to be able to contribute effectively across the full stack and understand complete application development.",
+    "title": "About Me",
+    "subtitle": "Junior Software Developer | Seeking my first role near Antwerp",
+    "heroIntroSentence": "Recently completed my Graduaat in Programming and gained practical experience through a software development internship.",
+    "education": {
+      "title": "Education",
+      "institution": "AP Hogeschool Antwerpen",
+      "notCompletedStatus": "Not completed",
+      "courseworkTitle": "Key Coursework",
+      "courseworkTitleDefault": "Key Coursework",
+      "graduaat": {
+        "degree": "Graduaat Programmeren",
+        "period": "September 2023 - June 2025 (Expected)",
+        "description": "Currently completing this practical degree, focusing on hands-on software development.",
+        "coursework": {
+          "itEssentials": "IT Essentials (3 SP)",
+          "projectSkills": "Projectvaardigheden (3 SP)",
+          "basicProgramming": "Basis programmeren (6 SP)",
+          "databases": "Databanken (6 SP)",
+          "cloudSystems": "Cloudsystemen (6 SP)",
+          "ooProgramming": "OO programmeren (9 SP)",
+          "webDevelopment": "Webontwikkeling (9 SP)",
+          "webTechnology": "Webtechnologie (9 SP)",
+          "wplExploration": "WPL exploratie (3 SP)",
+          "wplProject": "WPL project (6 SP)",
+          "proWorkplaces": "PRO werkplekleren (30 SP)",
+          "webFrameworks": "Web frameworks (9 SP)",
+          "apiDevelopment": "API ontwikkeling (6 SP)",
+          "testingSecurity": "Testing & security (3 SP)",
+          "wplCase": "WPL case (12 SP)"
+        }
+      },
+      "bachelor": {
+        "degree": "Bachelor Toegepaste Informatica",
+        "period": "September 2020 - June 2022",
+        "description": "Studied applied computer science, building a foundational understanding.",
+        "coursework": {
+          "programmingPrinciples": "Programming principles (6 SP)",
+          "databases": "Databases (3 SP)",
+          "webTechnology": "Web technology (3 SP)",
+          "dataNetworks": "Data networks (3 SP)",
+          "linux": "Linux (3 SP)",
+          "digitalFundamentals": "Digital fundamentals (3 SP)",
+          "businessProcesses": "Business processes (3 SP)",
+          "iotExperiments": "IoT experiments (3 SP)",
+          "webProgramming": "Web programming (6 SP)",
+          "discoverIT": "Discover IT (3 SP)",
+          "analysis": "Analysis (3 SP)",
+          "communication": "Communication (3 SP)",
+          "cyberSecurity": "Cyber security (3 SP)",
+          "dataStructures": "Data structures (3 SP)",
+          "databaseProgramming": "Database programming (3 SP)",
+          "routingSwitching": "Routing & switching (3 SP)",
+          "netOOP": ".NET OOP (3 SP)",
+          "softwareDesign": "Software design",
+          "uxDesign": "UX Design",
+          "introMobile": "Intro mobile",
+          "devOps": "DevOps"
+        },
+        "note": "Due to challenging circumstances at the time, including the impact of the global pandemic, I made the decision to switch to the more practically oriented Graduaat program."
+      },
+      "potentialNote": "While I did not complete the Bachelor degree, the foundational knowledge and experience I gained during that period were significant and contributed greatly to my development and readiness for a career in software development."
+    },
+    "internship": {
+      "title": "Internship Experience",
+      "paragraph1": "I recently completed a [Duration, e.g., 3-month] software development internship at [Company Name or 'a software company'] where I worked on [mention project name, e.g., the AmoTrack project]. This hands-on experience allowed me to directly apply and expand my skills in a professional agile environment.",
+      "paragraph2": "I contributed across the full stack, developing features using [list key frontend tech, e.g., React] for the user interface and building robust backend functionality with [list key backend tech, e.g., Fastify and PostgreSQL/Drizzle]. Key responsibilities included [mention 1-2 specific, impactful tasks, e.g., implementing REST API endpoints, contributing to database schema design, writing unit tests].",
+      "conclusion": "This internship served as my final project for my Graduaat and provided invaluable exposure to modern development workflows, team collaboration, code reviews, and deploying applications (e.g., basic Azure deployment)."
+    },
+    "learningApproach": {
+      "title": "Learning Approach & Motivation",
+      "paragraph1": "I am a highly motivated and adaptable learner, constantly seeking to deepen my understanding of software development. I am particularly passionate about building reliable and efficient backend systems, but I am also dedicated to developing my frontend skills to be a versatile full-stack contributor.",
+      "paragraph2": "My learning style is hands-on and proactive. I complement structured education with self-driven exploration through building personal projects and engaging with online resources and documentation. I actively seek out best practices and learn from established materials like 'Clean Code' and 'Don’t Make Me Think'.",
+      "paragraph3": "I see AI as a valuable tool to enhance productivity and learning, using it for code suggestions and debugging support while always maintaining control and understanding of the code. I am eager to learn new technologies, refactor code for clarity and efficiency, and grow within a team environment."
+    },
     "languagesTitle": "Languages I Speak",
     "languagesText": "As a native Spanish speaker, fluent in Dutch, and comfortable working in English, I am well-equipped for collaboration in diverse, international teams and able to easily access and understand technical resources in multiple languages.",
-    "aiTitle": "My Approach to AI in Development",
-    "aiPhilosophy": "Using AI Smartly and Responsibly",
-    "aiPhilosophyText": "I view AI as a powerful tool that can enhance developer productivity—excellent for suggesting code improvements, identifying potential issues, and accelerating routine tasks—while emphasizing that the developer must retain full control, understanding, and responsibility for the final code.",
-    "aiApproach": "How I Use It in Practice",
-    "aiApproachText": "My primary uses for AI include generating code suggestions, refining existing code solutions, and assisting with documentation and explanations. I strictly adhere to best practices regarding data privacy and intellectual property, ensuring no private or sensitive project code is shared with AI tools.",
-    "aiExample": "For instance, while developing this portfolio, I utilized AI for initial layout ideas and debugging support, but all architectural decisions, code implementation, and final content were entirely my own work.",
-    "goalsTitle": "My Career Goals",
-    "goalsText": "I aspire to become a proficient Full-Stack Developer, with a particular interest in backend systems. My focus extends beyond just building new features; I am keen on maintaining, optimizing, and ensuring the long-term health and efficiency of existing systems. This includes writing clean, maintainable code and contributing to robust architectures.",
-    "goalsPhilosophy": "Contributing to the longevity and reliability of software is as crucial as its initial creation. I value future-proof design and maintainable codebases.",
-    "methodsTitle": "My Methods and Learning Approach",
-    "methodsApproach": "Balancing Innovation and Foundations",
-    "methodsText1": "I build my knowledge base by continuously learning new technologies while simultaneously deepening my understanding of fundamental programming principles and established best practices. This approach helps me find a balance between exploring innovation and applying proven solutions effectively.",
-    "methodsLearning": "Structured Learning & Practical Application",
-    "methodsText2": "I learn through books like ‘Clean Code’, 'Head First Design Patterns', and ‘Don’t Make Me Think’, combined with hands-on project work and leveraging AI-driven learning methods for support and exploration. My constant aim is to improve code quality, maintainability, and overall development efficiency.",
-    "subtitle": "My journey, skills, and aspirations as a developer.",
-    "contactTitle": "Contact",
-    "contactEmail": "contact@example.com",
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "cvDownloadTitle": "CV Download",
-    "cvDownloadButton": "Download CV",
-    "eyeOnAi": {
-      "title": "My View on AI",
-      "subheading1Title": "Using AI Smartly",
-      "subheading1Text": "I see AI as a helpful tool in programming: ideal for suggestions and error detection, while I maintain control and understanding of my projects.",
-      "subheading2Title": "How I Use It",
-      "subheading2Text": "I primarily use AI for code suggestions, improving existing solutions, and writing documentation. I am always cautious about privacy and never share sensitive code or data."
-    },
-    "goals": {
-      "title": "My Goals",
-      "paragraph1": "I aim to become a full-stack developer who maintains and optimizes existing systems. My focus is on improving efficiency and functionality, rather than always building new technologies.",
-      "quote": "It's not just about creating new features, but about keeping existing systems future-proof and maintainable."
-    },
-    "learningTrajectory": {
-      "title": "My Learning Trajectory",
-      "paragraph1": "I am currently studying Programming at AP University College, where I learn both frontend and backend development. Although I enjoy backend work the most, I also work hard on my frontend skills to be able to build complete applications."
+    "workStyle": {
+      "title": "My Work Style",
+      "subheading1Title": "Collaboration & Communication",
+      "subheading1Text": "I value open communication and enjoy collaborating with team members. I am comfortable using version control (Git) and participating in code reviews to ensure high-quality code.",
+      "subheading2Title": "Focus on Quality & Maintainability",
+      "subheading2Text": "I strive to write clean, readable, and maintainable code, understanding that software longevity is as important as its initial creation."
     },
     "skills": {
-      "title": "Skills",
+      "title": "Technical Skills Overview",
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Database",
@@ -162,6 +208,12 @@
       "gitGithub": "Git & GitHub",
       "azure": "Azure (Basic Deployment)",
       "agileMethodologies": "Agile Methodologies",
+      "csharp": "C#",
+      "dotnet": ".NET",
+      "mongodb": "MongoDB",
+      "mysql": "MySQL",
+      "docker": "Docker",
+      "vscode": "VS Code",
       "problemSolving": "Problem Solving",
       "effectiveCommunication": "Effective Communication",
       "teamCollaboration": "Team Collaboration",
@@ -170,13 +222,13 @@
       "timeManagement": "Time Management",
       "proactiveEager": "Proactive & Eager to Contribute"
     },
-    "workStyle": {
-      "title": "My Work Style",
-      "subheading1Title": "Building Knowledge",
-      "subheading1Text": "I do this by learning new technologies as well as deepening my existing knowledge. It's about a balance between innovation and the practical application of proven solutions.",
-      "subheading2Title": "Learning Method",
-      "subheading2Text": "I learn using books like 'Clean Code', 'Head First Design Patterns', and 'Don\\'t Make Me Think', combined with AI-driven learning methods. I always look for ways to improve code quality and maintainability."
-    }
+    "contactTitle": "Get in Touch",
+    "contactEmail": "your.email@example.com",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cvDownloadTitle": "Download CV",
+    "cvDownloadButtonText": "Download my CV",
+    "cvDownloadLink": "/path/to/your/cv.pdf"
   },
   "footer": {
     "about": "About",
@@ -238,7 +290,7 @@
       },
       "week9": {
         "title": "Week 9",
-        "overview": "Transitioned back to working on both the frontend and backend of the AmoTrack project after finalizing Amo Style Library tasks. Picked up new tickets assigned by the senior team, focused on implementing new features and updates across the stack. Gained experience with API documentation by creating Swagger specifications.",
+        "overview": "Transitioned back to working on both the frontend and backend of the AmoTrack project after finalizing Amo Style Library tasks. Pick up new tickets assigned by the senior team, focused on implementing new features and updates across the stack. Gained experience with API documentation by creating Swagger specifications.",
         "day": []
       },
       "week10": {
@@ -275,22 +327,5 @@
   "experience": {
     "downloadResume": "Download Resume"
   },
-  "toggleLanguage": "Toggle language",
-  "education": {
-    "title": "Education",
-    "subtitle": "My formal education in information technology",
-    "degree": "Graduate, Information Technology (Programming)",
-    "institution": "AP Hogeschool Antwerpen",
-    "duration": "Sep 2023 - Jun 2025 (Expected)",
-    "courseworkTitle": "Relevant Coursework:",
-    "coursework": {
-      "webDevelopment": "Web Development (HTML, CSS, JavaScript, React)",
-      "backendDevelopment": "Backend Development (Node.js, C#, .NET)",
-      "databaseDesign": "Database Design & Management",
-      "systemAdministration": "System Administration",
-      "softwareEngineering": "Software Engineering Principles",
-      "agileDevelopment": "Agile Development Methodologies"
-    },
-    "description": "My education provided a strong foundation in both theoretical concepts and practical application of software development principles, preparing me for real-world challenges."
-  }
+  "toggleLanguage": "Toggle language"
 }

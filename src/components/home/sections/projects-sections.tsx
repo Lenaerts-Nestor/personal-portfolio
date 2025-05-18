@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import { motion } from 'framer-motion';
 import { FolderKanban, ExternalLink, Github } from 'lucide-react';
 import { projects } from '../../../utils/projectsgroupicon';
@@ -367,30 +366,6 @@ export const ProjectsSection = () => {
               />
             ))}
           </div>
-        </div>
-
-        {/* View all projects button */}
-        <div className='flex justify-center mt-12'>
-          <button
-            onClick={() => navigate('/projects')}
-            className='px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center'
-          >
-            <span>View All Projects</span>
-            <svg
-              className='w-5 h-5 ml-2'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M14 5l7 7m0 0l-7 7m7-7H3'
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </section>
