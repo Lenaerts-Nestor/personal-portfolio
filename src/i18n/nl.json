@@ -36,7 +36,9 @@
     "professionalSkills": "Professionele Vaardigheden",
     "blogButton": "Lees Stage Blog",
     "aboutButton": "Over mij",
-    "scrollDown": "Scroll naar beneden voor meer"
+    "scrollDown": "Scroll naar beneden voor meer",
+    "hasCar": "Eigen auto",
+    "officeReady": "Kantoor beschikbaar"
   },
   "about": {
     "title": "Over Mij: Junior Full-Stack & Backend Ontwikkelaar",

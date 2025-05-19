@@ -36,7 +36,9 @@
     "professionalSkills": "Professional Skills",
     "blogButton": "Read Internship Blog",
     "aboutButton": "About Me",
-    "scrollDown": "Scroll down to explore more"
+    "scrollDown": "Scroll down to explore more",
+    "hasCar": "Own car",
+    "officeReady": "Office ready"
   },
   "about": {
     "title": "About Me: Junior Full-Stack & Backend Developer",
