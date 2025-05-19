@@ -282,10 +282,10 @@ export const ProjectsSection = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
               key={carouselIdx}
-              className='w-full max-w-xs mx-auto'
+              className='w-full max-w-xs mx-auto flex'
             >
               <div
-                className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm flex flex-col cursor-pointer overflow-hidden h-[400px] ${
+                className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm flex flex-col cursor-pointer overflow-hidden flex-1 ${
                   enhancedProjects[carouselIdx].isPrivate
                     ? 'border-2 border-purple-300 dark:border-purple-700'
                     : 'border border-gray-200 dark:border-gray-700'
@@ -327,9 +327,9 @@ export const ProjectsSection = () => {
                     </span>
                   </div>
 
-                  {/* Description with fixed height */}
-                  <div className='mb-4 h-20 overflow-hidden'>
-                    <p className='text-gray-600 dark:text-gray-400 text-sm line-clamp-3'>
+                  {/* Description with dynamic height for mobile */}
+                  <div className='mb-4'>
+                    <p className='text-gray-600 dark:text-gray-400 text-sm'>
                       {enhancedProjects[carouselIdx].description}
                     </p>
                   </div>

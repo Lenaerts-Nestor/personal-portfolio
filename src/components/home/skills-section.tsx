@@ -1,7 +1,15 @@
 'use client';
 
 import type React from 'react';
-
+import {
+  FaLightbulb,
+  FaUsers,
+  FaBook,
+  FaSearch,
+  FaClock,
+  FaHandsHelping,
+} from 'react-icons/fa';
+import { MdChat } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { Users, Layout, Server, PenToolIcon as Tool } from 'lucide-react';
 import {
@@ -25,6 +33,9 @@ import {
   SiFirebase,
   SiMysql,
   SiStorybook,
+  SiSwagger,
+  SiCodeblocks,
+  SiPostman,
 } from 'react-icons/si';
 import { useI18n } from '../shared/i18nContext';
 import { SectionHeading } from '../shared/layout/section-heading';
@@ -80,7 +91,6 @@ export const TechnologiesSection = () => {
       icon: <SiFlutter size={20} className='mr-2' />,
       key: 'Flutter',
     },
-    { name: 'Responsive Design', key: 'Responsive Design' },
   ];
 
   // Backend skills
@@ -111,7 +121,11 @@ export const TechnologiesSection = () => {
       icon: <SiMonogame size={20} className='mr-2' />,
       key: 'MonoGame',
     },
-    { name: 'RESTful APIs', key: 'RESTful APIs' },
+    {
+      name: 'RESTful APIs',
+      icon: <SiCodeblocks size={20} className='mr-2' />,
+      key: 'RESTful APIs',
+    },
     {
       name: 'PostgreSQL',
       icon: <SiPostgresql size={20} className='mr-2' />,
@@ -132,6 +146,11 @@ export const TechnologiesSection = () => {
       icon: <SiDrizzle size={20} className='mr-2' />,
       key: 'Drizzle ORM',
     },
+    {
+      name: 'Swagger',
+      icon: <SiSwagger size={20} className='mr-2' />,
+      key: 'Swagger',
+    },
   ];
 
   // Tools & DevOps skills
@@ -151,18 +170,49 @@ export const TechnologiesSection = () => {
       icon: <SiFirebase size={20} className='mr-2' />,
       key: 'Firebase',
     },
-    { name: 'Agile Methodologies', key: 'Agile Methodologies' },
+    {
+      name: 'Postman',
+      icon: <SiPostman size={20} className='mr-2' />,
+      key: 'Postman',
+    },
   ];
 
-  // Professional skills
   const professionalSkills: Skill[] = [
-    { name: 'Problem Solving', key: 'Problem Solving' },
-    { name: 'Effective Communication', key: 'Effective Communication' },
-    { name: 'Team Collaboration', key: 'Team Collaboration' },
-    { name: 'Continuous Learning', key: 'Continuous Learning' },
-    { name: 'Attention to Detail', key: 'Attention to Detail' },
-    { name: 'Time Management', key: 'Time Management' },
-    { name: 'Proactive & Eager to Contribute', key: 'Proactive' },
+    {
+      name: 'Problem Solving',
+      icon: <FaLightbulb size={20} className='mr-2' />, // Represents ideas and solutions
+      key: 'Problem Solving',
+    },
+    {
+      name: 'Effective Communication',
+      icon: <MdChat size={20} className='mr-2' />,
+      key: 'Effective Communication',
+    },
+    {
+      name: 'Team Collaboration',
+      icon: <FaUsers size={20} className='mr-2' />, // Represents teamwork
+      key: 'Team Collaboration',
+    },
+    {
+      name: 'Continuous Learning',
+      icon: <FaBook size={20} className='mr-2' />, // Represents learning and knowledge
+      key: 'Continuous Learning',
+    },
+    {
+      name: 'Attention to Detail',
+      icon: <FaSearch size={20} className='mr-2' />, // Represents focus and detail
+      key: 'Attention to Detail',
+    },
+    {
+      name: 'Time Management',
+      icon: <FaClock size={20} className='mr-2' />, // Represents time management
+      key: 'Time Management',
+    },
+    {
+      name: 'Proactive & Eager to Contribute',
+      icon: <FaHandsHelping size={20} className='mr-2' />, // Represents contribution and proactivity
+      key: 'Proactive',
+    },
   ];
 
   // Ensure the order is: Frontend (top-left), Backend (top-right), Tools (bottom-left), Professional (bottom-right)
