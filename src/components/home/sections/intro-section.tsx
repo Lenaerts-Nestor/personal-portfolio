@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import {
   Code,
-  FolderKanban,
   Briefcase,
   GraduationCap,
   Download,
@@ -16,7 +15,6 @@ import {
   Languages,
   Clock,
   Info,
-  ExternalLink,
 } from 'lucide-react';
 import { gradientTextClasses } from '../../../style/style';
 import { useI18n } from '../../shared/i18nContext';
@@ -48,39 +46,30 @@ export const IntroSection = () => {
   const overviewSections = [
     {
       icon: <Code className='w-5 h-5' />,
-      title: t('home.technologies'),
-      description: 'React, TypeScript, Node.js, PostgreSQL, Fastify',
-      link: '#technologies',
+      title: t('home.coreSkillsTitle'),
+      description: t('home.intro.overviewSkillsDescription'),
       bgColor: 'bg-indigo-100',
       textColor: 'text-indigo-600',
       iconColor: 'text-indigo-600',
     },
     {
-      icon: <FolderKanban className='w-5 h-5' />,
-      title: t('home.projects'),
-      description: 'Full-stack timesheet app, React components library',
-      link: '#projects',
-      bgColor: 'bg-purple-100',
-      textColor: 'text-purple-600',
-      iconColor: 'text-purple-600',
-    },
-    {
-      icon: <Briefcase className='w-5 h-5' />,
-      title: t('home.experienceTitle'),
-      description: 'Software Development Intern, IT Support',
-      link: '#experience',
-      bgColor: 'bg-blue-100',
-      textColor: 'text-blue-600',
-      iconColor: 'text-blue-600',
-    },
-    {
       icon: <GraduationCap className='w-5 h-5' />,
       title: t('home.educationTitle'),
-      description: 'Graduaat Programmeren, AP Hogeschool',
-      link: '#education',
+      description: t('home.intro.overviewEducationSummary').replace(
+        /API Development|Web Frameworks|Database Management/g,
+        '<span class="font-semibold text-emerald-700">$&</span>'
+      ),
       bgColor: 'bg-emerald-100',
       textColor: 'text-emerald-600',
       iconColor: 'text-emerald-600',
+    },
+    {
+      icon: <Briefcase className='w-5 h-5' />,
+      title: t('home.intro.internshipHighlightTitle'),
+      description: t('home.intro.internshipHighlightDescription'),
+      bgColor: 'bg-blue-100',
+      textColor: 'text-blue-600',
+      iconColor: 'text-blue-600',
     },
   ];
 
@@ -105,7 +94,7 @@ export const IntroSection = () => {
               className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-indigo-600 ${gradientTextClasses}`}
               variants={fadeIn}
             >
-              Software Developer
+              {t('home.intro.softwareDeveloper')}
             </motion.h1>
 
             {/* Position Badges - Moved below the main heading for better visibility */}
@@ -115,11 +104,11 @@ export const IntroSection = () => {
             >
               <span className='inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-indigo-600 text-white text-sm font-medium'>
                 <Briefcase className='w-4 h-4' />
-                <span>Junior Full-stack Developer</span>
+                <span>{t('home.intro.juniorFullStack')}</span>
               </span>
               <span className='inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-medium'>
                 <Code className='w-4 h-4' />
-                <span>Junior Backend Developer</span>
+                <span>{t('home.intro.juniorBackend')}</span>
               </span>
             </motion.div>
 
@@ -128,22 +117,21 @@ export const IntroSection = () => {
               className='text-lg text-gray-600 leading-relaxed max-w-2xl'
               variants={fadeIn}
             >
-              I'm a <span className='font-medium'>24-year-old developer</span>{' '}
-              about to receive my{' '}
+              {t('home.intro.introP1')}
+              <span className='font-medium'>{t('home.intro.age')}</span>
+              {t('home.intro.introP2')}
               <span className='font-semibold text-indigo-600'>
-                Graduaat Programmeren
-              </span>{' '}
-              diploma. Recently completed a successful internship building a{' '}
-              <span className='font-semibold text-indigo-600'>
-                full-stack timesheet application
-              </span>{' '}
-              using React, TypeScript, Node.js, Fastify & PostgreSQL. Eager to
-              start my career as a{' '}
-              <span className='font-medium'>
-                Junior Full-stack or Backend Developer
+                {t('home.intro.degree')}
               </span>
-              , with a strong willingness to learn new technologies and
-              languages.
+              {t('home.intro.introP3')}
+              <span className='font-semibold text-indigo-600'>
+                {t('home.intro.projectHighlight')}
+              </span>
+              {t('home.intro.introP4')}
+              <span className='font-medium'>
+                {t('home.intro.roleAspiration')}
+              </span>
+              {t('home.intro.introP5')}
             </motion.p>
 
             {/* Contact Information - Moved outside of Quick Overview */}
@@ -155,7 +143,7 @@ export const IntroSection = () => {
               <div className='flex items-center gap-2 p-4 border-b border-gray-100 bg-gray-50'>
                 <Info className='w-5 h-5 text-indigo-600' />
                 <h3 className='text-sm font-medium text-indigo-600'>
-                  Contact & Details
+                  {t('home.intro.contactDetails')}
                 </h3>
               </div>
 
@@ -163,39 +151,43 @@ export const IntroSection = () => {
                 {/* Contact Methods - First group */}
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4'>
                   <a
-                    href='mailto:email@example.com'
+                    href={`mailto:${t('home.intro.email')}`}
                     className='flex items-center gap-2 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors duration-200'
                   >
                     <Mail className='w-4 h-4 flex-shrink-0' />
-                    <span className='text-sm truncate'>email@example.com</span>
+                    <span className='text-sm truncate'>
+                      {t('home.intro.email')}
+                    </span>
                   </a>
                   <a
-                    href='tel:+32123456789'
+                    href={`tel:${t('home.intro.phone')}`}
                     className='flex items-center gap-2 px-4 py-3 bg-green-50 text-green-600 rounded-lg hover:bg-green-100 transition-colors duration-200'
                   >
                     <Phone className='w-4 h-4 flex-shrink-0' />
-                    <span className='text-sm truncate'>+32 123 456 789</span>
+                    <span className='text-sm truncate'>
+                      {t('home.intro.phone')}
+                    </span>
                   </a>
                   <a
-                    href='https://github.com/username'
+                    href={`https://${t('home.intro.githubUsername')}`}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex items-center gap-2 px-4 py-3 bg-gray-50 text-gray-600 rounded-lg hover:bg-gray-100 transition-colors duration-200'
                   >
                     <Github className='w-4 h-4 flex-shrink-0' />
                     <span className='text-sm truncate'>
-                      github.com/username
+                      {t('home.intro.githubUsername')}
                     </span>
                   </a>
                   <a
-                    href='https://linkedin.com/in/username'
+                    href={`https://${t('home.intro.linkedinUsername')}`}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex items-center gap-2 px-4 py-3 bg-sky-50 text-sky-600 rounded-lg hover:bg-sky-100 transition-colors duration-200'
                   >
                     <Linkedin className='w-4 h-4 flex-shrink-0' />
                     <span className='text-sm truncate'>
-                      linkedin.com/in/username
+                      {t('home.intro.linkedinUsername')}
                     </span>
                   </a>
                 </div>
@@ -205,33 +197,33 @@ export const IntroSection = () => {
                   <div className='flex flex-wrap gap-2'>
                     <span className='inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-50 text-purple-600 rounded-full text-xs font-medium'>
                       <MapPin className='w-3.5 h-3.5' />
-                      <span>Antwerpen Region</span>
+                      <span>{t('home.intro.antwerpenRegion')}</span>
                     </span>
                     <span className='inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-50 text-green-600 rounded-full text-xs font-medium'>
                       <Clock className='w-3.5 h-3.5' />
-                      <span>Available Immediately</span>
+                      <span>{t('home.intro.availableImmediately')}</span>
                     </span>
                     <span className='inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 text-amber-600 rounded-full text-xs font-medium'>
                       <Car className='w-3.5 h-3.5' />
-                      <span>Own car</span>
+                      <span>{t('home.hasCar')}</span>
                     </span>
                     <span className='inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 text-rose-600 rounded-full text-xs font-medium'>
                       <Building2 className='w-3.5 h-3.5' />
-                      <span>Office ready</span>
+                      <span>{t('home.officeReady')}</span>
                     </span>
                     <span className='inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-50 text-indigo-600 rounded-full text-xs font-medium'>
                       <Languages className='w-3.5 h-3.5' />
-                      <span>Dutch, English, Spanish</span>
+                      <span>{t('home.intro.languages')}</span>
                     </span>
 
                     {/* Position badges integrated into personal details for better mobile display */}
                     <span className='inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium md:hidden'>
                       <Briefcase className='w-3.5 h-3.5' />
-                      <span>Junior Full-stack Developer</span>
+                      <span>{t('home.intro.juniorFullStack')}</span>
                     </span>
                     <span className='inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-100 text-blue-700 rounded-full text-xs font-medium md:hidden'>
                       <Code className='w-3.5 h-3.5' />
-                      <span>Junior Backend Developer</span>
+                      <span>{t('home.intro.juniorBackend')}</span>
                     </span>
                   </div>
                 </div>
@@ -246,7 +238,7 @@ export const IntroSection = () => {
                 className='inline-flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300'
               >
                 <Download className='w-5 h-5' />
-                <span>Download Resume</span>
+                <span>{t('home.intro.downloadResume')}</span>
               </a>
             </motion.div>
           </motion.div>
@@ -261,16 +253,15 @@ export const IntroSection = () => {
             <div className='bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300'>
               <div className='p-6'>
                 <h2 className='text-xl font-semibold text-gray-800 mb-5'>
-                  Quick Overview
+                  {t('home.quickOverview')}
                 </h2>
 
                 {/* Overview Sections with enhanced navigation */}
                 <div className='space-y-5'>
                   {overviewSections.map((section, index) => (
-                    <a
+                    <div
                       key={index}
-                      href={section.link}
-                      className='flex items-start gap-4 group hover:bg-gray-50 p-3 rounded-xl transition-colors duration-200'
+                      className='flex items-start gap-4 group p-3 rounded-xl'
                     >
                       <div
                         className={`flex-shrink-0 w-12 h-12 ${section.bgColor} rounded-xl flex items-center justify-center ${section.iconColor}`}
@@ -279,22 +270,22 @@ export const IntroSection = () => {
                       </div>
                       <div className='flex-1'>
                         <div className='flex items-center justify-between'>
-                          <h3 className='font-medium text-gray-800 group-hover:text-indigo-600 transition-colors duration-200'>
+                          <h3 className='font-medium text-gray-800'>
                             {section.title}
                           </h3>
-                          <ExternalLink className='w-4 h-4 text-gray-400 group-hover:text-indigo-500 transition-colors duration-200' />
                         </div>
-                        <p className='text-gray-500 text-sm mt-1'>
-                          {section.description}
-                        </p>
+                        <p
+                          className='text-gray-500 text-sm mt-1'
+                          dangerouslySetInnerHTML={{
+                            __html: section.description,
+                          }}
+                        ></p>
                       </div>
-                    </a>
+                    </div>
                   ))}
                 </div>
 
-                {/* Contact & Details Section - Remove this entire section from the Quick Overview */}
-
-                {/* Scroll Down Indicator */}
+                {/* Scroll Down Indicator - Retained for now, can be removed if not desired */}
                 <div className='flex justify-center mt-6 text-gray-400'>
                   <a
                     href='#technologies'
@@ -311,7 +302,7 @@ export const IntroSection = () => {
                     }}
                   >
                     <span className='text-xs mb-1 group-hover:text-indigo-500'>
-                      Scroll down to explore more
+                      {t('home.scrollDown')}
                     </span>
                     <ChevronDown className='w-5 h-5 animate-bounce group-hover:text-indigo-500' />
                   </a>

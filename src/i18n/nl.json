@@ -38,7 +38,38 @@
     "aboutButton": "Over mij",
     "scrollDown": "Scroll naar beneden voor meer",
     "hasCar": "Eigen auto",
-    "officeReady": "Kantoor beschikbaar"
+    "officeReady": "Kantoor beschikbaar",
+    "intro": {
+      "softwareDeveloper": "Software Ontwikkelaar",
+      "juniorFullStack": "Junior Full-stack Ontwikkelaar",
+      "juniorBackend": "Junior Backend Ontwikkelaar",
+      "introP1": "Ik ben een ",
+      "age": "24-jarige ontwikkelaar",
+      "introP2": " die op het punt staat mijn ",
+      "degree": "Graduaat Programmeren",
+      "introP3": " diploma te ontvangen. Recentelijk een succesvolle stage afgerond waarbij ik een ",
+      "projectHighlight": "full-stack urenregistratie applicatie",
+      "introP4": " heb ontwikkeld. Ik sta te popelen om mijn carrière te starten als ",
+      "roleAspiration": "Junior Full-stack of Backend Ontwikkelaar",
+      "introP5": ", met een sterke bereidheid om nieuwe technologieën en talen te leren.",
+      "contactDetails": "Contact & Details",
+      "email": "nestor.lenaerts@gmail.com",
+      "phone": "0470 53 70 01",
+      "githubUsername": "github.com/Lenaerts-Nestor",
+      "linkedinUsername": "linkedin.com/in/nestor-lenaerts",
+      "antwerpenRegion": "Regio Antwerpen",
+      "availableImmediately": "Onmiddellijk Beschikbaar",
+      "languages": "Nederlands, Engels, Spaans",
+      "downloadResume": "Download CV",
+      "overviewTechDescription": "React, TypeScript, Node.js, PostgreSQL, Fastify",
+      "overviewProjectsDescription": "Full-stack urenregistratie app, React componenten bibliotheek",
+      "overviewExperienceDescription": "Software Development Stagiair, IT Support",
+      "overviewEducationDescription": "Graduaat Programmeren, AP Hogeschool",
+      "overviewSkillsDescription": "Gefocust op backend-ontwikkeling, het bouwen van robuuste systemen vanaf de basis met technologieën zoals Node.js, Fastify en PostgreSQL. Een snelle leerling, enthousiast om nieuwe technologieën te omarmen en me aan te passen aan veranderende projectbehoeften.",
+      "overviewEducationSummary": "Voltooit momenteel Graduaat Programmeren aan AP Hogeschool (lopend). Eerder Bachelor IT gevolgd (niet voltooid). Belangrijke aandachtsgebieden tijdens mijn studie omvatten API-ontwikkeling, Webframeworks en Databasebeheer.",
+      "internshipHighlightTitle": "Stage Hoogtepunt",
+      "internshipHighlightDescription": "Tijdens mijn recente stage succesvol een full-stack urenregistratieapplicatie opgeleverd, waarbij ik het project van het initiële frontendontwerp tot de backend API-ontwikkeling en database-integratie heb beheerd."
+    }
   },
   "about": {
     "title": "Over Mij: Junior Full-Stack & Backend Ontwikkelaar",
@@ -120,14 +151,16 @@
     "technologiesUsed": "Gebruikte Technologieën"
   },
   "projects": {
-    "viewDetails": "Bekijk details",
+    "viewDetails": "Bekijk Details",
     "viewAll": "Bekijk alle projecten",
     "internshipProject": "Stageproject",
     "technicalChallenge": "Technische Uitdaging:",
     "solution": "Oplossing:",
-    "previousProject": "Vorig project",
-    "nextProject": "Volgend project",
-    "goToProject": "Ga naar project"
+    "previousProject": "Vorig Project",
+    "nextProject": "Volgend Project",
+    "goToProject": "Ga naar project",
+    "featuredTitle": "Projecten",
+    "featuredDescription": "Ontdek een selectie van mijn belangrijkste projecten. <span class=\"font-semibold text-indigo-600\">Publieke projecten</span> zijn beschikbaar op GitHub, terwijl <span class=\"font-semibold text-purple-600\">privéprojecten</span> (zoals mijn stagewerk) vanwege vertrouwelijkheid in een modaal venster worden beschreven."
   },
   "skills": {
     "javascript": "JavaScript (ES6+)",

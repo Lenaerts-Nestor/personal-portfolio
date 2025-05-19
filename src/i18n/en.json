@@ -38,7 +38,38 @@
     "aboutButton": "About Me",
     "scrollDown": "Scroll down to explore more",
     "hasCar": "Own car",
-    "officeReady": "Office ready"
+    "officeReady": "Office ready",
+    "intro": {
+      "softwareDeveloper": "Software Developer",
+      "juniorFullStack": "Junior Full-stack Developer",
+      "juniorBackend": "Junior Backend Developer",
+      "introP1": "I'm a ",
+      "age": "24-year-old developer",
+      "introP2": " about to receive my ",
+      "degree": "Graduaat Programmeren",
+      "introP3": " diploma. Recently completed a successful internship where I developed a ",
+      "projectHighlight": "full-stack timesheet application",
+      "introP4": ". Eager to start my career as a ",
+      "roleAspiration": "Junior Full-stack or Backend Developer",
+      "introP5": ", with a strong willingness to learn new technologies and languages.",
+      "contactDetails": "Contact & Details",
+      "email": "nestor.lenaerts@gmail.com",
+      "phone": "0470 53 70 01",
+      "githubUsername": "github.com/Lenaerts-Nestor",
+      "linkedinUsername": "linkedin.com/in/nestor-lenaerts",
+      "antwerpenRegion": "Antwerpen Region",
+      "availableImmediately": "Available Immediately",
+      "languages": "Dutch, English, Spanish",
+      "downloadResume": "Download Resume",
+      "overviewTechDescription": "React, TypeScript, Node.js, PostgreSQL, Fastify",
+      "overviewProjectsDescription": "Full-stack timesheet app, React components library",
+      "overviewExperienceDescription": "Software Development Intern, IT Support",
+      "overviewEducationDescription": "Graduaat Programmeren, AP Hogeschool",
+      "overviewSkillsDescription": "Focused on backend development, building robust systems from scratch using technologies like Node.js, Fastify, and PostgreSQL. A fast learner, eager to embrace new technologies and adapt to evolving project needs.",
+      "overviewEducationSummary": "Currently completing Graduaat Programmeren at AP Hogeschool (in progress). Previously attended Bachelor IT (not completed). Key study focus areas include API Development, Web Frameworks, and Database Management.",
+      "internshipHighlightTitle": "Internship Highlight",
+      "internshipHighlightDescription": "Successfully delivered a full-stack timesheet application during my recent internship, managing the project from initial frontend design through to backend API development and database integration."
+    }
   },
   "about": {
     "title": "About Me: Junior Full-Stack & Backend Developer",
@@ -127,7 +158,9 @@
     "solution": "Solution:",
     "previousProject": "Previous Project",
     "nextProject": "Next Project",
-    "goToProject": "Go to project"
+    "goToProject": "Go to project",
+    "featuredTitle": "Projects",
+    "featuredDescription": "Explore a selection of my key projects. <span class=\"font-semibold text-indigo-600\">Public projects</span> are available on GitHub, while <span class=\"font-semibold text-purple-600\">private projects</span> (like my internship work) are detailed in a modal due to confidentiality."
   },
   "skills": {
     "javascript": "JavaScript (ES6+)",

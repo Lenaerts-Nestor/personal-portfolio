@@ -8,12 +8,14 @@ interface SectionHeadingProps {
   title: string;
   description: string;
   icon?: ReactNode;
+  dangerouslySetDescriptionHTML?: boolean; // Added new prop
 }
 
 export const SectionHeading = ({
   title,
   description,
   icon,
+  dangerouslySetDescriptionHTML = false, // Default to false
 }: SectionHeadingProps) => {
   return (
     <div className='text-center mb-12'>
@@ -42,8 +44,11 @@ export const SectionHeading = ({
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
         className='text-center text-lg text-gray-600 mb-8 max-w-3xl mx-auto'
+        {...(dangerouslySetDescriptionHTML && {
+          dangerouslySetInnerHTML: { __html: description },
+        })}
       >
-        {description}
+        {!dangerouslySetDescriptionHTML ? description : null}
       </motion.p>
     </div>
   );

@@ -109,14 +109,12 @@ export const ProjectsSection = () => {
 
   // Handle project click
   const handleProjectClick = (project: any) => {
-    if (project.id === 'timesheet') {
+    if (project.isPrivate) {
       setSelectedProject(project);
       setIsModalOpen(true);
-    } else if (!project.isPrivate) {
-      // For non-private projects, open GitHub
-      window.open(`https://github.com/username/${project.id}`, '_blank');
+    } else if (project.githubLink) {
+      window.open(project.githubLink, '_blank');
     } else {
-      // For other private projects, show modal
       setSelectedProject(project);
       setIsModalOpen(true);
     }
@@ -144,6 +142,7 @@ export const ProjectsSection = () => {
           title={t('projects.featuredTitle')}
           description={t('projects.featuredDescription')}
           icon={<FolderKanban className='h-8 w-8' />}
+          dangerouslySetDescriptionHTML={true}
         />
 
         {/* Desktop grid */}
@@ -240,16 +239,13 @@ export const ProjectsSection = () => {
                     </button>
                   ) : (
                     <a
-                      href={`https://github.com/username/${project.id}`}
+                      href={project.githubLink}
                       target='_blank'
                       rel='noopener noreferrer'
                       className='text-gray-700 dark:text-gray-300 font-medium text-sm flex items-center hover:text-gray-900 dark:hover:text-white transition-colors'
                       onClick={(e) => {
                         e.stopPropagation();
-                        window.open(
-                          `https://github.com/username/${project.id}`,
-                          '_blank'
-                        );
+                        window.open(project.githubLink, '_blank');
                       }}
                     >
                       <svg
@@ -376,14 +372,14 @@ export const ProjectsSection = () => {
                       </button>
                     ) : (
                       <a
-                        href={`https://github.com/username/${enhancedProjects[carouselIdx].id}`}
+                        href={enhancedProjects[carouselIdx].githubLink}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='text-gray-700 dark:text-gray-300 font-medium text-sm flex items-center hover:text-gray-900 dark:hover:text-white transition-colors'
                         onClick={(e) => {
                           e.stopPropagation();
                           window.open(
-                            `https://github.com/username/${enhancedProjects[carouselIdx].id}`,
+                            enhancedProjects[carouselIdx].githubLink,
                             '_blank'
                           );
                         }}

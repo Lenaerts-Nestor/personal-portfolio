@@ -27,6 +27,7 @@ export const projects = [
     type: 'Course Project',
     technologies: ['Node.js', 'TypeScript', 'MongoDB', 'Express'],
     techs: [],
+    githubLink: 'https://github.com/Lenaerts-Nestor/Project_Web_Development',
   },
   {
     id: 'game',
@@ -38,6 +39,7 @@ export const projects = [
     type: 'Personal Project',
     technologies: ['C#', 'MonoGame'],
     techs: [],
+    githubLink: 'https://github.com/Lenaerts-Nestor/Project_Game_Development',
   },
   {
     id: 'webapi',
@@ -49,6 +51,7 @@ export const projects = [
     type: 'Course Project',
     technologies: ['.NET', 'MySQL', 'Swagger'],
     techs: [],
+    githubLink: 'https://github.com/Lenaerts-Nestor/Project_Web_API',
   },
   {
     id: 'parkflow',
@@ -72,5 +75,6 @@ export const projects = [
     type: 'Personal Project',
     technologies: ['React Native', 'TypeScript', 'CSS', 'RESTful APIs'],
     techs: [],
+    githubLink: 'https://github.com/Lenaerts-Nestor/Project_Mobile_Development',
   },
 ];
