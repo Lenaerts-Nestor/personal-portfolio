@@ -32,18 +32,47 @@ export const Navbar = ({
   const [_language, setLanguage] = useState(defaultLanguage);
   const location = useLocation();
   const isBlogPage = location.pathname === '/blog';
+  const [activeSection, setActiveSection] = useState<string>('');
+  const sectionIds = ['projects', 'technologies', 'experience', 'education'];
+
+  useEffect(() => {
+    // Only run on home page
+    if (location.pathname !== '/') {
+      setActiveSection('');
+      return;
+    }
+    const handleScroll = () => {
+      let found = '';
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom > 80) {
+            found = id;
+            break;
+          }
+        }
+      }
+      setActiveSection(found);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [location.pathname]);
 
   const homeMenuItems = [
-    {
-      path: '/#projects',
-      label: 'Projects',
-      icon: <FolderKanban className='h-4 w-4' />,
-      priority: 'high',
-    },
     {
       path: '/#technologies',
       label: 'Skills',
       icon: <Code className='h-4 w-4' />,
+      priority: 'high',
+    },
+    {
+      path: '/#projects',
+      label: 'Projects',
+      icon: <FolderKanban className='h-4 w-4' />,
       priority: 'high',
     },
     {
@@ -132,15 +161,14 @@ export const Navbar = ({
 
   const isActive = (path: string) => {
     if (path === '/') {
-      return location.pathname === '/' && !location.hash;
+      return location.pathname === '/' && !location.hash && !activeSection;
     }
     if (path === '/blog') {
       return location.pathname === '/blog';
     }
     if (path.startsWith('/#')) {
-      return (
-        location.pathname === '/' && location.hash === path.replace('/', '')
-      );
+      const section = path.replace('/#', '');
+      return location.pathname === '/' && activeSection === section;
     }
     return false;
   };
@@ -185,7 +213,14 @@ export const Navbar = ({
                 {item.icon && <span className='mr-1.5'>{item.icon}</span>}
                 {item.label}
                 {isActive(item.path) && (
-                  <span className='absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600 rounded-full'></span>
+                  <span
+                    className='absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600 rounded-full transition-all duration-500'
+                    style={{
+                      transitionProperty: 'left, width, background-color',
+                      left: 0,
+                      width: '100%',
+                    }}
+                  ></span>
                 )}
               </Link>
             ))}

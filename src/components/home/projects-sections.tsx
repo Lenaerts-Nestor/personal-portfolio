@@ -1,18 +1,71 @@
 'use client';
 
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FolderKanban, ExternalLink, Github } from 'lucide-react';
+import { FolderKanban, ChevronLeft, ChevronRight, Lock } from 'lucide-react';
+import {
+  SiReact,
+  SiTypescript,
+  SiFastify,
+  SiPostgresql,
+  SiDrizzle,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+  SiSharp,
+  SiMonogame,
+  SiDotnet,
+  SiMysql,
+  SiFlutter,
+  SiFirebase,
+  SiReactivex,
+  SiCss3,
+  SiSwagger,
+  SiDart,
+} from 'react-icons/si';
 import { projects } from '../../utils/projects-data';
 import { useI18n } from '../shared/i18nContext';
 import { SectionHeading } from '../shared/layout/section-heading';
+import { ProjectModal } from './project-modal';
+
+// Map project technologies to their corresponding icons and colors
+const techIcons = {
+  React: { icon: SiReact, color: 'text-sky-500' },
+  TypeScript: { icon: SiTypescript, color: 'text-blue-600' },
+  Fastify: { icon: SiFastify, color: 'text-gray-800 dark:text-gray-200' },
+  PostgreSQL: { icon: SiPostgresql, color: 'text-blue-700' },
+  'Drizzle ORM': { icon: SiDrizzle, color: 'text-amber-500' },
+  'Node.js': { icon: SiNodedotjs, color: 'text-green-600' },
+  MongoDB: { icon: SiMongodb, color: 'text-green-500' },
+  Express: { icon: SiExpress, color: 'text-gray-700 dark:text-gray-300' },
+  C: { icon: SiSharp, color: 'text-purple-600' },
+  MonoGame: { icon: SiMonogame, color: 'text-red-600' },
+  '.NET': { icon: SiDotnet, color: 'text-purple-700' },
+  MySQL: { icon: SiMysql, color: 'text-blue-800' },
+  Flutter: { icon: SiFlutter, color: 'text-cyan-500' },
+  Firebase: { icon: SiFirebase, color: 'text-amber-500' },
+  'React Native': { icon: SiReactivex, color: 'text-sky-600' },
+  CSS: { icon: SiCss3, color: 'text-blue-500' },
+  Swagger: { icon: SiSwagger, color: 'text-green-600' },
+  Dart: { icon: SiDart, color: 'text-blue-400' },
+};
+
+// Add isPrivate flag to some projects and enhance with challenges/solutions
+const enhancedProjects = projects.map((project) => ({
+  ...project,
+  isPrivate: project.id === 'timesheet' || project.id === 'parkflow',
+  challenges: '', // Will be filled from translations
+  solutions: '', // Will be filled from translations
+}));
 
 export const ProjectsSection = () => {
   const [carouselIdx, setCarouselIdx] = useState(0);
-  const navigate = useNavigate();
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const { t } = useI18n();
 
+  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -28,34 +81,64 @@ export const ProjectsSection = () => {
     show: { y: 0, opacity: 1 },
   };
 
+  // Carousel navigation
   const nextProject = () => {
-    setCarouselIdx((prevIdx) => (prevIdx + 1) % projects.length);
+    setCarouselIdx((prevIdx) => (prevIdx + 1) % enhancedProjects.length);
   };
 
   const prevProject = () => {
     setCarouselIdx(
-      (prevIdx) => (prevIdx - 1 + projects.length) % projects.length
+      (prevIdx) =>
+        (prevIdx - 1 + enhancedProjects.length) % enhancedProjects.length
     );
   };
 
-  const enhancedProjects = projects.map((project) => {
-    const enhancedDescription = project.description;
-    let challenges = '';
-    let solutions = '';
+  // Fill in translations for challenges and solutions
+  useEffect(() => {
+    enhancedProjects.forEach((project) => {
+      try {
+        project.challenges = t(`projects.${project.id}.challenge`);
+        project.solutions = t(`projects.${project.id}.solution`);
+      } catch (error) {
+        // Fallback if translation is missing
+        project.challenges = 'Technical challenges faced during development.';
+        project.solutions = 'Solutions implemented to overcome the challenges.';
+      }
+    });
+  }, [t]);
 
-    challenges = t(`projects.${project.id}.challenge`);
-    solutions = t(`projects.${project.id}.solution`);
+  // Handle project click
+  const handleProjectClick = (project: any) => {
+    if (project.id === 'timesheet') {
+      setSelectedProject(project);
+      setIsModalOpen(true);
+    } else if (!project.isPrivate) {
+      // For non-private projects, open GitHub
+      window.open(`https://github.com/username/${project.id}`, '_blank');
+    } else {
+      // For other private projects, show modal
+      setSelectedProject(project);
+      setIsModalOpen(true);
+    }
+  };
 
-    return {
-      ...project,
-      enhancedDescription,
-      challenges,
-      solutions,
-    };
-  });
+  // Close modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Render tech icon
+  const renderTechIcon = (tech: string) => {
+    const iconData = techIcons[tech as keyof typeof techIcons];
+    if (iconData) {
+      const IconComponent = iconData.icon;
+      return <IconComponent className={`h-4 w-4 ${iconData.color}`} />;
+    }
+    return null;
+  };
 
   return (
-    <section id='projects' className='py-16 bg-gray-50'>
+    <section id='projects' className='py-16 bg-gray-50 dark:bg-gray-900'>
       <div className='max-w-6xl mx-auto px-4'>
         <SectionHeading
           title={t('projects.featuredTitle')}
@@ -76,94 +159,111 @@ export const ProjectsSection = () => {
               key={project.id}
               variants={item}
               whileHover={{ y: -5 }}
-              className='bg-white rounded-lg shadow-sm p-0 flex flex-col cursor-pointer hover:shadow-md transition-all duration-300 border border-gray-200 overflow-hidden h-full'
-              onClick={() => navigate(`/projects/${project.id}`)}
+              className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm flex flex-col cursor-pointer hover:shadow-md transition-all duration-300 overflow-hidden h-[400px] ${
+                project.isPrivate
+                  ? 'border-2 border-purple-300 dark:border-purple-700'
+                  : 'border border-gray-200 dark:border-gray-700'
+              }`}
+              onClick={() => handleProjectClick(project)}
             >
-              <div className='relative w-full bg-gray-100 h-40 overflow-hidden'>
+              {/* Project Image */}
+              <div className='relative w-full bg-gray-100 dark:bg-gray-700 h-40 overflow-hidden'>
                 <img
                   src={project.image || '/placeholder.svg'}
                   alt={project.title}
                   className='w-full h-full object-cover object-center'
                   loading='lazy'
                 />
-                <div className='absolute top-2 right-2 flex space-x-2'>
-                  <a
-                    href='#'
-                    className='p-2 bg-white rounded-full shadow-sm hover:bg-gray-100'
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <Github className='h-4 w-4 text-gray-700' />
-                  </a>
-                  <a
-                    href='#'
-                    className='p-2 bg-white rounded-full shadow-sm hover:bg-gray-100'
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <ExternalLink className='h-4 w-4 text-gray-700' />
-                  </a>
-                </div>
+
+                {/* Private indicator */}
+                {project.isPrivate && (
+                  <div className='absolute top-2 right-2 flex items-center gap-1.5 px-3 py-1.5 bg-purple-600/90 text-white rounded-full'>
+                    <Lock className='h-3.5 w-3.5' />
+                    <span className='text-xs font-medium'>Private</span>
+                  </div>
+                )}
               </div>
+
+              {/* Project Content */}
               <div className='p-5 flex flex-col flex-grow'>
-                <div className='flex justify-between items-center mb-2'>
-                  <h3 className='text-lg font-semibold text-gray-900'>
+                <div className='flex justify-between items-center mb-3'>
+                  <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100'>
                     {project.title}
                   </h3>
-                  <span className='text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded'>
+                  <span className='text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded'>
                     {project.id === 'timesheet'
                       ? t('projects.internshipProject')
                       : project.type}
                   </span>
                 </div>
-                <p className='text-gray-600 mb-3 text-sm'>
-                  {project.description}
-                </p>
 
-                {/* Technical challenges and solutions */}
-                <div className='mb-3'>
-                  <p className='text-xs text-gray-500 font-medium mb-1'>
-                    {t('projects.technicalChallenge')}
+                {/* Description with fixed height */}
+                <div className='mb-4 h-20 overflow-hidden'>
+                  <p className='text-gray-600 dark:text-gray-400 text-sm line-clamp-3'>
+                    {project.description}
                   </p>
-                  <p className='text-xs text-gray-600 mb-2'>
-                    {project.challenges}
-                  </p>
-                  <p className='text-xs text-gray-500 font-medium mb-1'>
-                    {t('projects.solution')}
-                  </p>
-                  <p className='text-xs text-gray-600'>{project.solutions}</p>
                 </div>
 
-                <div className='flex flex-wrap gap-2 mt-auto mb-3'>
+                {/* Technologies with enhanced icons */}
+                <div className='flex flex-wrap gap-2 mb-4'>
                   {project.technologies &&
                     project.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className='text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full'
+                        className='flex items-center gap-1.5 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1.5 rounded-full'
                       >
+                        {renderTechIcon(tech)}
                         {tech}
                       </span>
                     ))}
                 </div>
-                <a
-                  href={`/projects/${project.id}`}
-                  className='text-indigo-600 font-medium text-sm flex items-center hover:text-indigo-800 transition-colors'
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {t('projects.viewDetails')}
-                  <svg
-                    className='w-4 h-4 ml-1'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M14 5l7 7m0 0l-7 7m7-7H3'
-                    />
-                  </svg>
-                </a>
+
+                {/* Action button */}
+                <div className='mt-auto'>
+                  {project.isPrivate ? (
+                    <button className='text-indigo-600 dark:text-indigo-400 font-medium text-sm flex items-center hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors'>
+                      {t('projects.viewDetails')}
+                      <svg
+                        className='w-4 h-4 ml-1'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                        xmlns='http://www.w3.org/2000/svg'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth={2}
+                          d='M14 5l7 7m0 0l-7 7m7-7H3'
+                        />
+                      </svg>
+                    </button>
+                  ) : (
+                    <a
+                      href={`https://github.com/username/${project.id}`}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-gray-700 dark:text-gray-300 font-medium text-sm flex items-center hover:text-gray-900 dark:hover:text-white transition-colors'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(
+                          `https://github.com/username/${project.id}`,
+                          '_blank'
+                        );
+                      }}
+                    >
+                      <svg
+                        className='h-5 w-5 mr-1.5'
+                        fill='currentColor'
+                        viewBox='0 0 24 24'
+                        xmlns='http://www.w3.org/2000/svg'
+                      >
+                        <path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' />
+                      </svg>
+                      View on GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -171,28 +271,16 @@ export const ProjectsSection = () => {
 
         {/* Mobile carousel */}
         <div className='md:hidden relative px-8'>
-          <div className='flex items-center justify-center'>
+          <div className='flex items-center justify-center' ref={carouselRef}>
             <button
               className='absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md disabled:opacity-50 focus:outline-none z-10'
               onClick={prevProject}
               disabled={carouselIdx === 0}
               aria-label={t('projects.previousProject')}
             >
-              <svg
-                className='w-4 h-4'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth={2}
-                  d='M15 19l-7-7 7-7'
-                />
-              </svg>
+              <ChevronLeft className='w-4 h-4' />
             </button>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -201,12 +289,17 @@ export const ProjectsSection = () => {
               className='w-full max-w-xs mx-auto'
             >
               <div
-                className='bg-white rounded-lg shadow-sm p-0 flex flex-col cursor-pointer border border-gray-200 overflow-hidden'
+                className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm flex flex-col cursor-pointer overflow-hidden h-[400px] ${
+                  enhancedProjects[carouselIdx].isPrivate
+                    ? 'border-2 border-purple-300 dark:border-purple-700'
+                    : 'border border-gray-200 dark:border-gray-700'
+                }`}
                 onClick={() =>
-                  navigate(`/projects/${enhancedProjects[carouselIdx].id}`)
+                  handleProjectClick(enhancedProjects[carouselIdx])
                 }
               >
-                <div className='relative w-full bg-gray-100 h-40 flex items-center justify-center'>
+                {/* Project Image */}
+                <div className='relative w-full bg-gray-100 dark:bg-gray-700 h-40 flex items-center justify-center'>
                   <img
                     src={
                       enhancedProjects[carouselIdx].image || '/placeholder.svg'
@@ -215,111 +308,109 @@ export const ProjectsSection = () => {
                     className='w-full h-full object-cover object-center'
                     loading='lazy'
                   />
-                  <div className='absolute top-2 right-2 flex space-x-2'>
-                    <a
-                      href='#'
-                      className='p-2 bg-white rounded-full shadow-sm hover:bg-gray-100'
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Github className='h-4 w-4 text-gray-700' />
-                    </a>
-                    <a
-                      href='#'
-                      className='p-2 bg-white rounded-full shadow-sm hover:bg-gray-100'
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <ExternalLink className='h-4 w-4 text-gray-700' />
-                    </a>
-                  </div>
+
+                  {/* Private indicator */}
+                  {enhancedProjects[carouselIdx].isPrivate && (
+                    <div className='absolute top-2 right-2 flex items-center gap-1.5 px-3 py-1.5 bg-purple-600/90 text-white rounded-full'>
+                      <Lock className='h-3.5 w-3.5' />
+                      <span className='text-xs font-medium'>Private</span>
+                    </div>
+                  )}
                 </div>
-                <div className='p-5'>
-                  <div className='flex justify-between items-center mb-2'>
-                    <h3 className='text-lg font-semibold text-gray-900'>
+
+                {/* Project Content */}
+                <div className='p-5 flex flex-col flex-grow'>
+                  <div className='flex justify-between items-center mb-3'>
+                    <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100'>
                       {enhancedProjects[carouselIdx].title}
                     </h3>
-                    <span className='text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded'>
+                    <span className='text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded'>
                       {enhancedProjects[carouselIdx].id === 'timesheet'
                         ? t('projects.internshipProject')
                         : enhancedProjects[carouselIdx].type}
                     </span>
                   </div>
-                  <p className='text-gray-600 mb-3 text-sm'>
-                    {enhancedProjects[carouselIdx].description}
-                  </p>
 
-                  {/* Technical challenges and solutions */}
-                  <div className='mb-3'>
-                    <p className='text-xs text-gray-500 font-medium mb-1'>
-                      {t('projects.technicalChallenge')}
-                    </p>
-                    <p className='text-xs text-gray-600 mb-2'>
-                      {enhancedProjects[carouselIdx].challenges}
-                    </p>
-                    <p className='text-xs text-gray-500 font-medium mb-1'>
-                      {t('projects.solution')}
-                    </p>
-                    <p className='text-xs text-gray-600'>
-                      {enhancedProjects[carouselIdx].solutions}
+                  {/* Description with fixed height */}
+                  <div className='mb-4 h-20 overflow-hidden'>
+                    <p className='text-gray-600 dark:text-gray-400 text-sm line-clamp-3'>
+                      {enhancedProjects[carouselIdx].description}
                     </p>
                   </div>
 
-                  <div className='flex flex-wrap gap-2 mb-3'>
+                  {/* Technologies with enhanced icons */}
+                  <div className='flex flex-wrap gap-2 mb-4'>
                     {enhancedProjects[carouselIdx].technologies &&
                       enhancedProjects[carouselIdx].technologies.map(
                         (tech, index) => (
                           <span
                             key={index}
-                            className='text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full'
+                            className='flex items-center gap-1.5 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1.5 rounded-full'
                           >
+                            {renderTechIcon(tech)}
                             {tech}
                           </span>
                         )
                       )}
                   </div>
-                  <a
-                    href={`/projects/${enhancedProjects[carouselIdx].id}`}
-                    className='text-indigo-600 font-medium text-sm flex items-center hover:text-indigo-800 transition-colors'
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    {t('projects.viewDetails')}
-                    <svg
-                      className='w-4 h-4 ml-1'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M14 5l7 7m0 0l-7 7m7-7H3'
-                      />
-                    </svg>
-                  </a>
+
+                  {/* Action button */}
+                  <div className='mt-auto'>
+                    {enhancedProjects[carouselIdx].isPrivate ? (
+                      <button className='text-indigo-600 dark:text-indigo-400 font-medium text-sm flex items-center hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors'>
+                        {t('projects.viewDetails')}
+                        <svg
+                          className='w-4 h-4 ml-1'
+                          fill='none'
+                          stroke='currentColor'
+                          viewBox='0 0 24 24'
+                          xmlns='http://www.w3.org/2000/svg'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M14 5l7 7m0 0l-7 7m7-7H3'
+                          />
+                        </svg>
+                      </button>
+                    ) : (
+                      <a
+                        href={`https://github.com/username/${enhancedProjects[carouselIdx].id}`}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-gray-700 dark:text-gray-300 font-medium text-sm flex items-center hover:text-gray-900 dark:hover:text-white transition-colors'
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(
+                            `https://github.com/username/${enhancedProjects[carouselIdx].id}`,
+                            '_blank'
+                          );
+                        }}
+                      >
+                        <svg
+                          className='h-5 w-5 mr-1.5'
+                          fill='currentColor'
+                          viewBox='0 0 24 24'
+                          xmlns='http://www.w3.org/2000/svg'
+                        >
+                          <path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' />
+                        </svg>
+                        View on GitHub
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
+
             <button
               className='absolute right-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md disabled:opacity-50 focus:outline-none z-10'
               onClick={nextProject}
               disabled={carouselIdx === enhancedProjects.length - 1}
               aria-label={t('projects.nextProject')}
             >
-              <svg
-                className='w-4 h-4'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth={2}
-                  d='M9 5l7 7-7 7'
-                />
-              </svg>
+              <ChevronRight className='w-4 h-4' />
             </button>
           </div>
 
@@ -330,7 +421,9 @@ export const ProjectsSection = () => {
                 key={idx}
                 onClick={() => setCarouselIdx(idx)}
                 className={`mx-1 h-2 rounded-full focus:outline-none transition-all duration-300 ${
-                  idx === carouselIdx ? 'bg-indigo-600 w-6' : 'bg-gray-300 w-2'
+                  idx === carouselIdx
+                    ? 'bg-indigo-600 w-6'
+                    : 'bg-gray-300 dark:bg-gray-600 w-2'
                 }`}
                 aria-label={t('projects.goToProject') + ' ' + (idx + 1)}
               />
@@ -338,6 +431,13 @@ export const ProjectsSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </section>
   );
 };

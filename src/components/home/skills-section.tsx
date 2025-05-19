@@ -1,6 +1,7 @@
 'use client';
 
 import type React from 'react';
+
 import { motion } from 'framer-motion';
 import { Users, Layout, Server, PenToolIcon as Tool } from 'lucide-react';
 import {
@@ -38,8 +39,9 @@ interface SkillCategory {
   title: string;
   icon: React.ReactNode;
   skills: Skill[];
-  bgColor: string;
-  textColor: string;
+  color: string;
+  lightColor: string;
+  darkColor: string;
 }
 
 export const TechnologiesSection = () => {
@@ -167,98 +169,152 @@ export const TechnologiesSection = () => {
   const skillCategories: SkillCategory[] = [
     {
       title: 'Frontend Development',
-      icon: <Layout className='h-8 w-8 text-indigo-500' />,
+      icon: <Layout className='h-8 w-8' />,
       skills: frontendSkills,
-      bgColor: 'bg-indigo-100',
-      textColor: 'text-indigo-700',
+      color: 'indigo',
+      lightColor: 'bg-indigo-50 dark:bg-indigo-950/30',
+      darkColor: 'bg-indigo-600 dark:bg-indigo-500',
     },
     {
       title: 'Backend Development',
-      icon: <Server className='h-8 w-8 text-blue-500' />,
+      icon: <Server className='h-8 w-8' />,
       skills: backendSkills,
-      bgColor: 'bg-blue-100',
-      textColor: 'text-blue-700',
+      color: 'purple',
+      lightColor: 'bg-purple-50 dark:bg-purple-950/30',
+      darkColor: 'bg-purple-600 dark:bg-purple-500',
     },
     {
       title: 'Tools & DevOps',
-      icon: <Tool className='h-8 w-8 text-emerald-500' />,
+      icon: <Tool className='h-8 w-8' />,
       skills: toolsSkills,
-      bgColor: 'bg-emerald-100',
-      textColor: 'text-emerald-700',
+      color: 'emerald',
+      lightColor: 'bg-emerald-50 dark:bg-emerald-950/30',
+      darkColor: 'bg-emerald-600 dark:bg-emerald-500',
     },
     {
       title: 'Professional Skills',
-      icon: <Users className='h-8 w-8 text-purple-500' />,
+      icon: <Users className='h-8 w-8' />,
       skills: professionalSkills,
-      bgColor: 'bg-purple-100',
-      textColor: 'text-purple-700',
+      color: 'rose',
+      lightColor: 'bg-rose-50 dark:bg-rose-950/30',
+      darkColor: 'bg-rose-600 dark:bg-rose-500',
     },
   ];
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
   };
 
-  const tagVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  const skillVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.3,
+        ease: 'easeOut',
+      },
+    },
   };
 
   return (
     <section
       id='technologies'
-      className='py-16 md:py-24 bg-gray-50 dark:bg-gray-900'
+      className='py-16 bg-gray-50 dark:bg-gray-900 overflow-hidden'
     >
       <div className='container mx-auto px-4 max-w-6xl'>
         <SectionHeading
-          title='Technical Skills & Competencies'
+          title='Technical Skills'
           description='My expertise in modern web development technologies and professional competencies'
         />
 
-        {/* Changed to 2-column grid on medium screens and larger */}
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-12'>
-          {skillCategories.map((category) => (
+        <motion.div
+          className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-10'
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 h-full'
-              variants={cardVariants}
-              initial='hidden'
-              whileInView='visible'
-              viewport={{ once: true, amount: 0.3 }}
+              className='relative h-full'
+              variants={itemVariants}
             >
-              <div className='flex items-center mb-6'>
-                <div className='p-3 bg-gray-100 dark:bg-gray-700 rounded-lg mr-4'>
-                  {category.icon}
-                </div>
-                <h3 className='text-2xl font-semibold text-gray-800 dark:text-white'>
-                  {category.title}
-                </h3>
-              </div>
-
-              <motion.div
-                className='flex flex-wrap gap-3'
-                variants={{
-                  visible: { transition: { staggerChildren: 0.05 } },
-                }}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{ once: true, amount: 0.2 }}
+              <div
+                className={`h-full rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 ${category.lightColor} backdrop-blur-sm`}
               >
-                {category.skills.map((skill) => (
-                  <motion.span
-                    key={skill.key}
-                    className={`flex items-center px-4 py-2 rounded-md text-sm font-medium ${category.bgColor} ${category.textColor} transition-transform hover:scale-105`}
-                    variants={tagVariants}
+                {/* Header */}
+                <div
+                  className={`${category.darkColor} px-6 py-4 flex items-center gap-3`}
+                >
+                  <div className='p-2 bg-white/20 rounded-lg text-white'>
+                    {category.icon}
+                  </div>
+                  <h3 className='text-xl font-bold text-white'>
+                    {category.title}
+                  </h3>
+                </div>
+
+                {/* Skills Grid */}
+                <div className='p-5'>
+                  <motion.div
+                    className='grid grid-cols-2 sm:grid-cols-3 gap-3'
+                    variants={{
+                      visible: {
+                        transition: {
+                          staggerChildren: 0.03,
+                          delayChildren: 0.2,
+                        },
+                      },
+                    }}
                   >
-                    {skill.icon}
-                    {skill.name}
-                  </motion.span>
-                ))}
-              </motion.div>
+                    {category.skills.map((skill) => (
+                      <motion.div
+                        key={skill.key}
+                        className={`flex items-center p-3 rounded-lg bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-300 hover:scale-105 hover:border-${category.color}-300 dark:hover:border-${category.color}-500`}
+                        variants={skillVariants}
+                      >
+                        {skill.icon ? (
+                          <div
+                            className={`text-${category.color}-500 flex items-center`}
+                          >
+                            {skill.icon}
+                          </div>
+                        ) : (
+                          <div
+                            className={`w-5 h-5 mr-2 rounded-full bg-${category.color}-100 dark:bg-${category.color}-900/50 border border-${category.color}-200 dark:border-${category.color}-700`}
+                          ></div>
+                        )}
+                        <span className='text-sm font-medium text-gray-700 dark:text-gray-200 truncate'>
+                          {skill.name}
+                        </span>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                </div>
+              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
