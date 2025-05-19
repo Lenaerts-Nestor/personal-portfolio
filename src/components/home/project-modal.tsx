@@ -24,6 +24,7 @@ import {
   SiSwagger,
   SiDart,
 } from 'react-icons/si';
+import { AmoTrackSummary } from '../../utils/project-summaries/amotrack-summary';
 
 // Map project technologies to their corresponding icons and colors
 const techIcons = {
@@ -188,105 +189,42 @@ export const ProjectModal = ({
                 </div>
               </div>
 
-              {/* Description */}
-              <div className='mb-6'>
-                <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2'>
-                  Project Overview
-                </h3>
-                <p className='text-gray-700 dark:text-gray-300'>
-                  {project.description}
-                </p>
-              </div>
+              {/* Project-specific content */}
+              {project.id === 'timesheet' ? (
+                <AmoTrackSummary />
+              ) : (
+                <>
+                  {/* Description */}
+                  <div className='mb-6'>
+                    <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2'>
+                      Project Overview
+                    </h3>
+                    <p className='text-gray-700 dark:text-gray-300'>
+                      {project.description}
+                    </p>
+                  </div>
 
-              {/* Technical challenges and solutions */}
-              <div className='mb-6'>
-                <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3'>
-                  Technical Details
-                </h3>
-                <div className='bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4 mb-4'>
-                  <h4 className='text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-                    {t('projects.technicalChallenge')}
-                  </h4>
-                  <p className='text-gray-600 dark:text-gray-400 mb-4'>
-                    {project.challenges}
-                  </p>
-                  <h4 className='text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-                    {t('projects.solution')}
-                  </h4>
-                  <p className='text-gray-600 dark:text-gray-400'>
-                    {project.solutions}
-                  </p>
-                </div>
-              </div>
-
-              {/* Additional project details - for the timesheet project */}
-              {project.id === 'timesheet' && (
-                <div className='mb-6'>
-                  <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3'>
-                    Project Highlights
-                  </h3>
-                  <ul className='list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300'>
-                    <li>
-                      Developed during my internship at Amotek as the primary
-                      project
-                    </li>
-                    <li>
-                      Built a full-stack timesheet application for internal
-                      business tracking and management
-                    </li>
-                    <li>
-                      Implemented user authentication, role-based access
-                      control, and comprehensive CRUD operations
-                    </li>
-                    <li>
-                      Created a responsive UI with React and TypeScript that
-                      works seamlessly across devices
-                    </li>
-                    <li>
-                      Designed and implemented a RESTful API with Fastify that
-                      follows best practices for performance and security
-                    </li>
-                    <li>
-                      Used PostgreSQL with Drizzle ORM for efficient database
-                      operations and type safety
-                    </li>
-                    <li>
-                      Implemented features like time tracking, project
-                      management, reporting, and data visualization
-                    </li>
-                  </ul>
-                </div>
-              )}
-
-              {/* Screenshots section - for the timesheet project */}
-              {project.id === 'timesheet' && (
-                <div className='mb-6'>
-                  <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3'>
-                    Project Screenshots
-                  </h3>
-                  <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-                    <div className='bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden'>
-                      <img
-                        src={project.image || '/placeholder.svg'}
-                        alt='Timesheet Dashboard'
-                        className='w-full h-48 object-cover object-center'
-                      />
-                      <div className='p-2 text-center text-sm text-gray-600 dark:text-gray-400'>
-                        Dashboard View
-                      </div>
-                    </div>
-                    <div className='bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden'>
-                      <img
-                        src={project.image || '/placeholder.svg'}
-                        alt='Timesheet Entry Form'
-                        className='w-full h-48 object-cover object-center'
-                      />
-                      <div className='p-2 text-center text-sm text-gray-600 dark:text-gray-400'>
-                        Time Entry Form
-                      </div>
+                  {/* Technical challenges and solutions */}
+                  <div className='mb-6'>
+                    <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3'>
+                      Technical Details
+                    </h3>
+                    <div className='bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4 mb-4'>
+                      <h4 className='text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+                        {t('projects.technicalChallenge')}
+                      </h4>
+                      <p className='text-gray-600 dark:text-gray-400 mb-4'>
+                        {project.challenges}
+                      </p>
+                      <h4 className='text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+                        {t('projects.solution')}
+                      </h4>
+                      <p className='text-gray-600 dark:text-gray-400'>
+                        {project.solutions}
+                      </p>
                     </div>
                   </div>
-                </div>
+                </>
               )}
             </div>
 

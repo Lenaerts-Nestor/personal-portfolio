@@ -93,7 +93,7 @@
     "methodsApproach": "Balans tussen Innovatie en Fundamenten",
     "methodsText1": "Ik bouw mijn kennis op door continu nieuwe technologieën te leren en tegelijkertijd mijn begrip van fundamentele programmeerprincipes en gevestigde best practices te verdiepen. Deze aanpak helpt me een balans te vinden tussen het verkennen van innovatie en het effectief toepassen van bewezen oplossingen.",
     "methodsLearning": "Gestructureerd Leren & Praktische Toepassing",
-    "methodsText2": "Mijn leerproces wordt geleid door fundamentele boeken zoals ‘Clean Code’, 'Head First Design Patterns’, en ‘Don’t Make Me Think’, gecombineerd met praktische projectwerk en het benutten van AI-gestuurde leermethoden voor ondersteuning en exploratie. Mijn constante doel is het verbeteren van codekwaliteit, onderhoudbaarheid en algehele ontwikkelingsefficiëntie.",
+    "methodsText2": "Mijn leerproces wordt geleid door fundamentele boeken zoals 'Clean Code', 'Head First Design Patterns', en 'Don't Make Me Think', gecombineerd met praktische projectwerk en het benutten van AI-gestuurde leermethoden voor ondersteuning en exploratie. Mijn constante doel is het verbeteren van codekwaliteit, onderhoudbaarheid en algehele ontwikkelingsefficiëntie.",
     "contactTitle": "Neem Contact Op",
     "contactEmail": "jouw.email@voorbeeld.be",
     "github": "GitHub",
@@ -160,7 +160,38 @@
     "nextProject": "Volgend Project",
     "goToProject": "Ga naar project",
     "featuredTitle": "Projecten",
-    "featuredDescription": "Ontdek een selectie van mijn belangrijkste projecten. <span class=\"font-semibold text-indigo-600\">Publieke projecten</span> zijn beschikbaar op GitHub, terwijl <span class=\"font-semibold text-purple-600\">privéprojecten</span> (zoals mijn stagewerk) vanwege vertrouwelijkheid in een modaal venster worden beschreven."
+    "featuredDescription": "Ontdek een selectie van mijn belangrijkste projecten. <span class=\"font-semibold text-indigo-600\">Publieke projecten</span> zijn beschikbaar op GitHub, terwijl <span class=\"font-semibold text-purple-600\">privéprojecten</span> (zoals mijn stagewerk) vanwege vertrouwelijkheid in een modaal venster worden beschreven.",
+    "amotrack": {
+      "overviewTitle": "Project Overzicht",
+      "overview": "AmoTrack is een uitgebreide full-stack applicatie ontwikkeld voor Amotek's interne bedrijfsregistratie en projectmanagement behoeften. Het systeem integreert tijdsregistratie, projectbeheer, klantenbeheer en rapportage in één platform, wat een complete oplossing biedt voor de operationele workflow van het bedrijf.",
+      "featuresTitle": "Belangrijkste Functies",
+      "features": {
+        "timeTracking": "Uitgebreide tijdsregistratie met gedetailleerd urenbriefjesbeheer",
+        "projectManagement": "Projectopvolging met taken, deadlines en resourcetoewijzing",
+        "clientManagement": "Klantinformatiebeheer en relatietracking",
+        "userManagement": "Gebruikersbeheer met rolgebaseerde toegangscontrole",
+        "reporting": "Gedetailleerde rapportage en datavisualisatiemogelijkheden",
+        "authentication": "Veilig authenticatie- en autorisatiesysteem"
+      },
+      "architectureTitle": "Technische Architectuur",
+      "frontendTitle": "Frontend Architectuur",
+      "frontendDescription": "Gebouwd met React en TypeScript, implementeert de frontend een modulaire componentstructuur met aangepaste hooks voor verschillende entiteitstypes. Het maakt gebruik van Tanstack Query voor efficiënt API-statusbeheer, React Router voor naadloze navigatie, en integreert met een aangepaste styling-bibliotheek voor consistente UI-componenten.",
+      "backendTitle": "Backend Architectuur",
+      "backendDescription": "Aangedreven door Fastify en Node.js, biedt de backend een hoogwaardige RESTful API met uitgebreide validatie. Het gebruikt Drizzle ORM met PostgreSQL voor type-veilige databaseoperaties, implementeert JWT-authenticatie, en bevat Swagger-documentatie voor API-endpoints.",
+      "contributionsTitle": "Mijn Bijdragen",
+      "contributions": {
+        "frontend": "Ontwikkelde responsieve UI-componenten met React en TypeScript, waardoor een goed gestructureerde gebruikersinterface ontstond",
+        "backend": "Implementeerde RESTful API-endpoints met Fastify voor efficiënte gegevensverwerking en bedrijfslogica",
+        "database": "Ontwierp databaseschema's en queries met PostgreSQL en Drizzle ORM voor optimale gegevensopslag",
+        "api": "Creëerde uitgebreide API-documentatie met Swagger voor verbeterde ontwikkelaarservaring",
+        "deployment": "Configureerde deployment-pijplijnen en pakte DevOps-uitdagingen aan voor soepele levering"
+      },
+      "challenge": "De belangrijkste uitdaging was het creëren van een uniform systeem dat complexe relaties tussen klanten, projecten, taken en urenbriefjes kon verwerken, terwijl de data-integriteit behouden bleef en een intuïtieve gebruikerservaring werd geboden. Daarnaast vereiste het implementeren van correcte authenticatie en autorisatie over zowel frontend als backend zorgvuldige coördinatie.",
+      "solution": "Ik implementeerde een goed gestructureerd databaseschema met Drizzle ORM dat de relaties tussen entiteiten nauwkeurig modelleerde. De backend werd ontworpen met duidelijke scheiding van verantwoordelijkheden (controllers, services, routes) voor onderhoudbaarheid. Aan de frontend-kant creëerde ik herbruikbare componenten en aangepaste hooks voor elk entiteitstype, wat zorgde voor consistente gegevensverwerking en UI-presentatie. Voor authenticatie implementeerde ik een veilig JWT-gebaseerd systeem met rolgebaseerde toegangscontrole.",
+      "technologiesTitle": "Technologie Stack",
+      "outcomeTitle": "Project Resultaat",
+      "outcome": "De AmoTrack-applicatie is succesvol opgeleverd en wordt nu intern door Amotek gebruikt voor dagelijkse operaties. Het systeem heeft de projectmanagement- en tijdsregistratieprocessen van het bedrijf gestroomlijnd, wat waardevolle inzichten biedt in resourcetoewijzing en projectwinstgevendheid. De codebase is goed gestructureerd en gedocumenteerd, waardoor het gemakkelijk te onderhouden en uit te breiden is met nieuwe functies indien nodig."
+    }
   },
   "skills": {
     "javascript": "JavaScript (ES6+)",

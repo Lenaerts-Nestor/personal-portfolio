@@ -1,9 +1,9 @@
 export const projects = [
   {
     id: 'timesheet',
-    title: 'Timesheet',
+    title: 'AmoTrack',
     description:
-      'Web app for internal business tracking and management. This full-stack application was developed during my internship at Amotek and is now used internally for time tracking, project management, and reporting.',
+      'A comprehensive full-stack application for internal business tracking and management, developed during my internship at Amotek. This system handles time tracking, project management, client management, and reporting.',
     icon: null,
     image: 'src/assets/timesheet.jpg',
     type: 'Internship Project',
@@ -13,6 +13,7 @@ export const projects = [
       'Fastify',
       'PostgreSQL',
       'Drizzle ORM',
+      'Node.js',
     ],
     techs: [],
     isPrivate: true,

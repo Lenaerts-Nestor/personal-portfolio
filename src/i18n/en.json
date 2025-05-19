@@ -93,7 +93,7 @@
     "methodsApproach": "Balancing Innovation and Fundamentals",
     "methodsText1": "I build my knowledge by continuously learning new technologies while simultaneously deepening my understanding of fundamental programming principles and established best practices. This approach helps me find a balance between exploring innovation and effectively applying proven solutions.",
     "methodsLearning": "Structured Learning & Practical Application",
-    "methodsText2": "My learning process is guided by foundational books like 'Clean Code', 'Head First Design Patterns', and 'Don’t Make Me Think', combined with practical project work and utilizing AI-driven learning methods for support and exploration. My constant goal is to improve code quality, maintainability, and overall development efficiency.",
+    "methodsText2": "My learning process is guided by foundational books like 'Clean Code', 'Head First Design Patterns', and 'Don't Make Me Think', combined with practical project work and utilizing AI-driven learning methods for support and exploration. My constant goal is to improve code quality, maintainability, and overall development efficiency.",
     "contactTitle": "Get in Touch",
     "contactEmail": "your.email@example.com",
     "github": "GitHub",
@@ -160,7 +160,38 @@
     "nextProject": "Next Project",
     "goToProject": "Go to project",
     "featuredTitle": "Projects",
-    "featuredDescription": "Explore a selection of my key projects. <span class=\"font-semibold text-indigo-600\">Public projects</span> are available on GitHub, while <span class=\"font-semibold text-purple-600\">private projects</span> (like my internship work) are detailed in a modal due to confidentiality."
+    "featuredDescription": "Explore a selection of my key projects. <span class=\"font-semibold text-indigo-600\">Public projects</span> are available on GitHub, while <span class=\"font-semibold text-purple-600\">private projects</span> (like my internship work) are detailed in a modal due to confidentiality.",
+    "amotrack": {
+      "overviewTitle": "Project Overview",
+      "overview": "AmoTrack is a comprehensive full-stack application developed for Amotek's internal business tracking and project management needs. The system integrates time tracking, project management, client management, and reporting into a unified platform, providing a complete solution for the company's operational workflow.",
+      "featuresTitle": "Key Features",
+      "features": {
+        "timeTracking": "Comprehensive time tracking with detailed timesheet management",
+        "projectManagement": "Project tracking with tasks, deadlines, and resource allocation",
+        "clientManagement": "Client information management and relationship tracking",
+        "userManagement": "User administration with role-based access control",
+        "reporting": "Detailed reporting and data visualization capabilities",
+        "authentication": "Secure authentication and authorization system"
+      },
+      "architectureTitle": "Technical Architecture",
+      "frontendTitle": "Frontend Architecture",
+      "frontendDescription": "Built with React and TypeScript, the frontend implements a modular component structure with custom hooks for different entity types. It leverages Tanstack Query for efficient API state management, React Router for seamless navigation, and integrates with a custom styling library for consistent UI components.",
+      "backendTitle": "Backend Architecture",
+      "backendDescription": "Powered by Fastify and Node.js, the backend provides a high-performance RESTful API with comprehensive validation. It uses Drizzle ORM with PostgreSQL for type-safe database operations, implements JWT authentication, and includes Swagger documentation for API endpoints.",
+      "contributionsTitle": "My Contributions",
+      "contributions": {
+        "frontend": "Developed responsive UI components with React and TypeScript, creating a well-structured user interface",
+        "backend": "Implemented RESTful API endpoints using Fastify for efficient data handling and business logic",
+        "database": "Designed database schemas and queries with PostgreSQL and Drizzle ORM for optimal data storage",
+        "api": "Created comprehensive API documentation with Swagger for improved developer experience",
+        "deployment": "Configured deployment pipelines and addressed DevOps challenges for smooth delivery"
+      },
+      "challenge": "The main challenge was creating a unified system that could handle complex relationships between clients, projects, tasks, and timesheets while maintaining data integrity and providing an intuitive user experience. Additionally, implementing proper authentication and authorization across both frontend and backend required careful coordination.",
+      "solution": "I implemented a well-structured database schema using Drizzle ORM that accurately modeled the relationships between entities. The backend was designed with clear separation of concerns (controllers, services, routes) for maintainability. On the frontend, I created reusable components and custom hooks for each entity type, ensuring consistent data handling and UI presentation. For authentication, I implemented a secure JWT-based system with role-based access control.",
+      "technologiesTitle": "Technology Stack",
+      "outcomeTitle": "Project Outcome",
+      "outcome": "The AmoTrack application was successfully delivered and is now used internally by Amotek for daily operations. The system has streamlined the company's project management and time tracking processes, providing valuable insights into resource allocation and project profitability. The codebase is well-structured and documented, making it easy to maintain and extend with new features as needed."
+    }
   },
   "skills": {
     "javascript": "JavaScript (ES6+)",
