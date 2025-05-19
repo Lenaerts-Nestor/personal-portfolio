@@ -1,5 +1,4 @@
 import { TechnologiesSection as MainTechnologies } from '../../components/home/skills-section';
-import EducationSection from '../../components/home/education-section';
 import { ScrollToTop } from '../../components/shared/scroll-to-top';
 
 import { useI18n } from '../../components/shared/i18nContext';
@@ -25,8 +24,8 @@ const HomePage = () => {
     <>
       <main>
         <IntroSection />
-        <MainTechnologies />
         <MainProjects />
+        <MainTechnologies />
         <MainExperience />
         <EducationSectionWrapper />
       </main>

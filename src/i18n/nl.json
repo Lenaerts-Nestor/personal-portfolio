@@ -8,7 +8,7 @@
     "next": "Volgende"
   },
   "home": {
-    "welcome": "Junior Full-Stack/Backend Ontwikkelaar | Zoekt Uitdaging in Antwerpen",
+    "welcome": "Junior Full-Stack/Backend Ontwikkelaar ",
     "description": "Recent afgestudeerd in Programmeren met aanzienlijke hands-on full-stack ontwikkelervaring opgedaan tijdens een stage. Mijn focus ligt op React en Node.js (Fastify, PostgreSQL) voor het bouwen van efficiënte en onderhoudbare applicaties. Ik sta te popelen om mijn vaardigheden en probleemoplossend vermogen in te zetten in een junior ontwikkelaarsrol in de regio Antwerpen en bij te dragen aan betekenisvolle projecten.",
     "readBlog": "Lees Stage Blog",
     "aboutMe": "Over mij",
@@ -302,7 +302,7 @@
   },
   "blog": {
     "title": "Mijn Software Ontwikkel Stage Reis",
-    "description": "Volg mijn wekelijkse ervaringen, uitdagingen en lessen geleerd tijdens mijn praktijkgerichte softwareontwikkelingstage.",
+    "description": "Recent afgestudeerd in Programmeren met een solide basis in full-stack ontwikkeling opgedaan tijdens een significante stage, waarbij ik uitgebreid gebruik heb gemaakt van React en Node.js (Fastify, PostgreSQL). Ik leer snel en sta te popelen om bij te dragen aan een dynamisch team in een junior ontwikkelaarsrol in de regio Antwerpen en met diverse technologieën te werken.",
     "readMore": "Lees meer",
     "weekOverview": "Week {weekNumber}",
     "dailyUpdates": {

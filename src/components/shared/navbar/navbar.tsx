@@ -11,7 +11,6 @@ import {
   Briefcase,
   FolderKanban,
   GraduationCap,
-  Mail,
   ArrowLeft,
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -30,23 +29,21 @@ export const Navbar = ({
   ],
 }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [language, setLanguage] = useState(defaultLanguage);
+  const [_language, setLanguage] = useState(defaultLanguage);
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
   const isBlogPage = location.pathname === '/blog';
 
-  // Define menu items based on current page
   const homeMenuItems = [
-    {
-      path: '/#technologies',
-      label: 'Skills',
-      icon: <Code className='h-4 w-4' />,
-      priority: 'high',
-    },
     {
       path: '/#projects',
       label: 'Projects',
       icon: <FolderKanban className='h-4 w-4' />,
+      priority: 'high',
+    },
+    {
+      path: '/#technologies',
+      label: 'Skills',
+      icon: <Code className='h-4 w-4' />,
       priority: 'high',
     },
     {
@@ -61,12 +58,7 @@ export const Navbar = ({
       icon: <GraduationCap className='h-4 w-4' />,
       priority: 'high',
     },
-    {
-      path: '/#contact',
-      label: 'Contact',
-      icon: <Mail className='h-4 w-4' />,
-      priority: 'medium',
-    },
+
     { path: '/blog', label: 'Blog', icon: null, priority: 'low' },
   ];
 
@@ -117,14 +109,12 @@ export const Navbar = ({
     }
   };
 
-  // Handle smooth scrolling for anchor links
   const handleAnchorClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     path: string
   ) => {
     if (path.startsWith('/#')) {
       e.preventDefault();
-      // If we're not on the homepage, navigate to homepage first
       if (location.pathname !== '/') {
         window.location.href = path;
         return;

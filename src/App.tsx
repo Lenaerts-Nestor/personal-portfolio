@@ -1,8 +1,7 @@
 import { AppRoutes } from './routes';
-import './style.css'; // Use the consolidated CSS file
+import './style.css';
 import { Navbar } from './components/shared/navbar/navbar';
 
-// Define the navbar props
 const navbarProps = {
   defaultLanguage: 'en',
   socials: [
@@ -18,7 +17,6 @@ function App() {
   return (
     <div className='min-h-screen min-w-screen'>
       <Navbar menuItems={[]} {...navbarProps} />
-      {/* Add padding-top to prevent content from being hidden behind the fixed navbar */}
       <div className='pt-[64px]'>
         <AppRoutes />
       </div>

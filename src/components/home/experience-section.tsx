@@ -18,6 +18,11 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiDrizzle,
+  SiStorybook,
+  SiNodedotjs,
+  SiStyledcomponents,
+  SiMacos,
+  SiPinetwork,
 } from 'react-icons/si';
 import { useI18n } from '../shared/i18nContext';
 
@@ -45,7 +50,7 @@ export default function ExperienceSection() {
       typeKey: 'experience.types.internship',
       descriptionKey: 'experience.descriptions.amotekInternship',
       responsibilitiesKeys: [
-        'experience.responsibilities.amotekInternship.0', // Using indices for list items
+        'experience.responsibilities.amotekInternship.0',
         'experience.responsibilities.amotekInternship.1',
         'experience.responsibilities.amotekInternship.2',
         'experience.responsibilities.amotekInternship.3',
@@ -61,9 +66,11 @@ export default function ExperienceSection() {
           icon: <SiPostgresql className='text-blue-700' />,
         },
         { name: 'Fastify', icon: <SiFastify className='text-gray-800' /> },
+        { name: 'Storybook', icon: <SiStorybook className='text-pink-500' /> },
+        { name: 'Node.js', icon: <SiNodedotjs className='text-green-600' /> },
         {
-          name: 'Tailwind CSS',
-          icon: <SiTailwindcss className='text-teal-500' />,
+          name: 'Styled-components',
+          icon: <SiStyledcomponents className='text-pink-500' />,
         },
         { name: 'Drizzle ORM', icon: <SiDrizzle className='text-amber-500' /> },
       ],
@@ -86,10 +93,10 @@ export default function ExperienceSection() {
           name: 'Windows',
           icon: <span className='i-mdi-microsoft-windows text-blue-500' />,
         },
-        { name: 'macOS', icon: <span className='i-mdi-apple text-gray-700' /> },
+        { name: 'macOS', icon: <SiMacos className='text-gray-700' /> },
         {
           name: 'Networking',
-          icon: <span className='i-mdi-lan text-green-600' />,
+          icon: <SiPinetwork />,
         },
       ],
       featured: false,

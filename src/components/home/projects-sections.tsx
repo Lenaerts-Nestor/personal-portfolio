@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FolderKanban, ExternalLink, Github } from 'lucide-react';
-import { projects } from '../../utils/projectsgroupicon';
+import { projects } from '../../utils/projects-data';
 import { useI18n } from '../shared/i18nContext';
 import { SectionHeading } from '../shared/layout/section-heading';
 
