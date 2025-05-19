@@ -69,7 +69,54 @@
         "softwareEngineering": "Software Engineering Principes",
         "agileDevelopment": "Agile Ontwikkelingsmethodologieën"
       },
-      "description": "Mijn opleiding bood een sterke basis in zowel theoretische concepten als praktische toepassing van softwareontwikkelingsprincipes, en bereidde me voor op uitdagingen in de echte wereld."
+      "description": "Mijn opleiding bood een sterke basis in zowel theoretische concepten als praktische toepassing van softwareontwikkelingsprincipes, en bereidde me voor op uitdagingen in de echte wereld.",
+      "mobile": {
+        "title": "Opleiding & Professionele Ontwikkeling",
+        "description": "Mijn academische basis en voortdurende leertraject",
+        "graduaatTitle": "Graduaat Programmeren",
+        "graduaatInstitution": "AP Hogeschool Antwerpen",
+        "graduaatPeriod": "Sep 2023 - Jun 2025 (Verwacht)",
+        "graduaatDescription": "Praktische, op de industrie gerichte programmeeropleiding met nadruk op hands-on softwareontwikkeling en moderne webtechnologieën.",
+        "graduaatFocusTitle": "Belangrijkste Focusgebieden",
+        "graduaatFocusAreas": [
+          "Web Frameworks",
+          "API-ontwikkeling",
+          "OO Programmeren",
+          "Databases",
+          "Testen & Beveiliging",
+          "Cloudsystemen"
+        ],
+        "graduaatCapstoneTitle": "Afstudeerproject",
+        "graduaatCapstoneDescription": "Full-stack urenregistratie-applicatie (AmoTrack) gebouwd met React, Fastify en PostgreSQL tijdens stage bij Amotek.",
+        "bachelorTitle": "Bachelor Toegepaste Informatica",
+        "bachelorNotCompleted": "(Niet afgerond)",
+        "bachelorInstitution": "AP Hogeschool Antwerpen",
+        "bachelorPeriod": "Sep 2020 - Jun 2022",
+        "bachelorCourseworkTitle": "Waardevolle Cursussen",
+        "bachelorCoursework": [
+          "Programmeervaardigheden",
+          "Databaseprogrammeren",
+          "Webprogrammeren",
+          ".NET OOP",
+          "Softwareontwerp"
+        ],
+        "bachelorSwitchNote": "Overgestapt naar het meer praktijkgerichte Graduaat-programma, dat beter aansloot bij mijn hands-on leerstijl en carrièredoelen.",
+        "profDevTitle": "Voortdurend Leren",
+        "profDevItems": [
+          {
+            "title": "Zelfgestuurd Leren",
+            "description": "Regelmatig bezig met documentatie, tutorials en communitybronnen voor React, Node.js, TypeScript en databases."
+          },
+          {
+            "title": "Technisch Lezen",
+            "description": "Bestuderen van standaardwerken zoals 'Clean Code' en 'Don't Make Me Think' voor best practices."
+          },
+          {
+            "title": "Praktische Toepassing",
+            "description": "Leren toegepast via stagewerk en persoonlijke projecten, met focus op full-stack applicaties."
+          }
+        ]
+      }
     },
     "skillsCategories": [
       {

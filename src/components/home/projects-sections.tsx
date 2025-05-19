@@ -38,43 +38,13 @@ export const ProjectsSection = () => {
     );
   };
 
-  // Enhanced project descriptions with technical challenges and solutions
   const enhancedProjects = projects.map((project) => {
     const enhancedDescription = project.description;
     let challenges = '';
     let solutions = '';
 
-    if (project.id === 'timesheet') {
-      challenges =
-        'Implemented complex state management for real-time updates across multiple users.';
-      solutions =
-        'Utilized React Context API and custom hooks to create a scalable state management solution.';
-    } else if (project.id === 'webdev') {
-      challenges =
-        'Needed to create a secure authentication system with role-based access control.';
-      solutions =
-        'Implemented JWT authentication with middleware for route protection and user role verification.';
-    } else if (project.id === 'game') {
-      challenges =
-        'Optimizing game performance while maintaining visual quality on various devices.';
-      solutions =
-        'Implemented efficient sprite rendering and collision detection algorithms.';
-    } else if (project.id === 'webapi') {
-      challenges =
-        'Designing a RESTful API that follows best practices and handles high request volumes.';
-      solutions =
-        'Created a well-structured API with proper error handling and caching mechanisms.';
-    } else if (project.id === 'parkflow') {
-      challenges =
-        'Integrating real-time location services with user authentication and booking system.';
-      solutions =
-        'Used Firebase for real-time database and authentication, with custom state management.';
-    } else if (project.id === 'carinfo') {
-      challenges =
-        'Handling API rate limits and optimizing mobile performance.';
-      solutions =
-        'Implemented request caching and lazy loading of components to improve performance.';
-    }
+    challenges = t(`projects.${project.id}.challenge`);
+    solutions = t(`projects.${project.id}.solution`);
 
     return {
       ...project,
@@ -88,8 +58,8 @@ export const ProjectsSection = () => {
     <section id='projects' className='py-16 bg-gray-50'>
       <div className='max-w-6xl mx-auto px-4'>
         <SectionHeading
-          title='Featured Projects'
-          description='A showcase of my technical skills and problem-solving abilities through real-world applications'
+          title={t('projects.featuredTitle')}
+          description={t('projects.featuredDescription')}
           icon={<FolderKanban className='h-8 w-8' />}
         />
 
@@ -140,7 +110,7 @@ export const ProjectsSection = () => {
                   </h3>
                   <span className='text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded'>
                     {project.id === 'timesheet'
-                      ? 'Internship Project'
+                      ? t('projects.internshipProject')
                       : project.type}
                   </span>
                 </div>
@@ -151,13 +121,13 @@ export const ProjectsSection = () => {
                 {/* Technical challenges and solutions */}
                 <div className='mb-3'>
                   <p className='text-xs text-gray-500 font-medium mb-1'>
-                    Technical Challenge:
+                    {t('projects.technicalChallenge')}
                   </p>
                   <p className='text-xs text-gray-600 mb-2'>
                     {project.challenges}
                   </p>
                   <p className='text-xs text-gray-500 font-medium mb-1'>
-                    Solution:
+                    {t('projects.solution')}
                   </p>
                   <p className='text-xs text-gray-600'>{project.solutions}</p>
                 </div>
@@ -178,7 +148,7 @@ export const ProjectsSection = () => {
                   className='text-indigo-600 font-medium text-sm flex items-center hover:text-indigo-800 transition-colors'
                   onClick={(e) => e.stopPropagation()}
                 >
-                  View Details
+                  {t('projects.viewDetails')}
                   <svg
                     className='w-4 h-4 ml-1'
                     fill='none'
@@ -206,7 +176,7 @@ export const ProjectsSection = () => {
               className='absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md disabled:opacity-50 focus:outline-none z-10'
               onClick={prevProject}
               disabled={carouselIdx === 0}
-              aria-label='Previous project'
+              aria-label={t('projects.previousProject')}
             >
               <svg
                 className='w-4 h-4'
@@ -269,7 +239,7 @@ export const ProjectsSection = () => {
                     </h3>
                     <span className='text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded'>
                       {enhancedProjects[carouselIdx].id === 'timesheet'
-                        ? 'Internship Project'
+                        ? t('projects.internshipProject')
                         : enhancedProjects[carouselIdx].type}
                     </span>
                   </div>
@@ -280,13 +250,13 @@ export const ProjectsSection = () => {
                   {/* Technical challenges and solutions */}
                   <div className='mb-3'>
                     <p className='text-xs text-gray-500 font-medium mb-1'>
-                      Technical Challenge:
+                      {t('projects.technicalChallenge')}
                     </p>
                     <p className='text-xs text-gray-600 mb-2'>
                       {enhancedProjects[carouselIdx].challenges}
                     </p>
                     <p className='text-xs text-gray-500 font-medium mb-1'>
-                      Solution:
+                      {t('projects.solution')}
                     </p>
                     <p className='text-xs text-gray-600'>
                       {enhancedProjects[carouselIdx].solutions}
@@ -311,7 +281,7 @@ export const ProjectsSection = () => {
                     className='text-indigo-600 font-medium text-sm flex items-center hover:text-indigo-800 transition-colors'
                     onClick={(e) => e.stopPropagation()}
                   >
-                    View Details
+                    {t('projects.viewDetails')}
                     <svg
                       className='w-4 h-4 ml-1'
                       fill='none'
@@ -334,7 +304,7 @@ export const ProjectsSection = () => {
               className='absolute right-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md disabled:opacity-50 focus:outline-none z-10'
               onClick={nextProject}
               disabled={carouselIdx === enhancedProjects.length - 1}
-              aria-label='Next project'
+              aria-label={t('projects.nextProject')}
             >
               <svg
                 className='w-4 h-4'
@@ -362,7 +332,7 @@ export const ProjectsSection = () => {
                 className={`mx-1 h-2 rounded-full focus:outline-none transition-all duration-300 ${
                   idx === carouselIdx ? 'bg-indigo-600 w-6' : 'bg-gray-300 w-2'
                 }`}
-                aria-label={`Go to project ${idx + 1}`}
+                aria-label={t('projects.goToProject') + ' ' + (idx + 1)}
               />
             ))}
           </div>

@@ -52,7 +52,7 @@ export const Navbar = ({
   };
 
   return (
-    <header className='border-b border-gray-200 bg-white sticky top-0 z-50'>
+    <header className='border-b border-gray-200 bg-white sticky top-0 z-50 w-full shadow-sm'>
       <div className='max-w-6xl mx-auto px-4'>
         <div className='flex items-center justify-between py-3'>
           <NavbarTitle />

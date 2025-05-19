@@ -16,8 +16,8 @@ const EducationSectionMobile: React.FC = () => {
     >
       <div className='container mx-auto px-4'>
         <SectionHeading
-          title='Education & Professional Development'
-          description='My academic foundation and continuous learning journey'
+          title={t('education.mobile.title')}
+          description={t('education.mobile.description')}
           icon={<GraduationCap className='h-8 w-8' />}
         />
 
@@ -36,57 +36,46 @@ const EducationSectionMobile: React.FC = () => {
               </div>
               <div>
                 <h3 className='text-xl font-semibold text-gray-900'>
-                  Graduaat Programmeren
+                  {t('education.mobile.graduaatTitle')}
                 </h3>
                 <p className='text-sm text-indigo-600'>
-                  AP Hogeschool Antwerpen
+                  {t('education.mobile.graduaatInstitution')}
                 </p>
                 <p className='text-xs text-gray-600'>
-                  Sep 2023 - Jun 2025 (Expected)
+                  {t('education.mobile.graduaatPeriod')}
                 </p>
               </div>
             </div>
 
             <p className='text-sm text-gray-700 mb-4'>
-              Practical, industry-focused programming degree emphasizing
-              hands-on software development skills with focus on modern web
-              technologies.
+              {t('education.mobile.graduaatDescription')}
             </p>
 
             <div className='mb-4 bg-gray-50 p-3 rounded-lg'>
               <h4 className='text-sm font-medium text-gray-800 mb-2'>
-                Key Focus Areas
+                {t('education.mobile.graduaatFocusTitle')}
               </h4>
               <div className='flex flex-wrap gap-2'>
-                <span className='text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded-full'>
-                  Web Frameworks
-                </span>
-                <span className='text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded-full'>
-                  API Development
-                </span>
-                <span className='text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded-full'>
-                  OO Programming
-                </span>
-                <span className='text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded-full'>
-                  Databases
-                </span>
-                <span className='text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded-full'>
-                  Testing & Security
-                </span>
-                <span className='text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded-full'>
-                  Cloud Systems
-                </span>
+                {(t('education.mobile.graduaatFocusAreas') as string[]).map(
+                  (area, i) => (
+                    <span
+                      key={i}
+                      className='text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded-full'
+                    >
+                      {area}
+                    </span>
+                  )
+                )}
               </div>
             </div>
 
             <div className='mb-4'>
               <h4 className='text-sm font-medium text-gray-800 mb-2 flex items-center'>
                 <span className='w-2 h-2 bg-indigo-500 rounded-full mr-2'></span>
-                Capstone Project
+                {t('education.mobile.graduaatCapstoneTitle')}
               </h4>
               <p className='text-sm text-gray-700'>
-                Full-stack timesheet application (AmoTrack) built with React,
-                Fastify, and PostgreSQL during internship at Amotek.
+                {t('education.mobile.graduaatCapstoneDescription')}
               </p>
             </div>
           </motion.div>
@@ -105,42 +94,40 @@ const EducationSectionMobile: React.FC = () => {
               </div>
               <div>
                 <h3 className='text-xl font-semibold text-gray-600 italic'>
-                  Bachelor Toegepaste Informatica
-                  <span className='text-xs ml-1'>(Not completed)</span>
+                  {t('education.mobile.bachelorTitle')}
+                  <span className='text-xs ml-1'>
+                    {t('education.mobile.bachelorNotCompleted')}
+                  </span>
                 </h3>
                 <p className='text-sm text-purple-600'>
-                  AP Hogeschool Antwerpen
+                  {t('education.mobile.bachelorInstitution')}
                 </p>
-                <p className='text-xs text-gray-600'>Sep 2020 - Jun 2022</p>
+                <p className='text-xs text-gray-600'>
+                  {t('education.mobile.bachelorPeriod')}
+                </p>
               </div>
             </div>
 
             <div className='mb-4 bg-gray-50 p-3 rounded-lg'>
               <h4 className='text-sm font-medium text-gray-800 mb-2'>
-                Valuable Coursework
+                {t('education.mobile.bachelorCourseworkTitle')}
               </h4>
               <div className='flex flex-wrap gap-2'>
-                <span className='text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded-full'>
-                  Programming Principles
-                </span>
-                <span className='text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded-full'>
-                  Database Programming
-                </span>
-                <span className='text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded-full'>
-                  Web Programming
-                </span>
-                <span className='text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded-full'>
-                  .NET OOP
-                </span>
-                <span className='text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded-full'>
-                  Software Design
-                </span>
+                {(t('education.mobile.bachelorCoursework') as string[]).map(
+                  (course, i) => (
+                    <span
+                      key={i}
+                      className='text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded-full'
+                    >
+                      {course}
+                    </span>
+                  )
+                )}
               </div>
             </div>
 
             <p className='text-xs text-gray-700 italic'>
-              Switched to the more practically oriented Graduaat program, which
-              better aligned with my hands-on learning style and career goals.
+              {t('education.mobile.bachelorSwitchNote')}
             </p>
           </motion.div>
 
@@ -157,41 +144,24 @@ const EducationSectionMobile: React.FC = () => {
                 <Award size={24} className='text-blue-600' />
               </div>
               <h3 className='text-xl font-semibold text-gray-900'>
-                Continuous Learning
+                {t('education.mobile.profDevTitle')}
               </h3>
             </div>
 
             <div className='space-y-4'>
-              <div className='bg-blue-50 p-3 rounded-lg'>
-                <h4 className='text-sm font-medium text-blue-600'>
-                  Self-Directed Learning
-                </h4>
-                <p className='text-xs text-gray-700'>
-                  Regular engagement with documentation, tutorials, and
-                  community resources for React, Node.js, TypeScript, and
-                  databases.
-                </p>
-              </div>
-
-              <div className='bg-blue-50 p-3 rounded-lg'>
-                <h4 className='text-sm font-medium text-blue-600'>
-                  Technical Reading
-                </h4>
-                <p className='text-xs text-gray-700'>
-                  Study of industry-standard resources like "Clean Code" and
-                  "Don't Make Me Think" for best practices.
-                </p>
-              </div>
-
-              <div className='bg-blue-50 p-3 rounded-lg'>
-                <h4 className='text-sm font-medium text-blue-600'>
-                  Practical Application
-                </h4>
-                <p className='text-xs text-gray-700'>
-                  Applied learning through internship work and personal
-                  projects, focusing on full-stack applications.
-                </p>
-              </div>
+              {(
+                t('education.mobile.profDevItems') as {
+                  title: string;
+                  description: string;
+                }[]
+              ).map((item, i) => (
+                <div key={i} className='bg-blue-50 p-3 rounded-lg'>
+                  <h4 className='text-sm font-medium text-blue-600'>
+                    {item.title}
+                  </h4>
+                  <p className='text-xs text-gray-700'>{item.description}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

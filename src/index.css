@@ -137,3 +137,9 @@ h6 {
   padding-bottom: 0.25rem;
   line-height: 1.2;
 }
+
+/* Ensure sticky elements work properly */
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}

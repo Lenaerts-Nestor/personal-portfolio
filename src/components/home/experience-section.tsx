@@ -19,6 +19,7 @@ import {
   SiTailwindcss,
   SiDrizzle,
 } from 'react-icons/si';
+import { useI18n } from '../shared/i18nContext';
 
 // Define the experience data structure
 interface Experience {
@@ -33,6 +34,8 @@ interface Experience {
 }
 
 export default function ExperienceSection() {
+  const { t } = useI18n();
+
   // Experience data with the requested content
   const experienceData: Experience[] = [
     {
@@ -128,8 +131,8 @@ export default function ExperienceSection() {
     <section id='experience' className='py-16 bg-gray-50'>
       <div className='max-w-6xl mx-auto px-4'>
         <SectionHeading
-          title='Professional Experience'
-          description='Practical application of my technical skills in professional environments'
+          title={t('home.experienceTitle')}
+          description={t('home.experienceDescription')}
           icon={<Briefcase className='h-8 w-8' />}
         />
 
@@ -210,7 +213,7 @@ export default function ExperienceSection() {
                 {exp.technologies && (
                   <div className='mt-4 pt-4 border-t border-gray-200'>
                     <h4 className='text-xs font-medium text-gray-500 mb-2'>
-                      Technologies:
+                      {t('home.technologies')}
                     </h4>
                     <div className='flex flex-wrap gap-2'>
                       {exp.technologies.map((tech, i) => (
@@ -306,7 +309,7 @@ export default function ExperienceSection() {
                 {exp.technologies && (
                   <div className='mt-4 pt-4 border-t border-gray-200'>
                     <h4 className='text-xs font-medium text-gray-500 mb-2'>
-                      Technologies:
+                      {t('home.technologies')}
                     </h4>
                     <div className='flex flex-wrap gap-2'>
                       {exp.technologies.map((tech, i) => (
@@ -334,7 +337,7 @@ export default function ExperienceSection() {
             className='px-6 py-3 bg-white border border-indigo-200 text-indigo-600 rounded-lg shadow-sm hover:bg-indigo-50 transition-all duration-300 flex items-center'
           >
             <Download className='w-5 h-5 mr-2' />
-            <span>Download Full Resume</span>
+            <span>{t('experience.downloadResume')}</span>
           </a>
         </div>
       </div>

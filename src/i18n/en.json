@@ -63,7 +63,54 @@
       "graduaatPeriod": "Sep 2023 - Jun 2025 (Expected)",
       "bachelorDegree": "Bachelor Toegepaste Informatica",
       "bachelorPeriod": "Sep 2020 - Jun 2022 (Not completed)",
-      "description": "Details about my educational background, including key coursework and my learning journey, are available on the About page."
+      "description": "Details about my educational background, including key coursework and my learning journey, are available on the About page.",
+      "mobile": {
+        "title": "Education & Professional Development",
+        "description": "My academic foundation and continuous learning journey",
+        "graduaatTitle": "Graduaat Programmeren",
+        "graduaatInstitution": "AP Hogeschool Antwerpen",
+        "graduaatPeriod": "Sep 2023 - Jun 2025 (Expected)",
+        "graduaatDescription": "Practical, industry-focused programming degree emphasizing hands-on software development skills with focus on modern web technologies.",
+        "graduaatFocusTitle": "Key Focus Areas",
+        "graduaatFocusAreas": [
+          "Web Frameworks",
+          "API Development",
+          "OO Programming",
+          "Databases",
+          "Testing & Security",
+          "Cloud Systems"
+        ],
+        "graduaatCapstoneTitle": "Capstone Project",
+        "graduaatCapstoneDescription": "Full-stack timesheet application (AmoTrack) built with React, Fastify, and PostgreSQL during internship at Amotek.",
+        "bachelorTitle": "Bachelor Toegepaste Informatica",
+        "bachelorNotCompleted": "(Not completed)",
+        "bachelorInstitution": "AP Hogeschool Antwerpen",
+        "bachelorPeriod": "Sep 2020 - Jun 2022",
+        "bachelorCourseworkTitle": "Valuable Coursework",
+        "bachelorCoursework": [
+          "Programming Principles",
+          "Database Programming",
+          "Web Programming",
+          ".NET OOP",
+          "Software Design"
+        ],
+        "bachelorSwitchNote": "Switched to the more practically oriented Graduaat program, which better aligned with my hands-on learning style and career goals.",
+        "profDevTitle": "Continuous Learning",
+        "profDevItems": [
+          {
+            "title": "Self-Directed Learning",
+            "description": "Regular engagement with documentation, tutorials, and community resources for React, Node.js, TypeScript, and databases."
+          },
+          {
+            "title": "Technical Reading",
+            "description": "Study of industry-standard resources like 'Clean Code' and 'Don't Make Me Think' for best practices."
+          },
+          {
+            "title": "Practical Application",
+            "description": "Applied learning through internship work and personal projects, focusing on full-stack applications."
+          }
+        ]
+      }
     },
     "skillsCategories": [
       {
