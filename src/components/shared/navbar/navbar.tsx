@@ -38,7 +38,7 @@ export const Navbar = ({
   // Define menu items based on current page
   const homeMenuItems = [
     {
-      path: '/#skills',
+      path: '/#technologies',
       label: 'Skills',
       icon: <Code className='h-4 w-4' />,
       priority: 'high',

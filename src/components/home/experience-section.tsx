@@ -23,12 +23,12 @@ import { useI18n } from '../shared/i18nContext';
 
 // Define the experience data structure
 interface Experience {
-  role: string;
-  company: string;
-  period: string;
-  type: string;
-  description?: string;
-  responsibilities: string[];
+  roleKey: string;
+  companyKey: string;
+  periodKey: string;
+  typeKey: string;
+  descriptionKey?: string;
+  responsibilitiesKeys: string[];
   technologies?: { name: string; icon: React.ReactNode }[];
   featured: boolean;
 }
@@ -36,20 +36,19 @@ interface Experience {
 export default function ExperienceSection() {
   const { t } = useI18n();
 
-  // Experience data with the requested content
+  // Experience data using translation keys
   const experienceData: Experience[] = [
     {
-      role: 'Software Development Intern',
-      company: 'Amotek',
-      period: 'Feb 2024 - Jun 2024',
-      type: 'Internship',
-      description:
-        'Worked on the AmoTrack project, building a full-stack application that the company now uses internally and is ready for client deployment.',
-      responsibilities: [
-        'Developed frontend components with React and TypeScript, creating a well-structured user interface',
-        'Implemented RESTful API endpoints using Fastify for backend development',
-        'Created database schemas and queries with PostgreSQL and Drizzle ORM',
-        'Worked primarily independently, occasionally collaborating with colleagues for guidance',
+      roleKey: 'experience.roles.softwareDeveloperIntern',
+      companyKey: 'experience.companies.amotek',
+      periodKey: 'experience.periods.amotekInternship',
+      typeKey: 'experience.types.internship',
+      descriptionKey: 'experience.descriptions.amotekInternship',
+      responsibilitiesKeys: [
+        'experience.responsibilities.amotekInternship.0', // Using indices for list items
+        'experience.responsibilities.amotekInternship.1',
+        'experience.responsibilities.amotekInternship.2',
+        'experience.responsibilities.amotekInternship.3',
       ],
       technologies: [
         { name: 'React', icon: <SiReact className='text-blue-500' /> },
@@ -71,17 +70,16 @@ export default function ExperienceSection() {
       featured: true,
     },
     {
-      role: 'IT Support Specialist',
-      company: 'Beego',
-      period: 'Jun 2023 - Dec 2023',
-      type: 'Student Job',
-      description:
-        'Provided on-site technical support to customers in their homes.',
-      responsibilities: [
-        "Visited customers' homes to resolve various technical issues with computers and devices",
-        'Provided clear explanations on safe internet navigation and cybersecurity best practices',
-        'Assisted elderly and non-technical users with setting up and troubleshooting their devices',
-        "Documented solutions for common problems to improve the company's knowledge base",
+      roleKey: 'experience.roles.itSupportSpecialist',
+      companyKey: 'experience.companies.beego',
+      periodKey: 'experience.periods.beegoStudentJob',
+      typeKey: 'experience.types.studentJob',
+      descriptionKey: 'experience.descriptions.beegoStudentJob',
+      responsibilitiesKeys: [
+        'experience.responsibilities.beegoStudentJob.0',
+        'experience.responsibilities.beegoStudentJob.1',
+        'experience.responsibilities.beegoStudentJob.2',
+        'experience.responsibilities.beegoStudentJob.3',
       ],
       technologies: [
         {
@@ -97,17 +95,16 @@ export default function ExperienceSection() {
       featured: false,
     },
     {
-      role: 'ICT Support Specialist',
-      company: 'TechSupport Co.',
-      period: 'Jan 2023 - May 2023',
-      type: 'Student Job',
-      description:
-        'A simple job where I explored the hardware side of IT outside of programming.',
-      responsibilities: [
-        'Set up and configured computers and workstations for new employees',
-        'Assisted with network installations and basic troubleshooting',
-        'Learned the fundamentals of IT support and hardware maintenance',
-        'Gained valuable experience in the operational aspects of IT infrastructure',
+      roleKey: 'experience.roles.ictSupportSpecialist',
+      companyKey: 'experience.companies.techSupportCo',
+      periodKey: 'experience.periods.techSupportCoStudentJob',
+      typeKey: 'experience.types.studentJob',
+      descriptionKey: 'experience.descriptions.techSupportCoStudentJob',
+      responsibilitiesKeys: [
+        'experience.responsibilities.techSupportCoStudentJob.0',
+        'experience.responsibilities.techSupportCoStudentJob.1',
+        'experience.responsibilities.techSupportCoStudentJob.2',
+        'experience.responsibilities.techSupportCoStudentJob.3',
       ],
       technologies: [
         {
@@ -140,7 +137,7 @@ export default function ExperienceSection() {
         <div className='hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {experienceData.map((exp, idx) => (
             <motion.div
-              key={exp.company}
+              key={exp.companyKey} // Use key from translation data if possible, company name might be too generic
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -160,9 +157,14 @@ export default function ExperienceSection() {
                         : 'bg-gray-100'
                     }`}
                   >
-                    {exp.role === 'Software Development Intern' ? (
+                    {/* Consider mapping role keys to icons in a separate object */}
+                    {exp.roleKey ===
+                    'experience.roles.softwareDeveloperIntern' ? (
                       <Building2 className='h-5 w-5 text-indigo-700' />
-                    ) : exp.role === 'IT Support Specialist' ? (
+                    ) : exp.roleKey ===
+                        'experience.roles.itSupportSpecialist' ||
+                      exp.roleKey ===
+                        'experience.roles.ictSupportSpecialist' ? (
                       <HelpCircle className='h-5 w-5 text-gray-600' />
                     ) : (
                       <Wrench className='h-5 w-5 text-gray-600' />
@@ -174,29 +176,29 @@ export default function ExperienceSection() {
                         exp.featured ? 'text-indigo-700' : 'text-gray-800'
                       }`}
                     >
-                      {exp.role}
+                      {t(exp.roleKey)}
                     </h3>
                     <div className='flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm'>
-                      <span className='font-medium'>{exp.company}</span>
+                      <span className='font-medium'>{t(exp.companyKey)}</span>
                       <span className='hidden sm:inline text-gray-400'>•</span>
-                      <span className='text-gray-600'>{exp.period}</span>
+                      <span className='text-gray-600'>{t(exp.periodKey)}</span>
                     </div>
                     <div className='mt-1 mb-3'>
                       <span className='text-xs text-gray-500 inline-block'>
-                        {exp.type}
+                        {t(exp.typeKey)}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {exp.description && (
+                {exp.descriptionKey && (
                   <p className='text-gray-700 mb-3 text-sm'>
-                    {exp.description}
+                    {t(exp.descriptionKey)}
                   </p>
                 )}
 
                 <ul className='space-y-2 text-gray-700 text-sm flex-grow'>
-                  {exp.responsibilities?.map((resp, i) => (
+                  {exp.responsibilitiesKeys?.map((respKey, i) => (
                     <li key={i} className='flex items-start'>
                       <span
                         className={`mr-2 ${
@@ -205,7 +207,7 @@ export default function ExperienceSection() {
                       >
                         •
                       </span>
-                      <span>{resp}</span>
+                      <span>{t(respKey)}</span>
                     </li>
                   ))}
                 </ul>
@@ -213,16 +215,17 @@ export default function ExperienceSection() {
                 {exp.technologies && (
                   <div className='mt-4 pt-4 border-t border-gray-200'>
                     <h4 className='text-xs font-medium text-gray-500 mb-2'>
-                      {t('home.technologies')}
+                      {t('experience.technologiesUsed')}
                     </h4>
                     <div className='flex flex-wrap gap-2'>
                       {exp.technologies.map((tech, i) => (
                         <div
-                          key={i}
+                          key={i} // Consider a unique key for each technology if possible
                           className='flex items-center bg-white px-2 py-1 rounded-full text-xs font-medium border border-gray-200 shadow-sm'
                         >
                           <span className='mr-1'>{tech.icon}</span>
-                          {tech.name}
+                          {tech.name}{' '}
+                          {/* Technology names are often not translated */}
                         </div>
                       ))}
                     </div>
@@ -237,7 +240,7 @@ export default function ExperienceSection() {
         <div className='md:hidden space-y-6'>
           {experienceData.map((exp, idx) => (
             <motion.div
-              key={exp.company}
+              key={exp.companyKey} // Use key from translation data if possible
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -257,9 +260,14 @@ export default function ExperienceSection() {
                         : 'bg-gray-100'
                     }`}
                   >
-                    {exp.role === 'Software Development Intern' ? (
+                    {/* Consider mapping role keys to icons */}
+                    {exp.roleKey ===
+                    'experience.roles.softwareDeveloperIntern' ? (
                       <Building2 className='h-5 w-5 text-indigo-700' />
-                    ) : exp.role === 'IT Support Specialist' ? (
+                    ) : exp.roleKey ===
+                        'experience.roles.itSupportSpecialist' ||
+                      exp.roleKey ===
+                        'experience.roles.ictSupportSpecialist' ? (
                       <HelpCircle className='h-5 w-5 text-gray-600' />
                     ) : (
                       <Wrench className='h-5 w-5 text-gray-600' />
@@ -271,28 +279,28 @@ export default function ExperienceSection() {
                         exp.featured ? 'text-indigo-700' : 'text-gray-800'
                       }`}
                     >
-                      {exp.role}
+                      {t(exp.roleKey)}
                     </h3>
                     <div className='flex flex-col text-sm'>
-                      <span className='font-medium'>{exp.company}</span>
-                      <span className='text-gray-600'>{exp.period}</span>
+                      <span className='font-medium'>{t(exp.companyKey)}</span>
+                      <span className='text-gray-600'>{t(exp.periodKey)}</span>
                     </div>
                     <div className='mt-1 mb-3'>
                       <span className='text-xs text-gray-500 inline-block'>
-                        {exp.type}
+                        {t(exp.typeKey)}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {exp.description && (
+                {exp.descriptionKey && (
                   <p className='text-gray-700 mb-3 text-sm'>
-                    {exp.description}
+                    {t(exp.descriptionKey)}
                   </p>
                 )}
 
                 <ul className='space-y-2 text-gray-700 text-sm'>
-                  {exp.responsibilities?.map((resp, i) => (
+                  {exp.responsibilitiesKeys?.map((respKey, i) => (
                     <li key={i} className='flex items-start'>
                       <span
                         className={`mr-2 ${
@@ -301,7 +309,7 @@ export default function ExperienceSection() {
                       >
                         •
                       </span>
-                      <span>{resp}</span>
+                      <span>{t(respKey)}</span>
                     </li>
                   ))}
                 </ul>
@@ -309,16 +317,17 @@ export default function ExperienceSection() {
                 {exp.technologies && (
                   <div className='mt-4 pt-4 border-t border-gray-200'>
                     <h4 className='text-xs font-medium text-gray-500 mb-2'>
-                      {t('home.technologies')}
+                      {t('experience.technologiesUsed')}
                     </h4>
                     <div className='flex flex-wrap gap-2'>
                       {exp.technologies.map((tech, i) => (
                         <div
-                          key={i}
+                          key={i} // Consider a unique key for each technology if possible
                           className='flex items-center bg-white px-2 py-1 rounded-full text-xs font-medium border border-gray-200 shadow-sm'
                         >
                           <span className='mr-1'>{tech.icon}</span>
-                          {tech.name}
+                          {tech.name}{' '}
+                          {/* Technology names are often not translated */}
                         </div>
                       ))}
                     </div>
@@ -332,7 +341,7 @@ export default function ExperienceSection() {
         {/* Resume download button */}
         <div className='flex justify-center mt-12'>
           <a
-            href='/resume.pdf'
+            href={t('about.cvDownloadLink')}
             download
             className='px-6 py-3 bg-white border border-indigo-200 text-indigo-600 rounded-lg shadow-sm hover:bg-indigo-50 transition-all duration-300 flex items-center'
           >

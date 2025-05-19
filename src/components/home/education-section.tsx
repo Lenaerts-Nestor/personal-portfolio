@@ -20,61 +20,61 @@ interface EducationEntry {
 
 const educationData: EducationEntry[] = [
   {
-    degreeKey: 'about.education.graduaat.degree',
-    institutionKey: 'about.education.institution',
-    periodKey: 'about.education.graduaat.period',
+    degreeKey: 'education.graduaat.degree',
+    institutionKey: 'education.institution',
+    periodKey: 'education.graduaat.period',
     status: 'in_progress',
-    courseworkTitleKey: 'about.education.courseworkTitle',
+    courseworkTitleKey: 'education.graduaat.courseworkTitle',
     courseworkKeys: [
-      'about.education.graduaat.coursework.itEssentials',
-      'about.education.graduaat.coursework.projectSkills',
-      'about.education.graduaat.coursework.basicProgramming',
-      'about.education.graduaat.coursework.databases',
-      'about.education.graduaat.coursework.cloudSystems',
-      'about.education.graduaat.coursework.ooProgramming',
-      'about.education.graduaat.coursework.webDevelopment',
-      'about.education.graduaat.coursework.webTechnology',
-      'about.education.graduaat.coursework.wplExploration',
-      'about.education.graduaat.coursework.wplProject',
-      'about.education.graduaat.coursework.proWorkplaces',
-      'about.education.graduaat.coursework.webFrameworks',
-      'about.education.graduaat.coursework.apiDevelopment',
-      'about.education.graduaat.coursework.testingSecurity',
-      'about.education.graduaat.coursework.wplCase',
+      'education.graduaat.coursework.itEssentials',
+      'education.graduaat.coursework.projectSkills',
+      'education.graduaat.coursework.basicProgramming',
+      'education.graduaat.coursework.databases',
+      'education.graduaat.coursework.cloudSystems',
+      'education.graduaat.coursework.ooProgramming',
+      'education.graduaat.coursework.webDevelopment',
+      'education.graduaat.coursework.webTechnology',
+      'education.graduaat.coursework.wplExploration',
+      'education.graduaat.coursework.wplProject',
+      'education.graduaat.coursework.proWorkplaces',
+      'education.graduaat.coursework.webFrameworks',
+      'education.graduaat.coursework.apiDevelopment',
+      'education.graduaat.coursework.testingSecurity',
+      'education.graduaat.coursework.wplCase',
     ],
-    descriptionKey: 'about.education.graduaat.description',
+    descriptionKey: 'education.graduaat.description',
   },
   {
-    degreeKey: 'about.education.bachelor.degree',
-    institutionKey: 'about.education.institution',
-    periodKey: 'about.education.bachelor.period',
+    degreeKey: 'education.bachelor.degree',
+    institutionKey: 'education.institution',
+    periodKey: 'education.bachelor.period',
     status: 'not_completed',
-    courseworkTitleKey: 'about.education.courseworkTitle',
+    courseworkTitleKey: 'education.bachelor.courseworkTitle',
     courseworkKeys: [
-      'about.education.bachelor.coursework.programmingPrinciples',
-      'about.education.bachelor.coursework.databases',
-      'about.education.bachelor.coursework.webTechnology',
-      'about.education.bachelor.coursework.dataNetworks',
-      'about.education.bachelor.coursework.linux',
-      'about.education.bachelor.coursework.digitalFundamentals',
-      'about.education.bachelor.coursework.businessProcesses',
-      'about.education.bachelor.coursework.iotExperiments',
-      'about.education.bachelor.coursework.webProgramming',
-      'about.education.bachelor.coursework.discoverIT',
-      'about.education.bachelor.coursework.analysis',
-      'about.education.bachelor.coursework.communication',
-      'about.education.bachelor.coursework.cyberSecurity',
-      'about.education.bachelor.coursework.dataStructures',
-      'about.education.bachelor.coursework.databaseProgramming',
-      'about.education.bachelor.coursework.routingSwitching',
-      'about.education.bachelor.coursework.netOOP',
-      'about.education.bachelor.coursework.softwareDesign',
-      'about.education.bachelor.coursework.uxDesign',
-      'about.education.bachelor.coursework.introMobile',
-      'about.education.bachelor.coursework.devOps',
+      'education.bachelor.coursework.programmingPrinciples',
+      'education.bachelor.coursework.databases',
+      'education.bachelor.coursework.webTechnology',
+      'education.bachelor.coursework.dataNetworks',
+      'education.bachelor.coursework.linux',
+      'education.bachelor.coursework.digitalFundamentals',
+      'education.bachelor.coursework.businessProcesses',
+      'education.bachelor.coursework.iotExperiments',
+      'education.bachelor.coursework.webProgramming',
+      'education.bachelor.coursework.discoverIT',
+      'education.bachelor.coursework.analysis',
+      'education.bachelor.coursework.communication',
+      'education.bachelor.coursework.cyberSecurity',
+      'education.bachelor.coursework.dataStructures',
+      'education.bachelor.coursework.databaseProgramming',
+      'education.bachelor.coursework.routingSwitching',
+      'education.bachelor.coursework.netOOP',
+      'education.bachelor.coursework.softwareDesign',
+      'education.bachelor.coursework.uxDesign',
+      'education.bachelor.coursework.introMobile',
+      'education.bachelor.coursework.devOps',
     ],
-    descriptionKey: 'about.education.bachelor.description',
-    noteKey: 'about.education.bachelor.note',
+    descriptionKey: 'education.bachelor.description',
+    noteKey: 'education.bachelor.note',
   },
 ];
 
@@ -85,8 +85,8 @@ const EducationSection: React.FC = () => {
     <section id='education' className='py-16 md:py-24 bg-white'>
       <div className='container mx-auto px-4 max-w-6xl'>
         <SectionHeading
-          title={t('about.education.title')}
-          description={t('home.educationDescription')}
+          title={t('education.title')}
+          description={t('education.description')}
           icon={<GraduationCap className='h-8 w-8' />}
         />
 
@@ -118,7 +118,7 @@ const EducationSection: React.FC = () => {
                   >
                     {t(edu.degreeKey)}{' '}
                     {edu.status === 'not_completed' &&
-                      `(${t('about.education.notCompletedStatus')})`}
+                      `(${t('education.notCompletedStatus')})`}
                   </h3>
                   <p className='text-md md:text-lg text-indigo-600 mb-1'>
                     {t(edu.institutionKey)}
@@ -138,7 +138,7 @@ const EducationSection: React.FC = () => {
                   <h4 className='text-md font-medium text-gray-800 mb-2'>
                     {t(
                       edu.courseworkTitleKey ||
-                        'about.education.courseworkTitleDefault'
+                        'education.graduaat.courseworkTitleDefault' // Fallback key
                     )}
                   </h4>
                   <ul className='grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc list-inside text-gray-700 text-sm'>
@@ -155,6 +155,7 @@ const EducationSection: React.FC = () => {
               )}
             </motion.div>
           ))}
+          {/* Potential Note at the end */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -162,7 +163,7 @@ const EducationSection: React.FC = () => {
             transition={{ duration: 0.5, delay: educationData.length * 0.1 }}
             className='max-w-4xl mx-auto text-center text-gray-700 italic mt-8'
           >
-            {t('about.education.potentialNote')}
+            {t('education.potentialNote')}
           </motion.p>
         </div>
       </div>

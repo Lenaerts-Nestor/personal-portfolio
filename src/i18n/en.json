@@ -8,8 +8,8 @@
     "next": "Next"
   },
   "home": {
-    "welcome": "Junior Software Developer Seeking Full-Stack & Backend Roles in Antwerpen",
-    "description": "A recent graduate in Programming, I'm actively seeking a Junior Full-Stack or Backend Developer position in the Antwerpen, Belgium area. This portfolio showcases my practical skills, including hands-on experience gained from my recent software development internship—detailed further in my internship blog. I'm eager to contribute to innovative projects and grow as a developer.",
+    "welcome": "Junior Full-Stack/Backend Developer | Seeking Opportunity in Antwerpen",
+    "description": "Recent Programming graduate with hands-on full-stack development experience from a significant internship. I specialize in React and Node.js (Fastify, PostgreSQL), building efficient and maintainable applications. Eager to apply my skills and problem-solving abilities in a junior developer role in the Antwerpen area and contribute to impactful projects.",
     "readBlog": "Read Internship Blog",
     "aboutMe": "About Me",
     "latestPosts": "Latest Blog Posts",
@@ -18,7 +18,7 @@
     "quickOverview": "Quick Overview",
     "internshipDetails": "Internship Details",
     "technologies": "Skills & Competencies",
-    "projects": "Projects",
+    "projects": "Projecten",
     "position": "Position",
     "duration": "Duration",
     "techUsed": "Technologies Used",
@@ -32,120 +32,6 @@
     "experienceDescription": "My professional journey in the tech industry so far, highlighting relevant development work and other valuable experience.",
     "skillsDescription": "Key technical and soft skills I bring to development projects, honed during my studies and practical internship experience.",
     "educationDescription": "My formal education in information technology.",
-    "positions": {
-      "fullStackDevIntern": "Software Development Intern",
-      "ictSupport": "ICT Support Specialist"
-    },
-    "companies": {
-      "amotek": "Amotek",
-      "digipolis": "Digipolis"
-    },
-    "experienceDates": {
-      "amotek": "Feb 2024 - Jun 2024",
-      "digipolis": "Aug 2024 - Sep 2024"
-    },
-    "experienceTypes": {
-      "internship": "Internship",
-      "temporaryContract": "Temporary Contract"
-    },
-    "locations": {
-      "hybridAntwerpInternship": "Hybrid · Internship",
-      "antwerpContract": "Antwerpen, Belgium · Temporary Contract"
-    },
-    "experienceDescriptions": {
-      "amotek": "Completed a full-stack software development internship, working on the AmoTrack project. Gained hands-on experience building features using React (frontend) and Fastify with PostgreSQL/Drizzle (backend). Involved in the full development lifecycle, including contributing to architecture discussions and utilizing modern development workflows. This internship also served as my final project for my Graduaat.",
-      "digipolis": "Provided ICT support, gaining foundational experience in system setup, network assistance, and problem-solving in a professional IT environment. Developed strong communication and client interaction skills."
-    },
-    "education": {
-      "title": "Education Summary",
-      "graduaatDegree": "Graduaat Programmeren",
-      "institution": "AP Hogeschool Antwerpen",
-      "graduaatPeriod": "Sep 2023 - Jun 2025 (Expected)",
-      "bachelorDegree": "Bachelor Toegepaste Informatica",
-      "bachelorPeriod": "Sep 2020 - Jun 2022 (Not completed)",
-      "description": "Details about my educational background, including key coursework and my learning journey, are available on the About page.",
-      "mobile": {
-        "title": "Education & Professional Development",
-        "description": "My academic foundation and continuous learning journey",
-        "graduaatTitle": "Graduaat Programmeren",
-        "graduaatInstitution": "AP Hogeschool Antwerpen",
-        "graduaatPeriod": "Sep 2023 - Jun 2025 (Expected)",
-        "graduaatDescription": "Practical, industry-focused programming degree emphasizing hands-on software development skills with focus on modern web technologies.",
-        "graduaatFocusTitle": "Key Focus Areas",
-        "graduaatFocusAreas": [
-          "Web Frameworks",
-          "API Development",
-          "OO Programming",
-          "Databases",
-          "Testing & Security",
-          "Cloud Systems"
-        ],
-        "graduaatCapstoneTitle": "Capstone Project",
-        "graduaatCapstoneDescription": "Full-stack timesheet application (AmoTrack) built with React, Fastify, and PostgreSQL during internship at Amotek.",
-        "bachelorTitle": "Bachelor Toegepaste Informatica",
-        "bachelorNotCompleted": "(Not completed)",
-        "bachelorInstitution": "AP Hogeschool Antwerpen",
-        "bachelorPeriod": "Sep 2020 - Jun 2022",
-        "bachelorCourseworkTitle": "Valuable Coursework",
-        "bachelorCoursework": [
-          "Programming Principles",
-          "Database Programming",
-          "Web Programming",
-          ".NET OOP",
-          "Software Design"
-        ],
-        "bachelorSwitchNote": "Switched to the more practically oriented Graduaat program, which better aligned with my hands-on learning style and career goals.",
-        "profDevTitle": "Continuous Learning",
-        "profDevItems": [
-          {
-            "title": "Self-Directed Learning",
-            "description": "Regular engagement with documentation, tutorials, and community resources for React, Node.js, TypeScript, and databases."
-          },
-          {
-            "title": "Technical Reading",
-            "description": "Study of industry-standard resources like 'Clean Code' and 'Don't Make Me Think' for best practices."
-          },
-          {
-            "title": "Practical Application",
-            "description": "Applied learning through internship work and personal projects, focusing on full-stack applications."
-          }
-        ]
-      }
-    },
-    "skillsCategories": [
-      {
-        "name": "Technical Skills",
-        "items": [
-          "JavaScript (ES6+)",
-          "TypeScript",
-          "React",
-          "Node.js",
-          "Fastify",
-          "PostgreSQL",
-          "Drizzle ORM",
-          "RESTful APIs",
-          "HTML5",
-          "CSS3",
-          "Git & GitHub",
-          "Azure (Basic Deployment)",
-          "Agile Methodologies",
-          "C#",
-          ".NET"
-        ]
-      },
-      {
-        "name": "Soft Skills",
-        "items": [
-          "Problem Solving",
-          "Effective Communication",
-          "Team Collaboration",
-          "Continuous Learning & Adaptability",
-          "Attention to Detail",
-          "Time Management",
-          "Proactive & Eager to Contribute"
-        ]
-      }
-    ],
     "technicalSkills": "Technical Skills",
     "professionalSkills": "Professional Skills",
     "blogButton": "Read Internship Blog",
@@ -153,122 +39,28 @@
     "scrollDown": "Scroll down to explore more"
   },
   "about": {
-    "title": "About Me",
-    "subtitle": "Junior Software Developer | Seeking my first role near Antwerp",
+    "title": "About Me: Junior Full-Stack & Backend Developer",
+    "subtitle": "My journey, skills, and ambitions as a developer.",
     "heroIntroSentence": "Recently completed my Graduaat in Programming and gained practical experience through a software development internship.",
-    "education": {
-      "title": "Education",
-      "institution": "AP Hogeschool Antwerpen",
-      "notCompletedStatus": "Not completed",
-      "courseworkTitle": "Key Coursework",
-      "courseworkTitleDefault": "Key Coursework",
-      "graduaat": {
-        "degree": "Graduaat Programmeren",
-        "period": "September 2023 - June 2025 (Expected)",
-        "description": "Currently completing this practical degree, focusing on hands-on software development.",
-        "coursework": {
-          "itEssentials": "IT Essentials (3 SP)",
-          "projectSkills": "Projectvaardigheden (3 SP)",
-          "basicProgramming": "Basis programmeren (6 SP)",
-          "databases": "Databanken (6 SP)",
-          "cloudSystems": "Cloudsystemen (6 SP)",
-          "ooProgramming": "OO programmeren (9 SP)",
-          "webDevelopment": "Webontwikkeling (9 SP)",
-          "webTechnology": "Webtechnologie (9 SP)",
-          "wplExploration": "WPL exploratie (3 SP)",
-          "wplProject": "WPL project (6 SP)",
-          "proWorkplaces": "PRO werkplekleren (30 SP)",
-          "webFrameworks": "Web frameworks (9 SP)",
-          "apiDevelopment": "API ontwikkeling (6 SP)",
-          "testingSecurity": "Testing & security (3 SP)",
-          "wplCase": "WPL case (12 SP)"
-        }
-      },
-      "bachelor": {
-        "degree": "Bachelor Toegepaste Informatica",
-        "period": "September 2020 - June 2022",
-        "description": "Studied applied computer science, building a foundational understanding.",
-        "coursework": {
-          "programmingPrinciples": "Programming principles (6 SP)",
-          "databases": "Databases (3 SP)",
-          "webTechnology": "Web technology (3 SP)",
-          "dataNetworks": "Data networks (3 SP)",
-          "linux": "Linux (3 SP)",
-          "digitalFundamentals": "Digital fundamentals (3 SP)",
-          "businessProcesses": "Business processes (3 SP)",
-          "iotExperiments": "IoT experiments (3 SP)",
-          "webProgramming": "Web programming (6 SP)",
-          "discoverIT": "Discover IT (3 SP)",
-          "analysis": "Analysis (3 SP)",
-          "communication": "Communication (3 SP)",
-          "cyberSecurity": "Cyber security (3 SP)",
-          "dataStructures": "Data structures (3 SP)",
-          "databaseProgramming": "Database programming (3 SP)",
-          "routingSwitching": "Routing & switching (3 SP)",
-          "netOOP": ".NET OOP (3 SP)",
-          "softwareDesign": "Software design",
-          "uxDesign": "UX Design",
-          "introMobile": "Intro mobile",
-          "devOps": "DevOps"
-        },
-        "note": "Due to challenging circumstances at the time, including the impact of the global pandemic, I made the decision to switch to the more practically oriented Graduaat program."
-      },
-      "potentialNote": "While I did not complete the Bachelor degree, the foundational knowledge and experience I gained during that period were significant and contributed greatly to my development and readiness for a career in software development."
-    },
-    "internship": {
-      "title": "Internship Experience",
-      "paragraph1": "I recently completed a [Duration, e.g., 3-month] software development internship at [Company Name or 'a software company'] where I worked on [mention project name, e.g., the AmoTrack project]. This hands-on experience allowed me to directly apply and expand my skills in a professional agile environment.",
-      "paragraph2": "I contributed across the full stack, developing features using [list key frontend tech, e.g., React] for the user interface and building robust backend functionality with [list key backend tech, e.g., Fastify and PostgreSQL/Drizzle]. Key responsibilities included [mention 1-2 specific, impactful tasks, e.g., implementing REST API endpoints, contributing to database schema design, writing unit tests].",
-      "conclusion": "This internship served as my final project for my Graduaat and provided invaluable exposure to modern development workflows, team collaboration, code reviews, and deploying applications (e.g., basic Azure deployment)."
-    },
-    "learningApproach": {
-      "title": "Learning Approach & Motivation",
-      "paragraph1": "I am a highly motivated and adaptable learner, constantly seeking to deepen my understanding of software development. I am particularly passionate about building reliable and efficient backend systems, but I am also dedicated to developing my frontend skills to be a versatile full-stack contributor.",
-      "paragraph2": "My learning style is hands-on and proactive. I complement structured education with self-driven exploration through building personal projects and engaging with online resources and documentation. I actively seek out best practices and learn from established materials like 'Clean Code' and 'Don’t Make Me Think'.",
-      "paragraph3": "I see AI as a valuable tool to enhance productivity and learning, using it for code suggestions and debugging support while always maintaining control and understanding of the code. I am eager to learn new technologies, refactor code for clarity and efficiency, and grow within a team environment."
-    },
+    "introduction": "As a recent Programming graduate based near Antwerpen, Belgium, I am actively seeking my first full-time Junior Developer position, with a strong interest in Full-Stack and Backend roles. My portfolio highlights the practical skills and hands-on experience gained during my studies and a significant software development internship. I am eager to contribute my abilities to a dynamic team and continue growing in a professional development environment.",
+    "educationTitle": "My Learning Journey",
+    "educationText": "I am currently completing my Graduaat in Programming at AP Hogeschool, building a strong foundation in both frontend and backend development. While I have a strong interest and aptitude for backend logic and architecture, I am also fully committed to strengthening my frontend skills to effectively contribute across the entire stack and understand the development of complete applications.",
     "languagesTitle": "Languages I Speak",
     "languagesText": "As a native Spanish speaker, fluent in Dutch, and comfortable working in English, I am well-equipped for collaboration in diverse, international teams and able to easily access and understand technical resources in multiple languages.",
-    "workStyle": {
-      "title": "My Work Style",
-      "subheading1Title": "Collaboration & Communication",
-      "subheading1Text": "I value open communication and enjoy collaborating with team members. I am comfortable using version control (Git) and participating in code reviews to ensure high-quality code.",
-      "subheading2Title": "Focus on Quality & Maintainability",
-      "subheading2Text": "I strive to write clean, readable, and maintainable code, understanding that software longevity is as important as its initial creation."
-    },
-    "skills": {
-      "title": "Technical Skills Overview",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "database": "Database",
-      "tools": "Tools",
-      "javascript": "JavaScript (ES6+)",
-      "typescript": "TypeScript",
-      "react": "React",
-      "nodejs": "Node.js",
-      "fastify": "Fastify",
-      "postgresql": "PostgreSQL",
-      "drizzleOrm": "Drizzle ORM",
-      "restfulApis": "RESTful APIs",
-      "html5": "HTML5",
-      "css3": "CSS3",
-      "gitGithub": "Git & GitHub",
-      "azure": "Azure (Basic Deployment)",
-      "agileMethodologies": "Agile Methodologies",
-      "csharp": "C#",
-      "dotnet": ".NET",
-      "mongodb": "MongoDB",
-      "mysql": "MySQL",
-      "docker": "Docker",
-      "vscode": "VS Code",
-      "problemSolving": "Problem Solving",
-      "effectiveCommunication": "Effective Communication",
-      "teamCollaboration": "Team Collaboration",
-      "continuousLearning": "Continuous Learning & Adaptability",
-      "attentionToDetail": "Attention to Detail",
-      "timeManagement": "Time Management",
-      "proactiveEager": "Proactive & Eager to Contribute"
-    },
+    "aiTitle": "My Perspective on AI in Development",
+    "aiPhilosophy": "Smart and Responsible AI Use",
+    "aiPhilosophyText": "I view AI as a powerful tool that can enhance developer productivity—excellent for suggesting code improvements, identifying potential issues, and accelerating routine tasks—but I emphasize that the developer must retain full control, understanding, and responsibility for the final code at all times.",
+    "aiApproach": "How I Use It in Practice",
+    "aiApproachText": "My primary uses of AI include generating code suggestions, refining existing code solutions, and assisting with documentation and explanations. I strictly adhere to best practices regarding data privacy and intellectual property, ensuring that no private or sensitive project code is ever shared with AI tools.",
+    "aiExample": "For instance, during the development of this portfolio, I used AI for initial layout ideas and debugging support, but all architectural decisions, code implementation, and final content were entirely my own work.",
+    "goalsTitle": "My Career Goals",
+    "goalsText": "I aspire to become a skilled Full-Stack Developer with a particular interest in backend systems. My focus extends beyond just building new features; I am driven to maintain and optimize existing systems and ensure their long-term health and efficiency. This includes writing clean, maintainable code and contributing to robust architectures.",
+    "goalsPhilosophy": "Contributing to the longevity and reliability of software is just as crucial as its initial creation. I value future-proof design and well-maintainable codebases.",
+    "methodsTitle": "My Work Style and Learning Method",
+    "methodsApproach": "Balancing Innovation and Fundamentals",
+    "methodsText1": "I build my knowledge by continuously learning new technologies while simultaneously deepening my understanding of fundamental programming principles and established best practices. This approach helps me find a balance between exploring innovation and effectively applying proven solutions.",
+    "methodsLearning": "Structured Learning & Practical Application",
+    "methodsText2": "My learning process is guided by foundational books like 'Clean Code', 'Head First Design Patterns', and 'Don’t Make Me Think', combined with practical project work and utilizing AI-driven learning methods for support and exploration. My constant goal is to improve code quality, maintainability, and overall development efficiency.",
     "contactTitle": "Get in Touch",
     "contactEmail": "your.email@example.com",
     "github": "GitHub",
@@ -276,6 +68,227 @@
     "cvDownloadTitle": "Download CV",
     "cvDownloadButtonText": "Download my CV",
     "cvDownloadLink": "/path/to/your/cv.pdf"
+  },
+  "experience": {
+    "downloadResume": "Download Resume",
+    "roles": {
+      "softwareDeveloperIntern": "Software Development Intern",
+      "itSupportSpecialist": "IT Support Specialist",
+      "ictSupportSpecialist": "ICT Support Specialist"
+    },
+    "companies": {
+      "amotek": "Amotek",
+      "beego": "Beego",
+      "techSupportCo": "TechSupport Co."
+    },
+    "periods": {
+      "amotekInternship": "Feb 2024 - Jun 2024",
+      "beegoStudentJob": "Jun 2023 - Dec 2023",
+      "techSupportCoStudentJob": "Jan 2023 - May 2023"
+    },
+    "types": {
+      "internship": "Internship",
+      "studentJob": "Student Job"
+    },
+    "descriptions": {
+      "amotekInternship": "Worked on the AmoTrack project, building a full-stack application that the company now uses internally and is ready for client deployment.",
+      "beegoStudentJob": "Provided on-site technical support to customers in their homes.",
+      "techSupportCoStudentJob": "A simple job where I explored the hardware side of IT outside of programming."
+    },
+    "responsibilities": {
+      "amotekInternship": [
+        "Developed frontend components with React and TypeScript, creating a well-structured user interface",
+        "Implemented RESTful API endpoints using Fastify for backend development",
+        "Created database schemas and queries with PostgreSQL and Drizzle ORM",
+        "Worked primarily independently, occasionally collaborating with colleagues for guidance"
+      ],
+      "beegoStudentJob": [
+        "Visited customers' homes to resolve various technical issues with computers and devices",
+        "Provided clear explanations on safe internet navigation and cybersecurity best practices",
+        "Assisted elderly and non-technical users with setting up and troubleshooting their devices",
+        "Documented solutions for common problems to improve the company's knowledge base"
+      ],
+      "techSupportCoStudentJob": [
+        "Set up and configured computers and workstations for new employees",
+        "Assisted with network installations and basic troubleshooting",
+        "Learned the fundamentals of IT support and hardware maintenance",
+        "Gained valuable experience in the operational aspects of IT infrastructure"
+      ]
+    },
+    "technologiesUsed": "Technologies Used"
+  },
+  "projects": {
+    "viewDetails": "View Details",
+    "viewAll": "View All Projects",
+    "internshipProject": "Internship Project",
+    "technicalChallenge": "Technical Challenge:",
+    "solution": "Solution:",
+    "previousProject": "Previous Project",
+    "nextProject": "Next Project",
+    "goToProject": "Go to project"
+  },
+  "skills": {
+    "javascript": "JavaScript (ES6+)",
+    "typescript": "TypeScript",
+    "react": "React",
+    "nodejs": "Node.js",
+    "fastify": "Fastify",
+    "postgresql": "PostgreSQL",
+    "drizzleOrm": "Drizzle ORM",
+    "restfulApis": "RESTful APIs",
+    "html5": "HTML5",
+    "css3": "CSS3",
+    "gitGithub": "Git & GitHub",
+    "azure": "Azure (Basic Deployment)",
+    "agileMethodologies": "Agile Methodologies",
+    "csharp": "C#",
+    "dotnet": ".NET",
+    "mongodb": "MongoDB",
+    "mysql": "MySQL",
+    "docker": "Docker",
+    "vscode": "VS Code",
+    "storybook": "Storybook",
+    "flutter": "Flutter",
+    "firebase": "Firebase",
+    "monogame": "MonoGame",
+    "responsiveDesign": "Responsive Design",
+    "problemSolving": "Problem Solving",
+    "effectiveCommunication": "Effective Communication",
+    "teamCollaboration": "Team Collaboration",
+    "continuousLearning": "Continuous Learning & Adaptability",
+    "attentionToDetail": "Attention to Detail",
+    "timeManagement": "Time Management",
+    "proactiveEager": "Proactive & Eager to Contribute",
+    "categories": {
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "toolsDevops": "Tools & DevOps",
+      "professional": "Professional Skills"
+    },
+    "description": "My expertise in modern web development technologies and professional competencies"
+  },
+  "education": {
+    "title": "Education & Professional Development",
+    "description": "My academic foundation and continuous learning journey in software development",
+    "graduaat": {
+      "degree": "Graduaat Programmeren",
+      "period": "September 2023 - June 2025 (Expected)",
+      "description": "Currently completing this practical degree, focusing on hands-on software development.",
+      "courseworkTitle": "Key Coursework",
+      "courseworkTitleDefault": "Key Coursework",
+      "coursework": {
+        "itEssentials": "IT Essentials (3 SP)",
+        "projectSkills": "Project Skills (3 SP)",
+        "basicProgramming": "Basic Programming (6 SP)",
+        "databases": "Databases (6 SP)",
+        "cloudSystems": "Cloud Systems (6 SP)",
+        "ooProgramming": "OO Programming (9 SP)",
+        "webDevelopment": "Web Development (9 SP)",
+        "webTechnology": "Web Technology (9 SP)",
+        "wplExploration": "WPL Exploration (3 SP)",
+        "wplProject": "WPL Project (6 SP)",
+        "proWorkplaces": "PRO Work Placement (30 SP)",
+        "webFrameworks": "Web Frameworks (9 SP)",
+        "apiDevelopment": "API Development (6 SP)",
+        "testingSecurity": "Testing & Security (3 SP)",
+        "wplCase": "WPL Case (12 SP)"
+      }
+    },
+    "bachelor": {
+      "degree": "Bachelor Applied Computer Science",
+      "period": "September 2020 - June 2022",
+      "description": "Studied applied computer science, building a foundational understanding.",
+      "courseworkTitle": "Valuable Coursework",
+      "coursework": {
+        "programmingPrinciples": "Programming principles (6 SP)",
+        "databases": "Databases (3 SP)",
+        "webTechnology": "Web technology (3 SP)",
+        "dataNetworks": "Data networks (3 SP)",
+        "linux": "Linux (3 SP)",
+        "digitalFundamentals": "Digital fundamentals (3 SP)",
+        "businessProcesses": "Business processes (3 SP)",
+        "iotExperiments": "IoT experiments (3 SP)",
+        "webProgramming": "Web programming (6 SP)",
+        "discoverIT": "Discover IT (3 SP)",
+        "analysis": "Analysis (3 SP)",
+        "communication": "Communication (3 SP)",
+        "cyberSecurity": "Cyber security (3 SP)",
+        "dataStructures": "Data structures (3 SP)",
+        "databaseProgramming": "Database programming (3 SP)",
+        "routingSwitching": "Routing & switching (3 SP)",
+        "netOOP": ".NET OOP (3 SP)",
+        "softwareDesign": "Software design",
+        "uxDesign": "UX Design",
+        "introMobile": "Intro mobile",
+        "devOps": "DevOps"
+      },
+      "note": "Due to challenging circumstances at the time, including the impact of the global pandemic, I made the decision to switch to the more practically oriented Graduaat program."
+    },
+    "institution": "AP Hogeschool Antwerpen",
+    "notCompletedStatus": "Not completed",
+    "potentialNote": "While I did not complete the Bachelor degree, the foundational knowledge and experience I gained during that period were significant and contributed greatly to my development and readiness for a career in software development.",
+    "professionalDevelopment": {
+      "title": "Continuous Professional Development",
+      "selfDirectedLearning": {
+        "title": "Self-Directed Learning",
+        "description": "Regular engagement with documentation, tutorials, and community resources to deepen understanding of React, Node.js, and TypeScript."
+      },
+      "technicalReading": {
+        "title": "Technical Reading",
+        "description": "Study of industry-standard books like \"Clean Code\" and \"Don't Make Me Think\" for best practices."
+      },
+      "practicalApplication": {
+        "title": "Practical Application",
+        "description": "Applied learning through internship work and personal projects, focusing on full-stack applications."
+      }
+    },
+    "mobile": {
+      "title": "Education & Professional Development",
+      "description": "My academic foundation and continuous learning journey",
+      "graduaatTitle": "Graduaat Programmeren",
+      "graduaatInstitution": "AP Hogeschool Antwerpen",
+      "graduaatPeriod": "Sep 2023 - Jun 2025 (Expected)",
+      "graduaatDescription": "Practical, industry-focused programming degree emphasizing hands-on software development skills with focus on modern web technologies.",
+      "graduaatFocusTitle": "Key Focus Areas",
+      "graduaatFocusAreas": [
+        "Web Frameworks",
+        "API Development",
+        "OO Programming",
+        "Databases",
+        "Testing & Security",
+        "Cloud Systems"
+      ],
+      "graduaatCapstoneTitle": "Capstone Project",
+      "graduaatCapstoneDescription": "Full-stack timesheet application (AmoTrack) built with React, Fastify, and PostgreSQL during internship at Amotek.",
+      "bachelorTitle": "Bachelor Toegepaste Informatica",
+      "bachelorNotCompleted": "(Not completed)",
+      "bachelorInstitution": "AP Hogeschool Antwerpen",
+      "bachelorPeriod": "Sep 2020 - Jun 2022",
+      "bachelorCourseworkTitle": "Valuable Coursework",
+      "bachelorCoursework": [
+        "Programming Principles",
+        "Database Programming",
+        "Web Programming",
+        ".NET OOP",
+        "Software Design"
+      ],
+      "bachelorSwitchNote": "Switched to the more practically oriented Graduaat program, which better aligned with my hands-on learning style and career goals.",
+      "profDevTitle": "Continuous Learning",
+      "profDevItems": [
+        {
+          "title": "Self-Directed Learning",
+          "description": "Regular engagement with documentation, tutorials, and community resources for React, Node.js, TypeScript, and databases."
+        },
+        {
+          "title": "Technical Reading",
+          "description": "Study of industry-standard resources like 'Clean Code' and 'Don't Make Me Think' for best practices."
+        },
+        {
+          "title": "Practical Application",
+          "description": "Applied learning through internship work and personal projects, focusing on full-stack applications."
+        }
+      ]
+    }
   },
   "footer": {
     "about": "About",
@@ -297,82 +310,61 @@
       "close": "Close",
       "week1": {
         "title": "Week 1",
-        "overview": "Started the internship with project onboarding. Focused on understanding the existing coding architecture (AmoDrive) and project structure, working with Storybook components, and improving coding style based on senior feedback. Gained practical experience using Git/GitHub workflows, resolved various technical errors, and successfully finalized tickets related to forms, cards, and modals.",
-        "day": []
+        "overview": "Started the internship with project onboarding. Focused on understanding the existing coding architecture (AmoDrive) and project structure, working with Storybook components, and improving coding style based on senior feedback. Gained practical experience using Git/GitHub workflows, resolved various technical errors, and successfully finalized tickets related to forms, cards, and modals."
       },
       "week2": {
         "title": "Week 2",
-        "overview": "Initiated work on the AmoTrack project, engaging with the core tech stack: React, PostgreSQL, Drizzle, and Fastify. Successfully set up the database, established connection, and developed the first CRUD endpoint. Received valuable feedback on logical thinking and collaboration. Created new endpoints, optimized server files, and started working on tickets for the user interface and API performance, gaining experience with ticket and PR workflows.",
-        "day": []
+        "overview": "Initiated work on the AmoTrack project, engaging with the core tech stack: React, PostgreSQL, Drizzle, and Fastify. Successfully set up the database, established connection, and developed the first CRUD endpoint. Received valuable feedback on logical thinking and collaboration. Created new endpoints, optimized server files, and started working on tickets for the user interface and API performance, gaining experience with ticket and PR workflows."
       },
       "week3": {
         "title": "Week 3",
-        "overview": "Focused on refining work based on feedback and tackling new tickets. Addressed challenges related to coding style consistency by learning from different seniors. Received positive feedback on Pull Requests and successfully completed and obtained approval for outstanding tasks from the first week. Continued developing skills in backend development.",
-        "day": []
+        "overview": "Focused on refining work based on feedback and tackling new tickets. Addressed challenges related to coding style consistency by learning from different seniors. Received positive feedback on Pull Requests and successfully completed and obtained approval for outstanding tasks from the first week. Continued developing skills in backend development."
       },
       "week4": {
         "title": "Week 4",
-        "overview": "Achieved a key milestone by presenting a demo of the AmoTrack frontend and backend development progress to the senior team. Implemented significant functions in form components and resolved backend bugs. Focused on making components more generic and reusable. Received positive feedback, motivating further dedication to project development and skill improvement.",
-        "day": []
+        "overview": "Achieved a key milestone by presenting a demo of the AmoTrack frontend and backend development progress to the senior team. Implemented significant functions in form components and resolved backend bugs. Focused on making components more generic and reusable. Received positive feedback, motivating further dedication to project development and skill improvement."
       },
       "week5": {
         "title": "Week 5",
-        "overview": "Primarily focused on managing and addressing Pull Requests (PRs) and continuing frontend development for AmoTrack, including updating forms. Successfully finalized remaining backend tasks. Started a small personal project ('Mini Mike') based on senior guidance, aimed at reinforcing learning and practical skills.",
-        "day": []
+        "overview": "Primarily focused on managing and addressing Pull Requests (PRs) and continuing frontend development for AmoTrack, including updating forms. Successfully finalized remaining backend tasks. Started a small personal project ('Mini Mike') based on senior guidance, aimed at reinforcing learning and practical skills."
       },
       "week6": {
         "title": "Week 6",
-        "overview": "Engaged with DevOps aspects, tackling Azure challenges and deployment issues, including optimizing 'chunk size reduction' via GitHub Actions. Continued frontend development work on assigned tickets. Collaborated with a colleague to troubleshoot and resolve deployment problems and contributed to updating the AmoStyle library. Provided constructive feedback on a colleague's project.",
-        "day": []
+        "overview": "Engaged with DevOps aspects, tackling Azure challenges and deployment issues, including optimizing 'chunk size reduction' via GitHub Actions. Continued frontend development work on assigned tickets. Collaborated with a colleague to troubleshoot and resolve deployment problems and contributed to updating the AmoStyle library. Provided constructive feedback on a colleague's project."
       },
       "week7": {
         "title": "Week 7",
-        "overview": "Dedicated the week entirely to working on the Amo-style-library. This involved rewriting existing components based on the decision to move away from using MUI, focusing on custom implementation, component testing, and library maintenance.",
-        "day": []
+        "overview": "Dedicated the week entirely to working on the Amo-style-library. This involved rewriting existing components based on the decision to move away from using MUI, focusing on custom implementation, component testing, and library maintenance."
       },
       "week8": {
         "title": "Week 8",
-        "overview": "A quieter week focusing on integrating feedback from my interim evaluation. Continued frontend refinement based on senior advice, independently addressing and fixing bugs. Developed new UI components including input fields, radio fields, and checkbox fields, demonstrating growing autonomy. Engaged in detailed review of feedback and technical documentation.",
-        "day": []
+        "overview": "A quieter week focusing on integrating feedback from my interim evaluation. Continued frontend refinement based on senior advice, independently addressing and fixing bugs. Developed new UI components including input fields, radio fields, and checkbox fields, demonstrating growing autonomy. Engaged in detailed review of feedback and technical documentation."
       },
       "week9": {
         "title": "Week 9",
-        "overview": "Transitioned back to working on both the frontend and backend of the AmoTrack project after finalizing Amo Style Library tasks. Pick up new tickets assigned by the senior team, focused on implementing new features and updates across the stack. Gained experience with API documentation by creating Swagger specifications.",
-        "day": []
+        "overview": "Transitioned back to working on both the frontend and backend of the AmoTrack project after finalizing Amo Style Library tasks. Pick up new tickets assigned by the senior team, focused on implementing new features and updates across the stack. Gained experience with API documentation by creating Swagger specifications."
       },
       "week10": {
         "title": "Week 10",
-        "overview": "Shifted full focus to the AmoTrack project, actively contributing to both frontend and backend development. Updated frontend components, resolved bugs, and processed translation feedback. Further enhanced API documentation by setting up Swagger. Began implementing core backend features, including soft deletion logic for data management.",
-        "day": []
+        "overview": "Shifted full focus to the AmoTrack project, actively contributing to both frontend and backend development. Updated frontend components, resolved bugs, and processed translation feedback. Further enhanced API documentation by setting up Swagger. Began implementing core backend features, including soft deletion logic for data management."
       },
       "week11": {
         "title": "Week 11",
-        "overview": "Dedicated the week to finalizing assigned tickets for the AmoTrack project. Successfully reached a major development milestone by fully implementing the complete timesheet logic, a core feature. Focused on thorough testing and preparation for upcoming demos, demonstrating ability to complete feature development cycles.",
-        "day": []
+        "overview": "Dedicated the week to finalizing assigned tickets for the AmoTrack project. Successfully reached a major development milestone by fully implementing the complete timesheet logic, a core feature. Focused on thorough testing and preparation for upcoming demos, demonstrating ability to complete feature development cycles."
       },
       "week12": {
         "title": "Week 12",
-        "overview": "Achieved high productivity by focusing exclusively on assigned development tickets. Rebuilt and refined several pages based on new design feedback to enhance user experience and interface usability. Prepared the codebase and architecture for the upcoming implementation of the API gateway.",
-        "day": []
+        "overview": "Achieved high productivity by focusing exclusively on assigned development tickets. Rebuilt and refined several pages based on new design feedback to enhance user experience and interface usability. Prepared the codebase and architecture for the upcoming implementation of the API gateway."
       },
       "week13": {
         "title": "Week 13",
-        "overview": "Focused heavily on finalization and refinement of critical application components. Completed and refined the timesheet feature, implemented and thoroughly tested the login functionality, and completed the translation of all application pages into English. Prepared to finalize user authentication flows and address remaining design feedback.",
-        "day": []
+        "overview": "Focused heavily on finalization and refinement of critical application components. Completed and refined the timesheet feature, implemented and thoroughly tested the login functionality, and completed the translation of all application pages into English. Prepared to finalize user authentication flows and address remaining design feedback."
       },
       "week14": {
         "title": "Week 14",
-        "overview": "Engaged in advanced topics and codebase optimization. Conducted self-study and implemented React Query for improved data fetching and state management. Researched testing methodologies and performance optimizations. Refactored and cleaned up existing code, implemented robust role checks for access control, and further refined login functionality and the timesheet feature. Enhanced UI details by styling project components.",
-        "day": []
+        "overview": "Engaged in advanced topics and codebase optimization. Conducted self-study and implemented React Query for improved data fetching and state management. Researched testing methodologies and performance optimizations. Refactored and cleaned up existing code, implemented robust role checks for access control, and further refined login functionality and the timesheet feature. Enhanced UI details by styling project components."
       }
     }
-  },
-  "projects": {
-    "viewDetails": "View Details",
-    "viewAll": "View All Projects"
-  },
-  "experience": {
-    "downloadResume": "Download Resume"
   },
   "toggleLanguage": "Toggle language"
 }

@@ -35,7 +35,7 @@ export const IntroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Full-Stack Developer with React & Node.js Expertise
+              {t('home.welcome')}
             </motion.h1>
 
             <motion.p
@@ -44,11 +44,7 @@ export const IntroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Junior developer with hands-on experience in building modern web
-              applications. I combine technical skills with strong
-              problem-solving abilities to deliver clean, efficient code and
-              exceptional user experiences. Based in Belgium and available for
-              opportunities across Europe.
+              {t('home.description')}
             </motion.p>
 
             {/* Section Navigation Buttons */}
@@ -63,7 +59,7 @@ export const IntroSection = () => {
                 className='flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium'
               >
                 <Code className='w-4 h-4' />
-                <span>My Skills</span>
+                <span>{t('home.technologies')}</span>
               </a>
 
               <a
@@ -71,7 +67,7 @@ export const IntroSection = () => {
                 className='flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium'
               >
                 <FolderKanban className='w-4 h-4' />
-                <span>My Projects</span>
+                <span>{t('home.projects')}</span>
               </a>
 
               <a
@@ -79,7 +75,7 @@ export const IntroSection = () => {
                 className='flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium'
               >
                 <Briefcase className='w-4 h-4' />
-                <span>My Experience</span>
+                <span>{t('home.experienceTitle')}</span>
               </a>
 
               <a
@@ -87,7 +83,7 @@ export const IntroSection = () => {
                 className='flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium'
               >
                 <GraduationCap className='w-4 h-4' />
-                <span>My Education</span>
+                <span>{t('home.educationTitle')}</span>
               </a>
             </motion.div>
           </motion.div>
@@ -101,7 +97,7 @@ export const IntroSection = () => {
             <div className='w-80 h-80 rounded-full bg-indigo-100 border-4 border-white shadow-xl overflow-hidden flex items-center justify-center'>
               <img
                 src='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7zwDG7AheP5bFHrvDtRpJZ3q1ZBU74.png'
-                alt='Profile'
+                alt='Profile' // Consider adding an alt text translation key as well
                 className='w-full h-full object-cover'
               />
             </div>
