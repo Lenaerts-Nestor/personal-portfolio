@@ -1,6 +1,7 @@
 'use client';
 
 import type React from 'react';
+import { IoHardwareChip } from 'react-icons/io5';
 
 import { motion } from 'framer-motion';
 import {
@@ -22,9 +23,11 @@ import {
   SiStyledcomponents,
   SiMacos,
   SiPinetwork,
+  SiGitforwindows,
 } from 'react-icons/si';
 import { useI18n } from '../../shared/i18nContext';
 import { SectionHeading } from '../../shared/layout/section-heading';
+import { FaApple, FaNetworkWired, FaWindows } from 'react-icons/fa';
 
 // Define the experience data structure
 interface Experience {
@@ -91,12 +94,12 @@ export default function ExperienceSection() {
       technologies: [
         {
           name: 'Windows',
-          icon: <span className='i-mdi-microsoft-windows text-blue-500' />,
+          icon: <FaWindows className='text-blue-500' />,
         },
-        { name: 'macOS', icon: <SiMacos className='text-gray-700' /> },
+        { name: 'macOS', icon: <FaApple className='text-gray-700' /> },
         {
           name: 'Networking',
-          icon: <SiPinetwork />,
+          icon: <FaNetworkWired className='text-gray-500' />,
         },
       ],
       featured: false,
@@ -116,15 +119,15 @@ export default function ExperienceSection() {
       technologies: [
         {
           name: 'Hardware',
-          icon: <span className='i-mdi-desktop-tower text-gray-700' />,
+          icon: <IoHardwareChip className='text-orange-500' />,
         },
         {
           name: 'Networking',
-          icon: <span className='i-mdi-network text-blue-600' />,
+          icon: <FaNetworkWired className='text-gray-500' />,
         },
         {
           name: 'Windows',
-          icon: <span className='i-mdi-microsoft-windows text-blue-500' />,
+          icon: <FaWindows className='text-blue-500' />,
         },
       ],
       featured: false,
