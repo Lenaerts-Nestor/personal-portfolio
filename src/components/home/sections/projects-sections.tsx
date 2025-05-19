@@ -23,10 +23,10 @@ import {
   SiSwagger,
   SiDart,
 } from 'react-icons/si';
-import { projects } from '../../utils/projects-data';
-import { useI18n } from '../shared/i18nContext';
-import { SectionHeading } from '../shared/layout/section-heading';
-import { ProjectModal } from './project-modal';
+import { projects } from '../../../utils/projects-data';
+import { useI18n } from '../../shared/i18nContext';
+import { SectionHeading } from '../../shared/layout/section-heading';
+import { ProjectModal } from '../project-modal';
 
 // Map project technologies to their corresponding icons and colors
 const techIcons = {

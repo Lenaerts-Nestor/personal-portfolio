@@ -10,7 +10,6 @@ import {
   Wrench,
   HelpCircle,
 } from 'lucide-react';
-import { SectionHeading } from '../shared/layout/section-heading';
 import {
   SiReact,
   SiPostgresql,
@@ -24,7 +23,8 @@ import {
   SiMacos,
   SiPinetwork,
 } from 'react-icons/si';
-import { useI18n } from '../shared/i18nContext';
+import { useI18n } from '../../shared/i18nContext';
+import { SectionHeading } from '../../shared/layout/section-heading';
 
 // Define the experience data structure
 interface Experience {

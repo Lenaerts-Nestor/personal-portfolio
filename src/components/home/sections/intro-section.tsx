@@ -18,8 +18,8 @@ import {
   Info,
   ExternalLink,
 } from 'lucide-react';
-import { gradientTextClasses } from '../../style/style';
-import { useI18n } from '../shared/i18nContext';
+import { gradientTextClasses } from '../../../style/style';
+import { useI18n } from '../../shared/i18nContext';
 
 export const IntroSection = () => {
   const { t } = useI18n();

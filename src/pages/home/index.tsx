@@ -2,10 +2,11 @@ import { TechnologiesSection as MainTechnologies } from '../../components/home/s
 import { ScrollToTop } from '../../components/shared/scroll-to-top';
 
 import { Footer } from '../../components/shared/layout/footer';
-import MainProjects from '../../components/home/projects-sections';
-import MainExperience from '../../components/home/experience-section';
-import { IntroSection } from '../../components/home/intro-section';
+
 import EducationSectionWrapper from '../../components/home/education-section-wrapper';
+import { IntroSection } from '../../components/home/sections/intro-section';
+import ProjectsSection from '../../components/home/sections/projects-sections';
+import ExperienceSection from '../../components/home/sections/experience-section';
 
 const HomePage = () => {
   return (
@@ -13,8 +14,8 @@ const HomePage = () => {
       <main>
         <IntroSection />
         <MainTechnologies />
-        <MainProjects />
-        <MainExperience />
+        <ProjectsSection />
+        <ExperienceSection />
         <EducationSectionWrapper />
       </main>
       <Footer />
