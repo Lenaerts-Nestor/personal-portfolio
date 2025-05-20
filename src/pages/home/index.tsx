@@ -1,4 +1,4 @@
-import { TechnologiesSection as MainTechnologies } from '../../components/home/skills-section';
+import { TechnologiesSection as MainTechnologies } from '../../components/home/sections/skills-section';
 import { ScrollToTop } from '../../components/shared/scroll-to-top';
 
 import { Footer } from '../../components/shared/layout/footer';

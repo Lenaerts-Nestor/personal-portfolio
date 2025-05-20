@@ -37,8 +37,8 @@ import {
   SiCodeblocks,
   SiPostman,
 } from 'react-icons/si';
-import { useI18n } from '../shared/i18nContext';
-import { SectionHeading } from '../shared/layout/section-heading';
+import { useI18n } from '../../shared/i18nContext';
+import { SectionHeading } from '../../shared/layout/section-heading';
 
 interface Skill {
   name: string;
