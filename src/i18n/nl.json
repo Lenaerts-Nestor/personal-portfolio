@@ -191,6 +191,57 @@
       "technologiesTitle": "Technologie Stack",
       "outcomeTitle": "Project Resultaat",
       "outcome": "De AmoTrack-applicatie is succesvol opgeleverd en wordt nu intern door Amotek gebruikt voor dagelijkse operaties. Het systeem heeft de projectmanagement- en tijdsregistratieprocessen van het bedrijf gestroomlijnd, wat waardevolle inzichten biedt in resourcetoewijzing en projectwinstgevendheid. De codebase is goed gestructureerd en gedocumenteerd, waardoor het gemakkelijk te onderhouden en uit te breiden is met nieuwe functies indien nodig."
+    },
+    "cvo": {
+      "overviewTitle": "Project Overzicht",
+      "overview": "Een backend-gericht automatiseringsproject voor CVO Antwerpen School, ontworpen om kernadministratieve processen te optimaliseren en automatiseren. Het systeem stroomlijnt studentenregistratie, accountcreatie, gebruikersbeheer (studenten, docenten, beheerders), en koppelt dynamisch cursussen aan docenten en studenten, met diepe Google API-integratie.",
+      "technologiesTitle": "Technologie Stack",
+      "featuresTitle": "Belangrijkste Functies",
+      "features": {
+        "item1": "Geautomatiseerde studentenregistratie en accountcreatie",
+        "item2": "Rolgebaseerd gebruikersbeheer (studenten, docenten, beheerders)",
+        "item3": "Dynamische koppeling van cursussen aan docenten en studenten",
+        "item4": "Volledige Google Classroom-automatisering (aanmaken van klassen, koppelen van cursussen, beheer van opdrachten)",
+        "item5": "Geautomatiseerd Google-accountbeheer voor studenten en docenten",
+        "item6": "Veilige RESTful API-eindpunten voor alle geautomatiseerde processen"
+      },
+      "architectureTitle": "Technische Architectuur",
+      "backendApiIntegrationTitle": "Backend & API Integratie",
+      "backendApiIntegrationDescription": "Het systeem is gebouwd in C# met aangepaste API-modellen en -services, gericht op veilige, schaalbare backend-logica. Uitgebreide Google API-integratie (Classroom, Directory, Gmail) automatiseert educatieve workflows en gebruikersbeheer. Dataserialisatie, e-mailafhandeling en webautomatiseringsbibliotheken ondersteunen robuuste, geautomatiseerde operaties.",
+      "contributionsTitle": "Mijn Rol & Verantwoordelijkheden",
+      "contributions": {
+        "item1": "Leidde de ontwikkeling van Google API-integratie (Classroom, Directory, Gmail)",
+        "item2": "Koppelde schoolsysteem met Google-accounts voor naadloze automatisering",
+        "item3": "Automatiseerde aanmaak van Google Classroom, koppeling van cursussen en gebruikerstoewijzingen",
+        "item4": "Ontwierp en implementeerde veilige RESTful-eindpunten voor alle geautomatiseerde processen",
+        "item5": "Voerde uitgebreid onderzoek uit naar Google API-documentatie en best practices",
+        "item6": "Zorgde voor veilige codering en efficiënte gegevensstroom gedurende het project"
+      },
+      "challenge": "De belangrijkste uitdaging was het grondig lezen en interpreteren van de uitgebreide Google API-documentatie om robuuste, veilige integratiepatronen te identificeren. Veilige codeerpraktijken en zorgvuldige architecturale beslissingen waren essentieel om gegevensprivacy en systeembetrouwbaarheid te waarborgen.",
+      "solution": "Ik implementeerde een modulaire, veilige backend-architectuur met aangepaste C#-services en -modellen, waarbij Google API's werden gebruikt voor automatisering. Beveiliging had bij elke stap prioriteit en RESTful-eindpunten werden ontworpen voor onderhoudbaarheid en uitbreidbaarheid.",
+      "outcomeTitle": "Projectresultaat",
+      "outcome": "Het CVO Antwerpen automatiseringssysteem werd succesvol geïmplementeerd, waardoor de administratieve last aanzienlijk werd verminderd en educatieve workflows werden gestroomlijnd. De integratie met Google-services creëerde een naadloze ervaring voor studenten en docenten, terwijl de veilige backend-architectuur gegevensprivacy en systeembetrouwbaarheid waarborgde."
+    },
+    "timesheet": {
+      "description": "AmoTrack is een uitgebreide full-stack applicatie ontwikkeld voor Amotek's interne bedrijfsregistratie en projectmanagement behoeften, die tijdsregistratie, projectbeheer, klantenbeheer en rapportage integreert."
+    },
+    "cvo": {
+      "description": "Backend-automatisering voor CVO Antwerpen, stroomlijning van administratieve taken zoals studentenregistratie en Google Classroom-integratie met C# en .NET."
+    }, 
+    "webdev": {
+      "description": "Een webontwikkelingsproject waarin vaardigheden worden getoond voor het bouwen van moderne, responsieve websites en webapplicaties."
+    },
+    "game": {
+      "description": "Een game-ontwikkelingsproject dat spellogica en interactief ontwerp demonstreert met C# en MonoGame."
+    },
+    "webapi": {
+      "description": "Een project gericht op het ontwerpen en ontwikkelen van robuuste, schaalbare Web API's, waarschijnlijk met Node.js/Fastify of .NET."
+    },
+    "parkflow": {
+      "description": "Een systeem voor het beheren en optimaliseren van parkeerplaatstoewijzing en verkeersdoorstroming, mogelijk gebruikmakend van IoT en webtechnologieën."
+    },
+    "carinfo": {
+      "description": "Een applicatie voor het raadplegen en weergeven van gedetailleerde voertuiginformatie, mogelijk geïntegreerd met externe automotive data API's."
     }
   },
   "skills": {

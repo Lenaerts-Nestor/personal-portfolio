@@ -1,7 +1,8 @@
 export const projects = [
   {
-    id: "timesheet",
+    id: "amotrack",
     title: "AmoTrack",
+    cardTranslationKey: "timesheet",
     description:
       "A comprehensive full-stack application for internal business tracking and management, developed during my internship at Amotek. This system handles time tracking, project management, client management, and reporting.",
     icon: null,
@@ -11,21 +12,22 @@ export const projects = [
     techs: [],
     isPrivate: true,
   },
-    {
+  {
     id: "cvo",
     title: "CVO Antwerpen",
+    cardTranslationKey: "cvo-automation",
     type: "Team Project",
     description:
       "A backend-focused automation project for CVO Antwerpen School, designed to optimize and automate core administrative processes with deep Google API integration.",
     image: "src/assets/cvo_antwerpen_zuid_cover.jpg",
-    
-    technologies: ["C#", ".NET", "Google APIs", "Swagger",],
+    technologies: ["C#", ".NET", "Google APIs", "Swagger"],
     githubLink: "",
     isPrivate: true,
   },
   {
     id: "webdev",
     title: "Web Development",
+    cardTranslationKey: "webdev",
     description:
       "Simple website with login, MongoDB, and admin features. This project demonstrates my ability to create a complete web application with authentication, database integration, and role-based access control.",
     icon: null,
@@ -38,6 +40,7 @@ export const projects = [
   {
     id: "game",
     title: "Game Development",
+    cardTranslationKey: "game",
     description:
       "2D platformer using MonoGame and C#. This project showcases my ability to work with game development frameworks and implement core gaming mechanics like physics, collision detection, and character movement.",
     icon: null,
@@ -50,6 +53,7 @@ export const projects = [
   {
     id: "webapi",
     title: "Web API",
+    cardTranslationKey: "webapi",
     description:
       "This project demonstrates the development of web services based on open standards such as XML, JSON, and HTTP(S). It includes authentication, rate limiting, and comprehensive documentation.",
     icon: null,
@@ -62,6 +66,7 @@ export const projects = [
   {
     id: "parkflow",
     title: "ParkFlow",
+    cardTranslationKey: "parkflow",
     description:
       "Flutter app that allows users to reserve, view, extend, or cancel parking spots. Users can also select their vehicle from a list and receive notifications about their parking status.",
     icon: null,
@@ -69,11 +74,11 @@ export const projects = [
     type: "Team Project",
     technologies: ["Flutter", "Firebase", "Dart"],
     techs: [],
-
   },
   {
     id: "carinfo",
     title: "Car Info",
+    cardTranslationKey: "carinfo",
     description:
       "A project where I tested my skills in React Native focused on mobile devices. I implemented API integrations correctly and used CRUD functions to manage car information data.",
     icon: null,
@@ -83,5 +88,4 @@ export const projects = [
     techs: [],
     githubLink: "https://github.com/Lenaerts-Nestor/Project_Mobile_Development",
   },
-
 ]

@@ -135,6 +135,20 @@ export const ProjectsSection = () => {
     return null;
   };
 
+  // Helper function to get project description
+  const getProjectDescription = (project: any) => {
+    const keyForCardDescription = project.cardTranslationKey || project.id;
+    const translationKey = `projects.${keyForCardDescription}.description`;
+    const translatedDescription = t(translationKey);
+
+    // Check if translation was successful and is not the key itself
+    if (translatedDescription && translatedDescription !== translationKey) {
+      return translatedDescription;
+    }
+    // Fallback to the hardcoded description in projects-data.tsx if translation fails
+    return project.description;
+  };
+
   return (
     <section id='projects' className='py-16 bg-gray-50 dark:bg-gray-900'>
       <div className='max-w-6xl mx-auto px-4'>
@@ -199,7 +213,7 @@ export const ProjectsSection = () => {
                 {/* Description with fixed height */}
                 <div className='mb-4 h-20 overflow-hidden'>
                   <p className='text-gray-600 dark:text-gray-400 text-sm line-clamp-3'>
-                    {project.description}
+                    {getProjectDescription(project)}
                   </p>
                 </div>
 
@@ -330,7 +344,7 @@ export const ProjectsSection = () => {
                   {/* Description with dynamic height for mobile */}
                   <div className='mb-4'>
                     <p className='text-gray-600 dark:text-gray-400 text-sm'>
-                      {enhancedProjects[carouselIdx].description}
+                      {getProjectDescription(enhancedProjects[carouselIdx])}
                     </p>
                   </div>
 

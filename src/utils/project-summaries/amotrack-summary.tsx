@@ -11,7 +11,7 @@ import {
 } from 'react-icons/si';
 
 // Tech stack with icons and colors
-const techIcons = {
+const Amotrack_TechIcons = {
   React: { icon: SiReact, color: 'text-sky-500' },
   TypeScript: { icon: SiTypescript, color: 'text-blue-600' },
   Fastify: { icon: SiFastify, color: 'text-gray-800 dark:text-gray-200' },
@@ -27,7 +27,7 @@ export const AmoTrackSummary = () => {
 
   // Render tech icon
   const renderTechIcon = (tech: string) => {
-    const iconData = techIcons[tech as keyof typeof techIcons];
+    const iconData = Amotrack_TechIcons[tech as keyof typeof Amotrack_TechIcons];
     if (iconData) {
       const IconComponent = iconData.icon;
       return <IconComponent className={`h-5 w-5 ${iconData.color}`} />;
@@ -55,30 +55,26 @@ export const AmoTrackSummary = () => {
         <div className='grid grid-cols-2 md:grid-cols-3 gap-3'>
           {['React', 'TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'Drizzle ORM', 'Swagger', 'Git'].map(
             (tech, index) => (
-              <span
-                key={index}
-                className='flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700/50 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-lg'
-              >
+              <div key={index} className='flex items-center space-x-2 bg-gray-100 dark:bg-gray-700/60 p-2 rounded-md shadow-sm'>
                 {renderTechIcon(tech)}
-                {tech}
-              </span>
+                <span className='text-sm text-gray-800 dark:text-gray-200'>{tech}</span>
+              </div>
             )
           )}
         </div>
       </div>
-
+      
       {/* Key Features */}
       <div>
         <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3'>
           {t('projects.amotrack.featuresTitle')}
         </h3>
         <ul className='list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300'>
-          <li>{t('projects.amotrack.features.timeTracking')}</li>
-          <li>{t('projects.amotrack.features.projectManagement')}</li>
-          <li>{t('projects.amotrack.features.clientManagement')}</li>
-          <li>{t('projects.amotrack.features.userManagement')}</li>
-          <li>{t('projects.amotrack.features.reporting')}</li>
-          <li>{t('projects.amotrack.features.authentication')}</li>
+          <li>{t('projects.amotrack.features.item1')}</li>
+          <li>{t('projects.amotrack.features.item2')}</li>
+          <li>{t('projects.amotrack.features.item3')}</li>
+          <li>{t('projects.amotrack.features.item4')}</li>
+          <li>{t('projects.amotrack.features.item5')}</li>
         </ul>
       </div>
 
