@@ -6,7 +6,6 @@ import {
   SiPostgresql,
   SiDrizzle,
   SiNodedotjs,
-  SiTailwindcss,
   SiSwagger,
   SiGit,
 } from 'react-icons/si';
@@ -19,7 +18,6 @@ const techIcons = {
   PostgreSQL: { icon: SiPostgresql, color: 'text-blue-700' },
   'Drizzle ORM': { icon: SiDrizzle, color: 'text-amber-500' },
   'Node.js': { icon: SiNodedotjs, color: 'text-green-600' },
-  TailwindCSS: { icon: SiTailwindcss, color: 'text-cyan-500' },
   Swagger: { icon: SiSwagger, color: 'text-green-600' },
   Git: { icon: SiGit, color: 'text-red-600' },
 };
@@ -47,6 +45,26 @@ export const AmoTrackSummary = () => {
         <p className='text-gray-700 dark:text-gray-300'>
           {t('projects.amotrack.overview')}
         </p>
+      </div>
+
+      {/* Technologies Used */}
+      <div>
+        <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3'>
+          {t('projects.amotrack.technologiesTitle')}
+        </h3>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-3'>
+          {['React', 'TypeScript', 'Node.js', 'Fastify', 'PostgreSQL', 'Drizzle ORM', 'Swagger', 'Git'].map(
+            (tech, index) => (
+              <span
+                key={index}
+                className='flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700/50 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-lg'
+              >
+                {renderTechIcon(tech)}
+                {tech}
+              </span>
+            )
+          )}
+        </div>
       </div>
 
       {/* Key Features */}
@@ -113,35 +131,6 @@ export const AmoTrackSummary = () => {
         <p className='text-gray-700 dark:text-gray-300'>
           {t('projects.amotrack.solution')}
         </p>
-      </div>
-
-      {/* Technologies Used */}
-      <div>
-        <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3'>
-          {t('projects.amotrack.technologiesTitle')}
-        </h3>
-        <div className='grid grid-cols-2 md:grid-cols-3 gap-3'>
-          {[
-            'React',
-            'TypeScript',
-            'Node.js',
-            'Fastify',
-            'PostgreSQL',
-            'Drizzle ORM',
-            'TailwindCSS',
-            'Swagger',
-            'Git',
-            'Azure',
-          ].map((tech, index) => (
-            <span
-              key={index}
-              className='flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700/50 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-lg'
-            >
-              {renderTechIcon(tech)}
-              {tech}
-            </span>
-          ))}
-        </div>
       </div>
 
       {/* Project Outcome */}

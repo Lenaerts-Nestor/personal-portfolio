@@ -53,7 +53,7 @@ const techIcons = {
 // Add isPrivate flag to some projects and enhance with challenges/solutions
 const enhancedProjects = projects.map((project) => ({
   ...project,
-  isPrivate: project.id === 'timesheet' || project.id === 'parkflow',
+  // Use isPrivate from the data file, do not override
   challenges: '', // Will be filled from translations
   solutions: '', // Will be filled from translations
 }));

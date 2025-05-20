@@ -25,6 +25,7 @@ import {
   SiDart,
 } from 'react-icons/si';
 import { AmoTrackSummary } from '../../utils/project-summaries/amotrack-summary';
+import { CvoSummary } from '../../utils/project-summaries/cvo-summary';
 
 // Map project technologies to their corresponding icons and colors
 const techIcons = {
@@ -171,27 +172,31 @@ export const ProjectModal = ({
             {/* Content - scrollable */}
             <div className='flex-1 overflow-y-auto p-6'>
               {/* Technologies */}
-              <div className='mb-6'>
-                <h3 className='text-sm font-medium text-gray-500 dark:text-gray-400 mb-3'>
-                  {t('experience.technologiesUsed')}
-                </h3>
-                <div className='flex flex-wrap gap-2'>
-                  {project.technologies &&
-                    project.technologies.map((tech: string, index: number) => (
-                      <span
-                        key={index}
-                        className='flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700/50 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-lg'
-                      >
-                        {renderTechIcon(tech)}
-                        {tech}
-                      </span>
-                    ))}
+              {project.id !== 'cvo' && project.id !== 'timesheet' && (
+                <div className='mb-6'>
+                  <h3 className='text-sm font-medium text-gray-500 dark:text-gray-400 mb-3'>
+                    {t('experience.technologiesUsed')}
+                  </h3>
+                  <div className='flex flex-wrap gap-2'>
+                    {project.technologies &&
+                      project.technologies.map((tech: string, index: number) => (
+                        <span
+                          key={index}
+                          className='flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700/50 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-lg'
+                        >
+                          {renderTechIcon(tech)}
+                          {tech}
+                        </span>
+                      ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Project-specific content */}
               {project.id === 'timesheet' ? (
                 <AmoTrackSummary />
+              ) : project.id === 'cvo' ? (
+                <CvoSummary />
               ) : (
                 <>
                   {/* Description */}
