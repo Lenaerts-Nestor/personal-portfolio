@@ -1,61 +1,37 @@
-import type { EducationEntry } from "../interface/education";
-
-export const educationData: EducationEntry[] = [
-  {
-    degreeKey: 'education.graduaat.degree',
-    institutionKey: 'education.institution',
-    periodKey: 'education.graduaat.period',
-    status: 'in_progress',
-    courseworkTitleKey: 'education.graduaat.courseworkTitle',
-    courseworkKeys: [
-      'education.graduaat.coursework.itEssentials',
-      'education.graduaat.coursework.projectSkills',
-      'education.graduaat.coursework.basicProgramming',
-      'education.graduaat.coursework.databases',
-      'education.graduaat.coursework.cloudSystems',
-      'education.graduaat.coursework.ooProgramming',
-      'education.graduaat.coursework.webDevelopment',
-      'education.graduaat.coursework.webTechnology',
-      'education.graduaat.coursework.wplExploration',
-      'education.graduaat.coursework.wplProject',
-      'education.graduaat.coursework.proWorkplaces',
-      'education.graduaat.coursework.webFrameworks',
-      'education.graduaat.coursework.apiDevelopment',
-      'education.graduaat.coursework.testingSecurity',
-      'education.graduaat.coursework.wplCase',
-    ],
-    descriptionKey: 'education.graduaat.description',
-  },
-  {
-    degreeKey: 'education.bachelor.degree',
-    institutionKey: 'education.institution',
-    periodKey: 'education.bachelor.period',
-    status: 'not_completed',
-    courseworkTitleKey: 'education.bachelor.courseworkTitle',
-    courseworkKeys: [
-      'education.bachelor.coursework.programmingPrinciples',
-      'education.bachelor.coursework.databases',
-      'education.bachelor.coursework.webTechnology',
-      'education.bachelor.coursework.dataNetworks',
-      'education.bachelor.coursework.linux',
-      'education.bachelor.coursework.digitalFundamentals',
-      'education.bachelor.coursework.businessProcesses',
-      'education.bachelor.coursework.iotExperiments',
-      'education.bachelor.coursework.webProgramming',
-      'education.bachelor.coursework.discoverIT',
-      'education.bachelor.coursework.analysis',
-      'education.bachelor.coursework.communication',
-      'education.bachelor.coursework.cyberSecurity',
-      'education.bachelor.coursework.dataStructures',
-      'education.bachelor.coursework.databaseProgramming',
-      'education.bachelor.coursework.routingSwitching',
-      'education.bachelor.coursework.netOOP',
-      'education.bachelor.coursework.softwareDesign',
-      'education.bachelor.coursework.uxDesign',
-      'education.bachelor.coursework.introMobile',
-      'education.bachelor.coursework.devOps',
-    ],
-    descriptionKey: 'education.bachelor.description',
-    noteKey: 'education.bachelor.note',
-  },
-];
+ export const professionalSections = [
+    {
+      title: 'Self-Directed Learning',
+      description: 'Regular engagement with documentation, tutorials, and community resources to deepen understanding of React, Node.js, and TypeScript.'
+    },
+    {
+      title: 'Technical Reading',
+      description: 'Study of industry-standard books like "Clean Code" and "Don\'t Make Me Think" for best practices.'
+    },
+    {
+      title: 'Practical Application',
+      description: 'Applied learning through internship work and personal projects, focusing on full-stack applications.'
+    }
+  ];
+  
+ export const educationData = [
+    {
+      title: 'Graduaat Programmeren',
+      institution: 'AP Hogeschool Antwerpen',
+      period: 'September 2023 - June 2025 (Expected)',
+      courseworks: ['Web Frameworks', 'API Development', 'OOP', 'Databases'],
+      courseworkTitle: 'Key Coursework',
+      description: 'Industry-focused programming degree with emphasis on practical web development skills.',
+      notCompleted: false,
+      badgeColor: 'indigo' as const
+    },
+    {
+      title: 'Bachelor Toegepaste Informatica',
+      institution: 'AP Hogeschool Antwerpen',
+      period: 'September 2020 - June 2022',
+      courseworks: ['Programming Principles', 'Database Programming', 'Web Programming', '.NET OOP'],
+      courseworkTitle: 'Valuable Coursework',
+      description: 'Switched to Graduaat program for more hands-on learning approach.',
+      notCompleted: true,
+      badgeColor: 'purple' as const
+    }
+  ];
