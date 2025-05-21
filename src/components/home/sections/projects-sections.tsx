@@ -3,52 +3,12 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FolderKanban, ChevronLeft, ChevronRight, Lock } from 'lucide-react';
-import {
-  SiReact,
-  SiTypescript,
-  SiFastify,
-  SiPostgresql,
-  SiDrizzle,
-  SiNodedotjs,
-  SiMongodb,
-  SiExpress,
-  SiSharp,
-  SiMonogame,
-  SiDotnet,
-  SiMysql,
-  SiFlutter,
-  SiFirebase,
-  SiReactivex,
-  SiCss3,
-  SiSwagger,
-  SiDart,
-} from 'react-icons/si';
-import { projects } from '../../../utils/projects-data';
+import { project_techIcons, projects } from '../../../utils/projects-data';
 import { useI18n } from '../../shared/i18nContext';
 import { SectionHeading } from '../../shared/layout/section-heading';
 import { ProjectModal } from '../project-modal';
 
-// Map project technologies to their corresponding icons and colors
-const techIcons = {
-  React: { icon: SiReact, color: 'text-sky-500' },
-  TypeScript: { icon: SiTypescript, color: 'text-blue-600' },
-  Fastify: { icon: SiFastify, color: 'text-gray-800 dark:text-gray-200' },
-  PostgreSQL: { icon: SiPostgresql, color: 'text-blue-700' },
-  'Drizzle ORM': { icon: SiDrizzle, color: 'text-amber-500' },
-  'Node.js': { icon: SiNodedotjs, color: 'text-green-600' },
-  MongoDB: { icon: SiMongodb, color: 'text-green-500' },
-  Express: { icon: SiExpress, color: 'text-gray-700 dark:text-gray-300' },
-  C: { icon: SiSharp, color: 'text-purple-600' },
-  MonoGame: { icon: SiMonogame, color: 'text-red-600' },
-  '.NET': { icon: SiDotnet, color: 'text-purple-700' },
-  MySQL: { icon: SiMysql, color: 'text-blue-800' },
-  Flutter: { icon: SiFlutter, color: 'text-cyan-500' },
-  Firebase: { icon: SiFirebase, color: 'text-amber-500' },
-  'React Native': { icon: SiReactivex, color: 'text-sky-600' },
-  CSS: { icon: SiCss3, color: 'text-blue-500' },
-  Swagger: { icon: SiSwagger, color: 'text-green-600' },
-  Dart: { icon: SiDart, color: 'text-blue-400' },
-};
+
 
 // Add isPrivate flag to some projects and enhance with challenges/solutions
 const enhancedProjects = projects.map((project) => ({
@@ -127,7 +87,7 @@ export const ProjectsSection = () => {
 
   // Render tech icon
   const renderTechIcon = (tech: string) => {
-    const iconData = techIcons[tech as keyof typeof techIcons];
+    const iconData = project_techIcons[tech as keyof typeof project_techIcons];
     if (iconData) {
       const IconComponent = iconData.icon;
       return <IconComponent className={`h-4 w-4 ${iconData.color}`} />;
@@ -135,17 +95,14 @@ export const ProjectsSection = () => {
     return null;
   };
 
-  // Helper function to get project description
   const getProjectDescription = (project: any) => {
     const keyForCardDescription = project.cardTranslationKey || project.id;
     const translationKey = `projects.${keyForCardDescription}.description`;
     const translatedDescription = t(translationKey);
 
-    // Check if translation was successful and is not the key itself
     if (translatedDescription && translatedDescription !== translationKey) {
       return translatedDescription;
     }
-    // Fallback to the hardcoded description in projects-data.tsx if translation fails
     return project.description;
   };
 

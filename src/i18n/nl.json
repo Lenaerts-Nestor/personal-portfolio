@@ -225,7 +225,7 @@
     "timesheet": {
       "description": "AmoTrack is een uitgebreide full-stack applicatie ontwikkeld voor Amotek's interne bedrijfsregistratie en projectmanagement behoeften, die tijdsregistratie, projectbeheer, klantenbeheer en rapportage integreert."
     },
-    "cvo": {
+    "cvo-automation": {
       "description": "Backend-automatisering voor CVO Antwerpen, stroomlijning van administratieve taken zoals studentenregistratie en Google Classroom-integratie met C# en .NET."
     }, 
     "webdev": {

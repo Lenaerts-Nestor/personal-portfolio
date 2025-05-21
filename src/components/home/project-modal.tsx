@@ -26,28 +26,9 @@ import {
 } from 'react-icons/si';
 import { AmoTrackSummary } from '../../utils/project-summaries/amotrack-summary';
 import { CvoSummary } from '../../utils/project-summaries/cvo-summary';
+import { project_techIcons } from '../../utils/projects-data';
 
 // Map project technologies to their corresponding icons and colors
-const techIcons = {
-  React: { icon: SiReact, color: 'text-sky-500' },
-  TypeScript: { icon: SiTypescript, color: 'text-blue-600' },
-  Fastify: { icon: SiFastify, color: 'text-gray-800 dark:text-gray-200' },
-  PostgreSQL: { icon: SiPostgresql, color: 'text-blue-700' },
-  'Drizzle ORM': { icon: SiDrizzle, color: 'text-amber-500' },
-  'Node.js': { icon: SiNodedotjs, color: 'text-green-600' },
-  MongoDB: { icon: SiMongodb, color: 'text-green-500' },
-  Express: { icon: SiExpress, color: 'text-gray-700 dark:text-gray-300' },
-  C: { icon: SiSharp, color: 'text-purple-600' },
-  MonoGame: { icon: SiMonogame, color: 'text-red-600' },
-  '.NET': { icon: SiDotnet, color: 'text-purple-700' },
-  MySQL: { icon: SiMysql, color: 'text-blue-800' },
-  Flutter: { icon: SiFlutter, color: 'text-cyan-500' },
-  Firebase: { icon: SiFirebase, color: 'text-amber-500' },
-  'React Native': { icon: SiReactivex, color: 'text-sky-600' },
-  CSS: { icon: SiCss3, color: 'text-blue-500' },
-  Swagger: { icon: SiSwagger, color: 'text-green-600' },
-  Dart: { icon: SiDart, color: 'text-blue-400' },
-};
 
 interface ProjectModalProps {
   project: any;
@@ -105,7 +86,7 @@ export const ProjectModal = ({
 
   // Render tech icon
   const renderTechIcon = (tech: string) => {
-    const iconData = techIcons[tech as keyof typeof techIcons];
+    const iconData = project_techIcons[tech as keyof typeof project_techIcons];
     if (iconData) {
       const IconComponent = iconData.icon;
       return <IconComponent className={`h-5 w-5 ${iconData.color}`} />;

@@ -1,3 +1,5 @@
+import { SiCss3, SiDart, SiDotnet, SiDrizzle, SiExpress, SiFastify, SiFirebase, SiFlutter, SiMongodb, SiMonogame, SiMysql, SiNodedotjs, SiPostgresql, SiReact, SiReactivex, SiSharp, SiSwagger, SiTypescript } from "react-icons/si";
+
 export const projects = [
   {
     id: "amotrack",
@@ -89,3 +91,23 @@ export const projects = [
     githubLink: "https://github.com/Lenaerts-Nestor/Project_Mobile_Development",
   },
 ]
+export const project_techIcons = {
+  React: { icon: SiReact, color: 'text-sky-500' },
+  TypeScript: { icon: SiTypescript, color: 'text-blue-600' },
+  Fastify: { icon: SiFastify, color: 'text-gray-800 dark:text-gray-200' },
+  PostgreSQL: { icon: SiPostgresql, color: 'text-blue-700' },
+  'Drizzle ORM': { icon: SiDrizzle, color: 'text-amber-500' },
+  'Node.js': { icon: SiNodedotjs, color: 'text-green-600' },
+  MongoDB: { icon: SiMongodb, color: 'text-green-500' },
+  Express: { icon: SiExpress, color: 'text-gray-700 dark:text-gray-300' },
+  C: { icon: SiSharp, color: 'text-purple-600' },
+  MonoGame: { icon: SiMonogame, color: 'text-red-600' },
+  '.NET': { icon: SiDotnet, color: 'text-purple-700' },
+  MySQL: { icon: SiMysql, color: 'text-blue-800' },
+  Flutter: { icon: SiFlutter, color: 'text-cyan-500' },
+  Firebase: { icon: SiFirebase, color: 'text-amber-500' },
+  'React Native': { icon: SiReactivex, color: 'text-sky-600' },
+  CSS: { icon: SiCss3, color: 'text-blue-500' },
+  Swagger: { icon: SiSwagger, color: 'text-green-600' },
+  Dart: { icon: SiDart, color: 'text-blue-400' },
+};

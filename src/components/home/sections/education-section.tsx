@@ -6,77 +6,8 @@ import { GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useI18n } from '../../shared/i18nContext';
 import { SectionHeading } from '../../shared/layout/section-heading';
+import { educationData } from '../../../utils/education-data';
 
-interface EducationEntry {
-  degreeKey: string;
-  institutionKey: string;
-  periodKey: string;
-  status?: 'completed' | 'in_progress' | 'not_completed';
-  descriptionKey?: string;
-  courseworkTitleKey?: string;
-  courseworkKeys?: string[];
-  noteKey?: string;
-}
-
-const educationData: EducationEntry[] = [
-  {
-    degreeKey: 'education.graduaat.degree',
-    institutionKey: 'education.institution',
-    periodKey: 'education.graduaat.period',
-    status: 'in_progress',
-    courseworkTitleKey: 'education.graduaat.courseworkTitle',
-    courseworkKeys: [
-      'education.graduaat.coursework.itEssentials',
-      'education.graduaat.coursework.projectSkills',
-      'education.graduaat.coursework.basicProgramming',
-      'education.graduaat.coursework.databases',
-      'education.graduaat.coursework.cloudSystems',
-      'education.graduaat.coursework.ooProgramming',
-      'education.graduaat.coursework.webDevelopment',
-      'education.graduaat.coursework.webTechnology',
-      'education.graduaat.coursework.wplExploration',
-      'education.graduaat.coursework.wplProject',
-      'education.graduaat.coursework.proWorkplaces',
-      'education.graduaat.coursework.webFrameworks',
-      'education.graduaat.coursework.apiDevelopment',
-      'education.graduaat.coursework.testingSecurity',
-      'education.graduaat.coursework.wplCase',
-    ],
-    descriptionKey: 'education.graduaat.description',
-  },
-  {
-    degreeKey: 'education.bachelor.degree',
-    institutionKey: 'education.institution',
-    periodKey: 'education.bachelor.period',
-    status: 'not_completed',
-    courseworkTitleKey: 'education.bachelor.courseworkTitle',
-    courseworkKeys: [
-      'education.bachelor.coursework.programmingPrinciples',
-      'education.bachelor.coursework.databases',
-      'education.bachelor.coursework.webTechnology',
-      'education.bachelor.coursework.dataNetworks',
-      'education.bachelor.coursework.linux',
-      'education.bachelor.coursework.digitalFundamentals',
-      'education.bachelor.coursework.businessProcesses',
-      'education.bachelor.coursework.iotExperiments',
-      'education.bachelor.coursework.webProgramming',
-      'education.bachelor.coursework.discoverIT',
-      'education.bachelor.coursework.analysis',
-      'education.bachelor.coursework.communication',
-      'education.bachelor.coursework.cyberSecurity',
-      'education.bachelor.coursework.dataStructures',
-      'education.bachelor.coursework.databaseProgramming',
-      'education.bachelor.coursework.routingSwitching',
-      'education.bachelor.coursework.netOOP',
-      'education.bachelor.coursework.softwareDesign',
-      'education.bachelor.coursework.uxDesign',
-      'education.bachelor.coursework.introMobile',
-      'education.bachelor.coursework.devOps',
-    ],
-    descriptionKey: 'education.bachelor.description',
-    noteKey: 'education.bachelor.note',
-  },
-];
 
 const EducationSection: React.FC = () => {
   const { t } = useI18n();
@@ -138,7 +69,7 @@ const EducationSection: React.FC = () => {
                   <h4 className='text-md font-medium text-gray-800 mb-2'>
                     {t(
                       edu.courseworkTitleKey ||
-                        'education.graduaat.courseworkTitleDefault' // Fallback key
+                        'education.graduaat.courseworkTitleDefault' 
                     )}
                   </h4>
                   <ul className='grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 list-disc list-inside text-gray-700 text-sm'>
@@ -155,7 +86,6 @@ const EducationSection: React.FC = () => {
               )}
             </motion.div>
           ))}
-          {/* Potential Note at the end */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
