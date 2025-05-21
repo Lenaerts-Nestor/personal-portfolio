@@ -4,31 +4,11 @@ import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Lock } from 'lucide-react';
 import { useI18n } from '../shared/i18nContext';
-import {
-  SiReact,
-  SiTypescript,
-  SiFastify,
-  SiPostgresql,
-  SiDrizzle,
-  SiNodedotjs,
-  SiMongodb,
-  SiExpress,
-  SiSharp,
-  SiMonogame,
-  SiDotnet,
-  SiMysql,
-  SiFlutter,
-  SiFirebase,
-  SiReactivex,
-  SiCss3,
-  SiSwagger,
-  SiDart,
-} from 'react-icons/si';
+
 import { AmoTrackSummary } from '../../utils/project-summaries/amotrack-summary';
 import { CvoSummary } from '../../utils/project-summaries/cvo-summary';
 import { project_techIcons } from '../../utils/projects-data';
 
-// Map project technologies to their corresponding icons and colors
 
 interface ProjectModalProps {
   project: any;

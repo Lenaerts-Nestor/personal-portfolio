@@ -8,14 +8,10 @@ import { useI18n } from '../../shared/i18nContext';
 import { SectionHeading } from '../../shared/layout/section-heading';
 import { ProjectModal } from '../project-modal';
 
-
-
-// Add isPrivate flag to some projects and enhance with challenges/solutions
 const enhancedProjects = projects.map((project) => ({
   ...project,
-  // Use isPrivate from the data file, do not override
-  challenges: '', // Will be filled from translations
-  solutions: '', // Will be filled from translations
+  challenges: '', 
+  solutions: '',
 }));
 
 export const ProjectsSection = () => {
