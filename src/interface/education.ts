@@ -8,3 +8,21 @@ export interface EducationEntry {
   courseworkKeys?: string[];
   noteKey?: string;
 }
+
+export interface EducationCardProps {
+  title: string
+  institution: string
+  period: string
+  description: string
+  courseworks: string[]
+  courseworkTitle: string
+  notCompleted?: boolean
+  delay?: number
+  badgeColor?: string
+}
+
+export interface ProfessionalDevCardProps {
+  title: string
+  sections: { title: string; description: string }[]
+  delay?: number
+}
