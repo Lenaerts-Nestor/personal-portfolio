@@ -3,18 +3,14 @@
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Lock } from 'lucide-react';
-import { useI18n } from '../shared/i18nContext';
+import { useI18n } from '../../../shared/i18nContext';
 
-import { AmoTrackSummary } from '../../utils/project-summaries/amotrack-summary';
-import { CvoSummary } from '../../utils/project-summaries/cvo-summary';
-import { project_techIcons } from '../../utils/projects-data';
+import { AmoTrackSummary } from '../../../../utils/project-summaries/amotrack-summary';
+import { CvoSummary } from '../../../../utils/project-summaries/cvo-summary';
+import { project_techIcons } from '../../../../utils/projects-data';
+import type { ProjectModalProps } from '../../../../interface/project';
 
 
-interface ProjectModalProps {
-  project: any;
-  isOpen: boolean;
-  onClose: () => void;
-}
 
 export const ProjectModal = ({
   project,
