@@ -1,7 +1,4 @@
-import React from 'react';
 import type { ExperienceTechnologiesProps } from '../../../../interface/experience';
-
-
 
 export const ExperienceTechnologies = ({ 
   technologies, 
