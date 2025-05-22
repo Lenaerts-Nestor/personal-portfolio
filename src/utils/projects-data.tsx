@@ -8,7 +8,7 @@ export const projects = [
     description:
       "A comprehensive full-stack application for internal business tracking and management, developed during my internship at Amotek. This system handles time tracking, project management, client management, and reporting.",
     icon: null,
-    image: "src/assets/timesheet.jpg",
+    image: "assets/timesheet.jpg",
     type: "Internship Project",
     technologies: ["React", "TypeScript", "Fastify", "PostgreSQL", "Drizzle ORM", "Node.js"],
     techs: [],
@@ -21,7 +21,7 @@ export const projects = [
     type: "Team Project",
     description:
       "A backend-focused automation project for CVO Antwerpen School, designed to optimize and automate core administrative processes with deep Google API integration.",
-    image: "src/assets/cvo_antwerpen_zuid_cover.jpg",
+    image: "assets/cvo_antwerpen_zuid_cover.jpg",
     technologies: ["C#", ".NET", "Google APIs", "Swagger"],
     githubLink: "",
     isPrivate: true,
@@ -33,7 +33,7 @@ export const projects = [
     description:
       "Simple website with login, MongoDB, and admin features. This project demonstrates my ability to create a complete web application with authentication, database integration, and role-based access control.",
     icon: null,
-    image: "src/assets/web_development.jpg",
+    image: "assets/web_development.jpg",
     type: "Course Project",
     technologies: ["Node.js", "TypeScript", "MongoDB", "Express"],
     techs: [],
@@ -46,7 +46,7 @@ export const projects = [
     description:
       "2D platformer using MonoGame and C#. This project showcases my ability to work with game development frameworks and implement core gaming mechanics like physics, collision detection, and character movement.",
     icon: null,
-    image: "src/assets/game_development.jpg",
+    image: "assets/game_development.jpg",
     type: "Personal Project",
     technologies: ["C#", "MonoGame"],
     techs: [],
@@ -59,7 +59,7 @@ export const projects = [
     description:
       "This project demonstrates the development of web services based on open standards such as XML, JSON, and HTTP(S). It includes authentication, rate limiting, and comprehensive documentation.",
     icon: null,
-    image: "src/assets/web_api.jpg",
+    image: "assets/web_api.jpg",
     type: "Course Project",
     technologies: [".NET", "MySQL", "Swagger"],
     techs: [],
@@ -72,7 +72,7 @@ export const projects = [
     description:
       "Flutter app that allows users to reserve, view, extend, or cancel parking spots. Users can also select their vehicle from a list and receive notifications about their parking status.",
     icon: null,
-    image: "src/assets/park_flow.jpg",
+    image: "assets/park_flow.jpg",
     type: "Team Project",
     technologies: ["Flutter", "Firebase", "Dart"],
     techs: [],
@@ -84,7 +84,7 @@ export const projects = [
     description:
       "A project where I tested my skills in React Native focused on mobile devices. I implemented API integrations correctly and used CRUD functions to manage car information data.",
     icon: null,
-    image: "src/assets/car_info.jpg",
+    image: "assets/car_info.jpg",
     type: "Personal Project",
     technologies: ["React Native", "TypeScript", "CSS", "RESTful APIs"],
     techs: [],
