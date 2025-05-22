@@ -1,5 +1,3 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 
 interface Section {
@@ -18,7 +16,6 @@ export const SectionNavigator = ({ sections }: SectionNavigatorProps) => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
 
-      // Find the section that is currently in view
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i].id);
         if (section && section.offsetTop <= scrollPosition) {

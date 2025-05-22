@@ -1,15 +1,11 @@
 import { motion } from 'framer-motion';
-import type { Experience } from '../../../../interface/experience';
+import type { DesktopExperienceCardProps } from '../../../../interface/experience';
 import { ExperienceHeader } from './ExperienceHeader';
 import { ExperienceIcon } from './ExperienceIcon';
 import { ExperienceList } from './ExperienceList';
 import { ExperienceTechnologies } from './ExperienceTechnologies';
 
-interface DesktopExperienceCardProps {
-  experience: Experience;
-  index: number;
-  t: (key: string) => string;
-}
+
 
 export const DesktopExperienceCard = ({
   experience: exp,

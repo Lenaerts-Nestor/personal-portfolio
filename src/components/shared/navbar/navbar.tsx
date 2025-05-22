@@ -1,7 +1,4 @@
-"use client"
-
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import {
   Menu,
@@ -106,10 +103,8 @@ export const Navbar = ({
     },
   ]
 
-  // Select appropriate menu items based on current page
   const menuItems = isBlogPage ? blogMenuItems : homeMenuItems
 
-  // Close mobile menu when location changes
   useEffect(() => {
     closeMobileMenu()
   }, [location.pathname, location.hash])

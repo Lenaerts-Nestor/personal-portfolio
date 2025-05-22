@@ -1,9 +1,6 @@
 import { Building2, HelpCircle, Wrench } from 'lucide-react';
+import type { ExperienceIconProps } from '../../../../interface/experience';
 
-interface ExperienceIconProps {
-  roleKey: string;
-  featured: boolean;
-}
 
 export const ExperienceIcon = ({ roleKey, featured }: ExperienceIconProps) => {
   const iconWrapperClassName = `p-2 rounded-lg ${

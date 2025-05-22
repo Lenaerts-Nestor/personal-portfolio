@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion';
 import { Briefcase, Code } from 'lucide-react';
-
-interface PositionBadgesProps {
-  t: (key: string) => string;
-  fadeIn: any;
-}
+import type { PositionBadgesProps } from '../../../../interface/intro';
 
 export const PositionBadges = ({ t, fadeIn }: PositionBadgesProps) => {
   return (

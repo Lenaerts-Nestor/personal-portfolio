@@ -1,11 +1,8 @@
-import type { Experience } from '../../../../interface/experience';
+import type {  ExperienceLayoutProps } from '../../../../interface/experience';
 import { DesktopExperienceCard } from './DesktopExperienceCard';
 import { MobileExperienceCard } from './MobileExperienceCard';
 
-interface ExperienceLayoutProps {
-  experiences: Experience[];
-  t: (key: string) => string;
-}
+
 
 export const ExperienceLayout = ({ experiences, t }: ExperienceLayoutProps) => {
   return (

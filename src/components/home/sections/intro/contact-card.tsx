@@ -1,10 +1,8 @@
 import { Info, Mail, Phone, Github, Linkedin, MapPin, Clock, Car, Building2, Languages, Briefcase, Code } from 'lucide-react';
 import { motion } from 'framer-motion';
+import type { ContactCardProps } from '../../../../interface/intro';
 
-interface ContactCardProps {
-  t: (key: string) => string;
-  fadeIn: any;
-}
+
 
 export const ContactCard = ({ t, fadeIn }: ContactCardProps) => {
   return (
@@ -12,7 +10,6 @@ export const ContactCard = ({ t, fadeIn }: ContactCardProps) => {
       variants={fadeIn}
       className='mt-6 bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden'
     >
-      {/* Contact Header */}
       <div className='flex items-center gap-2 p-4 border-b border-gray-100 bg-gray-50'>
         <Info className='w-5 h-5 text-indigo-600' />
         <h3 className='text-sm font-medium text-indigo-600'>
@@ -21,7 +18,6 @@ export const ContactCard = ({ t, fadeIn }: ContactCardProps) => {
       </div>
 
       <div className='p-4'>
-        {/* Contact Methods - First group */}
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4'>
           <a
             href={`mailto:${t('home.intro.email')}`}
@@ -65,7 +61,6 @@ export const ContactCard = ({ t, fadeIn }: ContactCardProps) => {
           </a>
         </div>
 
-        {/* Personal Details - Second group with visual separation */}
         <div className='pt-3 border-t border-gray-100'>
           <div className='flex flex-wrap gap-2'>
             <span className='inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-50 text-purple-600 rounded-full text-xs font-medium'>
@@ -89,7 +84,6 @@ export const ContactCard = ({ t, fadeIn }: ContactCardProps) => {
               <span>{t('home.intro.languages')}</span>
             </span>
 
-            {/* Position badges integrated into personal details for better mobile display */}
             <span className='inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium md:hidden'>
               <Briefcase className='w-3.5 h-3.5' />
               <span>{t('home.intro.juniorFullStack')}</span>

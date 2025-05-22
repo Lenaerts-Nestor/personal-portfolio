@@ -1,8 +1,6 @@
 import { ChevronDown } from 'lucide-react';
+import type { ScrollIndicatorProps } from '../../../../interface/intro';
 
-interface ScrollIndicatorProps {
-  t: (key: string) => string;
-}
 
 export const ScrollIndicator = ({ t }: ScrollIndicatorProps) => {
   return (

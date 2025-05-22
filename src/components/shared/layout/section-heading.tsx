@@ -1,21 +1,14 @@
-'use client';
-
-import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { gradientTextClasses } from '../../../style/style';
+import type { SectionHeadingProps } from '../../../interface/layout';
 
-interface SectionHeadingProps {
-  title: string;
-  description: string;
-  icon?: ReactNode;
-  dangerouslySetDescriptionHTML?: boolean; // Added new prop
-}
+
 
 export const SectionHeading = ({
   title,
   description,
   icon,
-  dangerouslySetDescriptionHTML = false, // Default to false
+  dangerouslySetDescriptionHTML = false, 
 }: SectionHeadingProps) => {
   return (
     <div className='text-center mb-12'>

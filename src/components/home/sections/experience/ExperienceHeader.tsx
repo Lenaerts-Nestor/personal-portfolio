@@ -1,12 +1,5 @@
-interface ExperienceHeaderProps {
-  roleKey: string;
-  companyKey: string;
-  periodKey: string;
-  typeKey: string;
-  featured: boolean;
-  t: (key: string) => string;
-  isDesktop?: boolean;
-}
+import type { ExperienceHeaderProps } from "../../../../interface/experience";
+
 
 export const ExperienceHeader = ({
   roleKey,

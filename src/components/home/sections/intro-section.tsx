@@ -4,36 +4,15 @@ import { gradientTextClasses } from '../../../style/style';
 import { useI18n } from '../../shared/i18nContext';
 import { Code, Briefcase, GraduationCap } from 'lucide-react';
 
-// Import the extracted components
 import { ContactCard } from './intro/contact-card';
 import { OverviewCard } from './intro/overview-card';
 import { PositionBadges } from './intro/position-badges';
 import { SectionDescription } from './intro/section-description';
+import { staggerContainer, fadeIn } from '../../../interface/intro';
 
 export const IntroSection = () => {
   const { t } = useI18n();
 
-  // Animation variants
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  // Overview sections that link to main content areas
   const overviewSections = [
     {
       icon: <Code className='w-5 h-5' />,
@@ -71,31 +50,21 @@ export const IntroSection = () => {
     >
       <div className='max-w-7xl mx-auto px-4 w-full'>
         <div className='grid lg:grid-cols-2 gap-12 items-center'>
-          {/* Left Column - Main Heading and Description */}
           <motion.div
             initial='hidden'
             animate='visible'
             variants={staggerContainer}
             className='space-y-6'
           >
-            {/* Main Heading */}
             <motion.h1
               className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-indigo-600 ${gradientTextClasses}`}
               variants={fadeIn}
             >
               {t('home.intro.softwareDeveloper')}
             </motion.h1>
-
-            {/* Position Badges */}
             <PositionBadges t={t} fadeIn={fadeIn} />
-
-            {/* Description with highlighted keywords */}
             <SectionDescription t={t} fadeIn={fadeIn} />
-
-            {/* Contact Information */}
             <ContactCard t={t} fadeIn={fadeIn} />
-
-            {/* Primary CTAs */}
             <motion.div variants={fadeIn}>
               <a
                 href={t('about.cvDownloadLink')}
@@ -108,7 +77,6 @@ export const IntroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Quick Overview Card */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}

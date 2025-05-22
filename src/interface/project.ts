@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { projects } from "../utils/projects-data";
 
 export interface ProjectTechBadgesProps {
   technologies: string[];
@@ -23,3 +24,18 @@ export interface ProjectCardProps {
   handleProjectClick: (project: any) => void;
   t: (key: string) => string;
 }
+export const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const enhancedProjects = projects.map((project) => ({
+  ...project,
+  challenges: '',
+  solutions: '',
+}));

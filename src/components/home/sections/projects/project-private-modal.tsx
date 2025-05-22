@@ -1,16 +1,12 @@
-'use client';
 
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Lock } from 'lucide-react';
 import { useI18n } from '../../../shared/i18nContext';
-
 import { AmoTrackSummary } from '../../../../utils/project-summaries/amotrack-summary';
 import { CvoSummary } from '../../../../utils/project-summaries/cvo-summary';
 import { project_techIcons } from '../../../../utils/projects-data';
 import type { ProjectModalProps } from '../../../../interface/project';
-
-
 
 export const ProjectModal = ({
   project,
@@ -20,7 +16,6 @@ export const ProjectModal = ({
   const { t } = useI18n();
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Close modal when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -33,7 +28,6 @@ export const ProjectModal = ({
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
-      // Prevent body scrolling when modal is open
       document.body.style.overflow = 'hidden';
     }
 
@@ -43,7 +37,6 @@ export const ProjectModal = ({
     };
   }, [isOpen, onClose]);
 
-  // Close modal on escape key press
   useEffect(() => {
     const handleEscKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -60,7 +53,6 @@ export const ProjectModal = ({
     };
   }, [isOpen, onClose]);
 
-  // Render tech icon
   const renderTechIcon = (tech: string) => {
     const iconData = project_techIcons[tech as keyof typeof project_techIcons];
     if (iconData) {
@@ -90,7 +82,6 @@ export const ProjectModal = ({
             exit={{ scale: 0.9, y: 20, opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
           >
-            {/* Header with image */}
             <div className='relative w-full h-64 sm:h-80 bg-gray-100 dark:bg-gray-700'>
               <img
                 src={project.image || '/placeholder.svg'}
@@ -108,7 +99,6 @@ export const ProjectModal = ({
                 </div>
               </div>
 
-              {/* Close button */}
               <button
                 onClick={onClose}
                 className='absolute top-4 right-4 p-2 bg-black/30 hover:bg-black/50 text-white rounded-full transition-colors duration-200'
@@ -117,7 +107,6 @@ export const ProjectModal = ({
                 <X className='h-5 w-5' />
               </button>
 
-              {/* Private indicator */}
               {project.isPrivate && (
                 <div className='absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1.5 bg-purple-600/90 text-white rounded-full'>
                   <Lock className='h-3.5 w-3.5' />
@@ -126,9 +115,7 @@ export const ProjectModal = ({
               )}
             </div>
 
-            {/* Content - scrollable */}
             <div className='flex-1 overflow-y-auto p-6'>
-              {/* Technologies */}
               {project.id !== 'cvo' && project.id !== 'timesheet' && (
                 <div className='mb-6'>
                   <h3 className='text-sm font-medium text-gray-500 dark:text-gray-400 mb-3'>
@@ -149,14 +136,12 @@ export const ProjectModal = ({
                 </div>
               )}
 
-              {/* Project-specific content */}
               {project.id === 'timesheet' ? (
                 <AmoTrackSummary />
               ) : project.id === 'cvo' ? (
                 <CvoSummary />
               ) : (
                 <>
-                  {/* Description */}
                   <div className='mb-6'>
                     <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2'>
                       Project Overview
@@ -166,7 +151,6 @@ export const ProjectModal = ({
                     </p>
                   </div>
 
-                  {/* Technical challenges and solutions */}
                   <div className='mb-6'>
                     <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3'>
                       Technical Details
@@ -190,7 +174,6 @@ export const ProjectModal = ({
               )}
             </div>
 
-            {/* Footer with actions */}
             <div className='border-t border-gray-200 dark:border-gray-700 p-4 flex justify-between items-center bg-gray-50 dark:bg-gray-800'>
               {project.isPrivate ? (
                 <span className='text-sm text-gray-500 dark:text-gray-400 flex items-center'>

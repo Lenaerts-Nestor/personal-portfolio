@@ -3,29 +3,13 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FolderKanban } from 'lucide-react';
-import { projects } from '../../../utils/projects-data';
 import { useI18n } from '../../shared/i18nContext';
 import { SectionHeading } from '../../shared/layout/section-heading';
 import { ProjectModal } from './projects/project-private-modal';
 import { ProjectCard } from './projects/project-card';
 import { ProjectCarousel } from './projects/project-carousel';
+import { enhancedProjects, container } from '../../../interface/project';
 
-// Animation variants
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const enhancedProjects = projects.map((project) => ({
-  ...project,
-  challenges: '',
-  solutions: '',
-}));
 
 export const ProjectsSection = () => {
   const [carouselIdx, setCarouselIdx] = useState(0);

@@ -1,24 +1,8 @@
-'use client';
-
 import type React from 'react';
 import { useEffect } from 'react';
 import { Calendar, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import type { WeeklyModalProps } from '../../interface/blog';
 
-interface WeeklyModalProps {
-  weeksArr: any[];
-  openIdx: number | null;
-  closeModal: () => void;
-  goTo: (dir: -1 | 1) => void;
-  t: (key: string) => string;
-  animating: boolean;
-  setAnimating: React.Dispatch<React.SetStateAction<boolean>>;
-  contentRef: React.RefObject<HTMLDivElement | null>;
-  handleTouchStart: (e: React.TouchEvent) => void;
-  handleTouchMove: (e: React.TouchEvent) => void;
-  handleTouchEnd: (e: React.TouchEvent) => void;
-  handleOverlayClick: (e: React.MouseEvent<HTMLDivElement>) => void;
-  handleContentScroll: (e: React.UIEvent<HTMLDivElement>) => void;
-}
 
 export const WeeklyModal: React.FC<WeeklyModalProps> = ({
   weeksArr,

@@ -1,9 +1,5 @@
-'use client';
-
 import type React from 'react';
-
 import { Link, useLocation } from 'react-router-dom';
-
 import type { HeaderMenuProps } from '../../../interface/navbar';
 
 export const ResponsiveNavMenu = ({
@@ -13,7 +9,6 @@ export const ResponsiveNavMenu = ({
 }: HeaderMenuProps) => {
   const location = useLocation();
 
-  // Handle smooth scrolling for anchor links
   const handleAnchorClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     path: string

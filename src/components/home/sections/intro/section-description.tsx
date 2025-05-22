@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion';
+import type { SectionDescriptionProps } from '../../../../interface/intro';
 
-interface SectionDescriptionProps {
-  t: (key: string) => string;
-  fadeIn: any;
-}
 
 export const SectionDescription = ({ t, fadeIn }: SectionDescriptionProps) => {
   return (

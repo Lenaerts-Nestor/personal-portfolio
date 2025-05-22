@@ -7,7 +7,6 @@ import { skills_containerVariants, skills_itemVariants, skills_skillCategories, 
 
 export const TechnologiesSection = () => {
 
-
   return (
     <section
       id='technologies'

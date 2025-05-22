@@ -1,5 +1,4 @@
 import { useI18n } from '../i18nContext';
-
 import type { SwitchLanguageProps } from '../../../interface/navbar';
 
 export const SwitchLanguage = ({

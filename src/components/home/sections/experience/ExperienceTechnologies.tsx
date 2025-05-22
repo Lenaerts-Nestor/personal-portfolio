@@ -1,9 +1,7 @@
 import React from 'react';
+import type { ExperienceTechnologiesProps } from '../../../../interface/experience';
 
-interface ExperienceTechnologiesProps {
-  technologies: Array<{ name: string; icon: React.ReactNode }>;
-  t: (key: string) => string;
-}
+
 
 export const ExperienceTechnologies = ({ 
   technologies, 

@@ -1,18 +1,6 @@
-import { motion } from 'framer-motion';
+import type { OverviewCardProps } from '../../../../interface/intro';
 import { ScrollIndicator } from './scroll-indicator';
-import type { JSX } from 'react';
 
-interface OverviewCardProps {
-  t: (key: string) => string;
-  overviewSections: Array<{
-    icon: JSX.Element;
-    title: string;
-    description: string;
-    bgColor: string;
-    textColor: string;
-    iconColor: string;
-  }>;
-}
 
 export const OverviewCard = ({ t, overviewSections }: OverviewCardProps) => {
   return (
@@ -22,7 +10,6 @@ export const OverviewCard = ({ t, overviewSections }: OverviewCardProps) => {
           {t('home.quickOverview')}
         </h2>
 
-        {/* Overview Sections with enhanced navigation */}
         <div className='space-y-5'>
           {overviewSections.map((section, index) => (
             <div

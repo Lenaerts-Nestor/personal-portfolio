@@ -1,9 +1,5 @@
-interface ExperienceListProps {
-  responsibilitiesKeys: string[];
-  t: (key: string) => string;
-  featured: boolean;
-  className?: string;
-}
+import type { ExperienceListProps } from "../../../../interface/experience";
+
 
 export const ExperienceList = ({ 
   responsibilitiesKeys, 
