@@ -1,5 +1,3 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FolderKanban } from 'lucide-react';
@@ -17,21 +15,18 @@ export const ProjectsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useI18n();
 
-  // Fill in translations for challenges and solutions
   useEffect(() => {
     enhancedProjects.forEach((project) => {
       try {
         project.challenges = t(`projects.${project.id}.challenge`);
         project.solutions = t(`projects.${project.id}.solution`);
       } catch (error) {
-        // Fallback if translation is missing
         project.challenges = 'Technical challenges faced during development.';
         project.solutions = 'Solutions implemented to overcome the challenges.';
       }
     });
   }, [t]);
 
-  // Handle project click
   const handleProjectClick = (project: any) => {
     if (project.isPrivate) {
       setSelectedProject(project);
@@ -44,7 +39,6 @@ export const ProjectsSection = () => {
     }
   };
 
-  // Close modal
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -70,7 +64,6 @@ export const ProjectsSection = () => {
           dangerouslySetDescriptionHTML={true}
         />
 
-        {/* Desktop grid */}
         <motion.div
           variants={container}
           initial='hidden'
@@ -89,7 +82,6 @@ export const ProjectsSection = () => {
           ))}
         </motion.div>
 
-        {/* Mobile carousel */}
         <ProjectCarousel
           projects={enhancedProjects}
           carouselIdx={carouselIdx}
@@ -100,7 +92,6 @@ export const ProjectsSection = () => {
         />
       </div>
 
-      {/* Project Modal */}
       <ProjectModal
         project={selectedProject}
         isOpen={isModalOpen}
