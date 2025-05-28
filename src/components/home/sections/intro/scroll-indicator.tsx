@@ -1,8 +1,10 @@
+import { memo } from 'react';
 import { ChevronDown } from 'lucide-react';
-import type { ScrollIndicatorProps } from '../../../../interface/intro';
+import { useI18n } from '../../../shared/i18nContext';
 
+export const ScrollIndicator = memo(() => {
+  const { t } = useI18n();
 
-export const ScrollIndicator = ({ t }: ScrollIndicatorProps) => {
   return (
     <div className='flex justify-center mt-6 text-gray-400'>
       <a
@@ -26,4 +28,6 @@ export const ScrollIndicator = ({ t }: ScrollIndicatorProps) => {
       </a>
     </div>
   );
-};
+});
+
+ScrollIndicator.displayName = 'ScrollIndicator';

@@ -15,7 +15,6 @@ export const ProjectCarousel = ({
 }: ProjectCarouselProps) => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  // Carousel navigation
   const nextProject = () => {
     setCarouselIdx((prevIdx: number) => (prevIdx + 1) % projects.length);
   };
@@ -26,7 +25,6 @@ export const ProjectCarousel = ({
     );
   };
 
-  // Render tech icon
   const renderTechIcon = (tech: string) => {
     const iconData = project_techIcons[tech as keyof typeof project_techIcons];
     if (iconData) {
