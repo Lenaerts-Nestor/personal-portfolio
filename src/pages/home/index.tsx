@@ -9,8 +9,8 @@ import EducationSection from '../../components/home/sections/education-section';
 
 const HomePage = () => {
   return (
-    <>
-      <main>
+    <div className='min-h-screen'>
+      <main className='scroll-smooth'>
         <IntroSection />
         <MainTechnologies />
         <ProjectsSection />
@@ -19,7 +19,7 @@ const HomePage = () => {
       </main>
       <Footer />
       <ScrollToTop />
-    </>
+    </div>
   );
 };
 

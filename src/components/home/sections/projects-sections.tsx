@@ -7,6 +7,7 @@ import { ProjectModal } from './projects/project-private-modal';
 import { ProjectCard } from './projects/project-card';
 import { ProjectCarousel } from './projects/project-carousel';
 import { enhancedProjects, container } from '../../../interface/project';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 
 
 export const ProjectsSection = () => {
@@ -14,6 +15,10 @@ export const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useI18n();
+  const sectionRef = useScrollAnimation({ 
+    animationType: 'slide-right',
+    threshold: 0.2 
+  });
 
   useEffect(() => {
     enhancedProjects.forEach((project) => {
@@ -52,10 +57,8 @@ export const ProjectsSection = () => {
       return translatedDescription;
     }
     return project.description;
-  };
-
-  return (
-    <section id='projects' className='py-16 bg-gray-50 dark:bg-gray-900'>
+  };  return (
+    <section ref={sectionRef} id='projects' className='py-16 bg-white dark:bg-gray-900'>
       <div className='max-w-6xl mx-auto px-4'>
         <SectionHeading
           title={t('projects.featuredTitle')}

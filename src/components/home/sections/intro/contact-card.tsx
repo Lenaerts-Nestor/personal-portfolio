@@ -75,14 +75,12 @@ export const ContactCard = memo(() => {
     };
     return `${baseClasses} ${colorMap[color as keyof typeof colorMap]}`;
   };
-
   return (
     <motion.div
       variants={fadeIn}
-      className='bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden backdrop-blur-sm'
-    >
-      {/* Header */}
-      <div className='flex items-center gap-3 p-5 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white'>
+      className='bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden backdrop-blur-sm flex flex-col lg:max-h-[50vh]'
+    >      {/* Header */}
+      <div className='flex items-center gap-3 p-4 lg:p-5 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white flex-shrink-0'>
         <div className='p-2 bg-indigo-100 rounded-lg'>
           <Info className='w-5 h-5 text-indigo-600' />
         </div>
@@ -91,7 +89,7 @@ export const ContactCard = memo(() => {
         </h3>
       </div>
 
-      <div className='p-5 space-y-5'>
+      <div className='p-4 lg:p-5 space-y-4 lg:space-y-5 flex-1 lg:overflow-y-auto'>
         {/* Contact Links */}
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
           {contactItems.map(({ key, icon: Icon, color, href, target, ariaLabel }) => (

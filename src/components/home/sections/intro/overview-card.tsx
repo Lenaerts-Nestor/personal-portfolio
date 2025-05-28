@@ -10,11 +10,10 @@ interface OverviewCardProps {
 
 export const OverviewCard = memo(({ overviewSections }: OverviewCardProps) => {
   const { t } = useI18n();
-
   return (
-    <div className='bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300'>
-      <div className='p-6'>
-        <div className='flex items-center justify-between mb-5'>
+    <div className='bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300 flex flex-col lg:max-h-[80vh]'>
+      <div className='p-4 lg:p-6 flex-1 flex flex-col overflow-hidden'>
+        <div className='flex items-center justify-between mb-4 lg:mb-5 flex-shrink-0'>
           <h2 className='text-xl font-semibold text-gray-800'>
             {t('home.quickOverview')}
           </h2>
@@ -29,7 +28,7 @@ export const OverviewCard = memo(({ overviewSections }: OverviewCardProps) => {
           </a>
         </div>
 
-        <div className='space-y-5'>
+        <div className='space-y-4 lg:space-y-5 flex-1 lg:overflow-y-auto min-h-0'>
           {overviewSections.map((section, index) => (
             <div
               key={index}

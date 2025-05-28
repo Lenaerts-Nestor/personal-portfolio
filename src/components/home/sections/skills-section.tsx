@@ -2,15 +2,20 @@ import { motion } from 'framer-motion';
 
 import { SectionHeading } from '../../shared/layout/section-heading';
 import { skills_containerVariants, skills_itemVariants, skills_skillCategories, skills_skillVariants } from '../../../utils/skills-data';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 
 
 
 export const TechnologiesSection = () => {
-
+  const sectionRef = useScrollAnimation({ 
+    animationType: 'slide-left',
+    threshold: 0.2 
+  });
   return (
     <section
+      ref={sectionRef}
       id='technologies'
-      className='py-16 bg-gray-50 dark:bg-gray-900 overflow-hidden'
+      className='py-16 bg-white dark:bg-gray-900 overflow-hidden'
     >
       <div className='container mx-auto px-4 max-w-6xl'>
         <SectionHeading

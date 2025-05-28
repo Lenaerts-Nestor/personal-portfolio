@@ -233,3 +233,105 @@ h6 {
     height: 100%;
   }
 }
+
+/* Full-screen section styling with natural scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Portfolio sections - minimum full viewport height */
+.portfolio-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Ensure intro section takes full available height (keeping current styling) */
+#intro {
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  #intro {
+    height: 100dvh;
+  }
+}
+
+/* Other sections use minimum height for natural content flow */
+#technologies,
+#projects,
+#experience,
+#education {
+  min-height: 100vh;
+}
+
+/* Slide-in transitions for sections */
+.section-content {
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Intersection observer animation classes with slide effect */
+.section-slide-in {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.section-slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Alternative slide-in from right for even sections */
+.section-slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.section-slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger animation for section content */
+.section-stagger > * {
+  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.section-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-stagger.visible > *:nth-child(1) { transition-delay: 0.1s; }
+.section-stagger.visible > *:nth-child(2) { transition-delay: 0.2s; }
+.section-stagger.visible > *:nth-child(3) { transition-delay: 0.3s; }
+.section-stagger.visible > *:nth-child(4) { transition-delay: 0.4s; }
+.section-stagger.visible > *:nth-child(5) { transition-delay: 0.5s; }
+
+@media (max-width: 767px) {
+  /* Prevent horizontal scroll on mobile */
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden !important;
+  }
+  /* Remove awkward line/shadow below Quick Overview card */
+  #intro .contact-card, #intro .overview-card {
+    box-shadow: none !important;
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+  }
+  /* Remove extra margin/padding at bottom of intro section */
+  #intro {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}

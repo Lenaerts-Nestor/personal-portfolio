@@ -100,7 +100,7 @@
     "linkedin": "LinkedIn",
     "cvDownloadTitle": "Download CV",
     "cvDownloadButtonText": "Download my CV",
-    "cvDownloadLink": "/path/to/your/cv.pdf"
+    "cvDownloadLink": "/resume/Nestor_Lenaerts_Junior_Software_Developer.pdf"
   },
   "experience": {
     "downloadResume": "Download Resume",
