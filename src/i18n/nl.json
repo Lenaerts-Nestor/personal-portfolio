@@ -480,6 +480,11 @@
         "title": "Week 14",
         "overview": "Bezig geweest met gevorderde onderwerpen en codebase optimalisatie. Zelfstudie gedaan naar React Query en dit geïmplementeerd in AmoTrack, onderzoek verricht naar testscenario's en performance optimalisaties. Bestaande code gerefactored en opgeschoond, robuuste rolcontroles voor toegangsbeheer geïmplementeerd, en de login functionaliteit en de timesheet feature verder verfijnd. UI details verbeterd door project componenten te stylen.",
         "tags": ["optimization", "learning", "refactoring", "code"]
+      },
+      "week15": {
+        "title": "Week 15",
+        "overview": "Laatste updates doen en kleine presentatie voorbereiden met documentatie van de projecten voor de seniors voor overnames. Gesprek over de transitie en overdracht van werkzaamheden naar het volgende ontwikkelingsteam.",
+        "tags": ["documentation", "presentation", "transition", "handover"]
       }
     }
   },

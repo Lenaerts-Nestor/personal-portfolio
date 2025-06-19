@@ -480,6 +480,11 @@
         "title": "Week 14",
         "overview": "Engaged in advanced topics and codebase optimization. Conducted self-study and implemented React Query for improved data fetching and state management. Researched testing methodologies and performance optimizations. Refactored and cleaned up existing code, implemented robust role checks for access control, and further refined login functionality and the timesheet feature. Enhanced UI details by styling project components.",
         "tags": ["optimization", "learning", "refactoring", "code"]
+      },
+      "week15": {
+        "title": "Week 15",
+        "overview": "Completing final updates and preparing a brief presentation with project documentation for senior developers for handover purposes. Discussion about the transition and transfer of responsibilities to the next development team.",
+        "tags": ["documentation", "presentation", "transition", "handover"]
       }
     }
   },
