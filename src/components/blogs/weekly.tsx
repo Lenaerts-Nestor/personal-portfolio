@@ -5,6 +5,7 @@ import { useI18n } from '../shared/i18nContext';
 import { WeeklyModal } from './weeklyModal';
 import { CardHeader } from './CardHeader';
 import { TagFilter } from './TagFilter';
+import { MobileTagFilterSheet } from './MobileTagFilterSheet';
 
 export const WeeklyBlog = () => {
   const { t } = useI18n();
@@ -13,10 +14,10 @@ export const WeeklyBlog = () => {
     weeksObj && typeof weeksObj === 'object'
       ? Object.keys(weeksObj).filter((k) => k.startsWith('week'))
       : [];
-  const weeksArr = weekKeys.map((key) => (weeksObj as any)[key]);
-  const [openIdx, setOpenIdx] = useState<number | null>(null);
+  const weeksArr = weekKeys.map((key) => (weeksObj as any)[key]);  const [openIdx, setOpenIdx] = useState<number | null>(null);
   const [animating, setAnimating] = useState(false);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   // Extract all unique tags from all weeks
   const allTags = useMemo(() => {
@@ -132,14 +133,21 @@ export const WeeklyBlog = () => {
           <div className='w-24 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto mb-4 rounded-full'></div>
           <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
             {t('blog.description')}
-          </p>        </div>
-
-        {/* Tag Filter Component */}
+          </p>        </div>        {/* Desktop Tag Filter Component - hidden on mobile */}
         <TagFilter
           allTags={allTags}
           selected={selectedTags}
           onChange={setSelectedTags}
-        />        {/* TODO: UX Improvement #2 - Add keyboard shortcuts for filter management 
+        />
+
+        {/* Mobile Tag Filter Sheet - only visible on mobile */}
+        <MobileTagFilterSheet
+          allTags={allTags}
+          selected={selectedTags}
+          onChange={setSelectedTags}
+          isOpen={isMobileFilterOpen}
+          onOpenChange={setIsMobileFilterOpen}
+        />{/* TODO: UX Improvement #2 - Add keyboard shortcuts for filter management 
              - Escape key to clear all filters
              - Ctrl/Cmd + A to select all tags  
              - Arrow keys to navigate between tags */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { X, Filter } from 'lucide-react';
-import { TagBadge } from '../shared/tag-badge';
+import { TagChipGrid } from './TagChipGrid';
 
 interface TagFilterProps {
   allTags: string[];
@@ -29,9 +29,9 @@ export const TagFilter: React.FC<TagFilterProps> = ({
   const handleClearAll = () => {
     onChange([]);
   };
-
   return (
-    <div className="mb-8 p-6 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl border border-purple-100">
+    // Only show on desktop - hidden on mobile where MobileTagFilterSheet is used
+    <div className="hidden md:block mb-8 p-6 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl border border-purple-100">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <Filter className="w-5 h-5 text-purple-600" />
@@ -53,27 +53,15 @@ export const TagFilter: React.FC<TagFilterProps> = ({
           </button>
         )}
       </div>      
-      <div className="flex flex-wrap gap-2">
-        {/* TODO: UX Improvement #3 - Add smooth animations for filter changes
-             - Staggered animation for tag chips appearing/disappearing
-             - Smooth scale/fade effects on selection
-             - Animated count updates in the active filter badge */}
-        {allTags.map((tag) => {
-          const isSelected = selected.includes(tag);
-          return (
-            <TagBadge
-              key={tag}
-              tag={tag}
-              onClick={handleTagToggle}
-              className={`transition-all duration-200 ${
-                isSelected 
-                  ? 'ring-2 ring-purple-400 ring-offset-1 shadow-md scale-105' 
-                  : 'hover:shadow-sm hover:scale-102'
-              }`}
-            />
-          );
-        })}
-      </div>
+      {/* TODO: UX Improvement #3 - Add smooth animations for filter changes
+           - Staggered animation for tag chips appearing/disappearing
+           - Smooth scale/fade effects on selection
+           - Animated count updates in the active filter badge */}
+      <TagChipGrid
+        allTags={allTags}
+        selected={selected}
+        onTagToggle={handleTagToggle}
+      />
       
       {selected.length === 0 && (
         <p className="text-sm text-gray-500 mt-3">
