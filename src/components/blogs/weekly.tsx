@@ -1,8 +1,9 @@
 import type React from 'react';
 import { useState, useRef } from 'react';
-import { Calendar, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { useI18n } from '../shared/i18nContext';
 import { WeeklyModal } from './weeklyModal';
+import { CardHeader } from './CardHeader';
 
 export const WeeklyBlog = () => {
   const { t } = useI18n();
@@ -108,28 +109,24 @@ export const WeeklyBlog = () => {
           <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
             {t('blog.description')}
           </p>
-        </div>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+        </div>        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {weeksArr.map((week, idx) => (
             <div
               key={week.title || idx}
               className='rounded-xl border border-purple-100 bg-white shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group'
               onClick={() => openModal(idx)}
             >
-              <div className='border-b border-purple-100 bg-gradient-to-r from-purple-50 to-indigo-50 p-4 flex items-center gap-2'>
-                <div className='p-2 rounded-full bg-purple-100 text-purple-600'>
-                  <Calendar className='w-5 h-5' />
-                </div>
-                <h3 className='text-lg font-bold text-purple-700'>
-                  {week.title || `Week ${idx + 1}`}
-                </h3>
-              </div>
+              {/* Using CardHeader component to prevent tag overlap */}
+              <CardHeader
+                title={week.title || `Week ${idx + 1}`}
+                subtitle={week.days && week.days.length > 0
+                  ? week.days.map((d: any) => d.date).join(', ')
+                  : ''}
+                tags={week.tags || []}
+                variant="card"
+              />
+              
               <div className='p-5'>
-                <div className='text-indigo-600 font-medium text-sm mb-2'>
-                  {week.days && week.days.length > 0
-                    ? week.days.map((d: any) => d.date).join(', ')
-                    : ''}
-                </div>
                 <div className='text-gray-700 text-sm line-clamp-3 mb-3'>
                   {week.overview}
                 </div>

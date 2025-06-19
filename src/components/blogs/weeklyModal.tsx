@@ -1,7 +1,8 @@
 import type React from 'react';
 import { useEffect } from 'react';
-import { Calendar, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import type { WeeklyModalProps } from '../../interface/blog';
+import { CardHeader } from './CardHeader';
 
 
 export const WeeklyModal: React.FC<WeeklyModalProps> = ({
@@ -61,30 +62,25 @@ export const WeeklyModal: React.FC<WeeklyModalProps> = ({
       <div
         className='relative w-[95vw] max-w-xl bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden'
         style={{ maxHeight: '85vh' }}
-      >
-        <div className='relative p-6 border-b border-gray-100 bg-gradient-to-r from-purple-50 to-indigo-50'>
+      >        <div className='relative'>
           <button
-            className='absolute right-4 top-4 text-red-500 hover:text-red-600 transition-colors'
+            className='absolute right-4 top-4 text-red-500 hover:text-red-600 transition-colors z-10'
             onClick={closeModal}
             aria-label={t('blog.dailyUpdates.close')}
           >
             <X className='w-6 h-6 stroke-[2.5]' />
           </button>
-          <div className='flex items-center gap-3'>
-            <div className='p-2 rounded-full bg-purple-100 text-purple-600'>
-              <Calendar className='w-5 h-5' />
-            </div>
-            <div>
-              <h2 className='text-2xl font-bold text-purple-700'>
-                {weeksArr[openIdx].title}
-              </h2>
-              <div className='text-indigo-600 font-medium text-sm'>
-                {weeksArr[openIdx].days && weeksArr[openIdx].days.length > 0
-                  ? weeksArr[openIdx].days.map((d: any) => d.date).join(', ')
-                  : ''}
-              </div>
-            </div>
-          </div>
+          
+          {/* Using CardHeader component for consistency */}
+          <CardHeader
+            title={weeksArr[openIdx].title}
+            subtitle={weeksArr[openIdx].days && weeksArr[openIdx].days.length > 0
+              ? weeksArr[openIdx].days.map((d: any) => d.date).join(', ')
+              : ''}
+            tags={weeksArr[openIdx].tags || []}
+            variant="modal"
+            className="pr-16" // Extra padding for close button
+          />
         </div>
 
         <div
