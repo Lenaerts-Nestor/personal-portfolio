@@ -1,5 +1,20 @@
+export interface DayEntry {
+  date: string;
+  content: string;
+  tags: string[];
+  images?: string[];
+}
+
+export interface WeekEntry {
+  title: string;
+  overview: string;
+  days?: DayEntry[];
+  tags: string[];
+  images?: string[];
+}
+
 export interface WeeklyModalProps {
-  weeksArr: any[];
+  weeksArr: WeekEntry[];
   openIdx: number | null;
   closeModal: () => void;
   goTo: (dir: -1 | 1) => void;

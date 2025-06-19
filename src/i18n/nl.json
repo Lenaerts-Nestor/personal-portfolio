@@ -424,51 +424,62 @@
     "weekOverview": "Week {weekNumber}",
     "dailyUpdates": {
       "title": "Dagelijkse Updates",
-      "close": "Sluiten",
-      "week1": {
+      "close": "Sluiten",      "week1": {
         "title": "Week 1",
-        "overview": "Gestart met de stage middels project onboarding. Gericht op het begrijpen van de bestaande code architectuur (AmoDrive) en projectstructuur, werken met Storybook componenten, en het verbeteren van codeerstijl op basis van feedback van seniors. Praktijkervaring opgedaan met Git/GitHub workflows, diverse technische fouten opgelost, en tickets met betrekking tot forms, cards en modals succesvol afgerond."
-      },
-      "week2": {
+        "overview": "Gestart met de stage middels project onboarding. Gericht op het begrijpen van de bestaande code architectuur (AmoDrive) en projectstructuur, werken met Storybook componenten, en het verbeteren van codeerstijl op basis van feedback van seniors. Praktijkervaring opgedaan met Git/GitHub workflows, diverse technische fouten opgelost, en tickets met betrekking tot forms, cards en modals succesvol afgerond.",
+        "tags": []
+      },      "week2": {
         "title": "Week 2",
-        "overview": "Gestart met werkzaamheden aan het AmoTrack project, waarbij ik aan de slag ging met de kern technologies: React, PostgreSQL, Drizzle en Fastify. Succesvol de database opgezet, connectie gemaakt, en het eerste CRUD endpoint ontwikkeld. Waardevolle feedback ontvangen over logisch denken en samenwerken. Nieuwe endpoints gecreëerd, server files geoptimaliseerd, en gestart met tickets voor de user interface en API performance, waardoor ik ervaring opdeed met ticket- en PR-workflows."
-      },
-      "week3": {
+        "overview": "Gestart met werkzaamheden aan het AmoTrack project, waarbij ik aan de slag ging met de kern technologies: React, PostgreSQL, Drizzle en Fastify. Succesvol de database opgezet, connectie gemaakt, en het eerste CRUD endpoint ontwikkeld. Waardevolle feedback ontvangen over logisch denken en samenwerken. Nieuwe endpoints gecreëerd, server files geoptimaliseerd, en gestart met tickets voor de user interface en API performance, waardoor ik ervaring opdeed met ticket- en PR-workflows.",
+        "tags": []
+      },      "week3": {
         "title": "Week 3",
-        "overview": "Gefocust op het verfijnen van werk op basis van feedback en het aanpakken van nieuwe tickets. Uitdagingen aangegaan met betrekking tot consistentie in codeerstijl door te leren van verschillende seniors. Positieve feedback ontvangen op Pull Requests en uitstaande taken van de eerste week succesvol afgerond en goedgekeurd gekregen. Verder gewerkt aan vaardigheden in backend ontwikkeling."
-      },
-      "week4": {
-        "overview": "Een belangrijk moment bereikt door een demo van de voortgang van de AmoTrack frontend en backend ontwikkeling te presenteren aan het senior team. Belangrijke functies geïmplementeerd in formulier componenten en bugs in de backend opgelost. Gericht op het generieker en herbruikbaarder maken van componenten. Positieve feedback ontvangen, wat motiveerde tot verdere toewijding aan projectontwikkeling en vaardigheidsverbetering."
-      },
-      "week5": {
-        "overview": "Voornamelijk gericht op het beheren en afhandelen van Pull Requests (PR's) en het voortzetten van frontend ontwikkeling voor AmoTrack, inclusief het bijwerken van formulieren. Succesvol resterende backend taken afgerond. Gestart met een klein persoonlijk project ('Mini Mike') op basis van senior advies, gericht op het versterken van leer- en praktijkvaardigheden."
-      },
-      "week6": {
-        "overview": "Aan de slag gegaan met DevOps aspecten, waarbij Azure uitdagingen en deployment issues werden aangepakt, inclusief optimalisatie van 'chunk size reduction' via GitHub Actions. Voortgezet met frontend ontwikkeling op toegewezen tickets. Samengewerkt met een collega om deployment problemen op te lossen en bijgedragen aan het bijwerken van de AmoStyle library. Constructieve feedback gegeven op het project van een collega."
-      },
-      "week7": {
-        "overview": "De week volledig gewijd aan het werken aan de Amo-style-library. Dit omvatte het herschrijven van bestaande componenten op basis van het besluit om te stoppen met het gebruik van MUI, met focus op custom implementatie, het testen van componenten, en library onderhoud."
-      },
-      "week8": {
-        "overview": "Een rustigere week gericht op het integreren van feedback van mijn tussentijdse evaluatie. Voortgezette frontend verfijning op basis van senior advies, waarbij bugs zelfstandig werden aangepakt en opgelost. Nieuwe UI componenten ontwikkeld, waaronder input velden, radio velden en checkbox velden, wat duidt op groeiende autonomie. Betrokken bij een gedetailleerde beoordeling van feedback en technische documentatie."
-      },
-      "week9": {
-        "overview": "Overgestapt op het weer werken aan zowel de frontend als backend van het AmoTrack project na het afronden van Amo Style Library taken. Nieuwe tickets opgepakt toegewezen door het senior team, gericht op het implementeren van nieuwe features en updates over de stack. Ervaring opgedaan met API documentatie door het creëren van Swagger specificaties."
-      },
-      "week10": {
-        "overview": "De focus volledig verlegd naar het AmoTrack project, waarbij actief is bijgedragen aan zowel frontend als backend ontwikkeling. Frontend componenten bijgewerkt, bugs opgelost, en vertaal feedback verwerkt. API documentatie verder verbeterd door Swagger op te zetten. Begonnen met het implementeren van kern backend features, inclusief soft deletion logica voor data management."
-      },
-      "week11": {
-        "overview": "De week gewijd aan het afronden van toegewezen tickets voor het AmoTrack project. Succesvol een belangrijke ontwikkel mijlpaal bereikt door de volledige timesheet logica, een kern functionaliteit, volledig te implementeren. Gericht op grondig testen en voorbereiding op aankomende demo's, wat het vermogen om feature ontwikkeling cycli te voltooien aantoont."
-      },
-      "week12": {
-        "overview": "Hoge productiviteit behaald door zich uitsluitend te richten op toegewezen ontwikkel tickets. Verschillende pagina's herbouwd en verfijnd op basis van nieuwe design feedback om de gebruikerservaring en interface bruikbaarheid te verbeteren. De codebase en architectuur voorbereid op de aankomende implementatie van de API gateway."
-      },
-      "week13": {
-        "overview": "Zwaar gefocust op afronding en verfijning van kritieke applicatie componenten. De timesheet feature volledig voltooid en verfijnd, login functionaliteit geïmplementeerd en grondig getest, en de vertaling van alle applicatie pagina's naar het Engels afgerond. Voorbereid om gebruikersauthenticatie flows af te ronden en resterende design feedback te adresseren."
-      },
-      "week14": {
-        "overview": "Bezig geweest met gevorderde onderwerpen en codebase optimalisatie. Zelfstudie gedaan naar React Query en dit geïmplementeerd in AmoTrack, onderzoek verricht naar testscenario's en performance optimalisaties. Bestaande code gerefactored en opgeschoond, robuuste rolcontroles voor toegangsbeheer geïmplementeerd, en de login functionaliteit en de timesheet feature verder verfijnd. UI details verbeterd door project componenten te stylen."
+        "overview": "Gefocust op het verfijnen van werk op basis van feedback en het aanpakken van nieuwe tickets. Uitdagingen aangegaan met betrekking tot consistentie in codeerstijl door te leren van verschillende seniors. Positieve feedback ontvangen op Pull Requests en uitstaande taken van de eerste week succesvol afgerond en goedgekeurd gekregen. Verder gewerkt aan vaardigheden in backend ontwikkeling.",
+        "tags": []
+      },      "week4": {
+        "title": "Week 4",
+        "overview": "Een belangrijk moment bereikt door een demo van de voortgang van de AmoTrack frontend en backend ontwikkeling te presenteren aan het senior team. Belangrijke functies geïmplementeerd in formulier componenten en bugs in de backend opgelost. Gericht op het generieker en herbruikbaarder maken van componenten. Positieve feedback ontvangen, wat motiveerde tot verdere toewijding aan projectontwikkeling en vaardigheidsverbetering.",
+        "tags": []
+      },      "week5": {
+        "title": "Week 5",
+        "overview": "Voornamelijk gericht op het beheren en afhandelen van Pull Requests (PR's) en het voortzetten van frontend ontwikkeling voor AmoTrack, inclusief het bijwerken van formulieren. Succesvol resterende backend taken afgerond. Gestart met een klein persoonlijk project ('Mini Mike') op basis van senior advies, gericht op het versterken van leer- en praktijkvaardigheden.",
+        "tags": []
+      },      "week6": {
+        "title": "Week 6",
+        "overview": "Aan de slag gegaan met DevOps aspecten, waarbij Azure uitdagingen en deployment issues werden aangepakt, inclusief optimalisatie van 'chunk size reduction' via GitHub Actions. Voortgezet met frontend ontwikkeling op toegewezen tickets. Samengewerkt met een collega om deployment problemen op te lossen en bijgedragen aan het bijwerken van de AmoStyle library. Constructieve feedback gegeven op het project van een collega.",
+        "tags": []
+      },      "week7": {
+        "title": "Week 7",
+        "overview": "De week volledig gewijd aan het werken aan de Amo-style-library. Dit omvatte het herschrijven van bestaande componenten op basis van het besluit om te stoppen met het gebruik van MUI, met focus op custom implementatie, het testen van componenten, en library onderhoud.",
+        "tags": []
+      },      "week8": {
+        "title": "Week 8",
+        "overview": "Een rustigere week gericht op het integreren van feedback van mijn tussentijdse evaluatie. Voortgezette frontend verfijning op basis van senior advies, waarbij bugs zelfstandig werden aangepakt en opgelost. Nieuwe UI componenten ontwikkeld, waaronder input velden, radio velden en checkbox velden, wat duidt op groeiende autonomie. Betrokken bij een gedetailleerde beoordeling van feedback en technische documentatie.",
+        "tags": []
+      },      "week9": {
+        "title": "Week 9",
+        "overview": "Overgestapt op het weer werken aan zowel de frontend als backend van het AmoTrack project na het afronden van Amo Style Library taken. Nieuwe tickets opgepakt toegewezen door het senior team, gericht op het implementeren van nieuwe features en updates over de stack. Ervaring opgedaan met API documentatie door het creëren van Swagger specificaties.",
+        "tags": []
+      },      "week10": {
+        "title": "Week 10",
+        "overview": "De focus volledig verlegd naar het AmoTrack project, waarbij actief is bijgedragen aan zowel frontend als backend ontwikkeling. Frontend componenten bijgewerkt, bugs opgelost, en vertaal feedback verwerkt. API documentatie verder verbeterd door Swagger op te zetten. Begonnen met het implementeren van kern backend features, inclusief soft deletion logica voor data management.",
+        "tags": []
+      },      "week11": {
+        "title": "Week 11",
+        "overview": "De week gewijd aan het afronden van toegewezen tickets voor het AmoTrack project. Succesvol een belangrijke ontwikkel mijlpaal bereikt door de volledige timesheet logica, een kern functionaliteit, volledig te implementeren. Gericht op grondig testen en voorbereiding op aankomende demo's, wat het vermogen om feature ontwikkeling cycli te voltooien aantoont.",
+        "tags": []
+      },      "week12": {
+        "title": "Week 12",
+        "overview": "Hoge productiviteit behaald door zich uitsluitend te richten op toegewezen ontwikkel tickets. Verschillende pagina's herbouwd en verfijnd op basis van nieuwe design feedback om de gebruikerservaring en interface bruikbaarheid te verbeteren. De codebase en architectuur voorbereid op de aankomende implementatie van de API gateway.",
+        "tags": []
+      },      "week13": {
+        "title": "Week 13",
+        "overview": "Zwaar gefocust op afronding en verfijning van kritieke applicatie componenten. De timesheet feature volledig voltooid en verfijnd, login functionaliteit geïmplementeerd en grondig getest, en de vertaling van alle applicatie pagina's naar het Engels afgerond. Voorbereid om gebruikersauthenticatie flows af te ronden en resterende design feedback te adresseren.",
+        "tags": []
+      },      "week14": {
+        "title": "Week 14",
+        "overview": "Bezig geweest met gevorderde onderwerpen en codebase optimalisatie. Zelfstudie gedaan naar React Query en dit geïmplementeerd in AmoTrack, onderzoek verricht naar testscenario's en performance optimalisaties. Bestaande code gerefactored en opgeschoond, robuuste rolcontroles voor toegangsbeheer geïmplementeerd, en de login functionaliteit en de timesheet feature verder verfijnd. UI details verbeterd door project componenten te stylen.",
+        "tags": []
       }
     }
   },

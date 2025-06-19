@@ -424,62 +424,62 @@
     "weekOverview": "Week {weekNumber}",
     "dailyUpdates": {
       "title": "Daily Updates",
-      "close": "Close",
-      "week1": {
+      "close": "Close",      "week1": {
         "title": "Week 1",
-        "overview": "Started the internship with project onboarding. Focused on understanding the existing coding architecture (AmoDrive) and project structure, working with Storybook components, and improving coding style based on senior feedback. Gained practical experience using Git/GitHub workflows, resolved various technical errors, and successfully finalized tickets related to forms, cards, and modals."
-      },
-      "week2": {
+        "overview": "Started the internship with project onboarding. Focused on understanding the existing coding architecture (AmoDrive) and project structure, working with Storybook components, and improving coding style based on senior feedback. Gained practical experience using Git/GitHub workflows, resolved various technical errors, and successfully finalized tickets related to forms, cards, and modals.",
+        "tags": []
+      },      "week2": {
         "title": "Week 2",
-        "overview": "Initiated work on the AmoTrack project, engaging with the core tech stack: React, PostgreSQL, Drizzle, and Fastify. Successfully set up the database, established connection, and developed the first CRUD endpoint. Received valuable feedback on logical thinking and collaboration. Created new endpoints, optimized server files, and started working on tickets for the user interface and API performance, gaining experience with ticket and PR workflows."
-      },
-      "week3": {
+        "overview": "Initiated work on the AmoTrack project, engaging with the core tech stack: React, PostgreSQL, Drizzle, and Fastify. Successfully set up the database, established connection, and developed the first CRUD endpoint. Received valuable feedback on logical thinking and collaboration. Created new endpoints, optimized server files, and started working on tickets for the user interface and API performance, gaining experience with ticket and PR workflows.",
+        "tags": []
+      },      "week3": {
         "title": "Week 3",
-        "overview": "Focused on refining work based on feedback and tackling new tickets. Addressed challenges related to coding style consistency by learning from different seniors. Received positive feedback on Pull Requests and successfully completed and obtained approval for outstanding tasks from the first week. Continued developing skills in backend development."
-      },
-      "week4": {
+        "overview": "Focused on refining work based on feedback and tackling new tickets. Addressed challenges related to coding style consistency by learning from different seniors. Received positive feedback on Pull Requests and successfully completed and obtained approval for outstanding tasks from the first week. Continued developing skills in backend development.",
+        "tags": []
+      },      "week4": {
         "title": "Week 4",
-        "overview": "Achieved a key milestone by presenting a demo of the AmoTrack frontend and backend development progress to the senior team. Implemented significant functions in form components and resolved backend bugs. Focused on making components more generic and reusable. Received positive feedback, motivating further dedication to project development and skill improvement."
-      },
-      "week5": {
+        "overview": "Achieved a key milestone by presenting a demo of the AmoTrack frontend and backend development progress to the senior team. Implemented significant functions in form components and resolved backend bugs. Focused on making components more generic and reusable. Received positive feedback, motivating further dedication to project development and skill improvement.",
+        "tags": []
+      },      "week5": {
         "title": "Week 5",
-        "overview": "Primarily focused on managing and addressing Pull Requests (PRs) and continuing frontend development for AmoTrack, including updating forms. Successfully finalized remaining backend tasks. Started a small personal project ('Mini Mike') based on senior guidance, aimed at reinforcing learning and practical skills."
-      },
-      "week6": {
+        "overview": "Primarily focused on managing and addressing Pull Requests (PRs) and continuing frontend development for AmoTrack, including updating forms. Successfully finalized remaining backend tasks. Started a small personal project ('Mini Mike') based on senior guidance, aimed at reinforcing learning and practical skills.",
+        "tags": []
+      },      "week6": {
         "title": "Week 6",
-        "overview": "Engaged with DevOps aspects, tackling Azure challenges and deployment issues, including optimizing 'chunk size reduction' via GitHub Actions. Continued frontend development work on assigned tickets. Collaborated with a colleague to troubleshoot and resolve deployment problems and contributed to updating the AmoStyle library. Provided constructive feedback on a colleague's project."
-      },
-      "week7": {
+        "overview": "Engaged with DevOps aspects, tackling Azure challenges and deployment issues, including optimizing 'chunk size reduction' via GitHub Actions. Continued frontend development work on assigned tickets. Collaborated with a colleague to troubleshoot and resolve deployment problems and contributed to updating the AmoStyle library. Provided constructive feedback on a colleague's project.",
+        "tags": []
+      },      "week7": {
         "title": "Week 7",
-        "overview": "Dedicated the week entirely to working on the Amo-style-library. This involved rewriting existing components based on the decision to move away from using MUI, focusing on custom implementation, component testing, and library maintenance."
-      },
-      "week8": {
+        "overview": "Dedicated the week entirely to working on the Amo-style-library. This involved rewriting existing components based on the decision to move away from using MUI, focusing on custom implementation, component testing, and library maintenance.",
+        "tags": []
+      },      "week8": {
         "title": "Week 8",
-        "overview": "A quieter week focusing on integrating feedback from my interim evaluation. Continued frontend refinement based on senior advice, independently addressing and fixing bugs. Developed new UI components including input fields, radio fields, and checkbox fields, demonstrating growing autonomy. Engaged in detailed review of feedback and technical documentation."
-      },
-      "week9": {
+        "overview": "A quieter week focusing on integrating feedback from my interim evaluation. Continued frontend refinement based on senior advice, independently addressing and fixing bugs. Developed new UI components including input fields, radio fields, and checkbox fields, demonstrating growing autonomy. Engaged in detailed review of feedback and technical documentation.",
+        "tags": []
+      },      "week9": {
         "title": "Week 9",
-        "overview": "Transitioned back to working on both the frontend and backend of the AmoTrack project after finalizing Amo Style Library tasks. Pick up new tickets assigned by the senior team, focused on implementing new features and updates across the stack. Gained experience with API documentation by creating Swagger specifications."
-      },
-      "week10": {
+        "overview": "Transitioned back to working on both the frontend and backend of the AmoTrack project after finalizing Amo Style Library tasks. Pick up new tickets assigned by the senior team, focused on implementing new features and updates across the stack. Gained experience with API documentation by creating Swagger specifications.",
+        "tags": []
+      },      "week10": {
         "title": "Week 10",
-        "overview": "Shifted full focus to the AmoTrack project, actively contributing to both frontend and backend development. Updated frontend components, resolved bugs, and processed translation feedback. Further enhanced API documentation by setting up Swagger. Began implementing core backend features, including soft deletion logic for data management."
-      },
-      "week11": {
+        "overview": "Shifted full focus to the AmoTrack project, actively contributing to both frontend and backend development. Updated frontend components, resolved bugs, and processed translation feedback. Further enhanced API documentation by setting up Swagger. Began implementing core backend features, including soft deletion logic for data management.",
+        "tags": []
+      },      "week11": {
         "title": "Week 11",
-        "overview": "Dedicated the week to finalizing assigned tickets for the AmoTrack project. Successfully reached a major development milestone by fully implementing the complete timesheet logic, a core feature. Focused on thorough testing and preparation for upcoming demos, demonstrating ability to complete feature development cycles."
-      },
-      "week12": {
+        "overview": "Dedicated the week to finalizing assigned tickets for the AmoTrack project. Successfully reached a major development milestone by fully implementing the complete timesheet logic, a core feature. Focused on thorough testing and preparation for upcoming demos, demonstrating ability to complete feature development cycles.",
+        "tags": []
+      },      "week12": {
         "title": "Week 12",
-        "overview": "Achieved high productivity by focusing exclusively on assigned development tickets. Rebuilt and refined several pages based on new design feedback to enhance user experience and interface usability. Prepared the codebase and architecture for the upcoming implementation of the API gateway."
-      },
-      "week13": {
+        "overview": "Achieved high productivity by focusing exclusively on assigned development tickets. Rebuilt and refined several pages based on new design feedback to enhance user experience and interface usability. Prepared the codebase and architecture for the upcoming implementation of the API gateway.",
+        "tags": []
+      },      "week13": {
         "title": "Week 13",
-        "overview": "Focused heavily on finalization and refinement of critical application components. Completed and refined the timesheet feature, implemented and thoroughly tested the login functionality, and completed the translation of all application pages into English. Prepared to finalize user authentication flows and address remaining design feedback."
-      },
-      "week14": {
+        "overview": "Focused heavily on finalization and refinement of critical application components. Completed and refined the timesheet feature, implemented and thoroughly tested the login functionality, and completed the translation of all application pages into English. Prepared to finalize user authentication flows and address remaining design feedback.",
+        "tags": []
+      },      "week14": {
         "title": "Week 14",
-        "overview": "Engaged in advanced topics and codebase optimization. Conducted self-study and implemented React Query for improved data fetching and state management. Researched testing methodologies and performance optimizations. Refactored and cleaned up existing code, implemented robust role checks for access control, and further refined login functionality and the timesheet feature. Enhanced UI details by styling project components."
+        "overview": "Engaged in advanced topics and codebase optimization. Conducted self-study and implemented React Query for improved data fetching and state management. Researched testing methodologies and performance optimizations. Refactored and cleaned up existing code, implemented robust role checks for access control, and further refined login functionality and the timesheet feature. Enhanced UI details by styling project components.",
+        "tags": []
       }
     }
   },
