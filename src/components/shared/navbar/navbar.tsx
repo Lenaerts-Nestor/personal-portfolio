@@ -15,14 +15,15 @@ import {
 import { Link, useLocation } from "react-router-dom"
 import { SwitchLanguage } from "./languageSwitch"
 import type { NavbarProps } from "../../../interface/navbar"
+import { ROUTES, HASH_ROUTES, NAVIGATION_SECTIONS, SOCIAL_PLATFORMS } from "../../../constants"
 
 export const Navbar = ({
   defaultLanguage = "en",
   onLanguageChange,
   socials = [
-    { platform: "github", url: "https://github.com/Lenaerts-Nestor" },
+    { platform: SOCIAL_PLATFORMS.GITHUB, url: "https://github.com/Lenaerts-Nestor" },
     {
-      platform: "linkedin",
+      platform: SOCIAL_PLATFORMS.LINKEDIN,
       url: "https://www.linkedin.com/in/nestor-lenaerts/",
     },
   ],
@@ -30,13 +31,13 @@ export const Navbar = ({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [_language, setLanguage] = useState(defaultLanguage)
   const location = useLocation()
-  const isBlogPage = location.pathname === "/blog"
+  const isBlogPage = location.pathname === ROUTES.BLOG
   const [activeSection, setActiveSection] = useState<string>("")
-  const sectionIds = ["projects", "technologies", "experience", "education"]
+  const sectionIds = NAVIGATION_SECTIONS
 
   useEffect(() => {
     // Only run on home page
-    if (location.pathname !== "/") {
+    if (location.pathname !== ROUTES.HOME) {
       setActiveSection("")
       return
     }
@@ -63,31 +64,31 @@ export const Navbar = ({
 
   const homeMenuItems = [
     {
-      path: "/#technologies",
+      path: HASH_ROUTES.TECHNOLOGIES,
       label: "Skills",
       icon: <Code className="h-4 w-4" />,
       type: "section",
     },
     {
-      path: "/#projects",
+      path: HASH_ROUTES.PROJECTS,
       label: "Projects",
       icon: <FolderKanban className="h-4 w-4" />,
       type: "section",
     },
     {
-      path: "/#experience",
+      path: HASH_ROUTES.EXPERIENCE,
       label: "Experience",
       icon: <Briefcase className="h-4 w-4" />,
       type: "section",
     },
     {
-      path: "/#education",
+      path: HASH_ROUTES.EDUCATION,
       label: "Education",
       icon: <GraduationCap className="h-4 w-4" />,
       type: "section",
     },
     {
-      path: "/blog",
+      path: ROUTES.BLOG,
       label: "Blog",
       icon: <FileText className="h-4 w-4" />,
       type: "page",
@@ -96,7 +97,7 @@ export const Navbar = ({
 
   const blogMenuItems = [
     {
-      path: "/",
+      path: ROUTES.HOME,
       label: "Back to Portfolio",
       icon: <ArrowLeft className="h-4 w-4" />,
       type: "page",
@@ -126,9 +127,9 @@ export const Navbar = ({
 
   const getSocialIcon = (platform: string) => {
     switch (platform.toLowerCase()) {
-      case "github":
+      case SOCIAL_PLATFORMS.GITHUB:
         return <Github className="h-5 w-5 text-gray-700 hover:text-indigo-600 transition-colors" />
-      case "linkedin":
+      case SOCIAL_PLATFORMS.LINKEDIN:
         return <Linkedin className="h-5 w-5 text-gray-700 hover:text-indigo-600 transition-colors" />
       default:
         return null
@@ -138,7 +139,7 @@ export const Navbar = ({
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (path.startsWith("/#")) {
       e.preventDefault()
-      if (location.pathname !== "/") {
+      if (location.pathname !== ROUTES.HOME) {
         window.location.href = path
         return
       }
@@ -154,15 +155,15 @@ export const Navbar = ({
   }
 
   const isActive = (path: string) => {
-    if (path === "/") {
-      return location.pathname === "/" && !location.hash && !activeSection
+    if (path === ROUTES.HOME) {
+      return location.pathname === ROUTES.HOME && !location.hash && !activeSection
     }
-    if (path === "/blog") {
-      return location.pathname === "/blog"
+    if (path === ROUTES.BLOG) {
+      return location.pathname === ROUTES.BLOG
     }
     if (path.startsWith("/#")) {
       const section = path.replace("/#", "")
-      return location.pathname === "/" && activeSection === section
+      return location.pathname === ROUTES.HOME && activeSection === section
     }
     return false
   }
@@ -174,7 +175,7 @@ export const Navbar = ({
           {/* Logo/Name - Left aligned */}
           <div className="flex-shrink-0">
             <Link
-              to="/"
+              to={ROUTES.HOME}
               className="text-lg font-bold text-gray-800 hover:text-indigo-600 transition-colors"
               onClick={closeMobileMenu}
             >

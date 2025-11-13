@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { gradientTextClasses } from '../../../style/style';
 import { useI18n } from '../i18nContext';
+import { ROUTES } from '../../../constants';
 
 export const Footer = () => {
   const { t } = useI18n();
@@ -43,7 +44,7 @@ export const Footer = () => {
             <ul className='space-y-2'>
               <li>
                 <Link
-                  to='/'
+                  to={ROUTES.HOME}
                   className='text-indigo-200 hover:text-white transition-colors'
                 >
                   {t('navigation.home')}
@@ -51,7 +52,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  to='/About'
+                  to={ROUTES.ABOUT}
                   className='text-indigo-200 hover:text-white transition-colors'
                 >
                   {t('navigation.about')}
@@ -59,7 +60,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  to='/Blog'
+                  to={ROUTES.BLOG}
                   className='text-indigo-200 hover:text-white transition-colors'
                 >
                   {t('navigation.blog')}

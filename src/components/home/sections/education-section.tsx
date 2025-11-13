@@ -4,6 +4,7 @@ import { EducationCard } from './education/education-card';
 import { ProfessionalDevCard } from './education/professional-dev-card';
 import { educationData, professionalSections } from '../../../utils/education-data';
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
+import { SECTION_IDS } from '../../../constants';
 
 export default function EducationSection() {
   const sectionRef = useScrollAnimation({ 
@@ -12,7 +13,7 @@ export default function EducationSection() {
   });
 
   return (
-    <section ref={sectionRef} id='education' className='py-16 md:py-24 bg-white'>
+    <section ref={sectionRef} id={SECTION_IDS.EDUCATION} className='py-16 md:py-24 bg-white'>
       <div className='container mx-auto px-4 max-w-6xl'>
         <SectionHeading
           title='Education & Professional Development'

@@ -9,13 +9,14 @@ import { PositionBadges } from './intro/position-badges';
 import { SectionDescription } from './intro/section-description';
 import { createOverviewSections } from './intro/overview-data';
 import { staggerContainer, fadeIn } from '../../../interface/intro';
+import { SECTION_IDS } from '../../../constants';
 
 export const IntroSection = memo(() => {
   const { t } = useI18n();
   const overviewSections = useMemo(() => createOverviewSections(t), [t]);
   return (
     <section
-      id='intro'
+      id={SECTION_IDS.INTRO}
       className='relative flex items-center justify-center lg:h-[calc(100vh-64px)] lg:items-center lg:justify-center lg:overflow-hidden'
       role='banner'
       aria-labelledby='intro-heading'

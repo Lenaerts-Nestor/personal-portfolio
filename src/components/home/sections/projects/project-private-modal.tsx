@@ -7,6 +7,7 @@ import { AmoTrackSummary } from '../../../../utils/project-summaries/amotrack-su
 import { CvoSummary } from '../../../../utils/project-summaries/cvo-summary';
 import { project_techIcons } from '../../../../utils/projects-data';
 import type { ProjectModalProps } from '../../../../interface/project';
+import { PROJECT_IDS, hasCustomSummary } from '../../../../constants';
 
 export const ProjectModal = ({
   project,
@@ -116,7 +117,7 @@ export const ProjectModal = ({
             </div>
 
             <div className='flex-1 overflow-y-auto p-6'>
-              {project.id !== 'cvo' && project.id !== 'timesheet' && (
+              {!hasCustomSummary(project.id) && (
                 <div className='mb-6'>
                   <h3 className='text-sm font-medium text-gray-500 dark:text-gray-400 mb-3'>
                     {t('experience.technologiesUsed')}
@@ -136,9 +137,9 @@ export const ProjectModal = ({
                 </div>
               )}
 
-              {project.id === 'timesheet' ? (
+              {project.id === PROJECT_IDS.TIMESHEET ? (
                 <AmoTrackSummary />
-              ) : project.id === 'cvo' ? (
+              ) : project.id === PROJECT_IDS.CVO ? (
                 <CvoSummary />
               ) : (
                 <>

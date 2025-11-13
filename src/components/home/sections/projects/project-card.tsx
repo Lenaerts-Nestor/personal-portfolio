@@ -3,6 +3,7 @@ import { Lock } from 'lucide-react';
 import { project_techIcons } from '../../../../utils/projects-data';
 import { ProjectTechBadges } from './project-tech-badges';
 import type { ProjectCardProps } from '../../../../interface/project';
+import { hasCustomTypeLabel } from '../../../../constants';
 
 const item = {
   hidden: { y: 20, opacity: 0 },
@@ -60,7 +61,7 @@ export const ProjectCard = ({
             {project.title}
           </h3>
           <span className='text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded'>
-            {project.id === 'timesheet'
+            {hasCustomTypeLabel(project.id)
               ? t('projects.internshipProject')
               : project.type}
           </span>

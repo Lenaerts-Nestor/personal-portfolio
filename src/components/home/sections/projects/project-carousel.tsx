@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Lock } from 'lucide-react';
 import { project_techIcons } from '../../../../utils/projects-data';
 import type { ProjectCarouselProps } from '../../../../interface/project';
+import { hasCustomTypeLabel } from '../../../../constants';
 
 
 export const ProjectCarousel = ({
@@ -146,7 +147,7 @@ const CarouselItem = ({
               {project.title}
             </h3>
             <span className='text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded'>
-              {project.id === 'timesheet'
+              {hasCustomTypeLabel(project.id)
                 ? t('projects.internshipProject')
                 : project.type}
             </span>

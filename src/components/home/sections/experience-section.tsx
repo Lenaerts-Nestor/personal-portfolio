@@ -4,6 +4,7 @@ import { SectionHeading } from '../../shared/layout/section-heading';
 import { experienceData } from '../../../utils/experience-data';
 import { ExperienceLayout } from './experience/ExperienceLayout';
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
+import { SECTION_IDS } from '../../../constants';
 
 export default function ExperienceSection() {
   const { t } = useI18n();
@@ -12,7 +13,7 @@ export default function ExperienceSection() {
     threshold: 0.2 
   });
   return (
-    <section ref={sectionRef} id='experience' className='py-16 bg-white'>
+    <section ref={sectionRef} id={SECTION_IDS.EXPERIENCE} className='py-16 bg-white'>
       <div className='max-w-6xl mx-auto px-4'>
         <SectionHeading
           title={t('home.experienceTitle')}

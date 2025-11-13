@@ -1,17 +1,18 @@
 import { memo } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useI18n } from '../../../shared/i18nContext';
+import { SECTION_IDS, HASH_ROUTES } from '../../../../constants';
 
 export const ScrollIndicator = memo(() => {
   const { t } = useI18n();
   return (
     <div className='flex justify-center mt-4 lg:mt-6 text-gray-400'>
       <a
-        href='#technologies'
+        href={HASH_ROUTES.TECHNOLOGIES}
         className='flex flex-col items-center hover:text-indigo-500 transition-colors duration-200 group'
         onClick={(e) => {
           e.preventDefault();
-          const technologiesSection = document.getElementById('technologies');
+          const technologiesSection = document.getElementById(SECTION_IDS.TECHNOLOGIES);
           if (technologiesSection) {
             technologiesSection.scrollIntoView({
               behavior: 'smooth',
