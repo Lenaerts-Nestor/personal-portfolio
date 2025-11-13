@@ -6,19 +6,19 @@ import { SectionHeading } from '../../shared/layout/section-heading';
 import { ProjectModal } from './projects/project-private-modal';
 import { ProjectCard } from './projects/project-card';
 import { ProjectCarousel } from './projects/project-carousel';
-import { enhancedProjects, container } from '../../../interface/project';
+import { enhancedProjects, container, type EnhancedProject } from '../../../interface/project';
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { SECTION_IDS } from '../../../constants';
 
 
 export const ProjectsSection = () => {
   const [carouselIdx, setCarouselIdx] = useState(0);
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<EnhancedProject | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useI18n();
-  const sectionRef = useScrollAnimation({ 
+  const sectionRef = useScrollAnimation({
     animationType: 'slide-right',
-    threshold: 0.2 
+    threshold: 0.2
   });
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export const ProjectsSection = () => {
     });
   }, [t]);
 
-  const handleProjectClick = (project: any) => {
+  const handleProjectClick = (project: EnhancedProject) => {
     if (project.isPrivate) {
       setSelectedProject(project);
       setIsModalOpen(true);
@@ -49,7 +49,7 @@ export const ProjectsSection = () => {
     setIsModalOpen(false);
   };
 
-  const getProjectDescription = (project: any) => {
+  const getProjectDescription = (project: EnhancedProject): string => {
     const keyForCardDescription = project.cardTranslationKey || project.id;
     const translationKey = `projects.${keyForCardDescription}.description`;
     const translatedDescription = t(translationKey);

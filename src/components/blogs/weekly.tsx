@@ -6,6 +6,7 @@ import { WeeklyModal } from './weeklyModal';
 import { CardHeader } from './CardHeader';
 import { TagFilter } from './TagFilter';
 import { MobileTagFilterSheet } from './MobileTagFilterSheet';
+import type { WeekEntry, DayEntry } from '../../interface/blog';
 
 export const WeeklyBlog = () => {
   const { t } = useI18n();
@@ -14,7 +15,7 @@ export const WeeklyBlog = () => {
     weeksObj && typeof weeksObj === 'object'
       ? Object.keys(weeksObj).filter((k) => k.startsWith('week'))
       : [];
-  const weeksArr = weekKeys.map((key) => (weeksObj as any)[key]);  const [openIdx, setOpenIdx] = useState<number | null>(null);
+  const weeksArr: WeekEntry[] = weekKeys.map((key) => (weeksObj as Record<string, WeekEntry>)[key]);  const [openIdx, setOpenIdx] = useState<number | null>(null);
   const [animating, setAnimating] = useState(false);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
@@ -44,7 +45,7 @@ export const WeeklyBlog = () => {
   const touchEndX = useRef<number | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const minSwipeDistance = 50;
-  const openModal = (week: any) => {
+  const openModal = (week: WeekEntry) => {
     // Find the original index in the full weeksArr
     const originalIdx = weeksArr.findIndex(w => w.title === week.title);
     setOpenIdx(originalIdx);
@@ -188,7 +189,7 @@ export const WeeklyBlog = () => {
                 <CardHeader
                   title={week.title || `Week ${idx + 1}`}
                   subtitle={week.days && week.days.length > 0
-                    ? week.days.map((d: any) => d.date).join(', ')
+                    ? week.days.map((d: DayEntry) => d.date).join(', ')
                     : ''}
                   tags={week.tags || []}
                   variant="card"

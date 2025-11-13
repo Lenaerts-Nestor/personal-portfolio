@@ -2,7 +2,7 @@ import { useRef, type JSX } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Lock } from 'lucide-react';
 import { project_techIcons } from '../../../../utils/projects-data';
-import type { ProjectCarouselProps } from '../../../../interface/project';
+import type { ProjectCarouselProps, EnhancedProject } from '../../../../interface/project';
 import { hasCustomTypeLabel } from '../../../../constants';
 
 
@@ -90,10 +90,10 @@ export const ProjectCarousel = ({
 };
 
 interface CarouselItemProps {
-  project: any;
+  project: EnhancedProject;
   carouselIdx: number;
-  handleProjectClick: (project: any) => void;
-  getProjectDescription: (project: any) => string;
+  handleProjectClick: (project: EnhancedProject) => void;
+  getProjectDescription: (project: EnhancedProject) => string;
   renderTechIcon: (tech: string) => JSX.Element | null;
   t: (key: string) => string;
 }

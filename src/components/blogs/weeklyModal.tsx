@@ -1,7 +1,7 @@
 import type React from 'react';
 import { useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-import type { WeeklyModalProps } from '../../interface/blog';
+import type { WeeklyModalProps, DayEntry } from '../../interface/blog';
 import { CardHeader } from './CardHeader';
 
 
@@ -75,7 +75,7 @@ export const WeeklyModal: React.FC<WeeklyModalProps> = ({
           <CardHeader
             title={weeksArr[openIdx].title}
             subtitle={weeksArr[openIdx].days && weeksArr[openIdx].days.length > 0
-              ? weeksArr[openIdx].days.map((d: any) => d.date).join(', ')
+              ? weeksArr[openIdx].days.map((d: DayEntry) => d.date).join(', ')
               : ''}
             tags={weeksArr[openIdx].tags || []}
             variant="modal"
@@ -112,7 +112,7 @@ export const WeeklyModal: React.FC<WeeklyModalProps> = ({
                 <p className='leading-relaxed'>{weeksArr[openIdx].overview}</p>
                 <ul className='mt-4'>
                   {weeksArr[openIdx].days &&
-                    weeksArr[openIdx].days.map((day: any, i: number) => (
+                    weeksArr[openIdx].days.map((day: DayEntry, i: number) => (
                       <li key={i} className='mb-2'>
                         <span className='font-semibold'>{day.date}:</span>{' '}
                         {day.content}
