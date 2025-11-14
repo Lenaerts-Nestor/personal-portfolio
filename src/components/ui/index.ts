@@ -40,3 +40,7 @@ export type { SectionProps } from './Section';
 // Loading components
 export { Skeleton, CardSkeleton } from './Skeleton';
 export type { SkeletonProps, SkeletonVariant } from './Skeleton';
+
+// Technology Badge component
+export { TechnologyBadge } from './TechnologyBadge';
+export type { TechnologyBadgeProps } from './TechnologyBadge';

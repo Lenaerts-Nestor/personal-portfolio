@@ -160,6 +160,26 @@ export const utils = {
   lineClamp: (lines: number) => `line-clamp-${lines}`,
 } as const;
 
+export const modal = {
+  backdrop: {
+    overlay: 'bg-black/70 backdrop-blur-md',
+    zIndex: 'z-50',
+  },
+  container: {
+    shadow: 'shadow-2xl',
+    border: 'border border-gray-200 dark:border-gray-700',
+    radius: 'rounded-2xl',
+    maxWidth: {
+      responsive: 'max-w-[95vw] sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl',
+    },
+    maxHeight: 'max-h-[92vh]',
+  },
+  spacing: {
+    padding: 'p-6 md:p-8',
+    contentGap: 'space-y-6',
+  },
+} as const;
+
 export type SpacingToken = typeof spacing;
 export type TypographyToken = typeof typography;
 export type RadiusToken = typeof radius;
@@ -169,3 +189,4 @@ export type GridToken = typeof grid;
 export type BreakpointToken = typeof breakpoints;
 export type ZIndexToken = typeof zIndex;
 export type UtilsToken = typeof utils;
+export type ModalToken = typeof modal;

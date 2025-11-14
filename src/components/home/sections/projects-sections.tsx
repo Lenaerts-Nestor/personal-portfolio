@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 import { FolderKanban } from 'lucide-react';
 import { useI18n } from '../../shared/i18nContext';
@@ -97,11 +98,14 @@ export const ProjectsSection = () => {
         />
       </Container>
 
-      <ProjectModal
-        project={selectedProject}
-        isOpen={isModalOpen}
-        onClose={closeModal}
-      />
+      {typeof document !== 'undefined' && createPortal(
+        <ProjectModal
+          project={selectedProject}
+          isOpen={isModalOpen}
+          onClose={closeModal}
+        />,
+        document.body
+      )}
     </Section>
   );
 };

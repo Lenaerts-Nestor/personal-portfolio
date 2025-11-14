@@ -1,30 +1,19 @@
-import { useI18n } from "../../components/shared/i18nContext"
-import { SiSharp, SiDotnet, SiGoogle, SiSwagger } from "react-icons/si"
+import { useI18n } from "../../components/shared/i18nContext";
+import { SiSharp, SiDotnet, SiGoogle, SiSwagger } from "react-icons/si";
+import { TechnologyBadge } from "../../components/ui";
 
-// Tech stack with icons and colors
-const techIcons = {
-  "C#": { icon: SiSharp, color: "text-purple-600" },
-  ".NET": { icon: SiDotnet, color: "text-purple-700" },
-  "Google APIs": { icon: SiGoogle, color: "text-red-500" },
-  Swagger: { icon: SiSwagger, color: "text-green-600" },
-}
+const techStack = [
+  { name: "C#", icon: SiSharp, color: "text-purple-600" },
+  { name: ".NET", icon: SiDotnet, color: "text-purple-700" },
+  { name: "Google APIs", icon: SiGoogle, color: "text-red-500" },
+  { name: "Swagger", icon: SiSwagger, color: "text-green-600" },
+] as const;
 
 export const CvoSummary = () => {
-  const { t } = useI18n()
-
-  // Render tech icon
-  const renderTechIcon = (tech: string) => {
-    const iconData = techIcons[tech as keyof typeof techIcons]
-    if (iconData) {
-      const IconComponent = iconData.icon
-      return <IconComponent className={`h-5 w-5 ${iconData.color}`} />
-    }
-    return null
-  }
+  const { t } = useI18n();
 
   return (
     <div className="space-y-6">
-      {/* Project Overview */}
       <div>
         <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
           {t("projects.cvo.overviewTitle") || "Project Overview"}
@@ -41,14 +30,13 @@ export const CvoSummary = () => {
           {t("projects.cvo.technologiesTitle") || "Technology Stack"}
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {["C#", ".NET", "Google APIs", "Swagger"].map((tech, index) => (
-            <span
+          {techStack.map((tech, index) => (
+            <TechnologyBadge
               key={index}
-              className="flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700/50 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-lg"
-            >
-              {renderTechIcon(tech)}
-              {tech}
-            </span>
+              tech={tech.name}
+              icon={tech.icon}
+              iconColor={tech.color}
+            />
           ))}
         </div>
       </div>
@@ -165,5 +153,5 @@ export const CvoSummary = () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
