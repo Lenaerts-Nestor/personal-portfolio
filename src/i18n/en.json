@@ -322,12 +322,16 @@
     "description": "My expertise in modern web development technologies and professional competencies"
   },
   "education": {
+    "sectionTitle": "Education & Professional Development",
+    "sectionDescription": "My academic foundation and continuous learning journey in software development",
     "title": "Education & Professional Development",
     "description": "My academic foundation and continuous learning journey in software development",
     "graduaat": {
+      "title": "Graduaat Programmeren",
+      "institution": "AP Hogeschool Antwerpen",
       "degree": "Graduaat Programmeren",
       "period": "September 2023 - June 2025 (Expected)",
-      "description": "Currently completing this practical degree, focusing on hands-on software development.",
+      "description": "Hands-on programming degree focused on modern web development, API design, and full-stack applications.",
       "courseworkTitle": "Key Coursework",
       "courseworkTitleDefault": "Key Coursework",
       "coursework": {
@@ -349,9 +353,12 @@
       }
     },
     "bachelor": {
+      "title": "Bachelor Toegepaste Informatica",
+      "institution": "AP Hogeschool Antwerpen",
       "degree": "Bachelor Applied Computer Science",
       "period": "September 2020 - June 2022",
-      "description": "Studied applied computer science, building a foundational understanding.",
+      "notCompletedBadge": "(Not completed)",
+      "description": "Foundation in computer science. Switched to Graduaat for practical, project-based learning aligned with career goals.",
       "courseworkTitle": "Valuable Coursework",
       "coursework": {
         "programmingPrinciples": "Programming principles (6 SP)",
@@ -381,6 +388,26 @@
     "institution": "AP Hogeschool Antwerpen",
     "notCompletedStatus": "Not completed",
     "potentialNote": "While I did not complete the Bachelor degree, the foundational knowledge and experience I gained during that period were significant and contributed greatly to my development and readiness for a career in software development.",
+    "aiMethodology": {
+      "title": "AI-Assisted Development Approach",
+      "subtitle": "Strategic, Not Dependent",
+      "intro": "I leverage AI tools strategically to enhance productivity while maintaining full code ownership and understanding.",
+      "sections": {
+        "blueprint": {
+          "title": "Blueprint First",
+          "description": "I manually design project structure, components, and architecture before any AI assistance."
+        },
+        "strategic": {
+          "title": "Strategic Automation",
+          "description": "AI handles repetitive tasks like generating similar components with variations, not core logic."
+        },
+        "understanding": {
+          "title": "Deep Understanding",
+          "description": "As a backend specialist, I must fully understand the code, issues, and best solutions before implementation."
+        }
+      },
+      "clarification": "I use AI to accelerate work, not replace critical thinking. Every line of code is reviewed and understood."
+    },
     "professionalDevelopment": {
       "title": "Continuous Professional Development",
       "selfDirectedLearning": {

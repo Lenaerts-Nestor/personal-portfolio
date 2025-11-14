@@ -322,12 +322,16 @@
     "description": "Mijn expertise in moderne webontwikkelingstechnologieën en professionele competenties"
   },
   "education": {
+    "sectionTitle": "Opleiding & Professionele Ontwikkeling",
+    "sectionDescription": "Mijn academische basis en voortdurende leertraject in softwareontwikkeling",
     "title": "Opleiding & Professionele Ontwikkeling",
     "description": "Mijn academische basis en voortdurende leertraject in softwareontwikkeling",
     "graduaat": {
+      "title": "Graduaat Programmeren",
+      "institution": "AP Hogeschool Antwerpen",
       "degree": "Graduaat Programmeren",
       "period": "September 2023 - Juni 2025 (Verwacht)",
-      "description": "Momenteel rond ik deze praktijkgerichte opleiding af, gericht op hands-on softwareontwikkeling.",
+      "description": "Praktijkgerichte programmeeropleiding met focus op moderne webontwikkeling, API-ontwerp en full-stack applicaties.",
       "courseworkTitle": "Belangrijke Vakken",
       "courseworkTitleDefault": "Belangrijke Vakken",
       "coursework": {
@@ -349,9 +353,12 @@
       }
     },
     "bachelor": {
+      "title": "Bachelor Toegepaste Informatica",
+      "institution": "AP Hogeschool Antwerpen",
       "degree": "Bachelor Toegepaste Informatica",
       "period": "September 2020 - Juni 2022",
-      "description": "Studeerde toegepaste informatica, waarbij ik een fundamenteel begrip opbouwde.",
+      "notCompletedBadge": "(Niet afgerond)",
+      "description": "Basis in computerwetenschappen. Overgestapt naar Graduaat voor praktische, projectgebaseerde leer ervaring afgestemd op carrièredoelen.",
       "courseworkTitle": "Waardevolle Cursussen",
       "coursework": {
         "programmingPrinciples": "Programmeervaardigheden (6 SP)",
@@ -381,6 +388,26 @@
     "institution": "AP Hogeschool Antwerpen",
     "notCompletedStatus": "Niet afgerond",
     "potentialNote": "Hoewel ik de Bacheloropleiding niet heb afgerond, was de fundamentele kennis en ervaring die ik in die periode heb opgedaan aanzienlijk en heeft het sterk bijgedragen aan mijn ontwikkeling en paraatheid voor een carrière in softwareontwikkeling.",
+    "aiMethodology": {
+      "title": "AI-Ondersteunde Ontwikkelingsmethode",
+      "subtitle": "Strategisch, Niet Afhankelijk",
+      "intro": "Ik benut AI-tools strategisch om productiviteit te verhogen terwijl ik volledige code-eigendom en begrip behoud.",
+      "sections": {
+        "blueprint": {
+          "title": "Eerst Blauwdruk",
+          "description": "Ik ontwerp handmatig projectstructuur, componenten en architectuur voordat ik AI-hulp gebruik."
+        },
+        "strategic": {
+          "title": "Strategische Automatisering",
+          "description": "AI handelt repetitieve taken af zoals het genereren van vergelijkbare componenten met variaties, niet kernlogica."
+        },
+        "understanding": {
+          "title": "Diep Begrip",
+          "description": "Als backend-specialist moet ik de code, problemen en beste oplossingen volledig begrijpen voordat ik implementeer."
+        }
+      },
+      "clarification": "Ik gebruik AI om werk te versnellen, niet om kritisch denken te vervangen. Elke regel code wordt beoordeeld en begrepen."
+    },
     "professionalDevelopment": {
       "title": "Voortdurende Professionele Ontwikkeling",
       "selfDirectedLearning": {
