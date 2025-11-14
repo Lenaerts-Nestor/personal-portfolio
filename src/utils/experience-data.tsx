@@ -1,6 +1,7 @@
 import { FaWindows, FaApple, FaNetworkWired } from "react-icons/fa";
 import { IoHardwareChip } from "react-icons/io5";
-import { SiReact, SiTypescript, SiPostgresql, SiFastify, SiStorybook, SiNodedotjs, SiStyledcomponents, SiDrizzle } from "react-icons/si";
+import { SiReact, SiTypescript, SiPostgresql, SiFastify, SiStorybook, SiNodedotjs, SiStyledcomponents, SiDrizzle, SiPhp, SiLaravel } from "react-icons/si";
+import { BsStars } from "react-icons/bs";
 import type { Experience } from "../interface/experience";
 
  export const experienceData: Experience[] = [
@@ -36,6 +37,25 @@ import type { Experience } from "../interface/experience";
         { name: 'Drizzle ORM', icon: <SiDrizzle className='text-amber-500' /> },
       ],
       featured: true,
+    },
+    {
+      roleKey: 'experience.roles.softwareEngineer',
+      companyKey: 'experience.companies.mymmo',
+      periodKey: 'experience.periods.mymmoStudentJob',
+      typeKey: 'experience.types.studentJob',
+      descriptionKey: 'experience.descriptions.mymmoStudentJob',
+      responsibilitiesKeys: [
+        'experience.responsibilities.mymmoStudentJob.0',
+        'experience.responsibilities.mymmoStudentJob.1',
+        'experience.responsibilities.mymmoStudentJob.2',
+        'experience.responsibilities.mymmoStudentJob.3',
+      ],
+      technologies: [
+        { name: 'PHP', icon: <SiPhp className='text-indigo-600' /> },
+        { name: 'Laravel', icon: <SiLaravel className='text-red-600' /> },
+        { name: 'AI Tools', icon: <BsStars className='text-purple-500' /> },
+      ],
+      featured: false,
     },
     {
       roleKey: 'experience.roles.itSupportSpecialist',

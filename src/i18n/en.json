@@ -106,16 +106,19 @@
     "downloadResume": "Download Resume",
     "roles": {
       "softwareDeveloperIntern": "Software Development Intern",
+      "softwareEngineer": "Junior Software Engineer",
       "itSupportSpecialist": "IT Support Specialist",
       "ictSupportSpecialist": "ICT Support Specialist"
     },
     "companies": {
       "amotek": "Amotek",
+      "mymmo": "Mymmo",
       "beego": "Beego",
       "techSupportCo": "TechSupport Co."
     },
     "periods": {
       "amotekInternship": "Feb 2024 - Jun 2024",
+      "mymmoStudentJob": "Sep 2023 - Jan 2024",
       "beegoStudentJob": "Jun 2023 - Dec 2023",
       "techSupportCoStudentJob": "Jan 2023 - May 2023"
     },
@@ -125,6 +128,7 @@
     },
     "descriptions": {
       "amotekInternship": "Worked on the AmoTrack project, building a full-stack application that the company now uses internally and is ready for client deployment.",
+      "mymmoStudentJob": "Analyzed and redesigned the software architecture for Mymmo's microservices-based system, proposing simplified solutions through API gateway implementation.",
       "beegoStudentJob": "Provided on-site technical support to customers in their homes.",
       "techSupportCoStudentJob": "A simple job where I explored the hardware side of IT outside of programming."
     },
@@ -134,6 +138,12 @@
         "Implemented RESTful API endpoints using Fastify for backend development",
         "Created database schemas and queries with PostgreSQL and Drizzle ORM",
         "Worked primarily independently, occasionally collaborating with colleagues for guidance"
+      ],
+      "mymmoStudentJob": [
+        "Analyzed existing microservices architecture to identify bottlenecks and complexity issues",
+        "Designed a simplified API gateway pattern using PHP Laravel to streamline system architecture",
+        "Utilized AI tools to research architectural best practices and explore different design approaches",
+        "Prototyped the proposed solution and identified client segmentation for better scalability"
       ],
       "beegoStudentJob": [
         "Visited customers' homes to resolve various technical issues with computers and devices",

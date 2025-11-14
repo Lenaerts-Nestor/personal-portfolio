@@ -7,13 +7,13 @@ import { MobileExperienceCard } from './MobileExperienceCard';
 export const ExperienceLayout = ({ experiences, t }: ExperienceLayoutProps) => {
   return (
     <>
-      <div className='hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div className='hidden md:grid grid-cols-1 md:grid-cols-2 gap-6'>
         {experiences.map((exp, idx) => (
-          <DesktopExperienceCard 
+          <DesktopExperienceCard
             key={exp.companyKey}
-            experience={exp} 
-            index={idx} 
-            t={t} 
+            experience={exp}
+            index={idx}
+            t={t}
           />
         ))}
       </div>
