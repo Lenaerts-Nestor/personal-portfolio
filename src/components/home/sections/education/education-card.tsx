@@ -45,7 +45,7 @@ export const EducationCard = ({
           <p className={`text-sm text-${badgeColor}-600 mb-1 text-center md:text-left`}>{institution}</p>
           <p className="text-xs text-gray-600 mb-3 text-center md:text-left">{period}</p>
 
-          <div className="bg-gray-50 p-3 rounded-lg mb-3 group-hover:bg-gray-100 transition-colors duration-300">
+          <div className="bg-gray-50 p-4 rounded-lg mb-3 group-hover:bg-gray-100 transition-colors duration-300">
             <h4 className="text-sm font-medium text-gray-800 mb-2 text-center md:text-left">{courseworkTitle}</h4>
             <div className="flex flex-wrap gap-2 justify-center md:justify-start">
               {courseworks.map((course, index) => (

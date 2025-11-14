@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
 import type { DesktopExperienceCardProps } from '../../../../interface/experience';
+import { Card } from '@/components/ui';
 import { ExperienceHeader } from './ExperienceHeader';
 import { ExperienceIcon } from './ExperienceIcon';
 import { ExperienceList } from './ExperienceList';
 import { ExperienceTechnologies } from './ExperienceTechnologies';
-
-
 
 export const DesktopExperienceCard = ({
   experience: exp,
@@ -19,13 +18,13 @@ export const DesktopExperienceCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: idx * 0.1 }}
-      className={`rounded-lg shadow-sm overflow-hidden h-full ${
-        exp.featured
-          ? 'bg-indigo-50 border border-indigo-100'
-          : 'bg-white border border-gray-100'
-      }`}
+      className="h-full"
     >
-      <div className='p-6 flex flex-col h-full'>
+      <Card
+        variant={exp.featured ? 'featured' : 'default'}
+        padding="md"
+        className="h-full flex flex-col"
+      >
         <div className='flex items-start gap-4'>
           <ExperienceIcon roleKey={exp.roleKey} featured={exp.featured} />
           <ExperienceHeader
@@ -40,12 +39,12 @@ export const DesktopExperienceCard = ({
         </div>
 
         {exp.descriptionKey && (
-          <p className='text-gray-700 mb-3 text-sm'>
+          <p className='text-gray-700 dark:text-gray-300 mb-3 text-sm'>
             {t(exp.descriptionKey)}
           </p>
         )}
 
-        <ExperienceList 
+        <ExperienceList
           responsibilitiesKeys={exp.responsibilitiesKeys}
           t={t}
           featured={exp.featured}
@@ -54,7 +53,7 @@ export const DesktopExperienceCard = ({
         {exp.technologies && (
           <ExperienceTechnologies technologies={exp.technologies} t={t} />
         )}
-      </div>
+      </Card>
     </motion.div>
   );
 };

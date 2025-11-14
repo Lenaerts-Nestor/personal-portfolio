@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import type { MobileExperienceCardProps } from '../../../../interface/experience';
+import { Card } from '@/components/ui';
 import { ExperienceHeader } from './ExperienceHeader';
 import { ExperienceIcon } from './ExperienceIcon';
 import { ExperienceList } from './ExperienceList';
 import { ExperienceTechnologies } from './ExperienceTechnologies';
-
 
 export const MobileExperienceCard = ({
   experience: exp,
@@ -18,13 +18,11 @@ export const MobileExperienceCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: idx * 0.1 }}
-      className={`rounded-lg shadow-sm overflow-hidden ${
-        exp.featured
-          ? 'bg-indigo-50 border border-indigo-100'
-          : 'bg-white border border-gray-100'
-      }`}
     >
-      <div className='p-5'>
+      <Card
+        variant={exp.featured ? 'featured' : 'default'}
+        padding="sm"
+      >
         <div className='flex items-start gap-3'>
           <ExperienceIcon roleKey={exp.roleKey} featured={exp.featured} />
           <ExperienceHeader
@@ -39,12 +37,12 @@ export const MobileExperienceCard = ({
         </div>
 
         {exp.descriptionKey && (
-          <p className='text-gray-700 mb-3 text-sm'>
+          <p className='text-gray-700 dark:text-gray-300 mb-3 text-sm'>
             {t(exp.descriptionKey)}
           </p>
         )}
 
-        <ExperienceList 
+        <ExperienceList
           responsibilitiesKeys={exp.responsibilitiesKeys}
           t={t}
           featured={exp.featured}
@@ -54,7 +52,7 @@ export const MobileExperienceCard = ({
         {exp.technologies && (
           <ExperienceTechnologies technologies={exp.technologies} t={t} />
         )}
-      </div>
+      </Card>
     </motion.div>
   );
 };

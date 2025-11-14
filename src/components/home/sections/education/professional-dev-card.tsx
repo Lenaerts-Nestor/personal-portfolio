@@ -29,7 +29,7 @@ export const ProfessionalDevCard = ({ title, sections, delay = 0.4 }: Profession
             {sections.map((section, index) => (
               <motion.div
                 key={index}
-                className="bg-blue-50 p-3 rounded-lg hover:bg-blue-100 transition-colors duration-300"
+                className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition-colors duration-300"
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
               >

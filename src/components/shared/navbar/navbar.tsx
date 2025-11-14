@@ -184,7 +184,7 @@ export const Navbar = ({
           </div>
 
           {/* Desktop Navigation - Center aligned with improved visual distinction */}
-          <nav className="hidden md:flex items-center justify-center space-x-1 flex-1 mx-4">
+          <nav className="hidden md:flex items-center justify-center space-x-2 flex-1 mx-4">
             {/* Section links grouped together with visual container */}
             <div className="flex items-center bg-gray-50 rounded-lg p-1">
               {menuItems

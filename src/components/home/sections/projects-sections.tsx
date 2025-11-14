@@ -9,6 +9,7 @@ import { ProjectCarousel } from './projects/project-carousel';
 import { enhancedProjects, container, type EnhancedProject } from '../../../interface/project';
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { SECTION_IDS } from '../../../constants';
+import { Section, Container } from '../../ui';
 
 
 export const ProjectsSection = () => {
@@ -59,8 +60,8 @@ export const ProjectsSection = () => {
     }
     return project.description;
   };  return (
-    <section ref={sectionRef} id={SECTION_IDS.PROJECTS} className='py-16 bg-white dark:bg-gray-900'>
-      <div className='max-w-6xl mx-auto px-4'>
+    <Section ref={sectionRef} id={SECTION_IDS.PROJECTS} background="default">
+      <Container maxWidth="lg">
         <SectionHeading
           title={t('projects.featuredTitle')}
           description={t('projects.featuredDescription')}
@@ -94,14 +95,14 @@ export const ProjectsSection = () => {
           getProjectDescription={getProjectDescription}
           t={t}
         />
-      </div>
+      </Container>
 
       <ProjectModal
         project={selectedProject}
         isOpen={isModalOpen}
         onClose={closeModal}
       />
-    </section>
+    </Section>
   );
 };
 

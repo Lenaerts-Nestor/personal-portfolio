@@ -55,7 +55,7 @@ export const ProjectCard = ({
       </div>
 
       {/* Project Content */}
-      <div className='p-5 flex flex-col flex-grow'>
+      <div className='p-6 flex flex-col flex-grow'>
         <div className='flex justify-between items-center mb-3'>
           <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100'>
             {project.title}

@@ -1,6 +1,7 @@
 import type React from 'react';
 import { useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { useScrollLock } from '../../hooks/useScrollLock';
 import type { WeeklyModalProps, DayEntry } from '../../interface/blog';
 import { CardHeader } from './CardHeader';
 
@@ -19,25 +20,8 @@ export const WeeklyModal: React.FC<WeeklyModalProps> = ({
   handleOverlayClick,
   handleContentScroll,
 }) => {
-  useEffect(() => {
-    if (openIdx !== null) {
-      const scrollY = window.scrollY;
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = '100%';
-    } else {
-      const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      window.scrollTo(0, Number.parseInt(scrollY || '0') * -1);
-    }
-    return () => {
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-    };
-  }, [openIdx]);
+  // Use custom hook for scroll locking
+  useScrollLock(openIdx !== null);
 
   useEffect(() => {
     if (openIdx === null) return;

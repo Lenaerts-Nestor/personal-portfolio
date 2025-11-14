@@ -4,6 +4,7 @@ import { SectionHeading } from '../../shared/layout/section-heading';
 import { skills_containerVariants, skills_itemVariants, skills_skillCategories, skills_skillVariants } from '../../../utils/skills-data';
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { SECTION_IDS } from '../../../constants';
+import { Section, Container } from '../../ui';
 
 
 
@@ -13,19 +14,20 @@ export const TechnologiesSection = () => {
     threshold: 0.2 
   });
   return (
-    <section
+    <Section
       ref={sectionRef}
       id={SECTION_IDS.TECHNOLOGIES}
-      className='py-16 bg-white dark:bg-gray-900 overflow-hidden'
+      background="default"
+      className="overflow-hidden"
     >
-      <div className='container mx-auto px-4 max-w-6xl'>
+      <Container maxWidth="lg">
         <SectionHeading
           title='Technical Skills'
           description='My expertise in modern web development technologies and professional competencies'
         />
 
         <motion.div
-          className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-10'
+          className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-10'
           variants={skills_containerVariants}
           initial='hidden'
           whileInView='visible'
@@ -42,7 +44,7 @@ export const TechnologiesSection = () => {
               >
                 {/* Header */}
                 <div
-                  className={`${category.darkColor} px-6 py-4 flex items-center gap-3`}
+                  className={`${category.darkColor} px-6 py-4 flex items-center gap-4`}
                 >
                   <div className='p-2 bg-white/20 rounded-lg text-white'>
                     {category.icon}
@@ -53,9 +55,9 @@ export const TechnologiesSection = () => {
                 </div>
 
                 {/* Skills Grid */}
-                <div className='p-5'>
+                <div className='p-6'>
                   <motion.div
-                    className='grid grid-cols-2 sm:grid-cols-3 gap-3'
+                    className='grid grid-cols-2 sm:grid-cols-3 gap-4'
                     variants={{
                       visible: {
                         transition: {
@@ -68,7 +70,7 @@ export const TechnologiesSection = () => {
                     {category.skills.map((skill) => (
                       <motion.div
                         key={skill.key}
-                        className={`flex items-center p-3 rounded-lg bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-300 hover:scale-105 hover:border-${category.color}-300 dark:hover:border-${category.color}-500`}
+                        className={`flex items-center p-4 rounded-lg bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-300 hover:scale-105 hover:border-${category.color}-300 dark:hover:border-${category.color}-500`}
                         variants={skills_skillVariants}
                       >
                         {skill.icon ? (
@@ -93,7 +95,7 @@ export const TechnologiesSection = () => {
             </motion.div>
           ))}
         </motion.div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 };

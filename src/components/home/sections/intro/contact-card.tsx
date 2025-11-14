@@ -60,7 +60,7 @@ export const ContactCard = memo(() => {
       gray: 'bg-gray-50 text-gray-600 hover:bg-gray-100',
       sky: 'bg-sky-50 text-sky-600 hover:bg-sky-100',
     };
-    return `group flex items-center gap-3 px-4 py-3.5 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-md ${colorMap[color as keyof typeof colorMap]}`;
+    return `group flex items-center gap-4 px-4 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-md ${colorMap[color as keyof typeof colorMap]}`;
   };
 
   const getBadgeClasses = (color: string, variant: 'status' | 'mobile' = 'status') => {
@@ -80,7 +80,7 @@ export const ContactCard = memo(() => {
       variants={fadeIn}
       className='bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden backdrop-blur-sm flex flex-col lg:max-h-[50vh]'
     >      {/* Header */}
-      <div className='flex items-center gap-3 p-4 lg:p-5 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white flex-shrink-0'>
+      <div className='flex items-center gap-4 p-4 lg:p-6 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white flex-shrink-0'>
         <div className='p-2 bg-indigo-100 rounded-lg'>
           <Info className='w-5 h-5 text-indigo-600' />
         </div>
@@ -89,9 +89,9 @@ export const ContactCard = memo(() => {
         </h3>
       </div>
 
-      <div className='p-4 lg:p-5 space-y-4 lg:space-y-5 flex-1 lg:overflow-y-auto'>
+      <div className='p-4 lg:p-6 space-y-4 lg:space-y-6 flex-1 lg:overflow-y-auto'>
         {/* Contact Links */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
           {contactItems.map(({ key, icon: Icon, color, href, target, ariaLabel }) => (
             <a
               key={key}

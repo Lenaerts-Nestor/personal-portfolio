@@ -1,12 +1,14 @@
 import type React from 'react';
-import { useState, useRef, useMemo } from 'react';
+import { useState, useRef } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { useI18n } from '../shared/i18nContext';
+import { useWeeklyFilter } from '../../hooks/useWeeklyFilter';
 import { WeeklyModal } from './weeklyModal';
 import { CardHeader } from './CardHeader';
 import { TagFilter } from './TagFilter';
 import { MobileTagFilterSheet } from './MobileTagFilterSheet';
 import type { WeekEntry, DayEntry } from '../../interface/blog';
+import { Section, Container } from '../ui';
 
 export const WeeklyBlog = () => {
   const { t } = useI18n();
@@ -15,31 +17,14 @@ export const WeeklyBlog = () => {
     weeksObj && typeof weeksObj === 'object'
       ? Object.keys(weeksObj).filter((k) => k.startsWith('week'))
       : [];
-  const weeksArr: WeekEntry[] = weekKeys.map((key) => (weeksObj as Record<string, WeekEntry>)[key]);  const [openIdx, setOpenIdx] = useState<number | null>(null);
+  const weeksArr: WeekEntry[] = weekKeys.map((key) => (weeksObj as Record<string, WeekEntry>)[key]);
+
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
   const [animating, setAnimating] = useState(false);
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
-  // Extract all unique tags from all weeks
-  const allTags = useMemo(() => {
-    const tagSet = new Set<string>();
-    weeksArr.forEach(week => {
-      if (week.tags) {
-        week.tags.forEach((tag: string) => tagSet.add(tag));
-      }
-    });
-    return Array.from(tagSet).sort();
-  }, [weeksArr]);
-
-  // Filter weeks based on selected tags
-  const filteredWeeks = useMemo(() => {
-    if (selectedTags.length === 0) {
-      return weeksArr;
-    }
-    return weeksArr.filter(week => 
-      week.tags && week.tags.some((tag: string) => selectedTags.includes(tag))
-    );
-  }, [weeksArr, selectedTags]);
+  // Use custom hook for tag filtering
+  const { filteredWeeks, allTags, selectedTags, setTags, clearTags } = useWeeklyFilter(weeksArr);
 
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
@@ -125,8 +110,8 @@ export const WeeklyBlog = () => {
   };
 
   return (
-    <section className='py-16 min-h-[60vh] overflow-x-hidden'>
-      <div className='max-w-5xl mx-auto px-4'>
+    <Section className="min-h-[60vh] overflow-x-hidden">
+      <Container maxWidth="md">
         <div className='text-center mb-12'>
           <h1 className='text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4'>
             {t('blog.title')}
@@ -138,21 +123,21 @@ export const WeeklyBlog = () => {
         <TagFilter
           allTags={allTags}
           selected={selectedTags}
-          onChange={setSelectedTags}
+          onChange={setTags}
         />
 
         {/* Mobile Tag Filter Sheet - only visible on mobile */}
         <MobileTagFilterSheet
           allTags={allTags}
           selected={selectedTags}
-          onChange={setSelectedTags}
+          onChange={setTags}
           isOpen={isMobileFilterOpen}
           onOpenChange={setIsMobileFilterOpen}
-        />{/* TODO: UX Improvement #2 - Add keyboard shortcuts for filter management 
+        />{/* TODO: UX Improvement #2 - Add keyboard shortcuts for filter management
              - Escape key to clear all filters
-             - Ctrl/Cmd + A to select all tags  
+             - Ctrl/Cmd + A to select all tags
              - Arrow keys to navigate between tags */}
-        
+
         {/* TODO: UX Improvement #3 - Add smooth animations for filter changes
              - Fade out/in effect when posts are filtered
              - Staggered animation for tag chips
@@ -171,7 +156,7 @@ export const WeeklyBlog = () => {
                 No blog posts match your current filter selection.
               </p>
               <button
-                onClick={() => setSelectedTags([])}
+                onClick={clearTags}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
               >
                 Clear all filters
@@ -194,7 +179,7 @@ export const WeeklyBlog = () => {
                   tags={week.tags || []}
                   variant="card"
                 />
-                
+
                 <div className='p-5'>
                   <div className='text-gray-700 text-sm line-clamp-3 mb-3'>
                     {week.overview}
@@ -208,7 +193,7 @@ export const WeeklyBlog = () => {
             ))}
           </div>
         )}
-      </div>
+      </Container>
 
       <WeeklyModal
         weeksArr={weeksArr}
@@ -225,6 +210,6 @@ export const WeeklyBlog = () => {
         handleOverlayClick={handleOverlayClick}
         handleContentScroll={handleContentScroll}
       />
-    </section>
+    </Section>
   );
 };
