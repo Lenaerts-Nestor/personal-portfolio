@@ -92,7 +92,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     const variantClasses = getVariantClasses(variant);
     const paddingClasses = getPaddingClasses(padding);
     const hoverClasses = hoverable
-      ? `${animation.transition.all} hover:shadow-md hover:-translate-y-1 cursor-pointer`
+      ? `${animation.transition.all} hover:shadow-xl hover:-translate-y-2 active:translate-y-0 active:shadow-md cursor-pointer`
       : '';
 
     return (

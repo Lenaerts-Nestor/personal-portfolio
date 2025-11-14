@@ -1,6 +1,7 @@
 import type React from 'react';
 import { useState, useRef } from 'react';
 import { ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useI18n } from '../shared/i18nContext';
 import { useWeeklyFilter } from '../../hooks/useWeeklyFilter';
 import { WeeklyModal } from './weeklyModal';
@@ -9,6 +10,7 @@ import { TagFilter } from './TagFilter';
 import { MobileTagFilterSheet } from './MobileTagFilterSheet';
 import type { WeekEntry, DayEntry } from '../../interface/blog';
 import { Section, Container } from '../ui';
+import { typography } from '../../constants';
 
 export const WeeklyBlog = () => {
   const { t } = useI18n();
@@ -113,11 +115,11 @@ export const WeeklyBlog = () => {
     <Section className="min-h-[60vh] overflow-x-hidden">
       <Container maxWidth="md">
         <div className='text-center mb-12'>
-          <h1 className='text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4'>
+          <h1 className={`${typography.heading.h1} bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4`}>
             {t('blog.title')}
           </h1>
           <div className='w-24 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto mb-4 rounded-full'></div>
-          <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+          <p className={`${typography.body.lg} text-gray-600 dark:text-gray-400 max-w-2xl mx-auto`}>
             {t('blog.description')}
           </p>        </div>        {/* Desktop Tag Filter Component - hidden on mobile */}
         <TagFilter
@@ -164,11 +166,34 @@ export const WeeklyBlog = () => {
             </div>
           </div>
         ) : (
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            {filteredWeeks.map((week, idx) => (              <div
+          <motion.div
+            className='grid grid-cols-1 md:grid-cols-3 gap-6'
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.1,
+                },
+              },
+            }}
+          >
+            {filteredWeeks.map((week, idx) => (
+              <motion.div
                 key={week.title || idx}
                 className='rounded-xl border border-purple-100 bg-white shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group'
                 onClick={() => openModal(week)}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.5 }
+                  },
+                }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 {/* Using CardHeader component to prevent tag overlap */}
                 <CardHeader
@@ -181,17 +206,17 @@ export const WeeklyBlog = () => {
                 />
 
                 <div className='p-5'>
-                  <div className='text-gray-700 text-sm line-clamp-3 mb-3'>
+                  <div className={`${typography.body.sm} text-gray-700 dark:text-gray-300 ${typography.utils.lineClamp3} mb-3`}>
                     {week.overview}
                   </div>
-                  <div className='flex items-center text-purple-600 font-medium text-sm mt-auto group-hover:text-indigo-600 transition-colors'>
+                  <div className={`flex items-center ${typography.label.base} text-purple-600 dark:text-purple-400 mt-auto group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors`}>
                     <span>{t('blog.readMore')}</span>
                     <ChevronRight className='w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform' />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
       </Container>
 

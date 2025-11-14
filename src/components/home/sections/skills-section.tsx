@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { SectionHeading } from '../../shared/layout/section-heading';
 import { skills_containerVariants, skills_itemVariants, skills_skillCategories, skills_skillVariants } from '../../../utils/skills-data';
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
-import { SECTION_IDS } from '../../../constants';
+import { SECTION_IDS, typography } from '../../../constants';
 import { Section, Container } from '../../ui';
 
 
@@ -49,7 +49,7 @@ export const TechnologiesSection = () => {
                   <div className='p-2 bg-white/20 rounded-lg text-white'>
                     {category.icon}
                   </div>
-                  <h3 className='text-xl font-bold text-white'>
+                  <h3 className={`${typography.heading.h4} text-white`}>
                     {category.title}
                   </h3>
                 </div>
@@ -84,7 +84,7 @@ export const TechnologiesSection = () => {
                             className={`w-5 h-5 mr-2 rounded-full bg-${category.color}-100 dark:bg-${category.color}-900/50 border border-${category.color}-200 dark:border-${category.color}-700`}
                           ></div>
                         )}
-                        <span className='text-sm font-medium text-gray-700 dark:text-gray-200 truncate'>
+                        <span className={`${typography.label.base} text-gray-700 dark:text-gray-200 truncate`}>
                           {skill.name}
                         </span>
                       </motion.div>

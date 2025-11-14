@@ -3,7 +3,7 @@ import { Lock } from 'lucide-react';
 import { project_techIcons } from '../../../../utils/projects-data';
 import { ProjectTechBadges } from './project-tech-badges';
 import type { ProjectCardProps } from '../../../../interface/project';
-import { hasCustomTypeLabel } from '../../../../constants';
+import { hasCustomTypeLabel, typography } from '../../../../constants';
 
 const item = {
   hidden: { y: 20, opacity: 0 },
@@ -57,10 +57,10 @@ export const ProjectCard = ({
       {/* Project Content */}
       <div className='p-6 flex flex-col flex-grow'>
         <div className='flex justify-between items-center mb-3'>
-          <h3 className='text-lg font-semibold text-gray-900 dark:text-gray-100'>
+          <h3 className={`${typography.heading.h4} text-gray-900 dark:text-gray-100`}>
             {project.title}
           </h3>
-          <span className='text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded'>
+          <span className={`${typography.label.sm} bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded`}>
             {hasCustomTypeLabel(project.id)
               ? t('projects.internshipProject')
               : project.type}
@@ -69,7 +69,7 @@ export const ProjectCard = ({
 
         {/* Description with fixed height */}
         <div className='mb-4 h-20 overflow-hidden'>
-          <p className='text-gray-600 dark:text-gray-400 text-sm line-clamp-3'>
+          <p className={`${typography.body.sm} text-gray-600 dark:text-gray-400 ${typography.utils.lineClamp3}`}>
             {getProjectDescription(project)}
           </p>
         </div>
@@ -83,7 +83,7 @@ export const ProjectCard = ({
         {/* Action button */}
         <div className='mt-auto'>
           {project.isPrivate ? (
-            <button className='text-indigo-600 dark:text-indigo-400 font-medium text-sm flex items-center hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors'>
+            <button className={`${typography.label.base} text-indigo-600 dark:text-indigo-400 flex items-center hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors`}>
               {t('projects.viewDetails')}
               <svg
                 className='w-4 h-4 ml-1'
@@ -105,7 +105,7 @@ export const ProjectCard = ({
               href={project.githubLink}
               target='_blank'
               rel='noopener noreferrer'
-              className='text-gray-700 dark:text-gray-300 font-medium text-sm flex items-center hover:text-gray-900 dark:hover:text-white transition-colors'
+              className={`${typography.label.base} text-gray-700 dark:text-gray-300 flex items-center hover:text-gray-900 dark:hover:text-white transition-colors`}
               onClick={(e) => {
                 e.stopPropagation();
                 window.open(project.githubLink, '_blank');

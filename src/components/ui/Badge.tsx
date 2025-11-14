@@ -67,9 +67,9 @@ const getVariantClasses = (variant: BadgeVariant): string => {
  */
 const getSizeClasses = (size: BadgeSize): string => {
   const sizes: Record<BadgeSize, string> = {
-    sm: 'text-xs px-2 py-0.5',
-    md: 'text-sm px-2.5 py-1',
-    lg: 'text-base px-3 py-1.5',
+    sm: 'text-xs leading-normal font-medium px-2 py-0.5',
+    md: 'text-sm leading-normal font-medium px-2.5 py-1',
+    lg: 'text-base leading-normal font-medium px-3 py-1.5',
   };
   return sizes[size];
 };
@@ -110,7 +110,7 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
     const variantClasses = getVariantClasses(variant);
     const sizeClasses = getSizeClasses(size);
     const interactiveClasses = interactive
-      ? `cursor-pointer hover:opacity-80 ${animation.transition.opacity}`
+      ? `cursor-pointer hover:opacity-80 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ${animation.transition.opacity}`
       : '';
 
     const handleClick = (e: React.MouseEvent<HTMLSpanElement>) => {

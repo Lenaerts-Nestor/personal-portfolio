@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { gradientTextClasses } from '../../../style/style';
 import type { SectionHeadingProps } from '../../../interface/layout';
+import { typography } from '../../../constants';
 
 
 
@@ -8,7 +9,7 @@ export const SectionHeading = ({
   title,
   description,
   icon,
-  dangerouslySetDescriptionHTML = false, 
+  dangerouslySetDescriptionHTML = false,
 }: SectionHeadingProps) => {
   return (
     <div className='text-center mb-12'>
@@ -19,8 +20,8 @@ export const SectionHeading = ({
         transition={{ duration: 0.5 }}
         className='inline-flex items-center justify-center mb-2'
       >
-        {icon && <span className='mr-2 text-indigo-600'>{icon}</span>}
-        <h2 className={`text-4xl font-bold ${gradientTextClasses}`}>{title}</h2>
+        {icon && <span className='mr-2 text-indigo-600 dark:text-indigo-400'>{icon}</span>}
+        <h2 className={`${typography.heading.h2} ${gradientTextClasses}`}>{title}</h2>
       </motion.div>
 
       <motion.div
@@ -36,7 +37,7 @@ export const SectionHeading = ({
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className='text-center text-lg text-gray-600 mb-8 max-w-3xl mx-auto'
+        className={`text-center ${typography.body.lg} text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto`}
         {...(dangerouslySetDescriptionHTML && {
           dangerouslySetInnerHTML: { __html: description },
         })}

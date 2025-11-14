@@ -36,3 +36,7 @@ export type { ContainerProps } from './Container';
 
 export { Section } from './Section';
 export type { SectionProps } from './Section';
+
+// Loading components
+export { Skeleton, CardSkeleton } from './Skeleton';
+export type { SkeletonProps, SkeletonVariant } from './Skeleton';

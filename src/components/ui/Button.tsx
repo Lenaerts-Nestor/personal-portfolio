@@ -66,9 +66,9 @@ const getVariantClasses = (variant: ButtonVariant): string => {
  */
 const getSizeClasses = (size: ButtonSize): string => {
   const sizes: Record<ButtonSize, string> = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'px-3 py-1.5 text-sm leading-normal',
+    md: 'px-6 py-3 text-base leading-normal',
+    lg: 'px-8 py-4 text-lg leading-normal',
   };
   return sizes[size];
 };
@@ -131,6 +131,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           ${variantClasses}
           ${sizeClasses}
           ${animation.transition.all}
+          active:scale-95
+          focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
           ${disabledClasses}
           ${className}
         `.trim().replace(/\s+/g, ' ')}
