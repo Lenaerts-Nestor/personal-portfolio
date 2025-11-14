@@ -1,7 +1,7 @@
 import { Layout, Users ,Server ,PenToolIcon as Tool} from "lucide-react";
 import { FaLightbulb, FaUsers, FaBook, FaSearch, FaClock, FaHandsHelping } from "react-icons/fa";
 import { MdChat } from "react-icons/md";
-import { SiJavascript, SiTypescript, SiReact, SiHtml5, SiCss3, SiStorybook, SiFlutter, SiNodedotjs, SiExpress, SiFastify, SiSharp, SiDotnet, SiMonogame, SiCodeblocks, SiPostgresql, SiMongodb, SiMysql, SiDrizzle, SiSwagger, SiGit, SiDocker, SiFirebase, SiPostman } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiReact, SiHtml5, SiCss3, SiStorybook, SiFlutter, SiNodedotjs, SiExpress, SiFastify, SiSharp, SiDotnet, SiMonogame, SiCodeblocks, SiPostgresql, SiMongodb, SiMysql, SiDrizzle, SiLaravel, SiGit, SiDocker, SiFirebase, SiPostman, SiOpenai } from "react-icons/si";
 import type { Skill, SkillCategory } from "../interface/skills";
 
   export const skills_frontendSkills: Skill[] = [
@@ -91,9 +91,9 @@ import type { Skill, SkillCategory } from "../interface/skills";
       key: 'Drizzle ORM',
     },
     {
-      name: 'Swagger',
-      icon: <SiSwagger size={20} className='mr-2' />,
-      key: 'Swagger',
+      name: 'PHP Laravel',
+      icon: <SiLaravel size={20} className='mr-2' />,
+      key: 'PHP Laravel',
     },
   ];
 
@@ -117,6 +117,11 @@ import type { Skill, SkillCategory } from "../interface/skills";
       name: 'Postman',
       icon: <SiPostman size={20} className='mr-2' />,
       key: 'Postman',
+    },
+    {
+      name: 'AI',
+      icon: <SiOpenai size={20} className='mr-2' />,
+      key: 'AI',
     },
   ];
 
