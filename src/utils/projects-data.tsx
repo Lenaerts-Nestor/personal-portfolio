@@ -1,4 +1,5 @@
-import { SiCss3, SiDart, SiDotnet, SiDrizzle, SiExpress, SiFastify, SiFirebase, SiFlutter, SiMongodb, SiMonogame, SiMysql, SiNodedotjs, SiPostgresql, SiReact, SiReactivex, SiSharp, SiSwagger, SiTypescript } from "react-icons/si";
+import { SiCss3, SiDart, SiDotnet, SiDrizzle, SiExpress, SiFastify, SiFirebase, SiFlutter, SiLaravel, SiMongodb, SiMonogame, SiMysql, SiNodedotjs, SiPhp, SiPostgresql, SiReact, SiReactivex, SiSharp, SiSwagger, SiTypescript } from "react-icons/si";
+import { BsStars } from "react-icons/bs";
 
 export const projects = [
   {
@@ -23,6 +24,18 @@ export const projects = [
       "A backend-focused automation project for CVO Antwerpen School, designed to optimize and automate core administrative processes with deep Google API integration.",
     image: "assets/cvo_antwerpen_zuid_cover.jpg",
     technologies: ["C#", ".NET", "Google APIs", "Swagger"],
+    githubLink: "",
+    isPrivate: true,
+  },
+  {
+    id: "mymmo",
+    title: "Mymmo",
+    cardTranslationKey: "mymmo",
+    type: "Team Project",
+    description:
+      "Software architecture analysis and redesign project for Mymmo, focusing on scalability and user-friendliness through microservices optimization and API gateway implementation.",
+    image: "assets/mymmo_cover.jpg",
+    technologies: ["PHP", "Laravel", "AI Tools", "Microservices"],
     githubLink: "",
     isPrivate: true,
   },
@@ -110,4 +123,8 @@ export const project_techIcons = {
   CSS: { icon: SiCss3, color: 'text-blue-500' },
   Swagger: { icon: SiSwagger, color: 'text-green-600' },
   Dart: { icon: SiDart, color: 'text-blue-400' },
+  PHP: { icon: SiPhp, color: 'text-indigo-600' },
+  Laravel: { icon: SiLaravel, color: 'text-red-600' },
+  'AI Tools': { icon: BsStars, color: 'text-purple-500' },
+  Microservices: { icon: SiNodedotjs, color: 'text-emerald-600' },
 };

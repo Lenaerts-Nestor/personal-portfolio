@@ -222,12 +222,39 @@
       "outcomeTitle": "Projectresultaat",
       "outcome": "Het CVO Antwerpen automatiseringssysteem werd succesvol geïmplementeerd, waardoor de administratieve last aanzienlijk werd verminderd en educatieve workflows werden gestroomlijnd. De integratie met Google-services creëerde een naadloze ervaring voor studenten en docenten, terwijl de veilige backend-architectuur gegevensprivacy en systeembetrouwbaarheid waarborgde."
     },
+    "mymmo": {
+      "description": "Software architectuur analyse en herontwerp voor Mymmo, gericht op vereenvoudiging van microservices via API gateway implementatie met PHP Laravel.",
+      "overviewTitle": "Project Overzicht",
+      "overview": "Een software architectuur analyse en herontwerpproject voor Mymmo, een bedrijf dat hun bestaande microservices-gebaseerde systeem wilde verbeteren. Het project richtte zich op het analyseren van de huidige architectuur, het identificeren van schaalbaarheids- en gebruiksvriendelijkheidsproblemen, en het voorstellen van vereenvoudigde oplossingen via API gateway implementatie.",
+      "technologiesTitle": "Technologie Stack",
+      "contextTitle": "Project Context",
+      "contextDescription": "Mymmo is een bedrijf met een complexe microservices-architectuur die moeilijk te onderhouden en te schalen werd. Ze huurden mij in als junior software engineer om hun huidige projectstructuur te analyseren en alternatieve oplossingen voor te stellen die de schaalbaarheid en gebruiksvriendelijkheid zouden verbeteren.",
+      "contributionsTitle": "Mijn Rol & Verantwoordelijkheden",
+      "contributions": {
+        "item1": "Analyseerde de bestaande microservices-architectuur om knelpunten en complexiteitsproblemen te identificeren",
+        "item2": "Ontwierp een vereenvoudigde software architectuur benadering met een API gateway patroon",
+        "item3": "Gebruikte AI-tools om verschillende architecturale benaderingen en best practices te verkennen",
+        "item4": "Maakte een prototype van een API gateway oplossing met PHP Laravel om de voorgestelde aanpak te demonstreren",
+        "item5": "Identificeerde potentiële klanttypes en use cases voor de verbeterde architectuur"
+      },
+      "challenge": "Het project had veel microservices waardoor het moeilijk was om de algehele systeemarchitectuur direct te begrijpen. De eerste grote uitdaging was om de bestaande structuur te begrijpen, de pijnpunten te identificeren, en vervolgens een oplossing voor te stellen die de architectuur zou vereenvoudigen zonder functionaliteit te verliezen. Begrijpen hoe verschillende services met elkaar communiceerden en hoe deze te consolideren in een beter beheerbaar gateway-patroon vereiste diepgaande analyse.",
+      "solution": "Ik benaderде het probleem systematisch door eerst de bestaande microservices en hun interacties te documenteren. Met behulp van AI-tools heb ik verschillende architectuurpatronen en best practices onderzocht voor het vereenvoudigen van microservices. Vervolgens ontwierp ik een vereenvoudigde API gateway met PHP Laravel die zou dienen als centraal toegangspunt, waardoor de complexiteit werd verminderd terwijl de schaalbaarheid behouden bleef. De gateway-benadering hielp bij het identificeren van verschillende klanttypes en stroomlijnde de algehele systeemarchitectuur.",
+      "achievementsTitle": "Belangrijkste Prestaties",
+      "achievements": {
+        "item1": "Succesvol de complexe microservices-architectuur geanalyseerd en gedocumenteerd",
+        "item2": "Een vereenvoudigd API gateway-patroon ontworpen dat het systeembegrip verbeterde",
+        "item3": "Praktische implementatie gedemonstreerd met PHP Laravel",
+        "item4": "Duidelijke klantsegmentatie geïdentificeerd voor betere schaalbaarheid"
+      },
+      "outcomeTitle": "Projectresultaat",
+      "outcome": "De architectuuranalyse en voorgestelde oplossing voorzagen Mymmo van een duidelijk stappenplan voor het vereenvoudigen van hun systeem met behoud van schaalbaarheid. De API gateway-benadering met Laravel demonstreerde een praktisch pad voorwaarts dat zowel de ontwikkelaarservaring als de systeemonderhoudbaarheid zou verbeteren. Dit project toonde mijn vermogen om complexe systemen te analyseren, kritisch over architectuur na te denken en praktische oplossingen voor te stellen."
+    },
     "timesheet": {
       "description": "AmoTrack is een uitgebreide full-stack applicatie ontwikkeld voor Amotek's interne bedrijfsregistratie en projectmanagement behoeften, die tijdsregistratie, projectbeheer, klantenbeheer en rapportage integreert."
     },
     "cvo-automation": {
       "description": "Backend-automatisering voor CVO Antwerpen, stroomlijning van administratieve taken zoals studentenregistratie en Google Classroom-integratie met C# en .NET."
-    }, 
+    },
     "webdev": {
       "description": "Een webontwikkelingsproject waarin vaardigheden worden getoond voor het bouwen van moderne, responsieve websites en webapplicaties."
     },

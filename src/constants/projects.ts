@@ -6,6 +6,7 @@ export const PROJECT_IDS = {
   AMOTRACK: 'amotrack',
   TIMESHEET: 'timesheet',
   CVO: 'cvo',
+  MYMMO: 'mymmo',
   WEBDEV: 'webdev',
   GAME: 'game',
   WEBAPI: 'webapi',
@@ -27,6 +28,7 @@ export type ProjectId = typeof PROJECT_IDS[keyof typeof PROJECT_IDS];
 export const PROJECTS_WITH_CUSTOM_SUMMARY: readonly ProjectId[] = [
   PROJECT_IDS.TIMESHEET,
   PROJECT_IDS.CVO,
+  PROJECT_IDS.MYMMO,
 ] as const;
 
 /**

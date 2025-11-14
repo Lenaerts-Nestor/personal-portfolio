@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Lock } from "lucide-react";
 import { AmoTrackSummary } from "../../../../utils/project-summaries/amotrack-summary";
 import { CvoSummary } from "../../../../utils/project-summaries/cvo-summary";
+import { MymmoSummary } from "../../../../utils/project-summaries/mymmo-summary";
 import type { ProjectModalProps } from "../../../../interface/project";
 import { PROJECT_IDS } from "../../../../constants";
 
@@ -10,6 +11,7 @@ import { PROJECT_IDS } from "../../../../constants";
 const PROJECT_SUMMARIES: Record<string, React.ComponentType> = {
   [PROJECT_IDS.AMOTRACK]: AmoTrackSummary,
   [PROJECT_IDS.CVO]: CvoSummary,
+  [PROJECT_IDS.MYMMO]: MymmoSummary,
   // Future private projects:
   // [PROJECT_IDS.NEW_PROJECT]: NewProjectSummary,
 };

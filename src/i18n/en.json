@@ -222,6 +222,33 @@
       "outcomeTitle": "Project Outcome",
       "outcome": "The CVO Antwerpen automation system was successfully implemented, significantly reducing administrative overhead and streamlining educational workflows. The integration with Google services created a seamless experience for students and teachers, while the secure backend architecture ensured data privacy and system reliability."
     },
+    "mymmo": {
+      "description": "Software architecture analysis and redesign for Mymmo, focusing on simplifying microservices through API gateway implementation using PHP Laravel.",
+      "overviewTitle": "Project Overview",
+      "overview": "A software architecture analysis and redesign project for Mymmo, a company seeking to improve their existing microservices-based system. The project focused on analyzing the current architecture, identifying scalability and user-friendliness issues, and proposing simplified solutions through API gateway implementation.",
+      "technologiesTitle": "Technology Stack",
+      "contextTitle": "Project Context",
+      "contextDescription": "Mymmo is a company with a complex microservices architecture that was becoming difficult to maintain and scale. They hired me as a junior software engineer to analyze their current project structure and propose alternative solutions that would improve scalability and user-friendliness.",
+      "contributionsTitle": "My Role & Responsibilities",
+      "contributions": {
+        "item1": "Analyzed the existing microservices architecture to identify bottlenecks and complexity issues",
+        "item2": "Designed a simplified software architecture approach using an API gateway pattern",
+        "item3": "Utilized AI tools to explore different architectural approaches and best practices",
+        "item4": "Prototyped an API gateway solution using PHP Laravel to demonstrate the proposed approach",
+        "item5": "Identified potential client types and use cases for the improved architecture"
+      },
+      "challenge": "The project had a lot of microservices which made it difficult to directly understand the overall system architecture. The first major challenge was to comprehend the existing structure, identify the pain points, and then propose a solution that would simplify the architecture without losing functionality. Understanding how different services interacted and how to consolidate them into a more manageable gateway pattern required deep analysis.",
+      "solution": "I approached the problem systematically by first documenting the existing microservices and their interactions. Using AI tools, I researched various architectural patterns and best practices for simplifying microservices. I then designed a simplified API gateway using PHP Laravel that would serve as a central entry point, reducing complexity while maintaining scalability. The gateway approach helped identify different client types and streamlined the overall system architecture.",
+      "achievementsTitle": "Key Achievements",
+      "achievements": {
+        "item1": "Successfully analyzed and documented the complex microservices architecture",
+        "item2": "Designed a simplified API gateway pattern that improved system comprehension",
+        "item3": "Demonstrated practical implementation using PHP Laravel",
+        "item4": "Identified clear client segmentation for better scalability"
+      },
+      "outcomeTitle": "Project Outcome",
+      "outcome": "The architectural analysis and proposed solution provided Mymmo with a clear roadmap for simplifying their system while maintaining scalability. The API gateway approach using Laravel demonstrated a practical path forward that would improve both developer experience and system maintainability. This project showcased my ability to analyze complex systems, think critically about architecture, and propose practical solutions."
+    },
     "timesheet": {
       "description": "AmoTrack is a comprehensive full-stack application developed for Amotek's internal business tracking and project management needs, integrating time tracking, project management, client management, and reporting."
     },
