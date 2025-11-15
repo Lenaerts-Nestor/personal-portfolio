@@ -93,32 +93,4 @@ export const experienceData: Experience[] = [
     ],
     featured: false,
   },
-  {
-    roleKey: "experience.roles.ictSupportSpecialist",
-    companyKey: "experience.companies.techSupportCo",
-    periodKey: "experience.periods.techSupportCoStudentJob",
-    typeKey: "experience.types.studentJob",
-    descriptionKey: "experience.descriptions.techSupportCoStudentJob",
-    responsibilitiesKeys: [
-      "experience.responsibilities.techSupportCoStudentJob.0",
-      "experience.responsibilities.techSupportCoStudentJob.1",
-      "experience.responsibilities.techSupportCoStudentJob.2",
-      "experience.responsibilities.techSupportCoStudentJob.3",
-    ],
-    technologies: [
-      {
-        name: "Hardware",
-        icon: <IoHardwareChip className="text-orange-500" />,
-      },
-      {
-        name: "Networking",
-        icon: <FaNetworkWired className="text-gray-500" />,
-      },
-      {
-        name: "Windows",
-        icon: <FaWindows className="text-blue-500" />,
-      },
-    ],
-    featured: false,
-  },
 ];

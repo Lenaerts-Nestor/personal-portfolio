@@ -107,20 +107,17 @@
     "roles": {
       "softwareDeveloperIntern": "Software Development Intern",
       "softwareEngineer": "Junior Software Engineer",
-      "itSupportSpecialist": "IT Support Specialist",
-      "ictSupportSpecialist": "ICT Support Specialist"
+      "itSupportSpecialist": "IT Support Specialist"
     },
     "companies": {
       "amotek": "Amotek",
       "mymmo": "Mymmo",
-      "beego": "Beego",
-      "techSupportCo": "TechSupport Co."
+      "beego": "Beego"
     },
     "periods": {
       "amotekInternship": "Feb 2024 - Jun 2024",
       "mymmoStudentJob": "Sep 2023 - Jan 2024",
-      "beegoStudentJob": "Jun 2023 - Dec 2023",
-      "techSupportCoStudentJob": "Jan 2023 - May 2023"
+      "beegoStudentJob": "Jun 2023 - Dec 2023"
     },
     "types": {
       "internship": "Internship",
@@ -129,8 +126,7 @@
     "descriptions": {
       "amotekInternship": "Worked on the AmoTrack project, building a full-stack application that the company now uses internally and is ready for client deployment.",
       "mymmoStudentJob": "Analyzed and redesigned the software architecture for Mymmo's microservices-based system, proposing simplified solutions through API gateway implementation.",
-      "beegoStudentJob": "Provided on-site technical support to customers in their homes.",
-      "techSupportCoStudentJob": "A simple job where I explored the hardware side of IT outside of programming."
+      "beegoStudentJob": "Provided on-site technical support to customers in their homes."
     },
     "responsibilities": {
       "amotekInternship": [
@@ -150,12 +146,6 @@
         "Provided clear explanations on safe internet navigation and cybersecurity best practices",
         "Assisted elderly and non-technical users with setting up and troubleshooting their devices",
         "Documented solutions for common problems to improve the company's knowledge base"
-      ],
-      "techSupportCoStudentJob": [
-        "Set up and configured computers and workstations for new employees",
-        "Assisted with network installations and basic troubleshooting",
-        "Learned the fundamentals of IT support and hardware maintenance",
-        "Gained valuable experience in the operational aspects of IT infrastructure"
       ]
     },
     "technologiesUsed": "Technologies Used"

@@ -107,20 +107,17 @@
     "roles": {
       "softwareDeveloperIntern": "Software Ontwikkel Stagiair",
       "softwareEngineer": "Junior Software Engineer",
-      "itSupportSpecialist": "IT Support Specialist",
-      "ictSupportSpecialist": "ICT Support Specialist"
+      "itSupportSpecialist": "IT Support Specialist"
     },
     "companies": {
       "amotek": "Amotek",
       "mymmo": "Mymmo",
-      "beego": "Beego",
-      "techSupportCo": "TechSupport Co."
+      "beego": "Beego"
     },
     "periods": {
       "amotekInternship": "Feb 2024 - Jun 2024",
       "mymmoStudentJob": "Sep 2023 - Jan 2024",
-      "beegoStudentJob": "Jun 2023 - Dec 2023",
-      "techSupportCoStudentJob": "Jan 2023 - Mei 2023"
+      "beegoStudentJob": "Jun 2023 - Dec 2023"
     },
     "types": {
       "internship": "Stage",
@@ -129,8 +126,7 @@
     "descriptions": {
       "amotekInternship": "Werkte aan het AmoTrack project, waarbij ik een full-stack applicatie bouwde die nu intern door het bedrijf wordt gebruikt en klaar is voor client deployment.",
       "mymmoStudentJob": "Analyseerde en herontwierp de software-architectuur voor Mymmo's microservices-gebaseerd systeem, waarbij ik vereenvoudigde oplossingen voorstelde via API gateway implementatie.",
-      "beegoStudentJob": "Bood technische ondersteuning aan huis bij klanten.",
-      "techSupportCoStudentJob": "Een eenvoudige baan waarbij ik de hardwarekant van IT verkende buiten programmeren om."
+      "beegoStudentJob": "Bood technische ondersteuning aan huis bij klanten."
     },
     "responsibilities": {
       "amotekInternship": [
@@ -150,12 +146,6 @@
         "Gaf duidelijke uitleg over veilig internetgebruik en best practices op het gebied van cybersecurity",
         "Hielp oudere en niet-technische gebruikers met het instellen en oplossen van problemen met hun apparaten",
         "Documenteerde oplossingen voor veelvoorkomende problemen om de kennisbank van het bedrijf te verbeteren"
-      ],
-      "techSupportCoStudentJob": [
-        "Zette computers en werkstations op en configureerde deze voor nieuwe medewerkers",
-        "Hielp bij netwerkinstallaties en basis troubleshooting",
-        "Leerde de fundamenten van IT-ondersteuning en hardware onderhoud",
-        "Deed waardevolle ervaring op met de operationele aspecten van IT-infrastructuur"
       ]
     },
     "technologiesUsed": "Gebruikte Technologieën"
