@@ -3,18 +3,13 @@ import { useI18n } from '../../shared/i18nContext';
 import { SectionHeading } from '../../shared/layout/section-heading';
 import { experienceData } from '../../../utils/experience-data';
 import { ExperienceLayout } from './experience/ExperienceLayout';
-import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { SECTION_IDS } from '../../../constants';
 import { Section, Container } from '../../ui';
 
 export default function ExperienceSection() {
   const { t } = useI18n();
-  const sectionRef = useScrollAnimation({ 
-    animationType: 'slide-left',
-    threshold: 0.2 
-  });
   return (
-    <Section ref={sectionRef} id={SECTION_IDS.EXPERIENCE} background="default">
+    <Section id={SECTION_IDS.EXPERIENCE} background="default">
       <Container maxWidth="lg">
         <SectionHeading
           title={t('home.experienceTitle')}

@@ -3,21 +3,15 @@ import { SectionHeading } from '../../shared/layout/section-heading';
 import { EducationCard } from './education/education-card';
 import { AIMethodologyCard } from './education/ai-methodology-card';
 import { educationData } from '../../../utils/education-data';
-import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { SECTION_IDS } from '../../../constants';
 import { Section, Container } from '../../ui';
 import { useI18n } from '../../shared/i18nContext';
 
 export default function EducationSection() {
-  const sectionRef = useScrollAnimation({
-    animationType: 'slide-right',
-    threshold: 0.2
-  });
-
   const { t } = useI18n();
 
   return (
-    <Section ref={sectionRef} id={SECTION_IDS.EDUCATION} background="default">
+    <Section id={SECTION_IDS.EDUCATION} background="default">
       <Container maxWidth="lg">
         <SectionHeading
           title={t('education.sectionTitle')}

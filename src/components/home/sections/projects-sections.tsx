@@ -8,7 +8,6 @@ import { ProjectModal } from './projects/project-private-modal';
 import { ProjectCard } from './projects/project-card';
 import { ProjectCarousel } from './projects/project-carousel';
 import { enhancedProjects, container, type EnhancedProject } from '../../../interface/project';
-import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { SECTION_IDS } from '../../../constants';
 import { Section, Container } from '../../ui';
 
@@ -18,10 +17,6 @@ export const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<EnhancedProject | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useI18n();
-  const sectionRef = useScrollAnimation({
-    animationType: 'slide-right',
-    threshold: 0.2
-  });
 
   useEffect(() => {
     enhancedProjects.forEach((project) => {
@@ -61,7 +56,7 @@ export const ProjectsSection = () => {
     }
     return project.description;
   };  return (
-    <Section ref={sectionRef} id={SECTION_IDS.PROJECTS} background="default">
+    <Section id={SECTION_IDS.PROJECTS} background="default">
       <Container maxWidth="lg">
         <SectionHeading
           title={t('projects.featuredTitle')}

@@ -59,34 +59,7 @@ export const AmoTrackSummary = () => {
       </div>
 
       {/* Key Features */}
-      <div>
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-          {t("projects.amotrack.featuresTitle") || "Key Features"}
-        </h3>
-        <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-          <li>
-            {t("projects.amotrack.features.item1") ||
-              "Real-time timesheet tracking with project-based time allocation"}
-          </li>
-          <li>
-            {t("projects.amotrack.features.item2") ||
-              "User management with role-based access control (admin, manager, employee)"}
-          </li>
-          <li>
-            {t("projects.amotrack.features.item3") ||
-              "Comprehensive reporting and analytics dashboard"}
-          </li>
-          <li>
-            {t("projects.amotrack.features.item4") ||
-              "RESTful API with Swagger documentation for easy integration"}
-          </li>
-          <li>
-            {t("projects.amotrack.features.item5") ||
-              "Responsive design for desktop and mobile devices"}
-          </li>
-        </ul>
-      </div>
-
+      {/** currently removed, this project has no key features. gotta contact amotek again to ask what it was */}
       {/* Technical Architecture */}
       <div>
         <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">

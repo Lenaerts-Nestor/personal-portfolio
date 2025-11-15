@@ -4,7 +4,8 @@
       "Bash(tree:*)",
       "Bash(npm run build:*)",
       "Bash(npm run dev:*)",
-      "Bash(node -e:*)"
+      "Bash(node -e:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

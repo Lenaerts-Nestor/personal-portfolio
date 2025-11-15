@@ -88,9 +88,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-indigo-800 text-center text-indigo-300">
-          <p>
-            &copy; {currentYear} Nestor Lenaerts. {t("footer.rights")}
-          </p>
+          <p>&copy; {currentYear} Nestor Lenaerts.</p>
         </div>
       </div>
     </footer>
